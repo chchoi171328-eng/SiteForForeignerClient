@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { CONTACT_INFO, NAV_LINKS, SERVICE_AREAS } from './constants';
 import { CustomLogo, Icons } from './components/Icons';
+
+// --- EmailJS Configuration ---
+// TODO: Replace these with your actual keys from EmailJS dashboard
+const EMAILJS_SERVICE_ID = ""; 
+const EMAILJS_TEMPLATE_ID = "";
+const EMAILJS_PUBLIC_KEY = "";
 
 // --- Shared Logic ---
 const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string, closeMobileMenu?: () => void) => {
@@ -334,19 +341,38 @@ const ContactSection = () => {
     e.preventDefault();
     setStatus('submitting');
 
-    // NOTE: In a real implementation without a database, you would use a service like EmailJS here.
-    // Example: await emailjs.send('service_id', 'template_id', formState, 'public_key');
-    // Since we don't have API keys, we simulate the network request and success state.
-    
-    await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate 1.5s network delay
-    
-    setStatus('success');
-    setFormState({ name: '', email: '', message: '' });
-    
-    // Reset status after showing success message
-    setTimeout(() => {
+    try {
+      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+        // Real EmailJS Send
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            from_name: formState.name,
+            from_email: formState.email,
+            message: formState.message,
+          },
+          EMAILJS_PUBLIC_KEY
+        );
+      } else {
+        // Simulated Send if keys are missing
+        console.log("EmailJS keys are missing. Simulating success.");
+        await new Promise(resolve => setTimeout(resolve, 1500));
+      }
+      
+      setStatus('success');
+      setFormState({ name: '', email: '', message: '' });
+      
+      // Reset status after showing success message
+      setTimeout(() => {
+        setStatus('idle');
+      }, 5000);
+
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      alert("Failed to send message. Please try again or contact us directly via phone.");
       setStatus('idle');
-    }, 5000);
+    }
   };
 
   return (
