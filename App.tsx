@@ -5,9 +5,9 @@ import { CustomLogo, Icons } from './components/Icons';
 
 // --- EmailJS Configuration ---
 // TODO: Replace these with your actual keys from EmailJS dashboard
-const EMAILJS_SERVICE_ID = ""; 
-const EMAILJS_TEMPLATE_ID = "";
-const EMAILJS_PUBLIC_KEY = "";
+const EMAILJS_SERVICE_ID = "foreignersite_Inquiry"; 
+const EMAILJS_TEMPLATE_ID = "template_4208stx";
+const EMAILJS_PUBLIC_KEY = "agP0G0rU2_TZD1wT5";
 
 // --- Shared Logic ---
 const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string, closeMobileMenu?: () => void) => {
@@ -334,7 +334,7 @@ const LocationSection = () => {
 
 // 6. Contact Form Section
 const ContactSection = () => {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -350,6 +350,7 @@ const ContactSection = () => {
           {
             from_name: formState.name,
             from_email: formState.email,
+            from_phone: formState.phone,
             message: formState.message,
           },
           EMAILJS_PUBLIC_KEY
@@ -361,7 +362,7 @@ const ContactSection = () => {
       }
       
       setStatus('success');
-      setFormState({ name: '', email: '', message: '' });
+      setFormState({ name: '', email: '', phone: '', message: '' });
       
       // Reset status after showing success message
       setTimeout(() => {
@@ -419,6 +420,18 @@ const ContactSection = () => {
                 />
               </div>
               <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
+                <input 
+                  type="tel" 
+                  required
+                  disabled={status === 'submitting'}
+                  className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100"
+                  placeholder="010-1234-5678"
+                  value={formState.phone}
+                  onChange={(e) => setFormState({...formState, phone: e.target.value})}
+                />
+              </div>
+              <div className="md:col-span-2">
                 <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
                 <input 
                   type="email" 
