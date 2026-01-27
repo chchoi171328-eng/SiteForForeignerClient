@@ -65,7 +65,16 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                {/* Legal Information */}
+                <div className="border-t border-gray-800 pt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                        사업자등록번호: 238-85-00581 | 광고책임변호사: 최철호
+                    </p>
+                </div>
+
+                {/* Copyright */}
+                <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">
                         &copy; {new Date().getFullYear()} SOL & LUNA Law Firm (법무법인 명). All rights reserved.
                     </p>
