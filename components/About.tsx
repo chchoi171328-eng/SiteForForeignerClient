@@ -28,12 +28,12 @@ const About: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-gold-400 font-bold uppercase tracking-widest mb-2">Who We Are</h2>
-                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">Bridging the Gap for International Clients</h3>
+                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">Expert Legal Solutions for International Clients</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            Living or doing business in a foreign country comes with unique legal challenges. At <span className="font-bold text-navy-900">SOL & LUNA Law Firm</span>, we specialize in helping expatriates and foreign corporations navigate the complexities of the Korean legal system.
+                            Navigating the Korean legal system requires more than just representation—it demands specialized insight and strategy. At <span className="font-bold text-navy-900">SOL & LUNA Law Firm</span>, we are dedicated to helping expatriates and foreign business owners operating in Korea overcome complex legal challenges with confidence.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Located in the heart of Pyeongtaek, we are strategically positioned to serve the diverse international community. Our team combines deep local expertise with a global perspective to protect your rights and interests.
+                            Backed by years of experience and a proven track record in foreigner-related cases, our team provides comprehensive legal support tailored to the global community. We combine deep knowledge of Korean law with an international perspective to protect your rights and deliver results.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6">
