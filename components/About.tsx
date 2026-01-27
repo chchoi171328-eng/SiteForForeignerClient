@@ -18,7 +18,7 @@ const About: React.FC = () => {
                     <div className="lg:w-1/2">
                         <div className="relative">
                             <LazyImage
-                                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80"
+                                src="/office1.png"
                                 alt="Professional business meeting between lawyers and clients discussing legal matters"
                                 className="rounded-lg shadow-2xl z-10 relative"
                             />
