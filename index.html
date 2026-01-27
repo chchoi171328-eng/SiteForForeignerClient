@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SOL & LUNA Law Firm | Expert Legal Services in Korea</title>
-    <meta name="description" content="Trusted legal partner for expatriates and international businesses in Pyeongtaek and Gyeonggi-do." />
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                400: '#D4AF37',
-                500: '#C5A028',
-                600: '#B49120',
-              },
-              navy: {
-                800: '#1e293b',
-                900: '#0f172a',
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOL & LUNA Law Firm | Expert Legal Services in Korea</title>
+  <meta name="description"
+    content="Trusted legal partner for expatriates and international businesses in Pyeongtaek and Gyeonggi-do." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              400: '#D4AF37',
+              500: '#C5A028',
+              600: '#B49120',
             },
-            fontFamily: {
-              serif: ['Cinzel', 'serif'],
-              sans: ['Lato', 'sans-serif'],
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
             }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Lato', 'sans-serif'],
           }
         }
       }
-    </script>
-    <style>
-      /* Smooth scrolling for anchor links */
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Screen reader only utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .sr-only:focus,
+    .focus\:not-sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: initial;
+      margin: initial;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -55,7 +84,10 @@
 }
 </script>
 </head>
-  <body class="bg-slate-50 text-slate-800 antialiased">
-    <div id="root"></div>
-  </body>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
