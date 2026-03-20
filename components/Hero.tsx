@@ -33,6 +33,7 @@ const Hero: React.FC = () => {
                     <div className="mb-10">
                         <a
                             href={`tel:${CONTACT_INFO.PHONE}`}
+                            onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
                             className="inline-flex items-center gap-3 text-3xl md:text-5xl font-serif font-bold text-white hover:text-gold-400 transition-colors group"
                             aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                         >

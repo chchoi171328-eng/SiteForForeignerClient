@@ -33,6 +33,7 @@ const LocationSection: React.FC = () => {
                                 <h3 className="font-bold text-lg text-gold-400 mb-1">Phone</h3>
                                 <a
                                     href={`tel:${CONTACT_INFO.PHONE}`}
+                                    onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
                                     className="text-gray-300 hover:text-white text-xl"
                                     aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                                 >

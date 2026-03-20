@@ -94,6 +94,7 @@ const Header: React.FC = () => {
                     ))}
                     <a
                         href={`tel:${CONTACT_INFO.PHONE}`}
+                        onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
                         className="bg-gold-400 text-navy-900 py-3 rounded text-center font-bold mt-2"
                         aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                     >

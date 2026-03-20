@@ -52,7 +52,11 @@ const Footer: React.FC = () => {
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li className="flex items-center gap-3">
                                 <Icons.Phone className="w-4 h-4 text-gold-400" aria-hidden="true" />
-                                <a href={`tel:${CONTACT_INFO.PHONE}`} aria-label={`Call ${CONTACT_INFO.PHONE}`}>
+                                <a 
+                                    href={`tel:${CONTACT_INFO.PHONE}`} 
+                                    onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
+                                    aria-label={`Call ${CONTACT_INFO.PHONE}`}
+                                >
                                     {CONTACT_INFO.PHONE}
                                 </a>
                             </li>

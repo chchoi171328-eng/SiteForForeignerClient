@@ -38,6 +38,7 @@ const App: React.FC = () => {
       <div className="lg:hidden fixed bottom-6 right-6 z-40">
         <a
           href={`tel:${CONTACT_INFO.PHONE}`}
+          onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
           className="bg-gold-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-gold-600 transition-colors animate-bounce"
           aria-label={`Call us now at ${CONTACT_INFO.PHONE}`}
         >

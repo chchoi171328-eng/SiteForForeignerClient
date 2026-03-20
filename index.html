@@ -18,6 +18,24 @@
     gtag('config', 'AW-18027167560');
   </script>
 
+  <!-- Event snippet for 클릭 투 콜 conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18027167560/04AECIaRm4wcEMj-gpRD',
+          'value': 1.0,
+          'currency': 'KRW',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
