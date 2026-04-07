@@ -46,7 +46,9 @@ const Header: React.FC = () => {
                             key={link.name}
                             href={link.href}
                             className="text-gray-200 hover:text-gold-400 font-sans text-sm tracking-wide transition-colors uppercase font-medium"
-                            onClick={(e) => handleSmoothScroll(e, link.href)}
+                            onClick={link.external ? undefined : (e) => handleSmoothScroll(e, link.href)}
+                            target={link.external ? "_blank" : undefined}
+                            rel={link.external ? "noopener noreferrer" : undefined}
                         >
                             {link.name}
                         </a>
@@ -87,7 +89,9 @@ const Header: React.FC = () => {
                             key={link.name}
                             href={link.href}
                             className="text-gray-200 text-lg py-2 border-b border-gray-800"
-                            onClick={(e) => handleSmoothScroll(e, link.href, () => setIsMobileMenuOpen(false))}
+                            onClick={link.external ? () => setIsMobileMenuOpen(false) : (e) => handleSmoothScroll(e, link.href, () => setIsMobileMenuOpen(false))}
+                            target={link.external ? "_blank" : undefined}
+                            rel={link.external ? "noopener noreferrer" : undefined}
                         >
                             {link.name}
                         </a>

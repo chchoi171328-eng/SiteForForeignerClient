@@ -11,6 +11,7 @@ export const NAV_LINKS = [
   { name: "About Us", href: "#about" },
   { name: "Practice Areas", href: "#practice" },
   { name: "Location", href: "#location" },
+  { name: "Legal Info", href: "https://blog.naver.com/natural_born", external: true },
   { name: "Contact", href: "#contact" },
 ];
 

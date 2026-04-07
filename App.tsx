@@ -34,12 +34,25 @@ const App: React.FC = () => {
       {/* Back to Top Button */}
       <BackToTop />
 
-      {/* Sticky Call Button for Mobile */}
-      <div className="lg:hidden fixed bottom-6 right-6 z-40">
+      {/* Sticky Call & Blog Buttons for Mobile */}
+      <div className="lg:hidden fixed bottom-6 right-6 z-40 flex flex-col gap-4">
+        {/* Naver Blog Button */}
+        <a
+          href="https://blog.naver.com/natural_born"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#03C75A] text-white rounded-full shadow-2xl flex items-center justify-center hover:bg-[#02b351] transition-colors"
+          style={{ width: '56px', height: '56px' }}
+          aria-label="Visit Naver Blog"
+        >
+          <span className="font-black text-2xl font-sans" style={{ marginTop: '2px', lineHeight: 1 }}>N</span>
+        </a>
+
+        {/* Call Button */}
         <a
           href={`tel:${CONTACT_INFO.PHONE}`}
           onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
-          className="bg-gold-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-gold-600 transition-colors animate-bounce"
+          className="bg-gold-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-gold-600 transition-colors"
           aria-label={`Call us now at ${CONTACT_INFO.PHONE}`}
         >
           <Icons.Phone className="w-6 h-6" />

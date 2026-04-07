@@ -36,8 +36,10 @@ const Footer: React.FC = () => {
                                     <a
                                         href={link.href}
                                         className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
-                                        onClick={(e) => handleSmoothScroll(e, link.href)}
-                                        aria-label={`Navigate to ${link.name} section`}
+                                        onClick={link.external ? undefined : (e) => handleSmoothScroll(e, link.href)}
+                                        target={link.external ? "_blank" : undefined}
+                                        rel={link.external ? "noopener noreferrer" : undefined}
+                                        aria-label={link.external ? `Visit ${link.name}` : `Navigate to ${link.name} section`}
                                     >
                                         {link.name}
                                     </a>
