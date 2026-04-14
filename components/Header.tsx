@@ -1,11 +1,19 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { CONTACT_INFO, NAV_LINKS } from '../constants';
 import { CustomLogo, Icons } from './Icons';
-import { handleSmoothScroll } from '../utils/smoothScroll';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === '/';
+
+    // On sub-pages, always show dark header
+    const showDarkHeader = !isHome || isScrolled;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,15 +25,14 @@ const Header: React.FC = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-navy-900 shadow-lg py-2' : 'bg-transparent py-4 lg:py-6'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showDarkHeader ? 'bg-navy-900 shadow-lg py-2' : 'bg-transparent py-4 lg:py-6'
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo Section */}
-                <a
-                    href="#home"
+                <Link
+                    href="/"
                     className="flex items-center gap-3 group"
-                    onClick={(e) => handleSmoothScroll(e, '#home')}
                     aria-label="SOL & LUNA Law Firm - Go to home"
                 >
                     <CustomLogo className={`transition-all duration-300 ${isScrolled ? 'w-10 h-10' : 'w-12 h-12 lg:w-16 lg:h-16'}`} />
@@ -37,31 +44,27 @@ const Header: React.FC = () => {
                             Law Firm
                         </span>
                     </div>
-                </a>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
                     {NAV_LINKS.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
                             href={link.href}
                             className="text-gray-200 hover:text-gold-400 font-sans text-sm tracking-wide transition-colors uppercase font-medium"
-                            onClick={link.external ? undefined : (e) => handleSmoothScroll(e, link.href)}
-                            target={link.external ? "_blank" : undefined}
-                            rel={link.external ? "noopener noreferrer" : undefined}
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
-                    <a
-                        href="#contact"
+                    <Link
+                        href="/contact"
                         className="flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-2.5 rounded-sm font-bold transition-all transform hover:-translate-y-0.5"
-                        onClick={(e) => handleSmoothScroll(e, '#contact')}
                         aria-label="Book a consultation"
                     >
                         <Icons.Phone className="w-4 h-4" />
                         <span>Book Consultation</span>
-                    </a>
+                    </Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -85,16 +88,14 @@ const Header: React.FC = () => {
                     aria-label="Mobile navigation"
                 >
                     {NAV_LINKS.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
                             href={link.href}
                             className="text-gray-200 text-lg py-2 border-b border-gray-800"
-                            onClick={link.external ? () => setIsMobileMenuOpen(false) : (e) => handleSmoothScroll(e, link.href, () => setIsMobileMenuOpen(false))}
-                            target={link.external ? "_blank" : undefined}
-                            rel={link.external ? "noopener noreferrer" : undefined}
+                            onClick={() => setIsMobileMenuOpen(false)}
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                     <a
                         href={`tel:${CONTACT_INFO.PHONE}`}

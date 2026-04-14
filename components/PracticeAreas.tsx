@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { SERVICE_AREAS } from '../constants';
 import { Icons } from './Icons';

@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
 import { Icons } from './Icons';
-import LazyImage from './LazyImage';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About: React.FC = () => {
@@ -17,10 +19,14 @@ const About: React.FC = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-1/2">
                         <div className="relative">
-                            <LazyImage
-                                src="/office1.png"
+                            <Image
+                                src="/assets/office1.png"
                                 alt="Professional business meeting between lawyers and clients discussing legal matters"
-                                className="rounded-lg shadow-2xl z-10 relative"
+                                width={800}
+                                height={600}
+                                className="rounded-lg shadow-2xl z-10 relative object-cover w-full h-auto"
+                                loading="eager"
+                                priority
                             />
                             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-navy-900 rounded-lg -z-0 hidden md:block" aria-hidden="true"></div>
                             <div className="absolute -top-6 -left-6 w-48 h-48 border-4 border-gold-400 rounded-lg -z-0 hidden md:block" aria-hidden="true"></div>

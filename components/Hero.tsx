@@ -1,17 +1,23 @@
+'use client';
+
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { CONTACT_INFO } from '../constants';
 import { Icons } from './Icons';
-import { handleSmoothScroll } from '../utils/smoothScroll';
 
 const Hero: React.FC = () => {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
                     alt="Modern law firm office environment with professional atmosphere"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-navy-900/80"></div>
             </div>
@@ -45,21 +51,19 @@ const Hero: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
-                        <a
-                            href="#contact"
+                        <Link
+                            href="/contact"
                             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all flex items-center justify-center gap-2"
-                            onClick={(e) => handleSmoothScroll(e, '#contact')}
                         >
                             <Icons.Calendar className="w-5 h-5" />
                             Initial Consultation
-                        </a>
-                        <a
-                            href="#practice"
+                        </Link>
+                        <Link
+                            href="/practice-areas"
                             className="bg-transparent border border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all"
-                            onClick={(e) => handleSmoothScroll(e, '#practice')}
                         >
                             Our Practice Areas
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

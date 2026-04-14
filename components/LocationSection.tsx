@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { CONTACT_INFO } from '../constants';
 import { Icons } from './Icons';
@@ -68,6 +70,7 @@ const LocationSection: React.FC = () => {
                         marginHeight={0}
                         marginWidth={0}
                         src={CONTACT_INFO.MAP_URL}
+                        loading="lazy"
                         className="grayscale hover:grayscale-0 transition-all duration-500"
                     >
                     </iframe>

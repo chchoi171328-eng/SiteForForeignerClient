@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
 import { CustomLogo, Icons } from './Icons';
-import { handleSmoothScroll } from '../utils/smoothScroll';
 import Modal from './Modal';
 
 const Footer: React.FC = () => {
@@ -33,16 +35,13 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3">
                             {NAV_LINKS.map(link => (
                                 <li key={link.name}>
-                                    <a
+                                    <Link
                                         href={link.href}
                                         className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
-                                        onClick={link.external ? undefined : (e) => handleSmoothScroll(e, link.href)}
-                                        target={link.external ? "_blank" : undefined}
-                                        rel={link.external ? "noopener noreferrer" : undefined}
-                                        aria-label={link.external ? `Visit ${link.name}` : `Navigate to ${link.name} section`}
+                                        aria-label={`Navigate to ${link.name} section`}
                                     >
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

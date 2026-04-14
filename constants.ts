@@ -7,12 +7,12 @@ export const CONTACT_INFO = {
 };
 
 export const NAV_LINKS = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Practice Areas", href: "#practice" },
-  { name: "Location", href: "#location" },
-  { name: "Legal Info", href: "https://blog.naver.com/natural_born", external: true },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Practice Areas", href: "/practice-areas" },
+  { name: "Location", href: "/location" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const SERVICE_AREAS = [
