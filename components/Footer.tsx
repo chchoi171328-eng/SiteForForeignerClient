@@ -9,9 +9,7 @@ import { reportPhoneConversion } from '../lib/gtag';
 import Modal from './Modal';
 
 const Footer: React.FC = () => {
-    const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
     const [isAntiSpamOpen, setIsAntiSpamOpen] = useState(false);
-    const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
     return (
         <footer className="bg-navy-900 text-white border-t border-gray-800 pt-16 pb-8" role="contentinfo">
@@ -107,25 +105,32 @@ const Footer: React.FC = () => {
                 {/* Legal Policy Links */}
                 <div className="border-t border-gray-800 pt-6 text-center">
                     <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm">
-                        <button
-                            onClick={() => setIsPrivacyOpen(true)}
+                        <Link
+                            href="/privacy"
                             className="text-gray-400 hover:text-gold-400 transition-colors underline"
                         >
                             Privacy Policy
-                        </button>
+                        </Link>
+                        <span className="text-gray-600">|</span>
+                        <Link
+                            href="/terms"
+                            className="text-gray-400 hover:text-gold-400 transition-colors underline"
+                        >
+                            Terms of Use
+                        </Link>
+                        <span className="text-gray-600">|</span>
+                        <Link
+                            href="/disclaimer"
+                            className="text-gray-400 hover:text-gold-400 transition-colors underline"
+                        >
+                            Disclaimer
+                        </Link>
                         <span className="text-gray-600">|</span>
                         <button
                             onClick={() => setIsAntiSpamOpen(true)}
                             className="text-gray-400 hover:text-gold-400 transition-colors underline"
                         >
                             Anti-Spam Policy
-                        </button>
-                        <span className="text-gray-600">|</span>
-                        <button
-                            onClick={() => setIsDisclaimerOpen(true)}
-                            className="text-gray-400 hover:text-gold-400 transition-colors underline"
-                        >
-                            Disclaimer
                         </button>
                     </div>
                 </div>
@@ -147,51 +152,6 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Privacy Policy Modal */}
-            <Modal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} title="Privacy Policy">
-                <div className="space-y-4">
-                    <h3 className="font-bold text-lg text-navy-900">Privacy Policy</h3>
-                    <p>
-                        SOL & LUNA Law Firm ("we," "our," or "us") is committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">1. Information We Collect</h4>
-                    <p>
-                        We may collect personal information that you voluntarily provide to us when you contact us, including but not limited to:
-                    </p>
-                    <ul className="list-disc pl-6 space-y-1">
-                        <li>Name and contact information (email address, phone number, address)</li>
-                        <li>Legal matter details and case information</li>
-                        <li>Communication preferences</li>
-                        <li>Any other information you choose to provide</li>
-                    </ul>
-
-                    <h4 className="font-bold text-navy-900 mt-4">2. How We Use Your Information</h4>
-                    <p>We use the information we collect to:</p>
-                    <ul className="list-disc pl-6 space-y-1">
-                        <li>Provide legal services and respond to your inquiries</li>
-                        <li>Communicate with you about your legal matters</li>
-                        <li>Improve our services and client experience</li>
-                        <li>Comply with legal obligations</li>
-                    </ul>
-
-                    <h4 className="font-bold text-navy-900 mt-4">3. Information Security</h4>
-                    <p>
-                        We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">4. Your Rights</h4>
-                    <p>
-                        Under Korean Personal Information Protection Act (PIPA), you have the right to access, correct, delete, or suspend the processing of your personal information. You may exercise these rights by contacting us.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">5. Contact Us</h4>
-                    <p>
-                        If you have any questions about this Privacy Policy, please contact us at {CONTACT_INFO.EMAIL} or call {CONTACT_INFO.PHONE}.
-                    </p>
-                </div>
-            </Modal>
 
             {/* Anti-Spam Policy Modal */}
             <Modal isOpen={isAntiSpamOpen} onClose={() => setIsAntiSpamOpen(false)} title="Anti-Spam Policy">
@@ -223,50 +183,6 @@ const Footer: React.FC = () => {
                 </div>
             </Modal>
 
-            {/* Disclaimer Modal */}
-            <Modal isOpen={isDisclaimerOpen} onClose={() => setIsDisclaimerOpen(false)} title="Legal Disclaimer">
-                <div className="space-y-4">
-                    <h3 className="font-bold text-lg text-navy-900">Legal Disclaimer</h3>
-                    <p>
-                        Please read this disclaimer carefully before using the services of SOL & LUNA Law Firm.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">1. No Attorney-Client Relationship</h4>
-                    <p>
-                        The information provided on this website and through initial consultations does not create an attorney-client relationship. An attorney-client relationship is established only through a formal engagement agreement signed by both parties.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">2. General Information Only</h4>
-                    <p>
-                        The content on this website is for general informational purposes only and should not be construed as legal advice. Every legal situation is unique, and information provided may not be applicable to your specific circumstances.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">3. No Guarantee of Results</h4>
-                    <p>
-                        Prior results do not guarantee a similar outcome. The outcome of any legal matter depends on many factors unique to each case. We cannot and do not guarantee specific results.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">4. Jurisdictional Limitations</h4>
-                    <p>
-                        Our legal services are provided in accordance with Korean law. We primarily serve clients in Korea and matters governed by Korean jurisdiction. International or cross-border legal matters may require coordination with attorneys in other jurisdictions.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">5. Website Accuracy</h4>
-                    <p>
-                        While we strive to keep the information on this website current and accurate, we make no representations or warranties of any kind about the completeness, accuracy, or reliability of the information.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">6. Limitation of Liability</h4>
-                    <p>
-                        SOL & LUNA Law Firm shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of this website or our services.
-                    </p>
-
-                    <h4 className="font-bold text-navy-900 mt-4">7. Contact for Legal Advice</h4>
-                    <p>
-                        For specific legal advice tailored to your situation, please contact us for a consultation at {CONTACT_INFO.PHONE} or {CONTACT_INFO.EMAIL}.
-                    </p>
-                </div>
-            </Modal>
         </footer>
     );
 };
