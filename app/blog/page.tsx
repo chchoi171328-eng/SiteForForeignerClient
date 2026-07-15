@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Read our latest articles and updates regarding Korean law, corporate compliance, and legal tips for foreigners.',
+  description: 'Read our latest articles and updates regarding Korean law and legal tips for foreigners.',
   openGraph: {
     title: 'Blog | SOL & LUNA Law Firm',
     description: 'Legal insights and news — Korean law articles and tips for foreigners.',

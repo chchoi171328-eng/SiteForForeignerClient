@@ -17,7 +17,7 @@ const PracticeAreas: React.FC = () => {
         >
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-gold-600 font-bold uppercase tracking-widest mb-2">Our Expertise</h2>
+                    <h2 className="text-gold-600 font-bold uppercase tracking-widest mb-2">Our Practice Areas</h2>
                     <h3 className="text-3xl md:text-4xl font-serif font-bold text-navy-900">Comprehensive Legal Solutions</h3>
                 </div>
 

@@ -29,10 +29,10 @@ const Hero: React.FC = () => {
                     </p>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 leading-tight">
                         Navigating Korean Law <br />
-                        <span className="text-gray-300 font-light">With Expertise & Experience</span>
+                        <span className="text-gray-300 font-light">For Foreign Residents in Korea</span>
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
-                        SOL & LUNA (Law Firm Myeong) provides dedicated legal services tailored for the international community, backed by extensive experience and specialized expertise.
+                        SOL & LUNA (Law Firm Myeong) provides dedicated legal services tailored for the international community, with years of experience in foreigner-related cases.
                     </p>
 
                     {/* Prominent Phone Number */}

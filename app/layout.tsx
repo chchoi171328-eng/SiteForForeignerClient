@@ -21,8 +21,9 @@ const jsonLd = {
   telephone: '031-658-6100',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '1029-1 Pyeongnam-ro, Pyeongtaek-si',
-    addressLocality: 'Gyeonggi-do',
+    streetAddress: '5F, SJ Plaza, 1029-1 Pyeongnam-ro',
+    addressLocality: 'Pyeongtaek-si',
+    addressRegion: 'Gyeonggi-do',
     addressCountry: 'KR'
   }
 }
@@ -30,23 +31,23 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://sllaw.co.kr'),
   title: {
-    default: 'SOL & LUNA Law Firm | Expert Legal Services in Korea',
+    default: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
     template: '%s | SOL & LUNA Law Firm',
   },
-  description: 'Trusted legal partner for expatriates and international businesses in Pyeongtaek and Gyeonggi-do.',
+  description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters. Paid consultations are available by appointment in Pyeongtaek.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://sllaw.co.kr',
     siteName: 'SOL & LUNA Law Firm',
-    title: 'SOL & LUNA Law Firm | Expert Legal Services in Korea',
-    description: 'Trusted legal partner for expatriates and international businesses in Pyeongtaek and Gyeonggi-do.',
+    title: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
+    description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters.',
     images: [{ url: '/assets/logo.png', width: 512, height: 512, alt: 'SOL & LUNA Law Firm Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SOL & LUNA Law Firm | Expert Legal Services in Korea',
-    description: 'Trusted legal partner for expatriates and international businesses in Pyeongtaek and Gyeonggi-do.',
+    title: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
+    description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters.',
     images: ['/assets/logo.png'],
   },
   alternates: {

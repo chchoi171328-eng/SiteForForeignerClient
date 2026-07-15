@@ -18,23 +18,28 @@ export const NAV_LINKS = [
 export const SERVICE_AREAS = [
   {
     title: "Criminal Defense",
-    description: "Protecting your rights in foreign jurisdictions with experienced defense attorneys.",
+    description: "Defense representation for foreign residents in Korean criminal cases and police investigations.",
     icon: "Shield"
   },
   {
-    title: "Divorce & Family Law",
-    description: "Compassionate handling of international divorce, child custody, and inheritance matters.",
-    icon: "Users"
-  },
-  {
     title: "Civil Litigation",
-    description: "Resolving disputes involving contracts, property, and damages with strategic legal representation.",
+    description: "Resolving disputes involving contracts, property, and damages before Korean courts.",
     icon: "Scale"
   },
   {
-    title: "Corporate Law",
-    description: "Legal support for foreign direct investment (FDI), business establishment, and corporate compliance.",
+    title: "Real Estate & Lease Disputes",
+    description: "Assistance with housing leases, deposit recovery, and real estate disputes in Korea.",
     icon: "Building"
+  },
+  {
+    title: "Debt Collection",
+    description: "Recovering unpaid debts and enforcing claims and judgments in Korea.",
+    icon: "Banknote"
+  },
+  {
+    title: "Divorce & Family Law",
+    description: "Handling international divorce, child custody, and inheritance matters.",
+    icon: "Users"
   },
   {
     title: "Labor & Employment",
