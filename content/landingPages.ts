@@ -96,12 +96,6 @@ export const LANDING_PAGES: LandingPage[] = [
         ],
       },
       {
-        heading: 'Emergency vs. Non-Emergency',
-        paragraphs: [
-          'If you are in an emergency or in immediate custody, contact the Korean emergency services (112) first. Our office responds to inquiries during business hours and is not an emergency service.',
-        ],
-      },
-      {
         heading: 'How to Request a Consultation',
         paragraphs: [
           'Send a brief description of your situation through the contact form or by phone. Initial consultations are paid and by appointment — 30 minutes for ₩100,000 (approx. US$70), VAT included, conducted directly by the attorney in English.',
