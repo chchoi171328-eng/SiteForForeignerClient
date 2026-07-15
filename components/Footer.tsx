@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
 import { CustomLogo, Icons } from './Icons';
+import { reportPhoneConversion } from '../lib/gtag';
 import Modal from './Modal';
 
 const Footer: React.FC = () => {
@@ -55,7 +56,7 @@ const Footer: React.FC = () => {
                                 <Icons.Phone className="w-4 h-4 text-gold-400" aria-hidden="true" />
                                 <a 
                                     href={`tel:${CONTACT_INFO.PHONE}`} 
-                                    onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
+                                    onClick={reportPhoneConversion}
                                     aria-label={`Call ${CONTACT_INFO.PHONE}`}
                                 >
                                     {CONTACT_INFO.PHONE}
