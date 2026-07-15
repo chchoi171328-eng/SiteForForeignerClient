@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Icons } from './Icons';
 import { CONTACT_INFO } from '../constants';
+import { trackEvent } from '../lib/gtag';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 // EmailJS Configuration from environment variables
@@ -44,6 +45,15 @@ const ContactSection: React.FC = () => {
     const [honeypot, setHoneypot] = useState('');
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const { ref, isVisible } = useScrollAnimation(0.2);
+    // Fire "contact_form_started" only on the first interaction.
+    const startedRef = useRef(false);
+
+    const handleFormStart = () => {
+        if (!startedRef.current) {
+            startedRef.current = true;
+            trackEvent('contact_form_started');
+        }
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -82,6 +92,7 @@ const ContactSection: React.FC = () => {
             );
 
             setStatus('success');
+            trackEvent('contact_form_submitted');
             setFormState({ name: '', email: '', phone: '', message: '' });
             setErrors({});
         } catch (error) {
@@ -127,7 +138,7 @@ const ContactSection: React.FC = () => {
                         </div>
                     )}
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} onFocus={handleFormStart} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label htmlFor="contact-name" className="block text-sm font-bold text-gray-700 mb-2">

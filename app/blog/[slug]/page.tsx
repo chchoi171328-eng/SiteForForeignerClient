@@ -11,6 +11,7 @@ import {
 } from '@/content/blog'
 import { getPracticeArea } from '@/content/practiceAreas'
 import { Icons } from '@/components/Icons'
+import TrackView from '@/components/TrackView'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -80,6 +81,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="pt-24 lg:pt-32 pb-20">
+      <TrackView event="blog_article_viewed" params={{ slug: post.slug }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <article className="container mx-auto px-6 max-w-3xl">

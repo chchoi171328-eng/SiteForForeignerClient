@@ -64,14 +64,15 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
       {
         heading: '4. Third-Party Processors and Cross-Border Transfer',
         paragraphs: [
-          'To receive and respond to your inquiries, we use EmailJS, an email delivery service, to transmit the contents of your inquiry to us. This provider processes data on servers located outside Korea (in the United States), so submitting an inquiry involves a cross-border transfer of the personal information it contains.',
-          'The information transferred is limited to what you include in the inquiry — such as your name, contact details, and message — and is used only to deliver and respond to that inquiry.',
+          'To receive and respond to your inquiries, we use EmailJS, an email delivery service, to transmit the contents of your inquiry to us. The information transferred is limited to what you include in the inquiry — such as your name, contact details, and message — and is used only to deliver and respond to that inquiry.',
+          'To understand how visitors use our website, we use Google Analytics, which collects usage data such as pages viewed and general interactions in an aggregated form. Google Analytics does not receive the contents of your inquiries.',
+          'Both providers process data on servers located outside Korea (in the United States), so using this website and submitting an inquiry may involve a cross-border transfer of the personal information described above.',
         ],
       },
       {
         heading: '5. Cookies',
         paragraphs: [
-          'This website does not use analytics or advertising cookies. Any cookies used are limited to those strictly necessary for the website to function. You can control or delete cookies through your browser settings.',
+          'This website uses cookies that are strictly necessary for it to function, and Google Analytics cookies that help us measure website usage. This website does not use advertising cookies. You can control or delete cookies through your browser settings.',
         ],
       },
       {

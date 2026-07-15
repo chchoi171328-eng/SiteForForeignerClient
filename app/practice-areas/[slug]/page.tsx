@@ -9,6 +9,7 @@ import {
 } from '@/content/practiceAreas'
 import { CONSULTATION, CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
+import TrackView from '@/components/TrackView'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -92,6 +93,7 @@ export default async function PracticeAreaDetailPage({
 
   return (
     <div className="pt-24 lg:pt-32 pb-20">
+      <TrackView event="practice_area_viewed" params={{ slug: area.slug }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="container mx-auto px-6 max-w-3xl">

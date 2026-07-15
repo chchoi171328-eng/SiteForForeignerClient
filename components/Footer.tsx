@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
 import { LANDING_PAGES } from '../content/landingPages';
 import { CustomLogo, Icons } from './Icons';
-import { reportPhoneConversion } from '../lib/gtag';
+import { reportPhoneConversion, trackEvent } from '../lib/gtag';
 import Modal from './Modal';
 
 const Footer: React.FC = () => {
@@ -88,7 +88,11 @@ const Footer: React.FC = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Icons.Mail className="w-4 h-4 text-gold-400" aria-hidden="true" />
-                                <a href={`mailto:${CONTACT_INFO.EMAIL}`} aria-label={`Email ${CONTACT_INFO.EMAIL}`}>
+                                <a
+                                    href={`mailto:${CONTACT_INFO.EMAIL}`}
+                                    onClick={() => trackEvent('email_clicked')}
+                                    aria-label={`Email ${CONTACT_INFO.EMAIL}`}
+                                >
                                     {CONTACT_INFO.EMAIL}
                                 </a>
                             </li>

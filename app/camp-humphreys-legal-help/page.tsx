@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import LandingTemplate from '@/components/LandingTemplate'
+import TrackView from '@/components/TrackView'
 import { getLandingPage } from '@/content/landingPages'
 
 const page = getLandingPage('camp-humphreys-legal-help')!
@@ -14,5 +15,10 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <LandingTemplate page={page} />
+  return (
+    <>
+      <TrackView event="camp_humphreys_page_viewed" />
+      <LandingTemplate page={page} />
+    </>
+  )
 }

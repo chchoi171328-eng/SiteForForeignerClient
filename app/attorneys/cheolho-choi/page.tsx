@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ATTORNEY, CONSULTATION, CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
+import TrackView from '@/components/TrackView'
 
 const PAGE_URL = 'https://www.lsfp.co.kr/attorneys/cheolho-choi'
 
@@ -58,6 +59,7 @@ const RELATED_AREAS = [
 export default function AttorneyProfilePage() {
   return (
     <div className="pt-24 lg:pt-32 pb-20">
+      <TrackView event="attorney_profile_viewed" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
