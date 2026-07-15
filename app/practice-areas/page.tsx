@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Practice Areas | SOL & LUNA Law Firm',
     description: 'Legal representation across criminal defense, civil litigation, real estate, debt collection, family law, and labor matters in Pyeongtaek, Korea.',
-    url: 'https://sllaw.co.kr/practice-areas',
+    url: 'https://www.lsfp.co.kr/practice-areas',
   },
   twitter: {
     card: 'summary',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Legal representation across criminal defense, civil litigation, real estate, debt collection, family law, and labor matters.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/practice-areas',
+    canonical: 'https://www.lsfp.co.kr/practice-areas',
   },
 }
 

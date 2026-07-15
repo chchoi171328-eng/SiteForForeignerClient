@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Blog | SOL & LUNA Law Firm',
     description: 'Legal insights and news — Korean law articles and tips for foreigners.',
-    url: 'https://sllaw.co.kr/blog',
+    url: 'https://www.lsfp.co.kr/blog',
   },
   twitter: {
     card: 'summary',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'Legal insights and news — Korean law articles and tips for foreigners.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/blog',
+    canonical: 'https://www.lsfp.co.kr/blog',
   },
 }
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Location & Office | SOL & LUNA Law Firm',
     description: 'Find our office in Pyeongtaek — conveniently located to serve the international community near Camp Humphreys.',
-    url: 'https://sllaw.co.kr/location',
+    url: 'https://www.lsfp.co.kr/location',
   },
   twitter: {
     card: 'summary',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Find our office in Pyeongtaek — conveniently located to serve the international community.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/location',
+    canonical: 'https://www.lsfp.co.kr/location',
   },
 }
 

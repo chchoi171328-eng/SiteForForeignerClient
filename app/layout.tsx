@@ -15,9 +15,9 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
   name: 'SOL & LUNA Law Firm',
-  image: 'https://sllaw.co.kr/assets/logo.png',
-  '@id': 'https://sllaw.co.kr',
-  url: 'https://sllaw.co.kr',
+  image: 'https://www.lsfp.co.kr/assets/logo.png',
+  '@id': 'https://www.lsfp.co.kr',
+  url: 'https://www.lsfp.co.kr',
   telephone: '031-658-6100',
   address: {
     '@type': 'PostalAddress',
@@ -29,7 +29,7 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sllaw.co.kr'),
+  metadataBase: new URL('https://www.lsfp.co.kr'),
   title: {
     default: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
     template: '%s | SOL & LUNA Law Firm',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sllaw.co.kr',
+    url: 'https://www.lsfp.co.kr',
     siteName: 'SOL & LUNA Law Firm',
     title: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
     description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters.',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     images: ['/assets/logo.png'],
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr',
+    canonical: 'https://www.lsfp.co.kr',
   },
 }
 

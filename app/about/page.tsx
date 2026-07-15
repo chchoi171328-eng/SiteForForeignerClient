@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Us | SOL & LUNA Law Firm',
     description: 'Learn more about SOL & LUNA Law Firm — providing dedicated legal services for the international community in Korea.',
-    url: 'https://sllaw.co.kr/about',
+    url: 'https://www.lsfp.co.kr/about',
   },
   twitter: {
     card: 'summary',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Learn more about SOL & LUNA Law Firm — providing dedicated legal services for the international community in Korea.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/about',
+    canonical: 'https://www.lsfp.co.kr/about',
   },
 }
 

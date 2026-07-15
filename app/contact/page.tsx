@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us | SOL & LUNA Law Firm',
     description: 'Request a paid consultation with SOL & LUNA Law Firm in Pyeongtaek. English consultations available for foreign residents in Korea.',
-    url: 'https://sllaw.co.kr/contact',
+    url: 'https://www.lsfp.co.kr/contact',
   },
   twitter: {
     card: 'summary',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Request a paid consultation with SOL & LUNA Law Firm in Pyeongtaek. English consultations available for foreign residents in Korea.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/contact',
+    canonical: 'https://www.lsfp.co.kr/contact',
   },
 }
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/api/'],
     },
-    sitemap: 'https://sllaw.co.kr/sitemap.xml',
+    sitemap: 'https://www.lsfp.co.kr/sitemap.xml',
   }
 }
