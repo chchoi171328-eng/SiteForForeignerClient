@@ -55,35 +55,4 @@ export const NAV_LINKS = [
   { name: "Contact", href: "/contact" },
 ];
 
-export const SERVICE_AREAS = [
-  {
-    title: "Criminal Defense",
-    description: "Defense representation for foreign residents in Korean criminal cases and police investigations.",
-    icon: "Shield"
-  },
-  {
-    title: "Civil Litigation",
-    description: "Resolving disputes involving contracts, property, and damages before Korean courts.",
-    icon: "Scale"
-  },
-  {
-    title: "Real Estate & Lease Disputes",
-    description: "Assistance with housing leases, deposit recovery, and real estate disputes in Korea.",
-    icon: "Building"
-  },
-  {
-    title: "Debt Collection",
-    description: "Recovering unpaid debts and enforcing claims and judgments in Korea.",
-    icon: "Banknote"
-  },
-  {
-    title: "Divorce & Family Law",
-    description: "Handling international divorce, child custody, and inheritance matters.",
-    icon: "Users"
-  },
-  {
-    title: "Labor & Employment",
-    description: "Guidance on Korean labor laws, unfair dismissal, and wage disputes for employees and employers.",
-    icon: "Briefcase"
-  }
-];
+// Practice-area content now lives in content/practiceAreas.ts (single source of truth).
