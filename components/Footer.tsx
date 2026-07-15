@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
+import { LANDING_PAGES } from '../content/landingPages';
 import { CustomLogo, Icons } from './Icons';
 import { reportPhoneConversion } from '../lib/gtag';
 import Modal from './Modal';
@@ -15,7 +16,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-navy-900 text-white border-t border-gray-800 pt-16 pb-8" role="contentinfo">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3 mb-6">
@@ -42,6 +43,31 @@ const Footer: React.FC = () => {
                                         aria-label={`Navigate to ${link.name} section`}
                                     >
                                         {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* For Foreigners */}
+                    <div>
+                        <h4 className="font-serif font-bold text-lg mb-6">For Foreigners</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link
+                                    href="/attorneys/cheolho-choi"
+                                    className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
+                                >
+                                    Meet Attorney Cheolho Choi
+                                </Link>
+                            </li>
+                            {LANDING_PAGES.map(page => (
+                                <li key={page.slug}>
+                                    <Link
+                                        href={`/${page.slug}`}
+                                        className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
+                                    >
+                                        {page.title}
                                     </Link>
                                 </li>
                             ))}
