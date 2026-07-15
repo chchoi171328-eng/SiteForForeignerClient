@@ -56,19 +56,38 @@ export const LEGAL_DOCUMENTS: LegalDocument[] = [
         ],
       },
       {
-        heading: '3. Information Security',
+        heading: '3. Retention Period',
+        paragraphs: [
+          'We retain the personal information you submit through an inquiry for one (1) year from the date of collection, after which it is destroyed without delay. Where a specific retention period is required by applicable law, we retain the relevant information for that statutory period.',
+        ],
+      },
+      {
+        heading: '4. Third-Party Processors and Cross-Border Transfer',
+        paragraphs: [
+          'To receive and respond to your inquiries, we use EmailJS, an email delivery service, to transmit the contents of your inquiry to us. This provider processes data on servers located outside Korea (in the United States), so submitting an inquiry involves a cross-border transfer of the personal information it contains.',
+          'The information transferred is limited to what you include in the inquiry — such as your name, contact details, and message — and is used only to deliver and respond to that inquiry.',
+        ],
+      },
+      {
+        heading: '5. Cookies',
+        paragraphs: [
+          'This website does not use analytics or advertising cookies. Any cookies used are limited to those strictly necessary for the website to function. You can control or delete cookies through your browser settings.',
+        ],
+      },
+      {
+        heading: '6. Information Security',
         paragraphs: [
           'We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.',
         ],
       },
       {
-        heading: '4. Your Rights',
+        heading: '7. Your Rights',
         paragraphs: [
           'Under the Korean Personal Information Protection Act (PIPA), you have the right to access, correct, delete, or suspend the processing of your personal information. You may exercise these rights by contacting us.',
         ],
       },
       {
-        heading: '5. Contact Us',
+        heading: '8. Contact Us',
         paragraphs: [
           `If you have any questions about this Privacy Policy, please contact us at ${CONTACT_INFO.EMAIL} or call ${CONTACT_INFO.PHONE}.`,
         ],
