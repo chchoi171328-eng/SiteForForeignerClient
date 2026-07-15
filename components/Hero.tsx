@@ -57,13 +57,13 @@ const Hero: React.FC = () => {
                             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all flex items-center justify-center gap-2"
                         >
                             <Icons.Calendar className="w-5 h-5" />
-                            Initial Consultation
+                            Request a Paid Consultation
                         </Link>
                         <Link
-                            href="/practice-areas"
+                            href="/attorneys/cheolho-choi"
                             className="bg-transparent border border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all"
                         >
-                            Our Practice Areas
+                            Meet Attorney Cheolho Choi
                         </Link>
                     </div>
                 </div>
