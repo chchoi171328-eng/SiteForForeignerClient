@@ -11,13 +11,56 @@ const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+// Content-length limits (also enforced with maxLength on the inputs).
+const LIMITS = { name: 100, phone: 30, email: 150, message: 2000, messageMin: 10 } as const;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+type FieldErrors = Partial<Record<'name' | 'email' | 'phone' | 'message', string>>;
+
+function validate(form: { name: string; email: string; phone: string; message: string }): FieldErrors {
+    const errors: FieldErrors = {};
+    if (!form.name.trim()) errors.name = 'Please enter your name.';
+    else if (form.name.trim().length > LIMITS.name) errors.name = 'Name is too long.';
+
+    if (!form.phone.trim()) errors.phone = 'Please enter a phone number.';
+    else if (form.phone.trim().length > LIMITS.phone) errors.phone = 'Phone number is too long.';
+
+    if (!form.email.trim()) errors.email = 'Please enter your email.';
+    else if (!EMAIL_RE.test(form.email.trim())) errors.email = 'Please enter a valid email address.';
+
+    const msg = form.message.trim();
+    if (!msg) errors.message = 'Please describe your inquiry.';
+    else if (msg.length < LIMITS.messageMin) errors.message = 'Please provide a little more detail.';
+    else if (msg.length > LIMITS.message) errors.message = 'Message is too long.';
+
+    return errors;
+}
+
 const ContactSection: React.FC = () => {
     const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' });
+    const [errors, setErrors] = useState<FieldErrors>({});
+    // Honeypot: a field hidden from real users. If it is filled, the submission
+    // is almost certainly a bot and is dropped.
+    const [honeypot, setHoneypot] = useState('');
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const { ref, isVisible } = useScrollAnimation(0.2);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        // Guard against double submission (e.g. Enter key + click).
+        if (status === 'submitting') return;
+
+        // Honeypot tripped → silently accept without sending (do not tip off the bot).
+        if (honeypot.trim() !== '') {
+            setStatus('success');
+            setFormState({ name: '', email: '', phone: '', message: '' });
+            return;
+        }
+
+        const nextErrors = validate(formState);
+        setErrors(nextErrors);
+        if (Object.keys(nextErrors).length > 0) return;
+
         setStatus('submitting');
 
         try {
@@ -30,16 +73,17 @@ const ContactSection: React.FC = () => {
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 {
-                    from_name: formState.name,
-                    from_email: formState.email,
-                    from_phone: formState.phone,
-                    message: formState.message,
+                    from_name: formState.name.trim(),
+                    from_email: formState.email.trim(),
+                    from_phone: formState.phone.trim(),
+                    message: formState.message.trim(),
                 },
                 EMAILJS_PUBLIC_KEY
             );
 
             setStatus('success');
             setFormState({ name: '', email: '', phone: '', message: '' });
+            setErrors({});
         } catch (error) {
             console.error("Failed to send email:", error);
             setStatus('error');
@@ -93,13 +137,19 @@ const ContactSection: React.FC = () => {
                                     id="contact-name"
                                     type="text"
                                     required
+                                    maxLength={LIMITS.name}
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100"
                                     placeholder="John Doe"
                                     value={formState.name}
                                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                                     aria-required="true"
+                                    aria-invalid={!!errors.name}
+                                    aria-describedby={errors.name ? 'contact-name-error' : undefined}
                                 />
+                                {errors.name && (
+                                    <p id="contact-name-error" className="text-red-600 text-sm mt-1">{errors.name}</p>
+                                )}
                             </div>
                             <div>
                                 <label htmlFor="contact-phone" className="block text-sm font-bold text-gray-700 mb-2">
@@ -109,13 +159,19 @@ const ContactSection: React.FC = () => {
                                     id="contact-phone"
                                     type="tel"
                                     required
+                                    maxLength={LIMITS.phone}
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100"
                                     placeholder="010-1234-5678"
                                     value={formState.phone}
                                     onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                                     aria-required="true"
+                                    aria-invalid={!!errors.phone}
+                                    aria-describedby={errors.phone ? 'contact-phone-error' : undefined}
                                 />
+                                {errors.phone && (
+                                    <p id="contact-phone-error" className="text-red-600 text-sm mt-1">{errors.phone}</p>
+                                )}
                             </div>
                             <div className="md:col-span-2">
                                 <label htmlFor="contact-email" className="block text-sm font-bold text-gray-700 mb-2">
@@ -125,13 +181,19 @@ const ContactSection: React.FC = () => {
                                     id="contact-email"
                                     type="email"
                                     required
+                                    maxLength={LIMITS.email}
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100"
                                     placeholder="john@example.com"
                                     value={formState.email}
                                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                                     aria-required="true"
+                                    aria-invalid={!!errors.email}
+                                    aria-describedby={errors.email ? 'contact-email-error' : undefined}
                                 />
+                                {errors.email && (
+                                    <p id="contact-email-error" className="text-red-600 text-sm mt-1">{errors.email}</p>
+                                )}
                             </div>
                         </div>
 
@@ -143,13 +205,32 @@ const ContactSection: React.FC = () => {
                                 id="contact-message"
                                 required
                                 rows={4}
+                                maxLength={LIMITS.message}
                                 disabled={status === 'submitting'}
                                 className="w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100"
                                 placeholder="Briefly describe your legal inquiry..."
                                 value={formState.message}
                                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                                 aria-required="true"
+                                aria-invalid={!!errors.message}
+                                aria-describedby={errors.message ? 'contact-message-error' : undefined}
                             ></textarea>
+                            {errors.message && (
+                                <p id="contact-message-error" className="text-red-600 text-sm mt-1">{errors.message}</p>
+                            )}
+                        </div>
+
+                        {/* Honeypot: hidden from users; bots that fill it are dropped. */}
+                        <div className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+                            <label htmlFor="contact-company">Company (leave this field empty)</label>
+                            <input
+                                id="contact-company"
+                                type="text"
+                                tabIndex={-1}
+                                autoComplete="off"
+                                value={honeypot}
+                                onChange={(e) => setHoneypot(e.target.value)}
+                            />
                         </div>
 
                         <button
