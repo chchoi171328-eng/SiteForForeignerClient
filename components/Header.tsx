@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { CONTACT_INFO, NAV_LINKS } from '../constants';
 import { CustomLogo, Icons } from './Icons';
+import { reportPhoneConversion } from '../lib/gtag';
 
 const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -99,7 +100,7 @@ const Header: React.FC = () => {
                     ))}
                     <a
                         href={`tel:${CONTACT_INFO.PHONE}`}
-                        onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
+                        onClick={reportPhoneConversion}
                         className="bg-gold-400 text-navy-900 py-3 rounded text-center font-bold mt-2"
                         aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                     >
