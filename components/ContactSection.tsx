@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Icons } from './Icons';
+import { CONTACT_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 // EmailJS Configuration from environment variables
@@ -12,7 +13,7 @@ const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const ContactSection: React.FC = () => {
     const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' });
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const { ref, isVisible } = useScrollAnimation(0.2);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -20,37 +21,28 @@ const ContactSection: React.FC = () => {
         setStatus('submitting');
 
         try {
-            if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
-                // Real EmailJS Send
-                await emailjs.send(
-                    EMAILJS_SERVICE_ID,
-                    EMAILJS_TEMPLATE_ID,
-                    {
-                        from_name: formState.name,
-                        from_email: formState.email,
-                        from_phone: formState.phone,
-                        message: formState.message,
-                    },
-                    EMAILJS_PUBLIC_KEY
-                );
-            } else {
-                // Simulated Send if keys are missing
-                console.log("EmailJS keys are missing. Simulating success.");
-                await new Promise(resolve => setTimeout(resolve, 1500));
+            if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+                // Never show a fake success — treat missing configuration as a real failure.
+                throw new Error('Email service is not configured (missing EmailJS environment variables).');
             }
+
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: formState.name,
+                    from_email: formState.email,
+                    from_phone: formState.phone,
+                    message: formState.message,
+                },
+                EMAILJS_PUBLIC_KEY
+            );
 
             setStatus('success');
             setFormState({ name: '', email: '', phone: '', message: '' });
-
-            // Reset status after showing success message
-            setTimeout(() => {
-                setStatus('idle');
-            }, 5000);
-
         } catch (error) {
             console.error("Failed to send email:", error);
-            alert("Failed to send message. Please try again or contact us directly via phone.");
-            setStatus('idle');
+            setStatus('error');
         }
     };
 
@@ -64,7 +56,7 @@ const ContactSection: React.FC = () => {
             <div className="container mx-auto px-6 max-w-4xl">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Request a Consultation</h2>
-                    <p className="text-gray-600">Send us a message and our team will get back to you within 24 hours.</p>
+                    <p className="text-gray-600">Send us a message and we will respond during business hours (weekdays).</p>
                 </div>
 
                 <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg relative overflow-hidden">
@@ -178,6 +170,15 @@ const ContactSection: React.FC = () => {
                                 </>
                             )}
                         </button>
+
+                        {status === 'error' && (
+                            <p role="alert" aria-live="assertive" className="text-red-600 text-center font-medium">
+                                We could not send your message. Please try again later, or contact us directly at{' '}
+                                <a href={`tel:${CONTACT_INFO.PHONE}`} className="underline font-bold whitespace-nowrap">
+                                    {CONTACT_INFO.PHONE}
+                                </a>.
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>
