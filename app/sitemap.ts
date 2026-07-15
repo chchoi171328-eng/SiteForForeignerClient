@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { PRACTICE_AREAS } from '@/content/practiceAreas'
 import { LANDING_PAGES } from '@/content/landingPages'
 import { LEGAL_DOCUMENTS } from '@/content/legal'
+import { BLOG_POSTS } from '@/content/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.lsfp.co.kr'
@@ -23,6 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly',
     priority: 0.3,
   }))
+  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.publishedAt),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  }))
 
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'monthly', priority: 1.0 },
@@ -34,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/location`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...blogPosts,
     ...legalPages,
   ]
 }
