@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scale, Globe, Building2, ShieldCheck, Briefcase, Users, Phone, Mail, MapPin, Menu, X, ArrowRight, CalendarCheck, Loader2, ArrowUp } from 'lucide-react';
+import { Scale, Globe, Building2, ShieldCheck, Briefcase, Users, Phone, Mail, MapPin, Menu, X, ArrowRight, CalendarCheck, Loader2, ArrowUp, Banknote } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -28,5 +28,6 @@ export const Icons = {
   ArrowRight: ArrowRight,
   Calendar: CalendarCheck,
   Loader: Loader2,
-  ArrowUp: ArrowUp
+  ArrowUp: ArrowUp,
+  Banknote: Banknote
 };

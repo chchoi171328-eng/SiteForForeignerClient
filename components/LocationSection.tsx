@@ -3,6 +3,7 @@
 import React from 'react';
 import { CONTACT_INFO } from '../constants';
 import { Icons } from './Icons';
+import { reportPhoneConversion, trackEvent } from '../lib/gtag';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const LocationSection: React.FC = () => {
@@ -35,7 +36,7 @@ const LocationSection: React.FC = () => {
                                 <h3 className="font-bold text-lg text-gold-400 mb-1">Phone</h3>
                                 <a
                                     href={`tel:${CONTACT_INFO.PHONE}`}
-                                    onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
+                                    onClick={reportPhoneConversion}
                                     className="text-gray-300 hover:text-white text-xl"
                                     aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                                 >
@@ -50,6 +51,7 @@ const LocationSection: React.FC = () => {
                                 <h3 className="font-bold text-lg text-gold-400 mb-1">Email</h3>
                                 <a
                                     href={`mailto:${CONTACT_INFO.EMAIL}`}
+                                    onClick={() => trackEvent('email_clicked')}
                                     className="text-gray-300 hover:text-white"
                                     aria-label={`Email us at ${CONTACT_INFO.EMAIL}`}
                                 >
@@ -74,9 +76,16 @@ const LocationSection: React.FC = () => {
                         className="grayscale hover:grayscale-0 transition-all duration-500"
                     >
                     </iframe>
-                    <div className="absolute bottom-4 right-4 bg-white p-2 text-xs text-gray-500 shadow-lg rounded" aria-hidden="true">
-                        SJ Plaza, Pyeongtaek
-                    </div>
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=1029-1%20Pyeongnam-ro%2C%20Pyeongtaek-si"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => trackEvent('map_opened')}
+                        className="absolute bottom-4 right-4 bg-white p-2 text-xs text-gray-600 shadow-lg rounded hover:text-navy-900 inline-flex items-center gap-1"
+                    >
+                        <Icons.MapPin className="w-3 h-3" aria-hidden="true" />
+                        Open in Google Maps
+                    </a>
                 </div>
             </div>
         </section>

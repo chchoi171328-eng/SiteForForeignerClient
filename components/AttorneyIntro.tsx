@@ -1,0 +1,51 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { ATTORNEY } from '../constants';
+import { Icons } from './Icons';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const AttorneyIntro: React.FC = () => {
+    const { ref, isVisible } = useScrollAnimation(0.2);
+
+    return (
+        <section
+            id="attorney"
+            ref={ref as React.RefObject<HTMLElement>}
+            className={`py-20 md:py-28 bg-slate-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+        >
+            <div className="container mx-auto px-6 max-w-4xl text-center">
+                <h2 className="text-gold-600 font-bold uppercase tracking-widest mb-2">Representative Attorney</h2>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-6">
+                    {ATTORNEY.nameEn} <span className="text-gray-400 font-light">({ATTORNEY.nameKr})</span>
+                </h3>
+
+                <div className="inline-flex items-center gap-2 bg-navy-50 text-navy-900 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                    <Icons.Shield className="w-4 h-4 text-gold-600" aria-hidden="true" />
+                    KBA-Registered Specialist — {ATTORNEY.kbaSpecialties.join(' & ')}
+                </div>
+
+                <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                    Attorney Choi served as in-house counsel at GS Engineering &amp; Construction and Lotte
+                    Engineering &amp; Construction before founding his practice, and holds KBA specialist
+                    registration in Civil and Criminal Law.
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed mb-10">
+                    {ATTORNEY.englishService}
+                </p>
+
+                <Link
+                    href="/attorneys/cheolho-choi"
+                    className="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors"
+                >
+                    View Full Profile
+                    <Icons.ArrowRight className="w-5 h-5" aria-hidden="true" />
+                </Link>
+            </div>
+        </section>
+    );
+};
+
+export default AttorneyIntro;

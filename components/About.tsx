@@ -34,12 +34,12 @@ const About: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-gold-400 font-bold uppercase tracking-widest mb-2">Who We Are</h2>
-                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">Expert Legal Solutions for International Clients</h3>
+                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">Legal Services for Foreign Residents in Korea</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            Navigating the Korean legal system requires more than just representation—it demands specialized insight and strategy. At <span className="font-bold text-navy-900">SOL & LUNA Law Firm</span>, we are dedicated to helping expatriates and foreign business owners operating in Korea overcome complex legal challenges with confidence.
+                            Navigating the Korean legal system is difficult without guidance you can understand. At <span className="font-bold text-navy-900">SOL & LUNA Law Firm</span>, we are dedicated to helping foreign residents in Korea overcome complex legal challenges with confidence.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Backed by years of experience and a proven track record in foreigner-related cases, our team provides comprehensive legal support tailored to the global community. We combine deep knowledge of Korean law with an international perspective to protect your rights and deliver results.
+                            Our team has years of experience handling foreigner-related cases and provides comprehensive legal support tailored to the international community. We combine knowledge of Korean law with an international perspective to protect your rights.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6">
@@ -48,8 +48,8 @@ const About: React.FC = () => {
                                     <Icons.Globe className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-navy-900">English Service</h4>
-                                    <p className="text-sm text-gray-500">Fluent communication</p>
+                                    <h4 className="font-bold text-navy-900">English Consultation</h4>
+                                    <p className="text-sm text-gray-500">Conducted directly by the attorney</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
@@ -57,8 +57,8 @@ const About: React.FC = () => {
                                     <Icons.Shield className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-navy-900">Trusted Defense</h4>
-                                    <p className="text-sm text-gray-500">Proven track record</p>
+                                    <h4 className="font-bold text-navy-900">KBA-Registered Specialist</h4>
+                                    <p className="text-sm text-gray-500">Civil and criminal law</p>
                                 </div>
                             </div>
                         </div>

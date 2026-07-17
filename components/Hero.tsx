@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CONTACT_INFO } from '../constants';
 import { Icons } from './Icons';
+import { reportPhoneConversion } from '../lib/gtag';
 
 const Hero: React.FC = () => {
     return (
@@ -29,17 +30,17 @@ const Hero: React.FC = () => {
                     </p>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 leading-tight">
                         Navigating Korean Law <br />
-                        <span className="text-gray-300 font-light">With Expertise & Experience</span>
+                        <span className="text-gray-300 font-light">For Foreign Residents in Korea</span>
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
-                        SOL & LUNA (Law Firm Myeong) provides dedicated legal services tailored for the international community, backed by extensive experience and specialized expertise.
+                        SOL & LUNA (Law Firm Myeong) provides dedicated legal services tailored for the international community, with years of experience in foreigner-related cases.
                     </p>
 
                     {/* Prominent Phone Number */}
                     <div className="mb-10">
                         <a
                             href={`tel:${CONTACT_INFO.PHONE}`}
-                            onClick={(e) => { e.preventDefault(); (window as any).gtag_report_conversion(e.currentTarget.href); }}
+                            onClick={reportPhoneConversion}
                             className="inline-flex items-center gap-3 text-3xl md:text-5xl font-serif font-bold text-white hover:text-gold-400 transition-colors group"
                             aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                         >
@@ -56,13 +57,13 @@ const Hero: React.FC = () => {
                             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all flex items-center justify-center gap-2"
                         >
                             <Icons.Calendar className="w-5 h-5" />
-                            Initial Consultation
+                            Request a Paid Consultation
                         </Link>
                         <Link
-                            href="/practice-areas"
+                            href="/attorneys/cheolho-choi"
                             className="bg-transparent border border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all"
                         >
-                            Our Practice Areas
+                            Meet Attorney Cheolho Choi
                         </Link>
                     </div>
                 </div>

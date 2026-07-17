@@ -3,19 +3,19 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Practice Areas',
-  description: 'Explore our areas of expertise including Criminal Defense, Divorce & Family Law, Corporate Law, Labor & Employment, and Civil Litigation.',
+  description: 'Criminal defense, civil litigation, real estate and lease disputes, debt collection, divorce and family law, and labor matters for foreign residents in Korea.',
   openGraph: {
     title: 'Practice Areas | SOL & LUNA Law Firm',
-    description: 'Expert legal representation across Criminal Defense, Family Law, Corporate Law, and more in Pyeongtaek, Korea.',
-    url: 'https://sllaw.co.kr/practice-areas',
+    description: 'Legal representation across criminal defense, civil litigation, real estate, debt collection, family law, and labor matters in Pyeongtaek, Korea.',
+    url: 'https://www.lsfp.co.kr/practice-areas',
   },
   twitter: {
     card: 'summary',
     title: 'Practice Areas | SOL & LUNA Law Firm',
-    description: 'Expert legal representation across Criminal Defense, Family Law, Corporate Law, and more.',
+    description: 'Legal representation across criminal defense, civil litigation, real estate, debt collection, family law, and labor matters.',
   },
   alternates: {
-    canonical: 'https://sllaw.co.kr/practice-areas',
+    canonical: 'https://www.lsfp.co.kr/practice-areas',
   },
 }
 
