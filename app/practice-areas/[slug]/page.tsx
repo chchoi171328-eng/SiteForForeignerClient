@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import {
   PRACTICE_AREAS,
@@ -108,15 +109,42 @@ export default async function PracticeAreaDetailPage({
         </nav>
 
         {/* Header */}
-        <header className="mb-10 flex items-start gap-4">
-          <div className="p-3 bg-navy-50 rounded-full shrink-0" aria-hidden="true">
-            <Icon className="w-7 h-7 text-navy-900" />
-          </div>
-          <div>
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-navy-900">{area.title}</h1>
-            <p className="text-gray-500 mt-1">For foreign residents in Korea · Pyeongtaek</p>
-          </div>
-        </header>
+        {area.headerImage ? (
+          <header className="mb-10">
+            <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+              <Image
+                src={area.headerImage}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 768px"
+              />
+              {/* Readability overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/55 to-navy-900/30" aria-hidden="true" />
+              <div className="absolute inset-0 flex items-end p-6">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full shrink-0" aria-hidden="true">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <h1 className="text-3xl md:text-4xl font-serif font-bold text-white">{area.title}</h1>
+                    <p className="text-gray-200 mt-1">For foreign residents in Korea · Pyeongtaek</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        ) : (
+          <header className="mb-10 flex items-start gap-4">
+            <div className="p-3 bg-navy-50 rounded-full shrink-0" aria-hidden="true">
+              <Icon className="w-7 h-7 text-navy-900" />
+            </div>
+            <div>
+              <h1 className="text-3xl md:text-4xl font-serif font-bold text-navy-900">{area.title}</h1>
+              <p className="text-gray-500 mt-1">For foreign residents in Korea · Pyeongtaek</p>
+            </div>
+          </header>
+        )}
 
         {/* 1. Overview */}
         {area.overview && area.overview.length > 0 && (
