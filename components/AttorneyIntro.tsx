@@ -32,8 +32,12 @@ const AttorneyIntro: React.FC = () => {
                     Engineering &amp; Construction before founding his practice, and holds KBA specialist
                     registration in Civil and Criminal Law.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed mb-10">
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
                     {ATTORNEY.englishService}
+                </p>
+                <p className="text-navy-900 font-medium leading-relaxed mb-10">
+                    Every credential on this site is a matter of public record in Korea.
+                    We encourage you to verify them.
                 </p>
 
                 <Link

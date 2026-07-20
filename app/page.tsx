@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import WhyConsult from '../components/WhyConsult'
 import About from '../components/About'
 import AttorneyIntro from '../components/AttorneyIntro'
 import PracticeAreas from '../components/PracticeAreas'
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <WhyConsult />
       <About />
       <AttorneyIntro />
       <PracticeAreas />

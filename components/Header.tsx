@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                         aria-label="Book a consultation"
                     >
                         <Icons.Phone className="w-4 h-4" />
-                        <span>Book Consultation</span>
+                        <span>Book Assessment</span>
                     </Link>
                 </nav>
 

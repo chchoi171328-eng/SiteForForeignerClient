@@ -6,7 +6,7 @@
 // entries. If two pages start to overlap, cut content rather than duplicating it.
 
 export type LandingSection = {
-  heading: string
+  heading?: string
   paragraphs?: string[]
   bullets?: string[]
 }
@@ -30,7 +30,7 @@ export const LANDING_PAGES: LandingPage[] = [
     slug: 'english-speaking-lawyer-pyeongtaek',
     centralQuestion: 'Is there a lawyer in Pyeongtaek I can consult with in English?',
     title: 'English-Speaking Lawyer in Pyeongtaek',
-    metaTitle: 'English-Speaking Lawyer in Pyeongtaek | SOL & LUNA',
+    metaTitle: 'English-Speaking Lawyer in Pyeongtaek | SOL & LUNA Law Firm',
     metaDescription:
       'Consult a Korean lawyer in English in Pyeongtaek. Paid consultations conducted directly by the attorney, by appointment. Fees, process, and office details.',
     heroSubtitle:
@@ -52,9 +52,9 @@ export const LANDING_PAGES: LandingPage[] = [
         ],
       },
       {
-        heading: 'Consultation Fee',
+        heading: 'Why "directly by the attorney" matters',
         paragraphs: [
-          'Initial consultations are paid and by appointment. A 30-minute consultation is ₩100,000 (approx. US$70), VAT included.',
+          'At many firms, "English service" means a staff interpreter relays your words to a lawyer you rarely meet. Here, the person listening to you at the consultation is the attorney who will argue your case. Nuance survives. Questions get answered by the person accountable for the answer.',
         ],
       },
       {
@@ -82,6 +82,7 @@ export const LANDING_PAGES: LandingPage[] = [
         heading: 'Where We Are',
         paragraphs: [
           'SOL & LUNA Law Firm is located in Pyeongtaek, within general reach of the Camp Humphreys area. Consultations are by appointment at our office.',
+          'Off-base legal matters (Korean police investigations, leases, family disputes) proceed in the Korean system regardless of your status, and that system is where we work every day.',
         ],
       },
       {
@@ -98,7 +99,7 @@ export const LANDING_PAGES: LandingPage[] = [
       {
         heading: 'How to Request a Consultation',
         paragraphs: [
-          'Send a brief description of your situation through the contact form or by phone. Initial consultations are paid and by appointment — 30 minutes for ₩100,000 (approx. US$70), VAT included, conducted directly by the attorney in English.',
+          'Send a brief description of your situation through the contact form or by phone. Initial consultations are paid and by appointment; fees are listed below.',
         ],
       },
     ],
@@ -144,6 +145,11 @@ export const LANDING_PAGES: LandingPage[] = [
           'Debt collection',
           'Divorce and family matters',
           'Labor and employment',
+        ],
+      },
+      {
+        paragraphs: [
+          'One more thing worth knowing: a consultation here does not commit you to anything. Some visitors book an assessment, learn where they stand, and decide not to litigate — with our agreement. That is a good outcome too.',
         ],
       },
     ],

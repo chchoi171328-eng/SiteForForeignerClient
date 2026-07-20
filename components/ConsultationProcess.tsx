@@ -8,20 +8,20 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const STEPS = [
     {
-        title: 'Submit an Inquiry',
-        body: 'Send a brief description of your situation through the contact form or by phone.',
+        title: 'Tell us what happened.',
+        body: 'Send a brief description through the contact form or by phone. Plain English is fine; you don’t need to use legal terms.',
     },
     {
-        title: 'Paid Consultation',
-        body: `A ${CONSULTATION.DURATION_MIN}-minute consultation is ${CONSULTATION.FEE_KRW_LABEL} (${CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included, by appointment.`,
+        title: 'Book a 30-minute assessment.',
+        body: `${CONSULTATION.INLINE}, by appointment. The fee is fixed — it does not change based on your case type.`,
     },
     {
-        title: 'Honest Assessment',
-        body: 'We explain the realistic outcomes first — including when litigation is not worth pursuing.',
+        title: 'Get an honest answer.',
+        body: 'The attorney explains the realistic outcomes. If you’re weighing whether to sue and we can’t see a meaningful result, we say so at this stage. If the case is already coming at you — a criminal investigation, a lawsuit — we map out the best achievable outcome and what it takes.',
     },
     {
-        title: 'Consistent Representation',
-        body: 'The same attorney handles your matter from consultation through to court.',
+        title: 'Same attorney, start to finish.',
+        body: 'If you proceed, the attorney you met handles your matter through to court. Fees for representation are quoted in writing before you commit, and do not grow mid-case.',
     },
 ];
 
@@ -38,11 +38,7 @@ const ConsultationProcess: React.FC = () => {
             <div className="container mx-auto px-6 max-w-5xl">
                 <div className="text-center mb-14">
                     <h2 className="text-gold-600 font-bold uppercase tracking-widest mb-2">How We Work</h2>
-                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-4">The Consultation Process</h3>
-                    <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        We do not take on every case, and we do not recommend litigation that has little chance
-                        of a meaningful result. We listen first, then tell you honestly what is realistic.
-                    </p>
+                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-navy-900">Four Steps, One Attorney</h3>
                 </div>
 
                 <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -66,7 +62,7 @@ const ConsultationProcess: React.FC = () => {
                         href="/contact"
                         className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors"
                     >
-                        Request a Paid Consultation
+                        Book a 30-Minute Assessment
                         <Icons.ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                 </div>

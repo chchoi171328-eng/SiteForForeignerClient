@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CONTACT_INFO } from '../constants';
+import { CONTACT_INFO, CONSULTATION } from '../constants';
 import { Icons } from './Icons';
 import { reportPhoneConversion } from '../lib/gtag';
 
@@ -26,14 +26,13 @@ const Hero: React.FC = () => {
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <div className="animate-fade-in-up">
                     <p className="text-gold-400 font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base">
-                        Trusted Legal Partner in Korea
+                        A Law Firm for Foreign Residents in Korea
                     </p>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 leading-tight">
-                        Navigating Korean Law <br />
-                        <span className="text-gray-300 font-light">For Foreign Residents in Korea</span>
+                        We don&apos;t take every case.
                     </h1>
                     <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
-                        SOL & LUNA (Law Firm Myeong) provides dedicated legal services tailored for the international community, with years of experience in foreigner-related cases.
+                        We listen to your situation first, then tell you honestly where you stand — the strengths and the weaknesses — so you can make an informed decision about what to do next.
                     </p>
 
                     {/* Prominent Phone Number */}
@@ -57,7 +56,7 @@ const Hero: React.FC = () => {
                             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all flex items-center justify-center gap-2"
                         >
                             <Icons.Calendar className="w-5 h-5" />
-                            Request a Paid Consultation
+                            Book a 30-Minute Assessment
                         </Link>
                         <Link
                             href="/attorneys/cheolho-choi"
@@ -66,6 +65,16 @@ const Hero: React.FC = () => {
                             Meet Attorney Cheolho Choi
                         </Link>
                     </div>
+
+                    {/* Fact line */}
+                    <p className="mt-10 mx-auto max-w-2xl border-t border-white/20 pt-6 text-gray-300 text-sm md:text-base">
+                        {CONSULTATION.HERO_FACT_LINE}
+                    </p>
+
+                    {/* Identifier */}
+                    <p className="mt-6 text-gray-400 text-xs md:text-sm tracking-wide uppercase">
+                        SOL &amp; LUNA · Law Firm Myeong · Pyeongtaek
+                    </p>
                 </div>
             </div>
         </section>

@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                             </div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            Providing professional legal counsel with integrity and excellence. We are committed to protecting your rights in Korea.
+                            SOL &amp; LUNA (Law Firm Myeong) is a Korean law firm in Pyeongtaek serving foreign residents. We limit our caseload, quote fees upfront, and tell you honestly when a case is not worth pursuing.
                         </p>
                     </div>
 

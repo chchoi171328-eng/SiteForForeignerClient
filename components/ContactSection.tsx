@@ -110,8 +110,13 @@ const ContactSection: React.FC = () => {
         >
             <div className="container mx-auto px-6 max-w-4xl">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Request a Consultation</h2>
-                    <p className="text-gray-600">Send us a message and we will respond during business hours (weekdays).</p>
+                    <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Tell Us What Happened</h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto mb-3">
+                        Describe your situation in your own words — plain English is fine, and you don&apos;t need to organize it like a lawyer would. We respond during business hours (weekdays) to schedule an assessment.
+                    </p>
+                    <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+                        Sending this form does not create an attorney–client relationship and does not commit you to anything.
+                    </p>
                 </div>
 
                 <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg relative overflow-hidden">
@@ -210,7 +215,7 @@ const ContactSection: React.FC = () => {
 
                         <div>
                             <label htmlFor="contact-message" className="block text-sm font-bold text-gray-700 mb-2">
-                                How can we help? <span className="text-red-500" aria-label="required">*</span>
+                                What happened? <span className="text-red-500" aria-label="required">*</span>
                             </label>
                             <textarea
                                 id="contact-message"

@@ -184,7 +184,7 @@ export default async function BlogPostPage({
             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors inline-flex items-center gap-2"
           >
             <Icons.Calendar className="w-5 h-5" aria-hidden="true" />
-            Request a Paid Consultation
+            Book a 30-Minute Assessment
           </Link>
         </section>
 

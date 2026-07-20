@@ -34,12 +34,12 @@ const About: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2">
                         <h2 className="text-gold-400 font-bold uppercase tracking-widest mb-2">Who We Are</h2>
-                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">Legal Services for Foreign Residents in Korea</h3>
+                        <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">A Small Firm, Deliberately</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            Navigating the Korean legal system is difficult without guidance you can understand. At <span className="font-bold text-navy-900">SOL & LUNA Law Firm</span>, we are dedicated to helping foreign residents in Korea overcome complex legal challenges with confidence.
+                            <span className="font-bold text-navy-900">SOL &amp; LUNA (Law Firm Myeong)</span> is a Korean law firm in Pyeongtaek serving foreign residents across Gyeonggi-do and beyond.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                            Our team has years of experience handling foreigner-related cases and provides comprehensive legal support tailored to the international community. We combine knowledge of Korean law with an international perspective to protect your rights.
+                            We deliberately limit the number of cases we take on at one time. The attorney you meet at your first consultation is the same attorney who drafts your documents, appears at your hearings, and stands with you in court. Nothing is lost in handoffs — and nothing is lost in translation, because your attorney is the one speaking with you.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6">
@@ -48,8 +48,8 @@ const About: React.FC = () => {
                                     <Icons.Globe className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-navy-900">English Consultation</h4>
-                                    <p className="text-sm text-gray-500">Conducted directly by the attorney</p>
+                                    <h4 className="font-bold text-navy-900">English, directly with the attorney</h4>
+                                    <p className="text-sm text-gray-500">no intermediaries, no relay interpreting</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3">
@@ -58,7 +58,7 @@ const About: React.FC = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-navy-900">KBA-Registered Specialist</h4>
-                                    <p className="text-sm text-gray-500">Civil and criminal law</p>
+                                    <p className="text-sm text-gray-500">Civil Law &amp; Criminal Law — verifiable public registration</p>
                                 </div>
                             </div>
                         </div>

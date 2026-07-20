@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import type { LandingPage } from '@/content/landingPages'
-import { CONSULTATION, CONTACT_INFO } from '@/constants'
+import { CONTACT_INFO } from '@/constants'
 import { Icons } from './Icons'
+import ConsultationFees from './ConsultationFees'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -56,9 +57,11 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
         )}
 
         {/* Content sections */}
-        {page.sections.map((section) => (
-          <section key={section.heading} className="mb-10">
-            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">{section.heading}</h2>
+        {page.sections.map((section, i) => (
+          <section key={section.heading ?? i} className="mb-10">
+            {section.heading && (
+              <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">{section.heading}</h2>
+            )}
             {section.paragraphs?.map((p) => (
               <p key={p} className="text-gray-700 leading-relaxed mb-4">{p}</p>
             ))}
@@ -77,19 +80,17 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
 
         {/* Consultation CTA */}
         <section className="bg-navy-900 text-white p-8 rounded-xl">
-          <h2 className="text-2xl font-serif font-bold mb-3">Request a Consultation</h2>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Initial consultations are paid and by appointment — {CONSULTATION.DURATION_MIN} minutes for{' '}
-            {CONSULTATION.FEE_KRW_LABEL} ({CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included, conducted
-            directly by the attorney in English.
-          </p>
+          <h2 className="text-2xl font-serif font-bold mb-4">Request a Consultation</h2>
+          <div className="mb-6">
+            <ConsultationFees variant="dark" />
+          </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
               className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors inline-flex items-center justify-center gap-2"
             >
               <Icons.Calendar className="w-5 h-5" aria-hidden="true" />
-              Request a Paid Consultation
+              Book a 30-Minute Assessment
             </Link>
             <a
               href={`tel:${CONTACT_INFO.PHONE}`}

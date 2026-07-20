@@ -7,9 +7,10 @@ import {
   DEFAULT_ATTORNEY_ASSISTANCE,
   PRACTICE_DISCLAIMER,
 } from '@/content/practiceAreas'
-import { CONSULTATION, CONTACT_INFO } from '@/constants'
+import { CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
 import TrackView from '@/components/TrackView'
+import ConsultationFees from '@/components/ConsultationFees'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -133,8 +134,8 @@ export default async function PracticeAreaDetailPage({
         <ListSection title="Documents & Evidence to Prepare" items={area.documents} />
         <ListSection title="Risks & Deadlines" items={area.risks} />
 
-        {/* 7. How the attorney assists */}
-        <ListSection title="How We Can Help" items={assistance} />
+        {/* 7. What we will tell you honestly */}
+        <ListSection title="What We Will Tell You Honestly" items={assistance} />
 
         {/* 8. FAQ */}
         {area.faqs && area.faqs.length > 0 && (
@@ -153,19 +154,17 @@ export default async function PracticeAreaDetailPage({
 
         {/* 10. Consultation CTA */}
         <section className="mb-10 bg-navy-900 text-white p-8 rounded-xl">
-          <h2 className="text-2xl font-serif font-bold mb-3">Discuss Your Case</h2>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Initial consultations are paid and available by appointment — {CONSULTATION.DURATION_MIN} minutes
-            for {CONSULTATION.FEE_KRW_LABEL} ({CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included, conducted
-            directly by the attorney in English.
-          </p>
+          <h2 className="text-2xl font-serif font-bold mb-4">Discuss Your Case</h2>
+          <div className="mb-6">
+            <ConsultationFees variant="dark" />
+          </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
               className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors inline-flex items-center justify-center gap-2"
             >
               <Icons.Calendar className="w-5 h-5" aria-hidden="true" />
-              Request a Paid Consultation
+              Book a 30-Minute Assessment
             </Link>
             <a
               href={`tel:${CONTACT_INFO.PHONE}`}
