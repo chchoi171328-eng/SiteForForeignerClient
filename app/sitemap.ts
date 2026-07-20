@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/attorneys/cheolho-choi`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.9 },
     { url: `${baseUrl}/practice-areas`, lastModified: new Date(), priority: 0.9 },
     ...practiceAreaPages,
+    { url: `${baseUrl}/fees`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.8 },
     ...landingPages,
     { url: `${baseUrl}/location`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.8 },

@@ -13,7 +13,7 @@ const STEPS = [
     },
     {
         title: 'Book a 30-minute assessment.',
-        body: `${CONSULTATION.INLINE}, by appointment. The fee is fixed — it does not change based on your case type.`,
+        body: CONSULTATION.STEP2,
     },
     {
         title: 'Get an honest answer.',
