@@ -25,6 +25,8 @@ export type PracticeArea = {
   metaDescription: string
   /** Whether to show this area in the home-page practice grid. */
   showOnHome: boolean
+  /** Decorative header image (priming). Rendered with empty alt. */
+  headerImage?: string
 
   // --- Detail page sections (guideline §10). Optional; hidden when empty. ---
   /** Section 1 — Overview paragraphs. */
@@ -59,6 +61,7 @@ export const PRACTICE_DISCLAIMER =
 export const PRACTICE_AREAS: PracticeArea[] = [
   {
     slug: 'criminal-defense',
+    headerImage: '/assets/pa-criminal.png',
     title: 'Criminal Defense',
     icon: 'Shield',
     cardDescription:
@@ -85,6 +88,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     slug: 'civil-litigation',
+    headerImage: '/assets/pa-civil.png',
     title: 'Civil Litigation',
     icon: 'Scale',
     cardDescription: 'Resolving disputes involving contracts, property, and damages before Korean courts.',
@@ -108,6 +112,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     slug: 'real-estate-lease-disputes',
+    headerImage: '/assets/pa-realestate.png',
     title: 'Real Estate & Lease Disputes',
     icon: 'Building',
     cardDescription: 'Assistance with housing leases, deposit recovery, and real estate disputes in Korea.',
@@ -130,6 +135,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     slug: 'debt-collection',
+    headerImage: '/assets/pa-debt.png',
     title: 'Debt Collection',
     icon: 'Banknote',
     cardDescription: 'Recovering unpaid debts and enforcing claims and judgments in Korea.',
@@ -152,6 +158,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     slug: 'divorce-family-law',
+    headerImage: '/assets/pa-family.png',
     title: 'Divorce & Family Law',
     icon: 'Users',
     cardDescription: 'Handling international divorce, child custody, and inheritance matters.',
@@ -175,6 +182,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     slug: 'labor-employment',
+    headerImage: '/assets/pa-labor.png',
     title: 'Labor & Employment',
     icon: 'Briefcase',
     cardDescription:

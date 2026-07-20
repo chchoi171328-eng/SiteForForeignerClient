@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { LandingPage } from '@/content/landingPages'
 import { CONTACT_INFO } from '@/constants'
 import { Icons } from './Icons'
@@ -38,12 +39,22 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
           <span className="text-gray-800">{page.title}</span>
         </nav>
 
-        {/* Header */}
-        <header className="mb-12">
-          <h1 className="text-3xl md:text-5xl font-serif font-bold text-navy-900 mb-4 leading-tight">
-            {page.title}
-          </h1>
-          <p className="text-lg text-gray-600 leading-relaxed">{page.heroSubtitle}</p>
+        {/* Header — decorative textured banner (readability overlay over image) */}
+        <header className="mb-12 relative rounded-xl overflow-hidden">
+          <Image
+            src="/assets/texture-section.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <div className="absolute inset-0 bg-navy-900/85" aria-hidden="true" />
+          <div className="relative z-10 p-8 md:p-10">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
+              {page.title}
+            </h1>
+            <p className="text-lg text-gray-200 leading-relaxed">{page.heroSubtitle}</p>
+          </div>
         </header>
 
         {/* Non-affiliation disclaimer (shown prominently near the top when set) */}
