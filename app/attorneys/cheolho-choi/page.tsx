@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ATTORNEY, CONSULTATION, CONTACT_INFO } from '@/constants'
+import { ATTORNEY, CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
 import TrackView from '@/components/TrackView'
+import ConsultationFees from '@/components/ConsultationFees'
 
 const PAGE_URL = 'https://www.lsfp.co.kr/attorneys/cheolho-choi'
 
@@ -131,10 +132,16 @@ export default function AttorneyProfilePage() {
             Engineering &amp; Construction, gaining firsthand experience of how companies use and
             respond to the law from the inside.
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed mb-4">
             Having studied both computer science and law, he is trained to break down complex case
             structures and analyze them methodically — an approach he applies to disputes involving
             multiple parties and overlapping issues.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Years inside GS E&amp;C and Lotte E&amp;C meant seeing disputes from the client&apos;s side of
+            the table — what legal fees look like on a company&apos;s budget, and what companies actually
+            need from outside counsel. That experience shapes how this firm quotes fees and reports
+            progress: the way we wished our outside counsel had.
           </p>
         </section>
 
@@ -157,20 +164,15 @@ export default function AttorneyProfilePage() {
         {/* Consultation policy */}
         <section className="mb-12 bg-navy-900 text-white p-8 rounded-xl">
           <h2 className="text-2xl font-serif font-bold mb-4">Consultation</h2>
-          <p className="text-gray-300 mb-4 leading-relaxed">
-            Initial consultations are paid and available by appointment. A {CONSULTATION.DURATION_MIN}-minute
-            consultation is {CONSULTATION.FEE_KRW_LABEL} ({CONSULTATION.FEE_USD_APPROX_LABEL})
-            {CONSULTATION.VAT_INCLUDED ? ', VAT included' : ''}. English consultations are conducted
-            directly by the attorney.
-          </p>
-          <p className="text-gray-400 text-sm mb-6">{CONTACT_INFO.HOURS_EN}</p>
+          <ConsultationFees variant="dark" />
+          <p className="text-gray-400 text-sm mt-4 mb-6">{CONTACT_INFO.HOURS_EN}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
               className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors inline-flex items-center justify-center gap-2"
             >
               <Icons.Calendar className="w-5 h-5" aria-hidden="true" />
-              Request a Paid Consultation
+              Book a 30-Minute Assessment
             </Link>
             <a
               href={`tel:${CONTACT_INFO.PHONE}`}
@@ -194,6 +196,11 @@ export default function AttorneyProfilePage() {
             법무법인 명 (Korean)
           </a>
           .
+        </p>
+
+        <p className="text-sm text-gray-500 leading-relaxed border-t border-gray-200 pt-6 mt-8">
+          KBA specialist registrations are public records maintained by the Korean Bar Association.
+          Feel free to verify before you book.
         </p>
       </div>
     </div>

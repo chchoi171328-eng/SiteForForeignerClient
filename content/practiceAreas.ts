@@ -76,6 +76,12 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Accused of drunk driving or refusing a breath test',
       'Under investigation for fraud',
     ],
+    attorneyAssistance: [
+      'Whether the early stage of your case — the police interview, your first written statement — is the stage that decides it. (It usually is.)',
+      'What a realistic outcome looks like for your charge, based on how Korean courts and prosecutors actually handle similar cases.',
+      'When cooperating, settling with the complainant, or fighting the charge each makes sense — and what each path costs.',
+      'How a criminal outcome can affect your stay in Korea — and why that needs to be part of the defense strategy, not an afterthought.',
+    ],
   },
   {
     slug: 'civil-litigation',
@@ -93,6 +99,11 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Breach of contract disputes',
       'Claims for damages or compensation',
       'Property and ownership disputes',
+    ],
+    attorneyAssistance: [
+      'Whether your claim is worth litigating at all, once court costs, time, and the odds of actually collecting are counted.',
+      'What evidence Korean courts weigh heavily — and whether you have it.',
+      'When a demand letter or negotiated settlement gets you more than a lawsuit.',
     ],
   },
   {
@@ -112,6 +123,10 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Disputes over lease terms or renewal',
       'Property condition or repair disputes',
     ],
+    attorneyAssistance: [
+      'Whether your deposit is actually recoverable, and in what order you rank against other creditors.',
+      'Which protections under Korean housing lease law apply to you as a foreign tenant — and which deadlines you must not miss.',
+    ],
   },
   {
     slug: 'debt-collection',
@@ -129,6 +144,10 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Unpaid loans between individuals',
       'Unpaid invoices or business debts',
       'Enforcing a judgment you have already won',
+    ],
+    attorneyAssistance: [
+      "Whether the debtor has assets worth pursuing — because a judgment you can't enforce is just paper.",
+      'What enforcement in Korea realistically costs and how long it takes.',
     ],
   },
   {
@@ -148,6 +167,11 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Child custody and support',
       'Inheritance disputes',
     ],
+    attorneyAssistance: [
+      'How Korean courts actually decide custody and property division in international marriages — not how you might wish they did.',
+      "What jurisdiction issues arise when spouses hold different nationalities, and which country's courts you should be in.",
+      'How divorce can affect a marriage-based residency status — a question that belongs in the case plan from day one, not after the judgment.',
+    ],
   },
   {
     slug: 'labor-employment',
@@ -166,6 +190,10 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Unfair dismissal',
       'Unpaid wages or severance',
       'Workplace disputes',
+    ],
+    attorneyAssistance: [
+      'Whether your dismissal qualifies as "unfair" under Korean labor law — the standard is specific, and not every unfair-feeling dismissal meets it.',
+      'What you are owed in unpaid wages or severance, and the fastest route to collecting it (labor office vs. lawsuit).',
     ],
   },
   {

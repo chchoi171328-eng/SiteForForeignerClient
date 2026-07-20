@@ -9,14 +9,20 @@ export const CONTACT_INFO = {
   NAVER_BLOG: "https://blog.naver.com/natural_born"
 };
 
-// Paid consultation policy. KRW is the billed amount (VAT included);
-// USD is an approximate convenience conversion only.
+// Paid consultation policy — two-tier by consultation language.
+// KRW is the billed amount (VAT included); USD is an approximate conversion only.
 export const CONSULTATION = {
   DURATION_MIN: 30,
-  FEE_KRW: 100000,
-  FEE_KRW_LABEL: "₩100,000",
+  FEE_KRW_KOREAN_LABEL: "₩50,000",
+  FEE_KRW_ENGLISH_LABEL: "₩100,000",
   FEE_USD_APPROX_LABEL: "approx. US$70",
-  VAT_INCLUDED: true
+  VAT_INCLUDED: true,
+  // Inline abbreviated form for use mid-sentence.
+  INLINE: "₩50,000 in Korean / ₩100,000 in English (approx. US$70), VAT included",
+  // Compact hero fact line.
+  HERO_FACT_LINE: "30-minute assessment in English, directly with the attorney — ₩100,000 (₩50,000 in Korean), VAT included. No obligation to proceed.",
+  // Transparency line — must appear wherever fees are shown.
+  KOREAN_SITE_LINE: "The same fees are published on our Korean-language site."
 };
 
 // Representative attorney. Facts sourced from the firm's Korean site; do not

@@ -34,7 +34,7 @@ export default function BlogRootPage() {
         <header className="text-center mb-14">
           <h1 className="text-4xl font-serif font-bold text-navy-900 mb-4">Legal Insights & Guides</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Practical information on Korean law for foreign residents.
+            Practical guides to Korean law for foreign residents — written to be useful whether or not you ever contact us.
           </p>
         </header>
 

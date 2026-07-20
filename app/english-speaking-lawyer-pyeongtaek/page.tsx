@@ -6,7 +6,7 @@ const page = getLandingPage('english-speaking-lawyer-pyeongtaek')!
 const url = `https://www.lsfp.co.kr/${page.slug}`
 
 export const metadata: Metadata = {
-  title: page.metaTitle,
+  title: { absolute: page.metaTitle },
   description: page.metaDescription,
   openGraph: { title: page.metaTitle, description: page.metaDescription, url },
   twitter: { card: 'summary', title: page.metaTitle, description: page.metaDescription },

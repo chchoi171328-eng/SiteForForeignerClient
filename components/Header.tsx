@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                             SOL & LUNA
                         </span>
                         <span className={`text-gold-400 font-sans tracking-[0.2em] uppercase ${isScrolled ? 'text-[0.5rem]' : 'text-xs'}`}>
-                            Law Firm
+                            Law Firm Myeong
                         </span>
                     </div>
                 </Link>
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
                         aria-label="Book a consultation"
                     >
                         <Icons.Phone className="w-4 h-4" />
-                        <span>Book Consultation</span>
+                        <span>Book Assessment</span>
                     </Link>
                 </nav>
 
