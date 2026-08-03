@@ -48,7 +48,8 @@ export const ATTORNEY = {
     "In-house Counsel, GS Engineering & Construction (former)",
     "In-house Counsel, Lotte Engineering & Construction (former)",
     "Judicial Trainee, Seoul High Court",
-    "Judicial Trainee, Seoul Northern District Court"
+    "Judicial Trainee, Seoul Northern District Court",
+    "KATUSA, 102nd MI Battalion, 2nd Infantry Division, U.S. Army (Camp Essayons, Uijeongbu) · 2001–2003"
   ],
   // Real English-service model, per the firm: attorney consults in English directly.
   englishService: "Consultations are conducted directly by the attorney in English.",

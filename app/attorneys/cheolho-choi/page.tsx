@@ -128,6 +128,11 @@ export default function AttorneyProfilePage() {
         <section className="mb-12">
           <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Background</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
+            Before law school, Attorney Choi completed his mandatory military service (2001–2003) as a
+            KATUSA — a Korean Army soldier assigned to a U.S. Army unit — serving with the 102nd Military
+            Intelligence Battalion, 2nd Infantry Division, at Camp Essayons in Uijeongbu.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
             Attorney Choi served as in-house counsel at GS Engineering &amp; Construction and Lotte
             Engineering &amp; Construction, gaining firsthand experience of how companies use and
             respond to the law from the inside.

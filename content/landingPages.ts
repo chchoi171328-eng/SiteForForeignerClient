@@ -97,6 +97,12 @@ export const LANDING_PAGES: LandingPage[] = [
         ],
       },
       {
+        heading: 'Military service, on a U.S. Army post',
+        paragraphs: [
+          "Attorney Choi served his own military service as a KATUSA with the 2nd Infantry Division — the same division now headquartered at Camp Humphreys. Two years living and working inside a U.S. Army unit means the culture around an American base doesn't need to be explained to him: the ranks, the rhythms, and the kinds of trouble that can find a soldier off-post. That's part of why this firm serves this community.",
+        ],
+      },
+      {
         heading: 'How to Request a Consultation',
         paragraphs: [
           'Send a brief description of your situation through the contact form or by phone. Initial consultations are paid and by appointment; fees are listed below.',
