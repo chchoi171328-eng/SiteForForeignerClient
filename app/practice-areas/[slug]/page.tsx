@@ -7,6 +7,8 @@ import {
   getPracticeArea,
   DEFAULT_ATTORNEY_ASSISTANCE,
   PRACTICE_DISCLAIMER,
+  RETAINER_VAT_NOTE,
+  RETAINER_STANDARD_NOTE,
 } from '@/content/practiceAreas'
 import { CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
@@ -155,17 +157,57 @@ export default async function PracticeAreaDetailPage({
           </section>
         )}
 
-        {/* 2–6. Optional detail sections (hidden until attorney copy is added) */}
-        <ListSection title="Common Situations" items={area.commonSituations} />
-        <ListSection title="How the Korean Process Works" items={area.koreanProcedure} />
-        <ListSection title="Immediate Steps to Take" items={area.immediateSteps} />
-        <ListSection title="Documents & Evidence to Prepare" items={area.documents} />
-        <ListSection title="Risks & Deadlines" items={area.risks} />
+        {/* 2. "Is this you?" checklist */}
+        {area.commonSituations && area.commonSituations.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-2">Is this you?</h2>
+            <p className="text-gray-500 mb-4">If any of these apply, this page is for you.</p>
+            <ul className="space-y-3">
+              {area.commonSituations.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-gray-700">
+                  <Icons.ArrowRight className="w-4 h-4 text-gold-500 mt-1.5 shrink-0" aria-hidden="true" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-        {/* 7. What we will tell you honestly */}
+        {/* 3. Procedure timeline */}
+        {area.timeline && area.timeline.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-2">How the process works</h2>
+            <p className="text-gray-500 mb-6">Find where your case is now.</p>
+            <ol className="space-y-6">
+              {area.timeline.map((step, i) => (
+                <li key={step.title} className="flex gap-4">
+                  <span
+                    className="shrink-0 w-9 h-9 rounded-full bg-navy-900 text-white font-bold text-sm flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-bold text-navy-900 mb-1">{step.title}</h3>
+                    <p className="text-gray-700 leading-relaxed mb-2">{step.body}</p>
+                    <p className="text-gray-600 leading-relaxed text-sm border-l-2 border-gold-400 pl-3">
+                      <span className="font-medium text-navy-900">What you can do at this stage — </span>
+                      {step.youCanDo}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            {area.timelineClosing && (
+              <p className="mt-6 text-navy-900 font-medium leading-relaxed">{area.timelineClosing}</p>
+            )}
+          </section>
+        )}
+
+        {/* 4. What we will tell you honestly */}
         <ListSection title="What We Will Tell You Honestly" items={assistance} />
 
-        {/* 8. FAQ */}
+        {/* 5. FAQ */}
         {area.faqs && area.faqs.length > 0 && (
           <section className="mb-10">
             <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Frequently Asked Questions</h2>
@@ -180,7 +222,35 @@ export default async function PracticeAreaDetailPage({
           </section>
         )}
 
-        {/* 10. Consultation CTA */}
+        {/* 6. Area retainer */}
+        {area.retainer && (
+          <section className="mb-10 border border-gray-200 rounded-xl p-6">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-1">Fees for this area</h2>
+            <p className="text-gray-500 mb-4">We tell you the cost from the start.</p>
+
+            {area.retainer.range && (
+              <p className="text-xl font-bold text-navy-900 mb-1">
+                Retainer {area.retainer.range}
+              </p>
+            )}
+            <p className="text-sm text-gray-500 mb-3">{RETAINER_VAT_NOTE}</p>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              It depends on {area.retainer.dependsOn}. {RETAINER_STANDARD_NOTE}
+            </p>
+            {area.retainer.closing && (
+              <p className="text-gray-700 leading-relaxed">{area.retainer.closing}</p>
+            )}
+            <Link
+              href="/fees"
+              className="mt-4 inline-flex items-center gap-1 text-gold-600 font-bold text-sm hover:text-gold-700"
+            >
+              See full fee information
+              <Icons.ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </section>
+        )}
+
+        {/* 7. Consultation CTA */}
         <section className="mb-10 bg-navy-900 text-white p-8 rounded-xl">
           <h2 className="text-2xl font-serif font-bold mb-4">Discuss Your Case</h2>
           <div className="mb-6">
