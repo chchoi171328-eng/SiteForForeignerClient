@@ -14,7 +14,7 @@ export type RetainerRange = {
 export const RETAINER_RANGES: RetainerRange[] = [
   {
     area: 'Criminal defense',
-    range: '₩4,000,000 – ₩10,000,000',
+    range: '₩4,000,000 – ₩12,000,000',
     dependsOn: 'stage of the case and factual complexity',
   },
   {
@@ -29,7 +29,12 @@ export const RETAINER_RANGES: RetainerRange[] = [
   },
   {
     area: 'Real estate & lease',
-    range: '₩3,000,000 – ₩6,000,000',
-    dependsOn: 'type of dispute',
+    range: 'from ₩3,000,000',
+    dependsOn: 'type of dispute and the amount in issue',
+  },
+  {
+    area: 'Labor & employment',
+    range: 'from ₩3,000,000',
+    dependsOn: 'the route chosen and the complexity of the dispute',
   },
 ]
