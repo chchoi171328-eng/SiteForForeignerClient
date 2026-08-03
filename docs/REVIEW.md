@@ -56,7 +56,8 @@ Procedural assertions:
 - [ ] Fact-finding enquiries and expert valuation can be applied for during litigation.
 - [ ] There is **no legal route to inspect a debtor's assets before judgment**; asset disclosure and asset searches are only available after. ⚠️ (stated in FAQ and in "What We Will Tell You Honestly")
 - [ ] Court costs generally follow the result, and attorney fees are recoverable only within limits set by court rules. ⚠️
-- [ ] A complaint and a payment order each carry a response deadline, and missing it can result in the other side succeeding. ⚠️ — **the page deliberately does not state the number of days**; confirm whether it should.
+- [ ] **30 days** to file an answer to a complaint, and a court may otherwise decide on the claimant's account alone. Same figures as the Korean /practice/civil page.
+- [ ] **Two weeks** from receipt to oppose a payment order, after which it stands as final. Same figure as the Korean /practice/civil page.
 - [ ] A judgment can be enforced later if the debtor acquires assets.
 
 ## /practice-areas/real-estate-lease-disputes
@@ -65,6 +66,7 @@ Retainer stated: **from ₩3,000,000** (matches Korean /fees "부동산" and /pr
 
 Procedural assertions:
 - [ ] Sequence: contract/facts review → protective measures → litigation → judgment and enforcement.
+- [ ] Notice periods around renewal and termination **vary by contract type and circumstances**, so the page deliberately states no single figure. ⚠️
 - [ ] Tenant protections attach to holding the property and to the registered address, and can be weakened by moving out and re-registering before securing the position. ⚠️
 - [ ] A registration procedure exists for tenants who must move out before the deposit is returned, and it should be completed before moving. ⚠️ (the page does not name it — confirm whether it should)
 - [ ] Housing lease protections are not restricted to Korean nationals. ⚠️
@@ -111,7 +113,7 @@ Procedural assertions:
 - [ ] Sequence: work out what is owed → choose the route → make the claim → outcome and recovery.
 - [ ] Administrative routes exist alongside the courts for labour claims, and differ in speed, cost, and available remedies. ⚠️
 - [ ] For unpaid wages, the administrative route is often faster and cheaper than litigation. ⚠️
-- [ ] Deadlines for challenging a dismissal are short and differ by route — **the page deliberately does not state the periods**; confirm whether it should. ⚠️
+- [ ] A remedy application to the Labor Relations Commission must be made **within three months** of the dismissal, and the period is strict (제척기간) — it does not pause or extend, and the route closes once it runs out. ⚠️ Supplied by the firm; no Korean-language page to cross-check against.
 - [ ] Whether a resignation was genuinely voluntary can be examined, even where paperwork says otherwise. ⚠️
 - [ ] Minimum standards apply to wages, hours, and overtime regardless of contract terms. ⚠️
 - [ ] Entitlement to earned wages does not disappear because of how a worker is sponsored — stated together with the caveat that practical consequences for status depend on circumstances. ⚠️ **This is the most sensitive statement on the site; review the wording closely.**

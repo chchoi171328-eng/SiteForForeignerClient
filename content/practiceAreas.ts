@@ -269,7 +269,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       {
         question: 'I received a court document. How long do I have?',
         answer:
-          'Deadlines are the part you cannot recover from. A complaint and a payment order each carry their own response period, and letting one pass can mean the other side simply wins. Check the date you received it and tell us that first — we will work out the order of what to do.',
+          'Deadlines are the part you cannot recover from. If you have been served with a complaint, you have 30 days to file an answer — do nothing and the court can decide on the other side’s account alone. A payment order has to be opposed within two weeks of the day you received it; once that passes it stands as final. Check the date on what you received and tell us that first.',
       },
       {
         question: 'There is no written loan agreement. Can I still recover?',
@@ -363,7 +363,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       {
         question: 'What deadlines must I not miss?',
         answer:
-          'The ones that bite are usually tied to moving out, to responding to court documents, and to the timing of notices around renewal or termination. Bring the dates — the contract date, the end date, and the date you received anything in writing — and we will map them.',
+          'The ones that bite are usually tied to moving out, to responding to court documents, and to the timing of notices around renewal or termination. The notice periods in particular vary with the type of contract and the circumstances, so there is no single number that applies to every lease. Bring the dates — when the contract was signed, when it ends, and when you received anything in writing — and we will map them against your contract.',
       },
       {
         question: 'My tenant will not pay and will not leave. Can I change the locks or remove their things?',
@@ -648,7 +648,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       {
         question: 'How long do I have to challenge a dismissal?',
         answer:
-          'Shorter than most people expect, and the period differs by route. If you have been dismissed, treat the date as the thing that matters most and tell us that first.',
+          'A remedy application to the Labor Relations Commission has to be made within three months of the dismissal. That period is strict — it does not pause or extend, and once it runs out that route is closed regardless of how strong the case was. If you have been dismissed, the date is the first thing to tell us.',
       },
       {
         question: 'Is what I was paid actually legal?',
