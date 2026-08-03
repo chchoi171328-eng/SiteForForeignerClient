@@ -101,9 +101,11 @@ Procedural assertions:
 - [ ] Consultation content is protected by an attorney's duty of confidentiality under Korean law. ⚠️
 - [ ] Residency tied to a marriage is affected by divorce — stated as a real question whose answer depends on circumstances, **not** as a definite outcome. Confirm the wording is at an acceptable level of caution.
 
-## /practice-areas/labor-employment ⚠️ no Korean source page, no published fee
+## /practice-areas/labor-employment ⚠️ no Korean source page
 
-Retainer stated: **none** — no figure is published on either site, so the page says the retainer is quoted in writing after review. **Supply a figure if one should be published**, or confirm the page should stay as is.
+Retainer stated: **from ₩3,000,000** — set by the firm for this page. Note there is **no labour row on either the Korean /fees table or the English /fees table**, so this figure currently appears only on the practice-area page.
+- [ ] Confirm the figure.
+- [ ] Decide whether labour should also be listed on /fees (and on the Korean site's fee table, to keep the two in step).
 
 Procedural assertions:
 - [ ] Sequence: work out what is owed → choose the route → make the claim → outcome and recovery.

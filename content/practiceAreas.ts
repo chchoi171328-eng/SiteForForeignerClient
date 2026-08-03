@@ -658,9 +658,10 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       CONSULTATION_ONLY_FAQ,
     ],
     retainer: {
+      range: 'from ₩3,000,000',
       dependsOn: 'the route chosen and the complexity of the dispute',
       closing:
-        'Labour matters are quoted after we review your case, in writing, before you commit — and the figure does not change while the case is running. Some wage claims are resolved through administrative routes at considerably lower cost, and we will tell you when that is the better option.',
+        'Some wage claims are resolved through administrative routes at considerably lower cost, and we will tell you when that is the better option.',
     },
   },
   {
