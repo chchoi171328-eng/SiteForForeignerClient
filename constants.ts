@@ -44,6 +44,7 @@ export const ATTORNEY = {
   ],
   career: [
     "Representative Attorney, SOL & LUNA Law Firm (present)",
+    "Legal Advisor, foreign resident counseling center, Pyeongtaek International Exchange Foundation (PIEF) · 2025–present",
     "Attorney, Law Firm Suho (former)",
     "In-house Counsel, GS Engineering & Construction (former)",
     "In-house Counsel, Lotte Engineering & Construction (former)",

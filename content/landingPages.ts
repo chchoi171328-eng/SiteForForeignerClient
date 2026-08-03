@@ -155,6 +155,11 @@ export const LANDING_PAGES: LandingPage[] = [
       },
       {
         paragraphs: [
+          "Since 2025, Attorney Choi has served as a legal advisor at the foreign resident counseling center run by the Pyeongtaek International Exchange Foundation (PIEF) — the city's public foundation for its international community. Appointed and reappointed by the foundation, he advises foreign residents on legal matters through the center's consultation program.",
+        ],
+      },
+      {
+        paragraphs: [
           'One more thing worth knowing: a consultation here does not commit you to anything. Some visitors book an assessment, learn where they stand, and decide not to litigate — with our agreement. That is a good outcome too.',
         ],
       },
