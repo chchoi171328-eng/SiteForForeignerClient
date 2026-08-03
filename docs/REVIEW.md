@@ -12,6 +12,9 @@ sufficient check on their own.
 **How to use:** confirm each line, or mark it for rewording. Anything marked
 ⚠️ was written without a Korean-language source and needs closer review.
 
+Items marked `[x] **CONFIRMED**` have been checked by the firm and do not need
+re-reviewing unless the page text changes. Everything still on `[ ]` is open.
+
 ---
 
 ## Site-wide
@@ -113,10 +116,10 @@ Procedural assertions:
 - [ ] Sequence: work out what is owed → choose the route → make the claim → outcome and recovery.
 - [ ] Administrative routes exist alongside the courts for labour claims, and differ in speed, cost, and available remedies. ⚠️
 - [ ] For unpaid wages, the administrative route is often faster and cheaper than litigation. ⚠️
-- [ ] A remedy application to the Labor Relations Commission must be made **within three months** of the dismissal, and the period is strict (제척기간) — it does not pause or extend, and the route closes once it runs out. ⚠️ Supplied by the firm; no Korean-language page to cross-check against.
+- [x] **CONFIRMED** — A remedy application to the Labor Relations Commission must be made **within three months** of the dismissal, and the period is strict (제척기간): it does not pause or extend, and the route closes once it runs out.
 - [ ] Whether a resignation was genuinely voluntary can be examined, even where paperwork says otherwise. ⚠️
 - [ ] Minimum standards apply to wages, hours, and overtime regardless of contract terms. ⚠️
-- [ ] Entitlement to earned wages does not disappear because of how a worker is sponsored — stated together with the caveat that practical consequences for status depend on circumstances. ⚠️ **This is the most sensitive statement on the site; review the wording closely.**
+- [x] **CONFIRMED** — Entitlement to earned wages does not disappear because of how a worker is sponsored, stated together with the caveat that practical consequences for status depend on circumstances.
 
 ---
 
