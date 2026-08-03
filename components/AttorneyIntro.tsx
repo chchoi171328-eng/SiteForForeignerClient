@@ -33,6 +33,10 @@ const AttorneyIntro: React.FC = () => {
                     registration in Civil and Criminal Law.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                    He also serves as a legal advisor at the foreign resident counseling center of the
+                    Pyeongtaek International Exchange Foundation (PIEF).
+                </p>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
                     {ATTORNEY.englishService}
                 </p>
                 <p className="text-navy-900 font-medium leading-relaxed mb-10">
