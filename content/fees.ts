@@ -32,4 +32,9 @@ export const RETAINER_RANGES: RetainerRange[] = [
     range: 'from ₩3,000,000',
     dependsOn: 'type of dispute and the amount in issue',
   },
+  {
+    area: 'Labor & employment',
+    range: 'from ₩3,000,000',
+    dependsOn: 'the route chosen and the complexity of the dispute',
+  },
 ]
