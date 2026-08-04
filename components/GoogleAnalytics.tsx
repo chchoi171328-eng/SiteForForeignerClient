@@ -1,6 +1,7 @@
 'use client'
 
 import Script from 'next/script'
+import { ADS_CONVERSION_ID } from '../lib/gtag'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
@@ -19,6 +20,8 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GA_MEASUREMENT_ID}');
+          // Google Ads destination on the same gtag.js library — not a second tag.
+          gtag('config', '${ADS_CONVERSION_ID}');
 
           function gtag_report_conversion(url) {
             var callback = function () {

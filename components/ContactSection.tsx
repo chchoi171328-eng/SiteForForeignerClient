@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Icons } from './Icons';
 import { CONTACT_INFO } from '../constants';
-import { trackEvent } from '../lib/gtag';
+import { trackEvent, reportAdsConversion, ADS_CONTACT_CONVERSION } from '../lib/gtag';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 // EmailJS Configuration from environment variables
@@ -93,6 +93,9 @@ const ContactSection: React.FC = () => {
 
             setStatus('success');
             trackEvent('contact_form_submitted');
+            // Google Ads conversion — only after the inquiry was actually delivered,
+            // so it never fires on click, on a validation failure, or on a send error.
+            reportAdsConversion(ADS_CONTACT_CONVERSION);
             setFormState({ name: '', email: '', phone: '', message: '' });
             setErrors({});
         } catch (error) {
