@@ -122,3 +122,37 @@
     봉투 — 인물·로고·경찰 상징 없음)
   - 본문: `/assets/guides/police-summons-prepare.jpg` (백지 노트·서류를
     정리하는 외국인 거주자의 손 — 얼굴 비노출)
+
+---
+
+## 4. Settlement (합의) in Criminal Cases
+`/guides/criminal-defense/hapui-settlement-in-criminal-cases` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 고소취소는 제1심 판결선고 전까지, 취소 후 재고소 불가, 반의사불벌죄 처벌불원 의사표시에 준용 | 형사소송법 제232조 | casenote.kr, law.go.kr |
+| 폭행죄 반의사불벌 | 형법 제260조 제3항 | 검색 다수 출처 |
+| 양형 조건 (범행 후의 정황 등) | 형법 제51조 | (통용 조문 — 재확인 권장) |
+| 형사공탁 특례 — 피해자 인적사항 미상이어도 사건번호로 공탁 가능 | 공탁법 제5조의2 | casenote.kr, lbox.kr |
+| 모욕죄 친고죄 언급 ("insult" 예시) | 형법 제312조 제1항 | (통용 조문 — 재확인 권장) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- "prosecutors ask whether you have settled" / "courts routinely adjourn
+  briefly" 등 실무 서술은 일반 실무 수준. 판례 인용 없음.
+- 합의 금액은 일절 숫자 제시 없음 ("no table and no formula").
+- 결과 보장 금지 준수 — "no one can promise", "treat anyone who
+  guarantees an outcome ... as a red flag".
+- 비자 FAQ는 허용 수위 ②로만 서술.
+- DUI를 "all other offenses" 예시로 언급 (반의사불벌 아님 — 사실 확인 완료
+  수준의 통용 지식이나 명시 조문 없음).
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/hapui-hero.jpg` (마주 놓인 두 의자와 서류 폴더 —
+    인물 없음)
+  - 본문: `/assets/guides/hapui-deposit.jpg` (서류 폴더를 건네는 한국인
+    변호사의 손 — 얼굴 비노출)

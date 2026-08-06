@@ -12,6 +12,7 @@ import type { ComponentType } from 'react'
 import GettingYourHousingDepositBack from './bodies/getting-your-housing-deposit-back'
 import JeonseExplained from './bodies/jeonse-explained'
 import ReceivedAPoliceSummons from './bodies/received-a-police-summons'
+import HapuiSettlementInCriminalCases from './bodies/hapui-settlement-in-criminal-cases'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -96,6 +97,18 @@ export const GUIDES: Guide[] = [
     reviewed: '2026-08',
     related: ['hapui-settlement-in-criminal-cases'],
     body: ReceivedAPoliceSummons,
+  },
+  {
+    slug: 'hapui-settlement-in-criminal-cases',
+    field: 'criminal-defense',
+    listingTitle: 'Settlement (합의) in Criminal Cases',
+    metaTitle:
+      'Hapui (합의): How Settlement Works in Korean Criminal Cases — Timing, Terms, and Limits',
+    metaDescription:
+      'How hapui (합의), the Korean criminal settlement, actually works: when it ends a case, when it only helps, the deadline, and the mistakes to avoid.',
+    reviewed: '2026-08',
+    related: ['received-a-police-summons'],
+    body: HapuiSettlementInCriminalCases,
   },
 ]
 
