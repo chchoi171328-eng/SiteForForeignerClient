@@ -40,5 +40,9 @@
 - 없음 (판례 인용 0건, SOFA·비자 관련 서술 0건)
 
 ### 이미지
-- 상태: 보류 — 본문 먼저 삽입 (guide-production PART C §3). Artlist 생성은
-  크레딧 승인 필요 시 사용자 확인 후 진행.
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 얼굴 비노출·텍스트
+  없음·16:9·클리셰 없음)
+  - 히어로: `/assets/guides/deposit-back-hero.jpg` (이사 박스가 놓인 빈 아파트,
+    인물 없음)
+  - 본문: `/assets/guides/deposit-back-demand-letter.jpg` (내용증명 봉투를
+    봉하는 외국인 거주자의 손 — 얼굴 비노출)

@@ -2,10 +2,12 @@
 // Authored via the english-guide-writer skill workflow (guide-production Phase 1, #1).
 // Statute references verified against elaw.klri.re.kr / law.go.kr — see REVIEW-GUIDES.md.
 
+import Image from 'next/image'
 import {
   GuideSummary,
   GuideToc,
   Term,
+  Caption,
   Callout,
   GuideFlow,
   GuideDeadlines,
@@ -20,6 +22,15 @@ const TD = 'px-4 py-3 text-sm text-gray-700 leading-relaxed align-top'
 export default function GettingYourHousingDepositBack() {
   return (
     <>
+      <Image
+        src="/assets/guides/deposit-back-hero.jpg"
+        alt="Moving boxes stacked in an empty Korean apartment — the point where getting your housing deposit back becomes urgent"
+        width={1600}
+        height={900}
+        priority
+        className="rounded-lg mb-8"
+      />
+
       <GuideSummary>
         <ul className="list-disc pl-5">
           <li>
@@ -203,6 +214,19 @@ export default function GettingYourHousingDepositBack() {
         It is not a court filing and it does not legally force anyone to pay — but it is the
         standard opening move in a Korean deposit dispute.
       </p>
+      <figure className="my-6">
+        <Image
+          src="/assets/guides/deposit-back-demand-letter.jpg"
+          alt="Preparing a certified content mail (내용증명) demand letter for a housing deposit claim in Korea"
+          width={1600}
+          height={900}
+          className="rounded-lg"
+        />
+        <Caption>
+          Certified content mail costs a few thousand won at any post office — the post office keeps
+          an official copy, so the landlord can never deny what was demanded and when.
+        </Caption>
+      </figure>
       <p className={P}>
         A good demand letter states the lease dates, the notice you gave, the amount owed, a payment
         deadline, and your bank account — and says plainly what comes next: a lease registration
