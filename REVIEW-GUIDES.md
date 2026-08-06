@@ -46,3 +46,37 @@
     인물 없음)
   - 본문: `/assets/guides/deposit-back-demand-letter.jpg` (내용증명 봉투를
     봉하는 외국인 거주자의 손 — 얼굴 비노출)
+
+---
+
+## 2. Jeonse, Explained
+`/guides/real-estate-lease-disputes/jeonse-explained` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 기간 미정·2년 미만 약정 → 2년 의제 (임차인은 단기 유효 주장 가능) | 주택임대차보호법 제4조 제1항 | casenote.kr |
+| 갱신 시 증액 상한 1/20(5%), 1년 내 재증액 금지 | 동법 제7조 | law.go.kr, easylaw.go.kr |
+| 계약갱신요구권 1회·2년 (guide 1과 공통) | 동법 제6조의3 | law.go.kr |
+| 양수인의 임대인 지위 승계 | 동법 제3조 제4항 | (통용 조문 — 재확인 권장) |
+| 대항력·우선변제권·존속 의제 (guide 1과 공통) | 동법 제3조, 제3조의2, 제4조 제2항 | elaw.klri.re.kr |
+| 외국인등록·체류지변경신고 갈음 | 출입국관리법 제88조의3 | gov.kr |
+| 전세권(물권) 정의 | 민법 제303조 | (통용 조문 — 재확인 권장) |
+| HUG 전세보증금반환보증 — 계약기간 1/2 경과 전 가입 | HUG 상품 약관 (법령 아님) | safehomes.kr 등 — 본문에서 "generally/check current conditions"로 완충 서술 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- 깡통전세·전세사기 현상은 시의성 표현 없이 구조적 위험으로만 서술.
+- "no nationality requirement in the Act" — 규칙 ③(동일 적용)에 따라 웹 검증
+  후 서술. 은행 전세대출 조건은 "have their own eligibility conditions"
+  수준으로만.
+- 전세권 등기 FAQ — 점유 없는 경우의 한계 서술은 일반론 수준. 수위 확인 요망.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/jeonse-hero.jpg` (한국 아파트 단지 거리 전경,
+    인물 없음)
+  - 본문: `/assets/guides/jeonse-register-check.jpg` (백지 서류를 살피는
+    외국인 거주자의 손 — 얼굴 비노출·판독 가능한 텍스트 없음)

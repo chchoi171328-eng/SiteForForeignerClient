@@ -10,6 +10,7 @@
 
 import type { ComponentType } from 'react'
 import GettingYourHousingDepositBack from './bodies/getting-your-housing-deposit-back'
+import JeonseExplained from './bodies/jeonse-explained'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -68,8 +69,20 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
     reviewed: '2026-08',
-    related: [],
+    related: ['jeonse-explained'],
     body: GettingYourHousingDepositBack,
+  },
+  {
+    slug: 'jeonse-explained',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'Jeonse, Explained',
+    metaTitle:
+      "Jeonse, Explained — How Korea's Lump-Sum Deposit Lease Works and How to Protect Your Money",
+    metaDescription:
+      "What jeonse (전세) is, how Korea's lump-sum deposit lease compares to wolse, and the steps that keep your deposit safe — explained for foreign residents.",
+    reviewed: '2026-08',
+    related: ['getting-your-housing-deposit-back'],
+    body: JeonseExplained,
   },
 ]
 
