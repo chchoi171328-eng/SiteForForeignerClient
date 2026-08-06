@@ -9,6 +9,7 @@
 // guide bodies outside that workflow. This file only registers finished guides.
 
 import type { ComponentType } from 'react'
+import GettingYourHousingDepositBack from './bodies/getting-your-housing-deposit-back'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -49,8 +50,28 @@ export type Guide = {
   body: ComponentType
 }
 
+/** Serializable guide fields — safe to pass into client components (no body). */
+export type GuideMeta = Omit<Guide, 'body'>
+
+export function toGuideMeta({ body: _body, ...meta }: Guide): GuideMeta {
+  return meta
+}
+
 /** Registered guides, in listing order within each field. */
-export const GUIDES: Guide[] = []
+export const GUIDES: Guide[] = [
+  {
+    slug: 'getting-your-housing-deposit-back',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'Getting Your Housing Deposit Back',
+    metaTitle:
+      'Getting Your Housing Deposit Back in Korea — Deadlines, Leverage, and the Order That Works',
+    metaDescription:
+      'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
+    reviewed: '2026-08',
+    related: [],
+    body: GettingYourHousingDepositBack,
+  },
+]
 
 export function getGuide(field: string, slug: string): Guide | undefined {
   return GUIDES.find((g) => g.field === field && g.slug === slug)
@@ -64,6 +85,6 @@ export function getGuideBySlug(slug: string): Guide | undefined {
   return GUIDES.find((g) => g.slug === slug)
 }
 
-export function guidePath(g: Guide): string {
+export function guidePath(g: Pick<Guide, 'field' | 'slug'>): string {
   return `/guides/${g.field}/${g.slug}`
 }

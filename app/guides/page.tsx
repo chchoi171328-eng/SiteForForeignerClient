@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { GUIDES } from '@/content/guides/registry'
+import { GUIDES, toGuideMeta } from '@/content/guides/registry'
 import GuidesList from '@/components/guide/GuidesList'
 
 const PAGE_URL = 'https://www.lsfp.co.kr/guides'
@@ -35,7 +35,7 @@ export default function GuidesPage() {
           </p>
         </header>
 
-        <GuidesList guides={GUIDES} />
+        <GuidesList guides={GUIDES.map(toGuideMeta)} />
       </div>
     </div>
   )

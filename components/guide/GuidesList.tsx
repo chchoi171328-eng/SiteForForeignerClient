@@ -9,12 +9,12 @@ import {
     GUIDE_FIELDS,
     FIELD_LABELS,
     guidePath,
-    type Guide,
+    type GuideMeta,
     type GuideField,
 } from '@/content/guides/registry';
 import { Icons } from '@/components/Icons';
 
-export default function GuidesList({ guides }: { guides: Guide[] }) {
+export default function GuidesList({ guides }: { guides: GuideMeta[] }) {
     const [field, setField] = useState<GuideField | 'all'>('all');
     const visible = field === 'all' ? guides : guides.filter((g) => g.field === field);
 
