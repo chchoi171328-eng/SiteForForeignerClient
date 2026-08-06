@@ -45,7 +45,7 @@ const AttorneyIntro: React.FC = () => {
                 </p>
 
                 <Link
-                    href="/attorneys/cheolho-choi"
+                    href="/attorneys/chulho-choi"
                     className="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors"
                 >
                     View Full Profile

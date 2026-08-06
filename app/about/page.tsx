@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import AttorneyIntro from '@/components/AttorneyIntro'
 
 export const metadata: Metadata = {
@@ -23,7 +24,18 @@ export default function AboutPage() {
   return (
     <div className="pt-24 lg:pt-32 pb-20">
       <div className="container mx-auto px-6 max-w-3xl">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-12">About SOL &amp; LUNA</h1>
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-8">About SOL &amp; LUNA</h1>
+
+        <div className="mb-12 rounded-xl overflow-hidden">
+          <Image
+            src="/assets/office-consult-wide.jpg"
+            alt="Consultation room at SOL &amp; LUNA: a table, two chairs facing each other, natural light from the window"
+            width={1600}
+            height={900}
+            className="w-full h-auto object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
 
         <section className="mb-12">
           <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Why we run the firm this way</h2>
