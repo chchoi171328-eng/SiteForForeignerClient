@@ -12,6 +12,8 @@
 | entrance.jpg (1200x1600, 세로) | Location | 입구 명판. 세로 레이아웃 권장 |
 | building-exterior.jpg (1200x1600, 세로) | Location (wayfinding) | 명 5F 간판 식별 가능 |
 | street-to-court.jpg (1200x1600, 세로) | Location (street) | 명 5F 간판 + 법원 방향. 세로 사용 |
+| attorney-choi-about.jpg (1200x1800, 세로) | 홈·About의 Representative Attorney 블록 | 세로 비율 유지 |
+| attorney-choi-profile.jpg (1200x1800, 세로) | 프로필 페이지 헤더 | 세로 비율 유지. Person JSON-LD의 image로도 사용 |
 
 주의: 거리·외관 컷은 16:9 크롭 시 간판 또는 법원이 잘려 세로 유지가 최선.
 Location 페이지는 세로 이미지 2~3장 병렬 레이아웃 권장.

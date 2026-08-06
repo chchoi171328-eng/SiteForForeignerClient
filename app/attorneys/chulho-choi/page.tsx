@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ATTORNEY, CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
@@ -37,6 +38,7 @@ const jsonLd = {
     name: ATTORNEY.nameEn,
     alternateName: ATTORNEY.nameKr,
     jobTitle: ATTORNEY.titleEn,
+    image: 'https://www.lsfp.co.kr/assets/attorney-choi-profile.jpg',
     worksFor: {
       '@type': 'LegalService',
       name: ATTORNEY.firmEn,
@@ -75,16 +77,31 @@ export default function AttorneyProfilePage() {
         </nav>
 
         {/* Header */}
-        <header className="mb-12">
-          <p className="text-gold-600 font-bold uppercase tracking-widest mb-2">{ATTORNEY.titleEn}</p>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-3">
-            {ATTORNEY.nameEn} <span className="text-gray-400 font-light">({ATTORNEY.nameKr})</span>
-          </h1>
-          <p className="text-lg text-gray-600">{ATTORNEY.firmEn} · Pyeongtaek, Korea</p>
+        <header className="mb-12 flex flex-col sm:flex-row sm:items-start gap-8">
+          {/* Portrait kept in its original 2:3 ratio rather than cropped square */}
+          <div className="w-40 sm:w-48 shrink-0 rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/assets/attorney-choi-profile.jpg"
+              alt={`Attorney ${ATTORNEY.nameEn}`}
+              width={1200}
+              height={1800}
+              priority
+              className="w-full h-auto object-cover"
+              sizes="(max-width: 640px) 160px, 192px"
+            />
+          </div>
 
-          <div className="mt-6 inline-flex items-center gap-2 bg-navy-50 text-navy-900 px-4 py-2 rounded-full text-sm font-medium">
-            <Icons.Shield className="w-4 h-4 text-gold-600" aria-hidden="true" />
-            KBA-Registered Specialist — {ATTORNEY.kbaSpecialties.join(' & ')}
+          <div>
+            <p className="text-gold-600 font-bold uppercase tracking-widest mb-2">{ATTORNEY.titleEn}</p>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-3">
+              {ATTORNEY.nameEn} <span className="text-gray-400 font-light">({ATTORNEY.nameKr})</span>
+            </h1>
+            <p className="text-lg text-gray-600">{ATTORNEY.firmEn} · Pyeongtaek, Korea</p>
+
+            <div className="mt-6 inline-flex items-center gap-2 bg-navy-50 text-navy-900 px-4 py-2 rounded-full text-sm font-medium">
+              <Icons.Shield className="w-4 h-4 text-gold-600" aria-hidden="true" />
+              KBA-Registered Specialist — {ATTORNEY.kbaSpecialties.join(' & ')}
+            </div>
           </div>
         </header>
 
