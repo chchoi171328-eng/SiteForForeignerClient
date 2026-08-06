@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { PRACTICE_AREAS } from '@/content/practiceAreas'
 import { LANDING_PAGES } from '@/content/landingPages'
 import { LEGAL_DOCUMENTS } from '@/content/legal'
-import { BLOG_POSTS } from '@/content/blog'
+import { GUIDES, guidePath } from '@/content/guides/registry'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.lsfp.co.kr'
@@ -24,11 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly',
     priority: 0.3,
   }))
-  const blogPosts: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt),
-    changeFrequency: 'monthly',
-    priority: 0.6,
+  const guidePages: MetadataRoute.Sitemap = GUIDES.map((g) => ({
+    url: `${baseUrl}${guidePath(g)}`,
+    lastModified: new Date(`${g.reviewed}-01`),
+    changeFrequency: 'yearly',
+    priority: 0.7,
   }))
 
   return [
@@ -38,11 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/practice-areas`, lastModified: new Date(), priority: 0.9 },
     ...practiceAreaPages,
     { url: `${baseUrl}/fees`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.8 },
+    { url: `${baseUrl}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...guidePages,
     ...landingPages,
     { url: `${baseUrl}/location`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-    ...blogPosts,
     ...legalPages,
   ]
 }

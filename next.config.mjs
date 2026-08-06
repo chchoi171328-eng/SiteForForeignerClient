@@ -12,6 +12,17 @@ const nextConfig = {
                 destination: '/attorneys/chulho-choi',
                 permanent: true,
             },
+            {
+                // The blog was replaced by the evergreen Legal Guides section.
+                source: '/blog',
+                destination: '/guides',
+                permanent: true,
+            },
+            {
+                source: '/blog/:slug*',
+                destination: '/guides',
+                permanent: true,
+            },
         ]
     },
     images: {
