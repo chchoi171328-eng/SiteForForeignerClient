@@ -9,21 +9,27 @@ import { reportPhoneConversion } from '../lib/gtag';
 
 const Hero: React.FC = () => {
     // The still image is always rendered — it is the LCP element and the fallback.
-    // The cinemagraph is layered on top only for visitors who want motion and are
-    // not on a data-saving connection, so it never mounts for the rest.
+    // The cinemagraph is layered on top only on desktop, and only for visitors who
+    // want motion and are not on a data-saving connection. Everyone else keeps the
+    // still, so phones never download the video at all.
     const [showCinemagraph, setShowCinemagraph] = useState(false);
 
     useEffect(() => {
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const desktop = window.matchMedia('(min-width: 768px)');
         const saveData = Boolean(
             (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
         );
 
-        const decide = () => setShowCinemagraph(!reduceMotion.matches && !saveData);
+        const decide = () => setShowCinemagraph(desktop.matches && !reduceMotion.matches && !saveData);
         decide();
 
         reduceMotion.addEventListener('change', decide);
-        return () => reduceMotion.removeEventListener('change', decide);
+        desktop.addEventListener('change', decide);
+        return () => {
+            reduceMotion.removeEventListener('change', decide);
+            desktop.removeEventListener('change', decide);
+        };
     }, []);
 
     return (
