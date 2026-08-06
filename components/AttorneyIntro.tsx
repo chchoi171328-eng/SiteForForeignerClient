@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ATTORNEY } from '../constants';
 import { Icons } from './Icons';
@@ -17,6 +18,18 @@ const AttorneyIntro: React.FC = () => {
                 }`}
         >
             <div className="container mx-auto px-6 max-w-4xl text-center">
+                {/* Portrait kept in its original 2:3 ratio rather than cropped square */}
+                <div className="mx-auto mb-8 w-44 md:w-52 rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                        src="/assets/attorney-choi-about.jpg"
+                        alt={`Attorney ${ATTORNEY.nameEn} at the SOL & LUNA office in Pyeongtaek`}
+                        width={1200}
+                        height={1800}
+                        className="w-full h-auto object-cover"
+                        sizes="(max-width: 768px) 176px, 208px"
+                    />
+                </div>
+
                 <h2 className="text-gold-600 font-bold uppercase tracking-widest mb-2">Representative Attorney</h2>
                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-6">
                     {ATTORNEY.nameEn} <span className="text-gray-400 font-light">({ATTORNEY.nameKr})</span>
