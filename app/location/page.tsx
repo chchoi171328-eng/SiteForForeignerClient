@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import LocationSection from '@/components/LocationSection'
 import type { Metadata } from 'next'
 
@@ -29,6 +30,38 @@ export default function LocationPage() {
           actually decided. Consultations are by appointment.
         </p>
       </div>
+
+      {/* Wayfinding photos — kept in their original portrait ratio */}
+      <div className="container mx-auto px-6 max-w-5xl mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            {
+              src: '/assets/building-exterior.jpg',
+              alt: 'SJ Plaza building in central Pyeongtaek, home of SOL & LUNA Law Firm',
+            },
+            {
+              src: '/assets/street-to-court.jpg',
+              alt: 'Street view of our building — the Pyeongtaek courthouse is directly across the road',
+            },
+            {
+              src: '/assets/entrance.jpg',
+              alt: 'Entrance nameplate at the SOL & LUNA Law Firm office',
+            },
+          ].map((photo) => (
+            <div key={photo.src} className="rounded-lg overflow-hidden">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={1200}
+                height={1600}
+                className="w-full h-auto object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
       <LocationSection />
     </div>
   )

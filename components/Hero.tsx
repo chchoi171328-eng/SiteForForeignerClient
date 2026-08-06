@@ -13,8 +13,8 @@ const Hero: React.FC = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                    alt="Modern law firm office environment with professional atmosphere"
+                    src="/assets/hero-window-court.jpg"
+                    alt="View of the Pyeongtaek courthouse and prosecutors' office from the SOL & LUNA office window"
                     fill
                     className="object-cover"
                     priority
@@ -23,7 +23,14 @@ const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-navy-900/80"></div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
+            {/* Photo caption — small, set apart from the hero copy, and kept clear of
+                the floating call buttons that sit bottom-right on small screens. */}
+            <p className="absolute bottom-4 left-4 z-10 max-w-[15rem] sm:max-w-xs text-left text-[11px] md:text-xs text-gray-400 leading-snug">
+                The Pyeongtaek courthouse and prosecutors&apos; office — seen from our office window.
+            </p>
+
+            {/* pb reserves room for the absolutely-positioned photo caption below */}
+            <div className="container mx-auto px-6 relative z-10 text-center pb-24 sm:pb-16">
                 <div className="animate-fade-in-up">
                     <p className="text-gold-400 font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base">
                         A Law Firm for Foreign Residents in Korea
