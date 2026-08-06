@@ -80,3 +80,45 @@
     인물 없음)
   - 본문: `/assets/guides/jeonse-register-check.jpg` (백지 서류를 살피는
     외국인 거주자의 손 — 얼굴 비노출·판독 가능한 텍스트 없음)
+
+---
+
+## 3. Received a Police Summons
+`/guides/criminal-defense/received-a-police-summons` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 피의자 출석요구 (임의수사) | 형사소송법 제200조 | casenote.kr |
+| 정당한 이유 없는 출석요구 불응·불응 우려 시 체포영장 | 동법 제200조의2 | law.go.kr, lbox.kr |
+| 참고인 출석요구 | 동법 제221조 | casenote.kr |
+| 변호인 신문 참여 | 동법 제243조의2 | casenote.kr |
+| 조서 열람·증감변경 청구, 이의 기재 | 동법 제244조 | lbox.kr, casenote.kr |
+| 진술거부권 사전 고지 (불이익 없음 포함) | 동법 제244조의3 | law.go.kr, casenote.kr |
+| 경찰 송치/불송치 결정 (2021 시행) | 동법 제245조의5 | casenote.kr |
+| 불송치 통지·고소인 이의신청 → 송치 | 동법 제245조의6·제245조의7 | casenote.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **SOFA FAQ** — 스킬 5-6절 ① 허용 수위 그대로: "notification and handling
+  can differ depending on your status, including for SOFA personnel —
+  clarify your situation first". 확정 서술 없음.
+- **출국 제한 FAQ** — "exit restrictions exist and are used" 수준.
+  출입국관리법 근거 조문 인용은 guide 27(Exit Bans)에서 웹 검증 후 다룰
+  예정이라 이 가이드에서는 조문 인용 없이 관점 수준 유지.
+- **비자 영향 FAQ** — 스킬 5-6절 ② 허용 수위 그대로 ("A criminal outcome
+  can affect your stay in Korea...").
+- **통역 제공** — 수사 단계 통역의 근거 법령은 guide 14에서 검증 예정.
+  이 가이드에서는 "In practice, investigative agencies arrange
+  interpreters... confirm ahead" 사실 서술만.
+- **약식명령·기소유예** — "summary (fine) order", "conditional
+  non-prosecution outcomes"로 개요만. 상세는 guide 15에서.
+
+### 보류(PENDING REVIEW) 항목
+- 없음 (판례 인용 0건. SOFA·비자·출국 모두 관점 수위 준수)
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/police-summons-hero.jpg` (현관 테이블 위 백지
+    봉투 — 인물·로고·경찰 상징 없음)
+  - 본문: `/assets/guides/police-summons-prepare.jpg` (백지 노트·서류를
+    정리하는 외국인 거주자의 손 — 얼굴 비노출)

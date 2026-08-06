@@ -11,6 +11,7 @@
 import type { ComponentType } from 'react'
 import GettingYourHousingDepositBack from './bodies/getting-your-housing-deposit-back'
 import JeonseExplained from './bodies/jeonse-explained'
+import ReceivedAPoliceSummons from './bodies/received-a-police-summons'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -83,6 +84,18 @@ export const GUIDES: Guide[] = [
     reviewed: '2026-08',
     related: ['getting-your-housing-deposit-back'],
     body: JeonseExplained,
+  },
+  {
+    slug: 'received-a-police-summons',
+    field: 'criminal-defense',
+    listingTitle: 'Received a Police Summons',
+    metaTitle:
+      'Received a Police Summons in Korea — What It Means and What to Do Before You Go',
+    metaDescription:
+      'What a Korean police summons (출석요구) means for a foreigner: suspect vs. witness status, your rights at the interview, and how to prepare.',
+    reviewed: '2026-08',
+    related: ['hapui-settlement-in-criminal-cases'],
+    body: ReceivedAPoliceSummons,
   },
 ]
 
