@@ -52,7 +52,7 @@ Use **URL Inspection** (top search bar in GSC) for each URL below, then click
 **Request Indexing**. Prioritise these:
 
 - [ ] `https://www.lsfp.co.kr/` (home)
-- [ ] `https://www.lsfp.co.kr/attorneys/cheolho-choi`
+- [ ] `https://www.lsfp.co.kr/attorneys/chulho-choi`
 - [ ] `https://www.lsfp.co.kr/english-speaking-lawyer-pyeongtaek`
 - [ ] `https://www.lsfp.co.kr/camp-humphreys-legal-help`
 - [ ] `https://www.lsfp.co.kr/lawyer-for-foreigners-korea`

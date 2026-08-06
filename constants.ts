@@ -31,7 +31,7 @@ export const CONSULTATION = {
 // Representative attorney. Facts sourced from the firm's Korean site; do not
 // embellish English ability, qualifications, or experience beyond this data.
 export const ATTORNEY = {
-  nameEn: "Cheolho Choi",
+  nameEn: "Chulho Choi",
   nameKr: "최철호",
   titleEn: "Representative Attorney",
   firmEn: "SOL & LUNA Law Firm",
@@ -63,7 +63,6 @@ export const NAV_LINKS = [
   { name: "Practice Areas", href: "/practice-areas" },
   { name: "Fees", href: "/fees" },
   { name: "Location", href: "/location" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 

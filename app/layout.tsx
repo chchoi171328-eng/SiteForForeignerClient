@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Cinzel, Lato } from 'next/font/google'
 import './globals.css'
 import Header from '../components/Header'
@@ -81,18 +82,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <BackToTop />
-        {/* Sticky Call Buttons logic */}
-        <div className="lg:hidden fixed bottom-6 right-6 z-40 flex flex-col gap-4">
-          <a
-            href="https://blog.naver.com/natural_born"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#03C75A] text-white rounded-full shadow-2xl flex items-center justify-center hover:bg-[#02b351] transition-colors"
-            style={{ width: '56px', height: '56px' }}
-            aria-label="Visit Naver Blog"
-          >
-            <span className="font-black text-2xl font-sans" style={{ marginTop: '2px', lineHeight: 1 }}>N</span>
-          </a>
+        {/* Sticky conversion buttons — this slot points into the site, not out of it */}
+        <div className="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-3">
           <a
             href={`tel:${CONTACT_INFO.PHONE}`}
             className="bg-[#C5A028] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:bg-[#B49120] transition-colors"
@@ -100,6 +91,13 @@ export default function RootLayout({
           >
             <Icons.Phone className="w-6 h-6" />
           </a>
+          <Link
+            href="/contact"
+            className="bg-navy-900 text-white pl-5 pr-6 py-4 rounded-full shadow-2xl inline-flex items-center gap-2 font-bold text-sm hover:bg-navy-800 transition-colors"
+          >
+            <Icons.Calendar className="w-5 h-5 shrink-0" aria-hidden="true" />
+            Tell Us What Happened
+          </Link>
         </div>
       </body>
     </html>

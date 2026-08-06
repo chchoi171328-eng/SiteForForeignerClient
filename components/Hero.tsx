@@ -66,10 +66,10 @@ const Hero: React.FC = () => {
                             Book a 30-Minute Assessment
                         </Link>
                         <Link
-                            href="/attorneys/cheolho-choi"
+                            href="/attorneys/chulho-choi"
                             className="bg-transparent border border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all"
                         >
-                            Meet Attorney Cheolho Choi
+                            Meet Attorney Chulho Choi
                         </Link>
                     </div>
 

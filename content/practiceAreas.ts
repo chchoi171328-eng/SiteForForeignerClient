@@ -197,7 +197,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       range: '₩4,000,000 – ₩12,000,000',
       dependsOn: 'the stage the case has reached and how complex the facts are',
       closing:
-        'Attorney Cheolho Choi is registered with the Korean Bar Association as a specialist in criminal law and civil law.',
+        'Attorney Chulho Choi is registered with the Korean Bar Association as a specialist in criminal law and civil law.',
     },
   },
   {

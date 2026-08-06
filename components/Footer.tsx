@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3">
                             <li>
                                 <Link
-                                    href="/attorneys/cheolho-choi"
+                                    href="/attorneys/chulho-choi"
                                     className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
                                 >
-                                    Meet Attorney Cheolho Choi
+                                    Meet Attorney Chulho Choi
                                 </Link>
                             </li>
                             {LANDING_PAGES.map(page => (
@@ -137,6 +137,19 @@ const Footer: React.FC = () => {
                             Anti-Spam Policy
                         </button>
                     </div>
+                </div>
+
+                {/* Secondary links */}
+                <div className="border-t border-gray-800 pt-6 text-center">
+                    <a
+                        href={CONTACT_INFO.NAVER_BLOG}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => trackEvent('naver_blog_clicked')}
+                        className="text-gray-500 hover:text-gold-400 text-sm transition-colors"
+                    >
+                        Our Naver Blog (English) ↗
+                    </a>
                 </div>
 
                 {/* Legal Information */}

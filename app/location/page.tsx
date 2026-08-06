@@ -25,9 +25,9 @@ export default function LocationPage() {
     <div className="pt-24 lg:pt-32">
       <div className="container mx-auto px-6 max-w-3xl mb-4">
         <p className="text-gray-700 leading-relaxed text-lg">
-          Our office is on the 5th floor of SJ Plaza in central Pyeongtaek, minutes from Pyeongtaek
-          District Court and the District Prosecutors&apos; Office — the buildings where local cases are
-          actually decided. Consultations are by appointment.
+          Our office is on the 5th floor of SJ Plaza in central Pyeongtaek, minutes from the Pyeongtaek
+          courthouse and prosecutors&apos; office — the buildings where local cases are actually decided.
+          Consultations are by appointment.
         </p>
       </div>
 

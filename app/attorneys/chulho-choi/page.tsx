@@ -5,14 +5,14 @@ import { Icons } from '@/components/Icons'
 import TrackView from '@/components/TrackView'
 import ConsultationFees from '@/components/ConsultationFees'
 
-const PAGE_URL = 'https://www.lsfp.co.kr/attorneys/cheolho-choi'
+const PAGE_URL = 'https://www.lsfp.co.kr/attorneys/chulho-choi'
 
 export const metadata: Metadata = {
-  title: 'Cheolho Choi | English-Speaking Korean Attorney in Pyeongtaek',
+  title: 'Chulho Choi | English-Speaking Korean Attorney in Pyeongtaek',
   description:
-    'Cheolho Choi (최철호), Representative Attorney at SOL & LUNA Law Firm in Pyeongtaek. KBA-registered specialist in Civil and Criminal Law, with in-house counsel experience at GS and Lotte E&C. Consultations conducted in English.',
+    'Chulho Choi (최철호), Representative Attorney at SOL & LUNA Law Firm in Pyeongtaek. KBA-registered specialist in Civil and Criminal Law, with in-house counsel experience at GS and Lotte E&C. Consultations conducted in English.',
   openGraph: {
-    title: 'Cheolho Choi | English-Speaking Korean Attorney in Pyeongtaek',
+    title: 'Chulho Choi | English-Speaking Korean Attorney in Pyeongtaek',
     description:
       'Representative Attorney at SOL & LUNA Law Firm. KBA-registered specialist in Civil and Criminal Law. English consultations available.',
     url: PAGE_URL,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Cheolho Choi | English-Speaking Korean Attorney in Pyeongtaek',
+    title: 'Chulho Choi | English-Speaking Korean Attorney in Pyeongtaek',
     description:
       'Representative Attorney at SOL & LUNA Law Firm. KBA-registered specialist in Civil and Criminal Law.',
   },
@@ -71,7 +71,7 @@ export default function AttorneyProfilePage() {
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-8">
           <Link href="/" className="hover:text-gold-600">Home</Link>
           <span className="mx-2" aria-hidden="true">/</span>
-          <span className="text-gray-800">Cheolho Choi</span>
+          <span className="text-gray-800">Chulho Choi</span>
         </nav>
 
         {/* Header */}
