@@ -14,6 +14,7 @@ import { CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
 import TrackView from '@/components/TrackView'
 import ConsultationFees from '@/components/ConsultationFees'
+import { getGuidesByField, guidePath, GUIDE_FIELDS, type GuideField } from '@/content/guides/registry'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -70,6 +71,10 @@ export default async function PracticeAreaDetailPage({
 
   const Icon = Icons[area.icon] || Icons.Scale
   const assistance = area.attorneyAssistance ?? DEFAULT_ATTORNEY_ASSISTANCE
+  // Guides share the six core field keys; korean-police-investigation has none.
+  const areaGuides = (GUIDE_FIELDS as readonly string[]).includes(area.slug)
+    ? getGuidesByField(area.slug as GuideField)
+    : []
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -247,6 +252,28 @@ export default async function PracticeAreaDetailPage({
               See full fee information
               <Icons.ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
+          </section>
+        )}
+
+        {/* 6b. Guides in this area (auto — hidden while the field has no guides) */}
+        {areaGuides.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Guides in this area</h2>
+            <ul className="space-y-3">
+              {areaGuides.map((g) => (
+                <li key={g.slug}>
+                  <Link href={guidePath(g)} className="group flex items-start gap-3">
+                    <Icons.ArrowRight className="w-4 h-4 text-gold-500 mt-1.5 shrink-0" aria-hidden="true" />
+                    <span>
+                      <span className="font-bold text-navy-900 group-hover:text-gold-600 transition-colors">
+                        {g.listingTitle}
+                      </span>
+                      <span className="block text-sm text-gray-500">Reviewed {g.reviewed}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 

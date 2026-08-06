@@ -62,6 +62,7 @@ export const NAV_LINKS = [
   { name: "About Us", href: "/about" },
   { name: "Practice Areas", href: "/practice-areas" },
   { name: "Fees", href: "/fees" },
+  { name: "Guides", href: "/guides" },
   { name: "Location", href: "/location" },
   { name: "Contact", href: "/contact" },
 ];
