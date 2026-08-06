@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CONTACT_INFO, CONSULTATION } from '../constants';
@@ -8,6 +8,24 @@ import { Icons } from './Icons';
 import { reportPhoneConversion } from '../lib/gtag';
 
 const Hero: React.FC = () => {
+    // The still image is always rendered — it is the LCP element and the fallback.
+    // The cinemagraph is layered on top only for visitors who want motion and are
+    // not on a data-saving connection, so it never mounts for the rest.
+    const [showCinemagraph, setShowCinemagraph] = useState(false);
+
+    useEffect(() => {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const saveData = Boolean(
+            (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
+        );
+
+        const decide = () => setShowCinemagraph(!reduceMotion.matches && !saveData);
+        decide();
+
+        reduceMotion.addEventListener('change', decide);
+        return () => reduceMotion.removeEventListener('change', decide);
+    }, []);
+
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
             {/* Background Image with Overlay */}
@@ -20,6 +38,24 @@ const Hero: React.FC = () => {
                     priority
                     sizes="100vw"
                 />
+
+                {/* Silent cinemagraph over the still. Decorative — the alt above
+                    already describes the view, so it is hidden from assistive tech. */}
+                {showCinemagraph && (
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/assets/hero-window-court.jpg"
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    >
+                        <source src="/assets/hero-window-court.webm" type="video/webm" />
+                        <source src="/assets/hero-window-court.mp4" type="video/mp4" />
+                    </video>
+                )}
+
                 <div className="absolute inset-0 bg-navy-900/80"></div>
             </div>
 
