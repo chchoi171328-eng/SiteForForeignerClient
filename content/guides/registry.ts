@@ -53,6 +53,8 @@ export type Guide = {
   metaDescription: string
   /** Review month, shown as "Reviewed {YYYY-MM}". No publish dates. */
   reviewed: string
+  /** Listing thumbnail (the guide's hero image), 16:9, under /assets/guides. */
+  thumbnail: string
   /** Slugs of related guides (same or other fields). */
   related?: string[]
   /** The guide body, composed from components/guide primitives. */
@@ -77,6 +79,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/deposit-back-hero.jpg',
     related: ['jeonse-explained', 'lease-registration-order'],
     body: GettingYourHousingDepositBack,
   },
@@ -89,6 +92,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "What jeonse (전세) is, how Korea's lump-sum deposit lease compares to wolse, and the steps that keep your deposit safe — explained for foreign residents.",
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/jeonse-hero.jpg',
     related: ['getting-your-housing-deposit-back'],
     body: JeonseExplained,
   },
@@ -101,6 +105,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'What a Korean police summons (출석요구) means for a foreigner: suspect vs. witness status, your rights at the interview, and how to prepare.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/police-summons-hero.jpg',
     related: ['hapui-settlement-in-criminal-cases', 'dui-in-korea'],
     body: ReceivedAPoliceSummons,
   },
@@ -113,6 +118,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How hapui (합의), the Korean criminal settlement, actually works: when it ends a case, when it only helps, the deadline, and the mistakes to avoid.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/hapui-hero.jpg',
     related: ['received-a-police-summons', 'dui-in-korea'],
     body: HapuiSettlementInCriminalCases,
   },
@@ -125,6 +131,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "Korea's DUI limit is 0.03% BAC. Penalties by blood alcohol level, license suspension and revocation, test refusal, and the appeal deadlines that follow.",
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/dui-hero.jpg',
     related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
     body: DuiInKorea,
   },
@@ -137,6 +144,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/divorce-hero.jpg',
     related: ['which-countrys-court-international-divorce'],
     body: DivorceInKoreaConsensualVsJudicial,
   },
@@ -149,6 +157,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "When Korean courts can hear an international divorce, which country's law applies under the statutory ladder, and how foreign divorces are recognized in Korea.",
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/jurisdiction-hero.jpg',
     related: ['divorce-in-korea-consensual-vs-judicial'],
     body: WhichCountrysCourtInternationalDivorce,
   },
@@ -161,6 +170,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'What to do about unpaid wages in Korea: the 14-day rule, the labor office complaint, the government wage fund (대지급금), free legal aid, and the 3-year deadline.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/unpaid-wages-hero.jpg',
     related: ['severance-pay-who-qualifies'],
     body: UnpaidWagesLaborOfficeVsLawsuit,
   },
@@ -173,6 +183,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       "Korea's statutory severance: a month's average pay per year worked. Who qualifies (1 year, 15 hours/week), the freelancer question, IRP accounts, and E-9 insurance.",
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/severance-hero.jpg',
     related: ['unpaid-wages-labor-office-vs-lawsuit'],
     body: SeverancePayWhoQualifies,
   },
@@ -185,6 +196,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How to get a lease registration order in Korea: when you qualify, filing step by step (self-filing included), costs recoverable from the landlord, and what to verify before moving out.',
     reviewed: '2026-08',
+    thumbnail: '/assets/guides/lease-registration-hero.jpg',
     related: ['getting-your-housing-deposit-back', 'jeonse-explained'],
     body: LeaseRegistrationOrder,
   },
