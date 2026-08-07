@@ -18,6 +18,7 @@ import DivorceInKoreaConsensualVsJudicial from './bodies/divorce-in-korea-consen
 import WhichCountrysCourtInternationalDivorce from './bodies/which-countrys-court-international-divorce'
 import UnpaidWagesLaborOfficeVsLawsuit from './bodies/unpaid-wages-labor-office-vs-lawsuit'
 import SeverancePayWhoQualifies from './bodies/severance-pay-who-qualifies'
+import LeaseRegistrationOrder from './bodies/lease-registration-order'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -76,7 +77,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
     reviewed: '2026-08',
-    related: ['jeonse-explained'],
+    related: ['jeonse-explained', 'lease-registration-order'],
     body: GettingYourHousingDepositBack,
   },
   {
@@ -174,6 +175,18 @@ export const GUIDES: Guide[] = [
     reviewed: '2026-08',
     related: ['unpaid-wages-labor-office-vs-lawsuit'],
     body: SeverancePayWhoQualifies,
+  },
+  {
+    slug: 'lease-registration-order',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'Lease Registration Order (임차권등기명령)',
+    metaTitle:
+      'The Lease Registration Order (임차권등기명령) — Keeping Your Deposit Rights After You Move Out',
+    metaDescription:
+      'How to get a lease registration order in Korea: when you qualify, filing step by step (self-filing included), costs recoverable from the landlord, and what to verify before moving out.',
+    reviewed: '2026-08',
+    related: ['getting-your-housing-deposit-back', 'jeonse-explained'],
+    body: LeaseRegistrationOrder,
   },
 ]
 

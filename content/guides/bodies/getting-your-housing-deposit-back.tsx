@@ -3,6 +3,7 @@
 // Statute references verified against elaw.klri.re.kr / law.go.kr — see REVIEW-GUIDES.md.
 
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   GuideSummary,
   GuideToc,
@@ -203,6 +204,15 @@ export default function GettingYourHousingDepositBack() {
         confirming the lease ended cleanly and the registration is completed before you vacate. A
         registered lease claim also signals to the landlord, and to the next tenant&rsquo;s bank,
         that the property carries an unpaid deposit — which itself creates real pressure to pay.
+        The full procedure — documents, filing, costs, and what to verify before moving — is
+        covered step by step in{' '}
+        <Link
+          href="/guides/real-estate-lease-disputes/lease-registration-order"
+          className="text-navy-900 underline decoration-gold-400 underline-offset-2 hover:text-gold-600"
+        >
+          Lease Registration Order (임차권등기명령)
+        </Link>
+        .
       </p>
 
       <h2 id="certified-mail" className={H2}>

@@ -365,3 +365,42 @@
     화분·백지 봉투·짐 상자, 인물·텍스트 없음)
   - 본문: `/assets/guides/severance-calc.jpg` (계산기 앱을 쓰는 외국인
     근로자의 손 — 화면 비노출·백지 플래너)
+
+---
+
+## 10. Lease Registration Order (임차권등기명령)
+`/guides/real-estate-lease-disputes/lease-registration-order` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08 — guide 1 검증분 + 이번 항별 재확인)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 신청 요건: 임대차 종료 + 보증금 미반환, 관할: 주택 소재지 지방법원·지원·시군법원 | 주임법 제3조의3 제1항 | casenote.kr (조문 원문 확인) |
+| 등기 후 대항력·우선변제권 취득, 기존 취득분은 대항요건 상실해도 유지 | 동법 제3조의3 제5항 | casenote.kr (조문 원문 확인) |
+| 임차권등기 후 새 임차인은 소액 최우선변제 배제 | 동법 제3조의3 제6항 | casenote.kr |
+| 신청·등기 비용 임대인에게 청구 가능 | 동법 제3조의3 제8항 | casenote.kr (조문 원문 확인) |
+| 2023 개정: 임대인 고지(송달) 전 등기 촉탁 가능 (2023-07-19 시행) | 동법 제3조의3 제3항 (민집법 준용) | moj.go.kr (guide 1에서 검증) |
+| 일부 반환 시에도 잔액에 대해 신청 가능 | 제1항 해석 ("반환되지 아니한") | 실무 통용 — 재확인 권장 |
+| 10년 소멸시효 (보증금 채권) | 민법 제162조 | guide 1에서 검증 |
+| 외국인등록·체류지신고 갈음 | 출입국관리법 제88조의3 | guide 1에서 검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **셀프 신청** — 이 주제는 스킬 guide-structure 2절의 명명된 예외 — 사실로
+  서술 ("tenants file these routinely; hiding that would be dishonest").
+- **비용 규모** — 구체 수치 대신 "tens of thousands of won" 서술 (인지·송달·
+  등기 수수료 세목 미인용).
+- **처리 기간** — "within a few weeks" 실무 일반론.
+- **말소 선후관계** — 보증금 반환이 말소보다 선행한다는 판례 법리를 "Practice
+  treats repayment as coming first"로 서술 (판례 인용 없음). 수위 확인 요망.
+- **전자소송 신청 가능** — "in practice" 수준 (근거 규칙 미인용).
+- **출국 후 신청 실익** — FAQ에서 "may no longer help ... depends on what was
+  recorded" 완충 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/lease-registration-hero.jpg` (빈 아파트 창턱 위
+    열쇠 — 인물·텍스트 없음)
+  - 본문: `/assets/guides/lease-registration-registry.jpg` (무인 발급기에서
+    백지 서류를 받는 손 — 얼굴 비노출·화면 공백)
