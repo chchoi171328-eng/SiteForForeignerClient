@@ -201,3 +201,44 @@
     공백·텍스트 없음·인물 없음·공포 구도 아님)
   - 본문: `/assets/guides/dui-daeri.jpg` (대리운전 기사에게 차 키를 건네는
     손 — 얼굴 비노출)
+
+---
+
+## 6. Divorce in Korea: Consensual vs. Judicial
+`/guides/divorce-family-law/divorce-in-korea-consensual-vs-judicial` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 협의이혼 (가정법원 확인) | 민법 제834조·제836조 | easylaw.go.kr |
+| 숙려기간: 양육 자녀 있으면 3개월 / 없으면 1개월, 단축 가능 | 민법 제836조의2 | casenote.kr, easylaw.go.kr |
+| 미성년 자녀 시 양육·친권 협의서 의무 제출, 법원 보정명령·확인 거부 가능 | 민법 제836조의2 제4항 | easylaw.go.kr |
+| 확인 후 3개월 내 이혼신고 (미신고 시 확인 실효) | 가족관계등록 절차 | easylaw.go.kr |
+| 재판상 이혼 6가지 사유 | 민법 제840조 | casenote.kr, law.go.kr |
+| 부정행위 제척: 안 날 6개월 / 있은 날 2년 | 민법 제841조 | 다수 확인 |
+| 기타 사유 제척 6개월/2년 | 민법 제842조 | (구조 확인 — 조문 원문 재확인 권장) |
+| 조정전치주의 (예외: 소환 불능·조정 무의미) | 가사소송법 제50조 | casenote.kr, easylaw.go.kr |
+| 재산분할청구권: 이혼 후 2년 제척, 출소기간(기간 내 심판청구 필요) | 민법 제839조의2 제3항 | casenote.kr, lawtimes.co.kr |
+| 위자료 별개 청구권, 단기 소멸시효(3년 — 불법행위) | 민법 제766조 | (3년 수치는 통용 조문 — 재확인 권장. 본문은 "shorter limitation period" 중심 서술) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **유책배우자 이혼청구 제한** — "under Korean practice the spouse principally
+  responsible ... faces limits" 수준으로 서술. 판례 법리이나 판례 인용 없이
+  일반 관행 서술로 처리 — 수위 확인 요망.
+- **외국인 부부 관할 FAQ** — "often yes ... depends" 관점 수준. 국제사법
+  조문 인용은 guide 7(Which Country's Court?)에서 웹 검증 후 처리 예정.
+- **F-6 등 혼인 비자 FAQ** — 허용 수위 ② + "custody ... can interact with
+  immigration decisions" 일반 서술만. (전면 주제는 보류 목록 — 작성 안 함)
+- **조정조서 효력** — "has the force of a judgment"는 가사소송법 제59조
+  취지의 통용 서술 (조문 인용 생략 — 재확인 권장).
+- 숙려기간 단축 — "Courts can shorten it in urgent cases" 완충 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/divorce-hero.jpg` (창가 탁자 위 결혼반지 두 개와
+    백지 서류 — 인물 없음)
+  - 본문: `/assets/guides/divorce-mediation.jpg` (빈 조정실 — 인물 없는
+    구도로 재생성. 1차 인물 구도는 사용자 피드백으로 폐기)

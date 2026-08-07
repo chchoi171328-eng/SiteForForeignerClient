@@ -14,6 +14,7 @@ import JeonseExplained from './bodies/jeonse-explained'
 import ReceivedAPoliceSummons from './bodies/received-a-police-summons'
 import HapuiSettlementInCriminalCases from './bodies/hapui-settlement-in-criminal-cases'
 import DuiInKorea from './bodies/dui-in-korea'
+import DivorceInKoreaConsensualVsJudicial from './bodies/divorce-in-korea-consensual-vs-judicial'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -122,6 +123,18 @@ export const GUIDES: Guide[] = [
     reviewed: '2026-08',
     related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
     body: DuiInKorea,
+  },
+  {
+    slug: 'divorce-in-korea-consensual-vs-judicial',
+    field: 'divorce-family-law',
+    listingTitle: 'Divorce in Korea: Consensual vs. Judicial',
+    metaTitle:
+      'Divorce in Korea for Foreigners — Consensual vs. Judicial, Step by Step',
+    metaDescription:
+      'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
+    reviewed: '2026-08',
+    related: [],
+    body: DivorceInKoreaConsensualVsJudicial,
   },
 ]
 
