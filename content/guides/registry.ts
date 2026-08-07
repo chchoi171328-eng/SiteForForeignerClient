@@ -15,6 +15,7 @@ import ReceivedAPoliceSummons from './bodies/received-a-police-summons'
 import HapuiSettlementInCriminalCases from './bodies/hapui-settlement-in-criminal-cases'
 import DuiInKorea from './bodies/dui-in-korea'
 import DivorceInKoreaConsensualVsJudicial from './bodies/divorce-in-korea-consensual-vs-judicial'
+import WhichCountrysCourtInternationalDivorce from './bodies/which-countrys-court-international-divorce'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -133,8 +134,20 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
     reviewed: '2026-08',
-    related: [],
+    related: ['which-countrys-court-international-divorce'],
     body: DivorceInKoreaConsensualVsJudicial,
+  },
+  {
+    slug: 'which-countrys-court-international-divorce',
+    field: 'divorce-family-law',
+    listingTitle: "Which Country's Court?",
+    metaTitle:
+      "International Divorce: Which Country's Court — and Which Law — Applies in Korea",
+    metaDescription:
+      "When Korean courts can hear an international divorce, which country's law applies under the statutory ladder, and how foreign divorces are recognized in Korea.",
+    reviewed: '2026-08',
+    related: ['divorce-in-korea-consensual-vs-judicial'],
+    body: WhichCountrysCourtInternationalDivorce,
   },
 ]
 
