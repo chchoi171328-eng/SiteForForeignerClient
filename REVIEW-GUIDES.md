@@ -156,3 +156,48 @@
     인물 없음)
   - 본문: `/assets/guides/hapui-deposit.jpg` (서류 폴더를 건네는 한국인
     변호사의 손 — 얼굴 비노출)
+
+---
+
+## 5. DUI in Korea
+`/guides/criminal-defense/dui-in-korea` · Reviewed 2026-08
+
+### 검증한 조문·수치 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 음주운전 기준 혈중알코올 0.03% 이상 | 도로교통법 제44조 제4항 | casenote.kr, easylaw.go.kr |
+| 초범 0.03~0.08%: 1년 이하 / 500만원 이하 | 동법 제148조의2 제3항 제3호 | casenote.kr (조문 원문 확인) |
+| 초범 0.08~0.2%: 1~2년 / 500~1,000만원 | 동법 제148조의2 제3항 제2호 | casenote.kr |
+| 초범 0.2% 이상: 2~5년 / 1,000~2,000만원 | 동법 제148조의2 제3항 제1호 | casenote.kr |
+| 측정거부(초범): 1~5년 / 500~2,000만원 | 동법 제148조의2 제2항 | casenote.kr |
+| 10년 내 재범 가중: 유형별 최대 6년 / 최대 3,000만원 | 동법 제148조의2 제1항 | casenote.kr |
+| 측정 응할 의무 (상당한 이유 시) | 동법 제44조 제2항 | casenote.kr |
+| 면허: 0.03% 정지 / 0.08%·측정거부·사고 취소 | 동법 제93조 (+시행규칙 별표28) | easylaw.go.kr, 다수 |
+| 면허처분 이의신청 60일 | 동법 제94조 | easylaw.go.kr |
+| 행정심판 90일 (안 날부터) | 행정심판법 제27조 | easylaw.go.kr |
+| 위험운전치상: 1~15년 / 1,000~3,000만원, 치사: 무기 또는 3년 이상 | 특정범죄가중법 제5조의11 | casenote.kr, lbox.kr |
+| 약식명령 정식재판청구 7일 | 형사소송법 제453조 | casenote.kr, law.go.kr |
+| 개인형 이동장치(전동킥보드) 음주 범칙금 10만원 | 도로교통법 범칙금 (금액은 easylaw 확인 — 별표 조항 재확인 권장) | easylaw.go.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **취소 후 결격기간** — "commonly a year for a simple first offense and
+  longer with accidents or repeat offenses"로 완충 서술 (별표 세부 기준
+  미인용 — 단순취소 1년/사고·재범 2년+ 정확 기준 재확인 권장).
+- **혈액 재측정 요구** — "may promptly request a blood test" 수준.
+  근거(도로교통법 제44조 제3항) 명시 조문 인용은 생략 — 확인 후 추가 가능.
+- **약식명령 관행** — "commonly resolved by a summary fine order"는 실무
+  일반론. 결과 보장 문구 없음 ("no one can promise").
+- **SOFA·비자 FAQ** — 허용 수위 ①·② 그대로. USFK 자체 규정 언급은
+  "maintains its own alcohol and driving policies" 일반 서술만.
+- 재범 가중 표 행은 구간별 세분 대신 "up to 6 years / up to ₩30,000,000
+  depending on the level"로 요약 (조문 자체는 제1항 제1~3호 검증 완료).
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/dui-hero.jpg` (야간 골목의 주차 차량 — 번호판
+    공백·텍스트 없음·인물 없음·공포 구도 아님)
+  - 본문: `/assets/guides/dui-daeri.jpg` (대리운전 기사에게 차 키를 건네는
+    손 — 얼굴 비노출)
