@@ -16,6 +16,7 @@ import HapuiSettlementInCriminalCases from './bodies/hapui-settlement-in-crimina
 import DuiInKorea from './bodies/dui-in-korea'
 import DivorceInKoreaConsensualVsJudicial from './bodies/divorce-in-korea-consensual-vs-judicial'
 import WhichCountrysCourtInternationalDivorce from './bodies/which-countrys-court-international-divorce'
+import UnpaidWagesLaborOfficeVsLawsuit from './bodies/unpaid-wages-labor-office-vs-lawsuit'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -148,6 +149,18 @@ export const GUIDES: Guide[] = [
     reviewed: '2026-08',
     related: ['divorce-in-korea-consensual-vs-judicial'],
     body: WhichCountrysCourtInternationalDivorce,
+  },
+  {
+    slug: 'unpaid-wages-labor-office-vs-lawsuit',
+    field: 'labor-employment',
+    listingTitle: 'Unpaid Wages: Labor Office vs. Lawsuit',
+    metaTitle:
+      'Unpaid Wages in Korea — Labor Office Complaint vs. Lawsuit, and How to Actually Get Paid',
+    metaDescription:
+      'What to do about unpaid wages in Korea: the 14-day rule, the labor office complaint, the government wage fund (대지급금), free legal aid, and the 3-year deadline.',
+    reviewed: '2026-08',
+    related: [],
+    body: UnpaidWagesLaborOfficeVsLawsuit,
   },
 ]
 

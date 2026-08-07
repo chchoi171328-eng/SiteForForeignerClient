@@ -282,3 +282,46 @@
     항공사 도장·텍스트 없음. 여권 구도는 국장·문자 위험으로 처음부터 배제)
   - 본문: `/assets/guides/jurisdiction-map.jpg` (책상 위 지구본·백지 노트 —
     글자 없는 지구본)
+
+---
+
+## 8. Unpaid Wages: Labor Office vs. Lawsuit
+`/guides/labor-employment/unpaid-wages-labor-office-vs-lawsuit` · Reviewed 2026-08
+
+### 검증한 조문·수치 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 임금 지급 4원칙 (통화·직접·전액·정기) | 근로기준법 제43조 | easylaw.go.kr |
+| 퇴직 후 14일 내 금품청산 (합의로 연장 가능) | 동법 제36조 | casenote.kr, easylaw.go.kr |
+| 미지급 시 지연이자 연 20% (14일 경과 다음날부터, 퇴직 근로자 임금·퇴직급여) | 동법 제37조 (+시행령) | law.go.kr 검색 확인 |
+| 임금채권 소멸시효 3년 | 동법 제49조 | casenote.kr |
+| 벌칙: 3년 이하 징역 / 3천만원 이하 벌금, 반의사불벌 | 동법 제109조 | casenote.kr |
+| 간이대지급금: 임금(최종 3개월) 최대 700만·퇴직급여(최종 3년) 최대 700만, 합계 1,000만원. 도산 불요 | 임금채권보장법 (제도) | easylaw.go.kr, moel.go.kr |
+| 간이대지급금 기한: 확인서 루트(퇴직 1년 내 진정 → 확인서 발급 후 6개월 내 청구) / 판결 루트(퇴직 2년 내 제소 → 확정 후 1년 내 청구) | 임금채권보장법 (제도) | easylaw.go.kr, moel.go.kr |
+| 무료법률구조: 최종 3개월 월평균임금 400만원 미만, 국내 거주 외국인 포함, ☎132 | 대한법률구조공단 제도 | gov.kr, korea.kr |
+| 소액사건 3,000만원 이하 (guide 1과 공통) | 소액사건심판법 제2조 | (guide 1에서 검증) |
+| 노동포털 온라인 진정 가능 | 고용노동부 노동포털 | labor.moel.go.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **셀프 진정 가능성** — 스킬 guide-structure 2절의 명시적 예외 규정에 따라
+  사실로 서술 ("Filing is designed for workers to do themselves").
+- **체류자격 무관 임금청구** — 판례 법리이나 판례 인용 없이 "treated as
+  claimable in practice regardless of your status situation"으로 실무 수준
+  서술. 통보의무 면제 제도(운영 지침)는 조문 미인용으로 언급 생략, "the
+  complaint process and immigration consequences can interact — get advice"
+  완충. 수위 확인 요망.
+- **노동청 처리 기간** — "Commonly a month or two" 실무 일반론.
+- **분할 합의 권고** — "written installment agreement with real dates" 일반
+  실무 조언 수준.
+- 도산대지급금은 "a separate, larger version of the fund exists" 개요만
+  (한도·요건 미기재 — 상세는 별도 가이드 후보).
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/unpaid-wages-hero.jpg` (퇴근 후 빈 사무 책상과
+    짐 상자 — 인물·텍스트 없음)
+  - 본문: `/assets/guides/unpaid-wages-office.jpg` (백지 서류를 폴더에
+    정리하는 외국인 근로자의 손 — 얼굴 비노출)
