@@ -13,6 +13,7 @@ import GettingYourHousingDepositBack from './bodies/getting-your-housing-deposit
 import JeonseExplained from './bodies/jeonse-explained'
 import ReceivedAPoliceSummons from './bodies/received-a-police-summons'
 import HapuiSettlementInCriminalCases from './bodies/hapui-settlement-in-criminal-cases'
+import DuiInKorea from './bodies/dui-in-korea'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -95,7 +96,7 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'What a Korean police summons (출석요구) means for a foreigner: suspect vs. witness status, your rights at the interview, and how to prepare.',
     reviewed: '2026-08',
-    related: ['hapui-settlement-in-criminal-cases'],
+    related: ['hapui-settlement-in-criminal-cases', 'dui-in-korea'],
     body: ReceivedAPoliceSummons,
   },
   {
@@ -107,8 +108,20 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'How hapui (합의), the Korean criminal settlement, actually works: when it ends a case, when it only helps, the deadline, and the mistakes to avoid.',
     reviewed: '2026-08',
-    related: ['received-a-police-summons'],
+    related: ['received-a-police-summons', 'dui-in-korea'],
     body: HapuiSettlementInCriminalCases,
+  },
+  {
+    slug: 'dui-in-korea',
+    field: 'criminal-defense',
+    listingTitle: 'DUI in Korea',
+    metaTitle:
+      'DUI in Korea — The 0.03% Limit, Penalties by Level, and What Happens to Your License',
+    metaDescription:
+      "Korea's DUI limit is 0.03% BAC. Penalties by blood alcohol level, license suspension and revocation, test refusal, and the appeal deadlines that follow.",
+    reviewed: '2026-08',
+    related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
+    body: DuiInKorea,
   },
 ]
 
