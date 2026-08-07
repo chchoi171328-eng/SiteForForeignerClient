@@ -20,8 +20,8 @@ const About: React.FC = () => {
                     <div className="lg:w-1/2">
                         <div className="relative">
                             <Image
-                                src="/assets/office1.png"
-                                alt="Professional business meeting between lawyers and clients discussing legal matters"
+                                src="/assets/office-consult-seat.jpg"
+                                alt="The consultation table at SOL & LUNA, with the Pyeongtaek courthouse visible through the window"
                                 width={800}
                                 height={600}
                                 className="rounded-lg shadow-2xl z-10 relative object-cover w-full h-auto"
