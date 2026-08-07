@@ -401,13 +401,11 @@ export default function DivorceInKoreaConsensualVsJudicial() {
 
       <p className={P + ' mt-8'}>
         If your situation involves courts in two countries — different nationalities, a marriage
-        lived across borders, a spouse abroad — read this guide together with our practice-area
-        overview at{' '}
-        <Link href="/practice-areas/divorce-family-law" className={LINK}>
-          Divorce &amp; Family Law
-        </Link>
-        {/* TODO: internal link to which-countrys-court guide (production list #7) once published */}
-        .
+        lived across borders, a spouse abroad — start with{' '}
+        <Link href="/guides/divorce-family-law/which-countrys-court-international-divorce" className={LINK}>
+          Which Country&rsquo;s Court?
+        </Link>{' '}
+        before choosing where to file.
       </p>
 
       <p className="text-sm text-gray-500 leading-relaxed mt-10">

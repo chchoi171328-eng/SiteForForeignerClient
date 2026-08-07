@@ -242,3 +242,43 @@
     백지 서류 — 인물 없음)
   - 본문: `/assets/guides/divorce-mediation.jpg` (빈 조정실 — 인물 없는
     구도로 재생성. 1차 인물 구도는 사용자 피드백으로 폐기)
+
+---
+
+## 7. Which Country's Court? (국제이혼 관할)
+`/guides/divorce-family-law/which-countrys-court-international-divorce` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 혼인관계 사건 특별관할 4가지 (일방 일상거소+마지막 공동 일상거소 / 원고+미성년 자녀 일상거소 / 부부 모두 한국인 / 한국인 원고의 해소 청구) | 국제사법 제56조 제1항 | casenote.kr (조문 원문 확인) |
+| 이혼 준거법 사다리: 동일 본국법 → 동일 일상거소지법 → 최밀접관련지법 | 국제사법 제66조 (제64조 준용) | casenote.kr |
+| 단서: 부부 일방이 한국에 일상거소 있는 한국인이면 한국법 | 국제사법 제66조 단서 | casenote.kr |
+| 외국재판 승인 4요건 (관할·송달·공서·상호보증), 자동승인 (별도 재판 불요) | 민사소송법 제217조 | casenote.kr, KCI 논문 다수 |
+| 재산분할 2년 출소기간 (guide 6과 공통) | 민법 제839조의2 제3항 | (guide 6에서 검증) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **일상거소 개념** — "living in a place for a substantial period with your
+  life centered there" 일반 서술 (판례 정의 인용 없음).
+- **국제적 소송경합** — "Korean law has rules for parallel international
+  proceedings" 일반 서술만. 국제사법 제11조 조문 인용은 미검증으로 생략.
+- **외국 행정이혼(협의이혼 등) 승인** — "sit less neatly ... have it
+  checked" 수준으로 완충. 확정 서술 없음.
+- **외국 이혼 후 한국 재산분할 청구 가능성** — 기한 박스에서 "Where Korean
+  law governs the money" 조건부 서술. 준거법 성질결정 논점은 미전개 —
+  수위 확인 요망.
+- **가족관계등록 신고** — 구체적 신고 기한·절차 조문 미인용 ("promptly",
+  "the register does not update itself" 수준).
+- 헤이그 아동탈취협약은 이번 세션 미검증으로 언급 자체를 생략 (무단 이동
+  경고는 일반 서술).
+- **비자 FAQ** — 허용 수위 ② 준수.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없는 구도)
+  - 히어로: `/assets/guides/jurisdiction-hero.jpg` (기내 창밖 새벽 해안 —
+    항공사 도장·텍스트 없음. 여권 구도는 국장·문자 위험으로 처음부터 배제)
+  - 본문: `/assets/guides/jurisdiction-map.jpg` (책상 위 지구본·백지 노트 —
+    글자 없는 지구본)
