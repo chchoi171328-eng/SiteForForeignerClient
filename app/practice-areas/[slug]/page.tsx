@@ -14,7 +14,8 @@ import { CONTACT_INFO } from '@/constants'
 import { Icons } from '@/components/Icons'
 import TrackView from '@/components/TrackView'
 import ConsultationFees from '@/components/ConsultationFees'
-import { getGuidesByField, guidePath, GUIDE_FIELDS, type GuideField } from '@/content/guides/registry'
+import { getGuidesByField, GUIDE_FIELDS, type GuideField } from '@/content/guides/registry'
+import GuideRow from '@/components/guide/GuideRow'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -258,20 +259,12 @@ export default async function PracticeAreaDetailPage({
         {/* 6b. Guides in this area (auto — hidden while the field has no guides) */}
         {areaGuides.length > 0 && (
           <section className="mb-10">
-            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Guides in this area</h2>
-            <ul className="space-y-3">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 pb-3 border-b-2 border-gold-400">
+              Guides in this area
+            </h2>
+            <ul className="divide-y divide-gray-200">
               {areaGuides.map((g) => (
-                <li key={g.slug}>
-                  <Link href={guidePath(g)} className="group flex items-start gap-3">
-                    <Icons.ArrowRight className="w-4 h-4 text-gold-500 mt-1.5 shrink-0" aria-hidden="true" />
-                    <span>
-                      <span className="font-bold text-navy-900 group-hover:text-gold-600 transition-colors">
-                        {g.listingTitle}
-                      </span>
-                      <span className="block text-sm text-gray-500">Reviewed {g.reviewed}</span>
-                    </span>
-                  </Link>
-                </li>
+                <GuideRow key={g.slug} guide={g} />
               ))}
             </ul>
           </section>
