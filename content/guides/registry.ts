@@ -17,6 +17,7 @@ import DuiInKorea from './bodies/dui-in-korea'
 import DivorceInKoreaConsensualVsJudicial from './bodies/divorce-in-korea-consensual-vs-judicial'
 import WhichCountrysCourtInternationalDivorce from './bodies/which-countrys-court-international-divorce'
 import UnpaidWagesLaborOfficeVsLawsuit from './bodies/unpaid-wages-labor-office-vs-lawsuit'
+import SeverancePayWhoQualifies from './bodies/severance-pay-who-qualifies'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -159,8 +160,20 @@ export const GUIDES: Guide[] = [
     metaDescription:
       'What to do about unpaid wages in Korea: the 14-day rule, the labor office complaint, the government wage fund (대지급금), free legal aid, and the 3-year deadline.',
     reviewed: '2026-08',
-    related: [],
+    related: ['severance-pay-who-qualifies'],
     body: UnpaidWagesLaborOfficeVsLawsuit,
+  },
+  {
+    slug: 'severance-pay-who-qualifies',
+    field: 'labor-employment',
+    listingTitle: 'Severance Pay: Who Qualifies',
+    metaTitle:
+      "Severance Pay in Korea (퇴직금) — Who Qualifies, How It's Calculated, and How It's Paid",
+    metaDescription:
+      "Korea's statutory severance: a month's average pay per year worked. Who qualifies (1 year, 15 hours/week), the freelancer question, IRP accounts, and E-9 insurance.",
+    reviewed: '2026-08',
+    related: ['unpaid-wages-labor-office-vs-lawsuit'],
+    body: SeverancePayWhoQualifies,
   },
 ]
 
