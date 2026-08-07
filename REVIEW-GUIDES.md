@@ -325,3 +325,43 @@
     짐 상자 — 인물·텍스트 없음)
   - 본문: `/assets/guides/unpaid-wages-office.jpg` (백지 서류를 폴더에
     정리하는 외국인 근로자의 손 — 얼굴 비노출)
+
+---
+
+## 9. Severance Pay: Who Qualifies
+`/guides/labor-employment/severance-pay-who-qualifies` · Reviewed 2026-08
+
+### 검증한 조문·수치 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 퇴직급여제도 설정 의무 — 1년 미만·4주 평균 주 15시간 미만 제외 | 퇴직급여법 제4조 | law.go.kr |
+| 계속근로 1년당 30일분 이상 평균임금 | 동법 제8조 제1항 | casenote.kr (조문 원문 확인) |
+| 14일 내 지급 (합의 연장 가능) + IRP 계정 이전 의무 (55세 이후 등 예외) | 동법 제9조 | casenote.kr, moel.go.kr |
+| 퇴직금 시효 3년 (퇴직 다음날 기산) | 동법 제10조 | casenote.kr, easylaw.go.kr |
+| 평균임금 = 최종 3개월 임금총액/총일수 | 근로기준법 제2조 제1항 제6호 | (통용 조문 — 재확인 권장) |
+| 미지급 시 지연이자 20% — 퇴직급여 일시금 포함 | 근로기준법 제37조 | guide 8에서 검증 |
+| E-9 출국만기보험: 통상임금 8.3% 납입, 1년 이상 근무, 출국 후 14일 내 지급(신청 사유 시 신청 후 14일) | 외국인고용법 제13조 | law.go.kr, lbox.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **퇴직금 분할약정(월급 포함) 무효** — 판례 법리. 판례 인용 없이 "generally
+  does not extinguish ... treated as invalid in principle"으로 서술. 수위 확인
+  요망.
+- **갱신 계약의 계속근로 인정** — "count as continuous where the work in fact
+  continued" 완충 서술 (판례 법리 — 인용 없음).
+- **근로자성 판단 요소** — 실무 기준 나열 (고정 근로시간·지휘감독·전속성 등),
+  "each case turns on its facts" 완충.
+- **출국만기보험 차액 지급** — "the difference is generally for the employer
+  to make up" 완충 서술 (시행령 근거 미인용 — 재확인 권장).
+- **소규모 사업장 적용** — "the smallest workplaces are covered ... phase-in
+  is long past" (2010년대 단계 적용 완료 — 연혁 조문 미인용).
+- **IRP 출국 해지** — "handled through the financial institution" 실무 수준.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/severance-hero.jpg` (마지막 출근일 책상 — 포장된
+    화분·백지 봉투·짐 상자, 인물·텍스트 없음)
+  - 본문: `/assets/guides/severance-calc.jpg` (계산기 앱을 쓰는 외국인
+    근로자의 손 — 화면 비노출·백지 플래너)

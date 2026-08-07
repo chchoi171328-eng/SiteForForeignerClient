@@ -376,11 +376,10 @@ export default function UnpaidWagesLaborOfficeVsLawsuit() {
 
       <p className={P + ' mt-8'}>
         If the missing money is severance pay specifically — or you are not sure you qualify for
-        it — see our practice-area overview at{' '}
-        <Link href="/practice-areas/labor-employment" className={LINK}>
-          Labor &amp; Employment
+        it — start with{' '}
+        <Link href="/guides/labor-employment/severance-pay-who-qualifies" className={LINK}>
+          Severance Pay: Who Qualifies
         </Link>
-        {/* TODO: internal link to severance-pay guide (production list #9) once published */}
         .
       </p>
 
