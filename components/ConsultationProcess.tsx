@@ -62,7 +62,7 @@ const ConsultationProcess: React.FC = () => {
                         href="/contact"
                         className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-3 rounded-sm font-bold transition-colors"
                     >
-                        Book a 30-Minute Assessment
+                        Request a Consultation
                         <Icons.ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                 </div>

@@ -61,10 +61,11 @@ const Header: React.FC = () => {
                     <Link
                         href="/contact"
                         className="flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-navy-900 px-6 py-2.5 rounded-sm font-bold transition-all transform hover:-translate-y-0.5"
-                        aria-label="Book a consultation"
+                        aria-label="Request a consultation"
                     >
                         <Icons.Phone className="w-4 h-4" />
-                        <span>Book Assessment</span>
+                        {/* Shortened per the CTA-unification brief: full label wraps at lg. */}
+                        <span className="whitespace-nowrap">Consultation</span>
                     </Link>
                 </nav>
 
