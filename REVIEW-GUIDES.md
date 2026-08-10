@@ -404,3 +404,44 @@
     열쇠 — 인물·텍스트 없음)
   - 본문: `/assets/guides/lease-registration-registry.jpg` (무인 발급기에서
     백지 서류를 받는 손 — 얼굴 비노출·화면 공백)
+
+---
+
+## 11. Property Division Basics
+`/guides/divorce-family-law/property-division-basics` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 재산분할청구권 — 협의 우선, 불성립 시 가정법원이 "쌍방의 협력으로 이룩한 재산의 액수 기타 사정" 참작 | 민법 제839조의2 제1·2항 | guide 6에서 검증 + casenote.kr |
+| 2년 제척 (출소기간) | 민법 제839조의2 제3항 | guide 6에서 검증 |
+| 재판상 이혼 준용 | 민법 제843조 | law.go.kr |
+| 사해행위취소: 재산분할청구권 해함을 알면서 한 재산 법률행위 → 가정법원에 취소·원상회복 청구, §406① 준용, 기간은 §406② | 민법 제839조의3 (2007 신설) | casenote.kr, law.go.kr |
+| §406② 기간: 안 날 1년 / 있은 날 5년 | 민법 제406조 제2항 | (통용 조문 — 재확인 권장) |
+| 재산명시 (재산분할·부양료·양육비 사건) | 가사소송법 제48조의2 | casenote.kr |
+| 재산조회 (명시 목록 불충분 시 금융기관 등 조회) | 가사소송법 제48조의3 | casenote.kr, law.go.kr |
+| 국민연금 분할연금 4요건 (혼인 중 가입기간 5년+ / 이혼 / 상대가 노령연금 수급권자 / 본인 수급연령 도달), 혼인기간분 균등 분할 | 국민연금법 제64조 | law.go.kr, kcie.or.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망) — 판례 법리 완충 서술
+- **특유재산 예외** (유지·증식 기여 시 분할 대상 편입) — "practice lets it
+  enter the division to that extent".
+- **장래 퇴직급여 분할 대상** — "treated in practice as divisible to the
+  extent earned during the marriage" (2014 전합 법리 — 인용 없음).
+- **채무 초과 시 분할 가능** — "practice has moved to allow division even
+  where debts exceed assets" (2013 전합 법리 — 인용 없음).
+- **전업주부 기여 인정·장기혼 균등 근접** — "commonly a share approaching
+  half" 완충. 고정 비율 서술 없음 ("no fixed entitlement exists").
+- **유책배우자도 분할 청구 가능** — 일반 원리 서술.
+- 분할연금 청구 기한(수급요건 충족 후 몇 년)은 수치 미검증으로 생략 —
+  "separate application with its own claim rules"로만.
+- 공무원·사학·군인연금 분할은 "run their own versions" 일반 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/property-division-hero.jpg` (해질녘 아파트 단지와
+    공원 벤치 — 인물·텍스트 없음)
+  - 본문: `/assets/guides/property-division-map.jpg` (백지 서류를 두 묶음으로
+    정리하는 손 — 얼굴 비노출)

@@ -19,6 +19,7 @@ import WhichCountrysCourtInternationalDivorce from './bodies/which-countrys-cour
 import UnpaidWagesLaborOfficeVsLawsuit from './bodies/unpaid-wages-labor-office-vs-lawsuit'
 import SeverancePayWhoQualifies from './bodies/severance-pay-who-qualifies'
 import LeaseRegistrationOrder from './bodies/lease-registration-order'
+import PropertyDivisionBasics from './bodies/property-division-basics'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -145,7 +146,7 @@ export const GUIDES: Guide[] = [
       'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/divorce-hero.jpg',
-    related: ['which-countrys-court-international-divorce'],
+    related: ['which-countrys-court-international-divorce', 'property-division-basics'],
     body: DivorceInKoreaConsensualVsJudicial,
   },
   {
@@ -199,6 +200,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/lease-registration-hero.jpg',
     related: ['getting-your-housing-deposit-back', 'jeonse-explained'],
     body: LeaseRegistrationOrder,
+  },
+  {
+    slug: 'property-division-basics',
+    field: 'divorce-family-law',
+    listingTitle: 'Property Division Basics',
+    metaTitle:
+      'Property Division in a Korean Divorce — What Gets Divided, How Shares Are Set, and the 2-Year Deadline',
+    metaDescription:
+      'How property division works in a Korean divorce: what counts as marital property, how contribution sets shares, pensions, hidden assets, and the 2-year limit.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/property-division-hero.jpg',
+    related: ['divorce-in-korea-consensual-vs-judicial', 'which-countrys-court-international-divorce'],
+    body: PropertyDivisionBasics,
   },
 ]
 
