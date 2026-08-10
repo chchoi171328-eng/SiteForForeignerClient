@@ -255,7 +255,12 @@ export default function DivorceInKoreaConsensualVsJudicial() {
           claim division of property built up during the marriage, regardless of whose name it is
           in and regardless of fault (Civil Act art. 839-2). The claim dies{' '}
           <strong>2 years after the divorce</strong>, and within that period it must actually be
-          filed at court, not just mentioned in messages.
+          filed at court, not just mentioned in messages. What counts as marital property, how
+          shares are set, and the hidden-asset tools are covered in{' '}
+          <Link href="/guides/divorce-family-law/property-division-basics" className={LINK}>
+            Property Division Basics
+          </Link>
+          .
         </li>
         <li>
           <strong>Solatium</strong> <span lang="ko">(위자료)</span> — separate, fault-based
@@ -272,7 +277,7 @@ export default function DivorceInKoreaConsensualVsJudicial() {
           <strong>Custody, visitation, and child support</strong> — agreed in the consensual
           route (mandatorily, with court review) or decided by the court in the judicial route.
           Each is a substantial topic of its own.
-          {/* TODO: internal links to property-division, custody, child-support guides (production list #11–13) */}
+          {/* TODO: internal links to custody and child-support guides (production list #12–13) */}
         </li>
       </ul>
 
