@@ -96,7 +96,7 @@ export default function RootLayout({
             className="bg-navy-900 text-white pl-5 pr-6 py-4 rounded-full shadow-2xl inline-flex items-center gap-2 font-bold text-sm hover:bg-navy-800 transition-colors"
           >
             <Icons.Calendar className="w-5 h-5 shrink-0" aria-hidden="true" />
-            Tell Us What Happened
+            Request a Consultation
           </Link>
         </div>
       </body>

@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
                             className="bg-gold-400 hover:bg-gold-500 text-navy-900 px-8 py-4 rounded-sm font-bold text-lg transition-all flex items-center justify-center gap-2"
                         >
                             <Icons.Calendar className="w-5 h-5" />
-                            Book a 30-Minute Assessment
+                            Request a Consultation
                         </Link>
                         <Link
                             href="/attorneys/chulho-choi"
