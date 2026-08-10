@@ -276,8 +276,12 @@ export default function DivorceInKoreaConsensualVsJudicial() {
         <li>
           <strong>Custody, visitation, and child support</strong> — agreed in the consensual
           route (mandatorily, with court review) or decided by the court in the judicial route.
-          Each is a substantial topic of its own.
-          {/* TODO: internal links to custody and child-support guides (production list #12–13) */}
+          Custody — including its international layer — is covered in{' '}
+          <Link href="/guides/divorce-family-law/child-custody-in-international-marriages" className={LINK}>
+            Child Custody in International Marriages
+          </Link>
+          .
+          {/* TODO: internal link to child-support guide (production list #13) */}
         </li>
       </ul>
 

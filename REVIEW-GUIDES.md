@@ -445,3 +445,44 @@
     공원 벤치 — 인물·텍스트 없음)
   - 본문: `/assets/guides/property-division-map.jpg` (백지 서류를 두 묶음으로
     정리하는 손 — 얼굴 비노출)
+
+---
+
+## 12. Child Custody in International Marriages
+`/guides/divorce-family-law/child-custody-in-international-marriages` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 이혼 시 양육사항(양육자·비용·면접교섭) 협의 의무, 법원 결정·변경 | 민법 제837조 (+제843조 준용) | easylaw.go.kr (통용 조문 — 항별 재확인 권장) |
+| 면접교섭권 (비양육친과 자녀 쌍방) | 민법 제837조의2 | easylaw.go.kr |
+| 친권자 지정 (협의/가정법원) | 민법 제909조 제4항 | (통용 조문 — 재확인 권장) |
+| 13세 이상 자녀 의견 청취 의무 (복리 예외) | 가사소송규칙 제100조 | 검색 확인 |
+| 가사조사관 조사 (양육환경 보고) | 가사소송법 제6조, 규칙 제8~11조 | 검색 확인 |
+| 친권·양육권·면접교섭 사건 국제재판관할: 자녀 일상거소 한국 / 부모 일방+자녀 한국인 | 국제사법 제59조 | casenote.kr (조문 원문 확인 — §61은 후견 조문임을 확인하고 §59로 정정) |
+| 헤이그 협약 한국 적용 (2012 가입, 2013-03-01 발효), 중앙당국 법무부 | 헤이그 이행법 + moj.go.kr | law.go.kr, moj.go.kr |
+| 아동반환사건 서울가정법원 전속관할 | 헤이그 이행법 제11조 | casenote.kr (조문 원문 확인) |
+| 1년 경과 시 신환경 정착 항변 | 협약 제12조 | 협약 원문 (통용) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **외국인 부모 양육권** — "foreign parents do receive custody ... courts
+  decide on caregiving facts" 실무 서술 (통계·판례 인용 없음).
+- **면접교섭 방해 → 변경 사유** — "courts treat sustained, unjustified
+  obstruction ... as a welfare problem" 완충 서술.
+- **무단 이동 형사 문제** — "can create separate legal problems" 수준
+  (국내 형법상 약취 논점 미전개).
+- **사전 보호조치** — "protective orders can be sought through the family
+  court" 일반 서술 (사전처분 조문 미인용).
+- **양육권-체류 상호작용 FAQ** — 허용 수위 ②. "raising a Korean child is
+  among the circumstances immigration decisions can take into account"
+  일반 서술 — 확정 없음. (F-6 전면 주제는 보류 목록 유지)
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물·아동 완전 비노출)
+  - 히어로: `/assets/guides/custody-hero.jpg` (현관의 어른·아이 신발 두 켤레 —
+    사람 없음)
+  - 본문: `/assets/guides/custody-calendar.jpg` (백지 달력과 나무 장난감
+    비행기 — 글자·숫자 없음)
