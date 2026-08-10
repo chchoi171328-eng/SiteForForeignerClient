@@ -20,6 +20,7 @@ import UnpaidWagesLaborOfficeVsLawsuit from './bodies/unpaid-wages-labor-office-
 import SeverancePayWhoQualifies from './bodies/severance-pay-who-qualifies'
 import LeaseRegistrationOrder from './bodies/lease-registration-order'
 import PropertyDivisionBasics from './bodies/property-division-basics'
+import ChildCustodyInInternationalMarriages from './bodies/child-custody-in-international-marriages'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -146,7 +147,7 @@ export const GUIDES: Guide[] = [
       'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/divorce-hero.jpg',
-    related: ['which-countrys-court-international-divorce', 'property-division-basics'],
+    related: ['which-countrys-court-international-divorce', 'property-division-basics', 'child-custody-in-international-marriages'],
     body: DivorceInKoreaConsensualVsJudicial,
   },
   {
@@ -213,6 +214,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/property-division-hero.jpg',
     related: ['divorce-in-korea-consensual-vs-judicial', 'which-countrys-court-international-divorce'],
     body: PropertyDivisionBasics,
+  },
+  {
+    slug: 'child-custody-in-international-marriages',
+    field: 'divorce-family-law',
+    listingTitle: 'Child Custody in International Marriages',
+    metaTitle:
+      'Child Custody in Korea for International Families — How Courts Decide, Visitation, and the Hague Rules',
+    metaDescription:
+      'How Korean courts decide custody in international families: the welfare standard, custody vs. parental authority, cross-border visitation, and the Hague rules.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/custody-hero.jpg',
+    related: ['divorce-in-korea-consensual-vs-judicial', 'which-countrys-court-international-divorce'],
+    body: ChildCustodyInInternationalMarriages,
   },
 ]
 
