@@ -149,6 +149,13 @@ export default function FeesPage() {
               </li>
             ))}
           </ul>
+          <p className="mt-8 text-gray-700 leading-relaxed">
+            Ready to book?{' '}
+            <Link href="/contact" className="font-bold text-gold-600 hover:text-gold-700 underline underline-offset-2">
+              Send a consultation request
+            </Link>{' '}
+            — we&apos;ll reply with available times.
+          </p>
         </section>
       </div>
     </div>
