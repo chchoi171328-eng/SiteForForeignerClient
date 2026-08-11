@@ -642,5 +642,6 @@
 - 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
   - 히어로: `/assets/guides/move-out-hero.jpg` (현관 옆 이사 상자·문에 걸린
     열쇠 — 상자 표면 공백)
-  - 본문: `/assets/guides/move-out-meter.jpg` (계량기를 촬영하는 손 — 숫자
-    없는 계기판, 얼굴 비노출)
+  - 본문: `/assets/guides/move-out-photos.jpg` (비운 방을 스마트폰으로
+    촬영하는 손 — 얼굴 비노출. 1차 계량기 구도는 숫자 제거로 의미가 죽어
+    사용자 피드백으로 폐기·재생성)

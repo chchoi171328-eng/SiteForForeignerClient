@@ -192,8 +192,8 @@ export default function MoveOutChecklistAndDeadlines() {
       </h2>
       <figure className="my-6">
         <Image
-          src="/assets/guides/move-out-meter.jpg"
-          alt="Photographing the utility meter on move-out day from a Korean apartment"
+          src="/assets/guides/move-out-photos.jpg"
+          alt="Photographing the emptied apartment on move-out day — condition photos are the cheapest legal protection"
           width={1600}
           height={900}
           className="rounded-lg"
