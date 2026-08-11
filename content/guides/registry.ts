@@ -24,6 +24,7 @@ import ChildCustodyInInternationalMarriages from './bodies/child-custody-in-inte
 import ChildSupportHowAmountsAreSet from './bodies/child-support-how-amounts-are-set'
 import PoliceInterviewRightsAndInterpreters from './bodies/police-interview-rights-and-interpreters'
 import SummaryOrdersAndFormalTrial from './bodies/summary-orders-and-formal-trial'
+import MoveOutChecklistAndDeadlines from './bodies/move-out-checklist-and-deadlines'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -85,7 +86,7 @@ export const GUIDES: Guide[] = [
       'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/deposit-back-hero.jpg',
-    related: ['jeonse-explained', 'lease-registration-order'],
+    related: ['jeonse-explained', 'lease-registration-order', 'move-out-checklist-and-deadlines'],
     body: GettingYourHousingDepositBack,
   },
   {
@@ -269,6 +270,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/summary-order-hero.jpg',
     related: ['received-a-police-summons', 'dui-in-korea', 'hapui-settlement-in-criminal-cases'],
     body: SummaryOrdersAndFormalTrial,
+  },
+  {
+    slug: 'move-out-checklist-and-deadlines',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'Move-Out Checklist and Deadlines',
+    metaTitle:
+      "Moving Out of a Korean Lease — The Checklist, the Deadlines, and the Money You're Owed",
+    metaDescription:
+      'Moving out of a Korean lease: notice deadlines, the deposit-first order of operations, repair-reserve refunds, utility settlement, and the 15-day address rule.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/move-out-hero.jpg',
+    related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'jeonse-explained'],
+    body: MoveOutChecklistAndDeadlines,
   },
 ]
 
