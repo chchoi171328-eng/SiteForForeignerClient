@@ -23,6 +23,7 @@ import PropertyDivisionBasics from './bodies/property-division-basics'
 import ChildCustodyInInternationalMarriages from './bodies/child-custody-in-international-marriages'
 import ChildSupportHowAmountsAreSet from './bodies/child-support-how-amounts-are-set'
 import PoliceInterviewRightsAndInterpreters from './bodies/police-interview-rights-and-interpreters'
+import SummaryOrdersAndFormalTrial from './bodies/summary-orders-and-formal-trial'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -255,6 +256,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/police-interview-hero.jpg',
     related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
     body: PoliceInterviewRightsAndInterpreters,
+  },
+  {
+    slug: 'summary-orders-and-formal-trial',
+    field: 'criminal-defense',
+    listingTitle: 'Summary Orders (약식명령) and Formal Trial',
+    metaTitle:
+      'The Korean Summary Order (약식명령) — The Fine in the Mail, the 7-Day Choice, and Formal Trial',
+    metaDescription:
+      'What a Korean summary order is, the 7-day window to demand a formal trial, whether the fine can rise if you contest, and what happens if you pay — or do nothing.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/summary-order-hero.jpg',
+    related: ['received-a-police-summons', 'dui-in-korea', 'hapui-settlement-in-criminal-cases'],
+    body: SummaryOrdersAndFormalTrial,
   },
 ]
 
