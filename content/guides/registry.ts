@@ -22,6 +22,7 @@ import LeaseRegistrationOrder from './bodies/lease-registration-order'
 import PropertyDivisionBasics from './bodies/property-division-basics'
 import ChildCustodyInInternationalMarriages from './bodies/child-custody-in-international-marriages'
 import ChildSupportHowAmountsAreSet from './bodies/child-support-how-amounts-are-set'
+import PoliceInterviewRightsAndInterpreters from './bodies/police-interview-rights-and-interpreters'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -109,7 +110,7 @@ export const GUIDES: Guide[] = [
       'What a Korean police summons (출석요구) means for a foreigner: suspect vs. witness status, your rights at the interview, and how to prepare.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/police-summons-hero.jpg',
-    related: ['hapui-settlement-in-criminal-cases', 'dui-in-korea'],
+    related: ['police-interview-rights-and-interpreters', 'hapui-settlement-in-criminal-cases', 'dui-in-korea'],
     body: ReceivedAPoliceSummons,
   },
   {
@@ -241,6 +242,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/child-support-hero.jpg',
     related: ['divorce-in-korea-consensual-vs-judicial', 'child-custody-in-international-marriages'],
     body: ChildSupportHowAmountsAreSet,
+  },
+  {
+    slug: 'police-interview-rights-and-interpreters',
+    field: 'criminal-defense',
+    listingTitle: 'The Police Interview: Your Rights and Interpreters',
+    metaTitle:
+      'The Korean Police Interview — Your Rights, the Written Record, and How Interpretation Works',
+    metaDescription:
+      'Inside a Korean police interview: silence and counsel rights, the record you sign, interpreter rules for foreigners, video recording, and the time limits.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/police-interview-hero.jpg',
+    related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
+    body: PoliceInterviewRightsAndInterpreters,
   },
 ]
 

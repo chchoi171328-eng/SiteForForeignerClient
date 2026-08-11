@@ -529,3 +529,43 @@
     도시락 — 사람 없음)
   - 본문: `/assets/guides/child-support-school.jpg` (백지 공책·색연필·실내화·
     저금통 — 글자 없음)
+
+---
+
+## 14. The Police Interview: Your Rights and Interpreters
+`/guides/criminal-defense/police-interview-rights-and-interpreters` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 | 검증 출처 |
+|---|---|---|
+| 외국인 조사 시 이해할 수 있는 언어로 통역 (수사 단계) | 경찰수사규칙 (행안부령) — **조문 번호 재확인 요망** | law.go.kr, bokjiro 보도 |
+| 공판 통역 의무 ("국어에 통하지 아니하는 자") | 형사소송법 제180조 | casenote.kr |
+| 한국어 가능 외국인도 통역 필요 여부 확인·제공 권고 | 국가인권위 권고 (경찰청장 대상) | humanrights.go.kr, lawtimes |
+| 영상녹화: 사전 고지, 전 과정 녹화, 원본 봉인·기명날인/서명 | 형사소송법 제244조의2 | casenote.kr, lbox.kr |
+| 조서 열람·정정·이의 기재 (guide 3와 공통) | 형사소송법 제244조 | guide 3에서 검증 |
+| 진술거부권 고지·변호인 참여(부당 신문 이의·의견 진술) | 형사소송법 제244조의3·제243조의2 | guide 3에서 검증 |
+| 신뢰관계인 동석 | 형사소송법 제244조의5 | (통용 조문 — 재확인 권장) |
+| 심야조사 금지 21:00~06:00 (예외는 조서 기재, 조서 열람은 자정까지) | 수사준칙(대통령령) 제21조 | law.go.kr |
+| 총조사시간 12시간(대기·휴식 포함)·실조사 8시간·종료 후 8시간 내 재조사 금지 | 수사준칙 제22조 | law.go.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **통역 근거 조문 번호** — 경찰수사규칙의 해당 조(외국인 조사) 번호를
+  본문에서 인용하지 않고 "the police's own investigation rules require"로
+  서술. 조번호 확정 후 추가 가능.
+- **영상녹화 신청** — 피의자 신청권 조문 미검증으로 "have your lawyer press
+  for recording" 실무 서술.
+- **원격(전화·화상) 통역** — "used in practice" 수준.
+- **조서 요지 기재 방식** — "records are written in summarized Q&A form"
+  실무 일반론.
+- 심야조사 예외 사유 목록은 미전개 ("narrow exceptions ... justified in
+  the record").
+
+### 보류(PENDING REVIEW) 항목
+- 없음 (SOFA·비자 서술 이 편에는 없음 — guide 3에서 처리)
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/police-interview-hero.jpg` (빈 조사실 — 탁자·의자
+    2개·숫자 없는 벽시계, 경찰 상징물 없음)
+  - 본문: `/assets/guides/police-interview-headset.jpg` (헤드셋·백지 노트 —
+    통역 테마, 글자 없음)

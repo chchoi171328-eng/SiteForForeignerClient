@@ -171,9 +171,14 @@ export default function ReceivedAPoliceSummons() {
           seriously: the record, not your memory of the conversation, is what travels.
         </li>
         <li>
-          <strong>Language help.</strong> In practice, investigative agencies arrange interpreters
-          for foreign suspects — but confirm before the date that one is actually booked, and never
-          sign a record you could not read. You may ask for time to go through it line by line.
+          <strong>Language help.</strong> Interpretation for a foreign suspect is your right, not
+          a favor — confirm before the date that an interpreter is actually booked, and never
+          sign a record you could not read. The interpreter rules, the read-back, and the
+          interview clocks are covered in depth in{' '}
+          <Link href="/guides/criminal-defense/police-interview-rights-and-interpreters" className={LINK}>
+            The Police Interview: Your Rights and Interpreters
+          </Link>
+          .
         </li>
       </ul>
 
