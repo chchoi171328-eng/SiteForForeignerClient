@@ -263,7 +263,12 @@ export default function DuiInKorea() {
         If you receive one, you have <strong>7 days from notice</strong> to demand a formal trial
         (Criminal Procedure Act art. 453); whether to accept the fine or contest is a real
         decision, because the conviction stands either way and repeat offenses within 10 years are
-        punished on the aggravated scale.
+        punished on the aggravated scale. The order, the 7-day fork, and the payment machinery are
+        covered in{' '}
+        <Link href="/guides/criminal-defense/summary-orders-and-formal-trial" className={LINK}>
+          Summary Orders (약식명령) and Formal Trial
+        </Link>
+        .
       </p>
       <p className={P}>
         Higher levels, refusals, repeat offenses, and accident cases go to ordinary prosecution,

@@ -569,3 +569,41 @@
     2개·숫자 없는 벽시계, 경찰 상징물 없음)
   - 본문: `/assets/guides/police-interview-headset.jpg` (헤드셋·백지 노트 —
     통역 테마, 글자 없음)
+
+---
+
+## 15. Summary Orders (약식명령) and Formal Trial
+`/guides/criminal-defense/summary-orders-and-formal-trial` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 약식명령: 벌금 등 부과 가능 사건, 공판 없이 서면심리 | 형사소송법 제448조 | casenote.kr |
+| 약식 부적당 시 공판절차 회부 | 형사소송법 제450조 | (통용 조문 — 재확인 권장) |
+| 정식재판청구 7일 (고지 받은 날부터, 서면) | 형사소송법 제453조 | guide 1·5에서 기검증 |
+| 확정 시 확정판결과 동일 효력 | 형사소송법 제457조 | casenote.kr |
+| 형종 상향 금지 (피고인 청구 사건) + 동종 내 중형 시 양형이유 기재 = **벌금 증액 가능** | 형사소송법 제457조의2 제1·2항 (2017 개정) | lbox.kr, casenote.kr, scourt.go.kr |
+| 벌금 30일 내 납입, 미납 시 노역장 유치 1일~3년 | 형법 제69조 제1·2항 | casenote.kr, lawnb.com |
+| 분납·납부연기 (검찰), 500만원 이하 사회봉사 대체 — 납부명령일부터 30일 내 신청 | 벌금미납자법 (특례법) | namu/로톡 다수 — **대체 상한 시행령 수치 재확인 권장** |
+| 정식재판청구권 회복 (책임 없는 사유) | 형사소송법 제458조 (상소권회복 준용) | (통용 — "narrow, fact-driven" 완충 서술) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **송달 의제 위험** — "service can still be deemed effective in ways that
+  start the clock" 완충 서술 (공시송달·보충송달 세부 미전개).
+- **전과 노출 범위 FAQ** — "how visible it is depends on who is asking"
+  완충. 형실효법 세부 미인용.
+- **청구 취하 가능** — "can withdraw the demand later" (§454 — 조문 번호
+  본문 미인용).
+- **비자 FAQ** — 허용 수위 ② 준수 (수용/불복 양방향 프레이밍).
+- 노역장 일당 환산액은 판결에서 정한다는 수준만 ("at a daily rate the
+  judgment sets") — 금액 미기재.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/summary-order-hero.jpg` (백지 등기우편 봉투·안경·
+    페이퍼나이프 — 글자·소인 없음)
+  - 본문: `/assets/guides/summary-order-calendar.jpg` (백지 탁상달력·빨간 핀 —
+    7일 기한 테마, 글자·숫자 없음)
