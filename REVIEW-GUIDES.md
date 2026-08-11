@@ -486,3 +486,46 @@
     사람 없음)
   - 본문: `/assets/guides/custody-calendar.jpg` (백지 달력과 나무 장난감
     비행기 — 글자·숫자 없음)
+
+---
+
+## 13. Child Support: How Amounts Are Set
+`/guides/divorce-family-law/child-support-how-amounts-are-set` · Reviewed 2026-08
+
+### 검증한 조문·수치 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 | 검증 출처 |
+|---|---|---|
+| 양육비 산정기준표: 서울가정법원 2021 공표(2021-12-22), 2022-03-01 시행 — 부모 합산 세전소득 × 자녀 연령 구간 → 표준양육비(자녀 1인) → 소득 비율 분담 | 산정기준표 (법령 아님 — 법원 공표 기준) | scourt.go.kr, easylaw.go.kr |
+| 표준양육비 범위 약 62.1만원 ~ 288만원/월 (2021표) | 산정기준표 | scourt.go.kr, lawtimes.co.kr |
+| 합산소득 = 세전 (근로·사업·임대·이자·연금·정부보조금 포함) | 산정기준표 해설 | easylaw.go.kr |
+| 직접지급명령: 정당한 사유 없이 2회 이상 미지급 시 소득세원천징수의무자(고용주)에 공제·직접지급 명령 | 가사소송법 제63조의2 | easylaw.go.kr |
+| 담보제공·일시금지급명령 | 가사소송법 제63조의3 | easylaw.go.kr |
+| 이행명령 | 가사소송법 제64조 제1항 | casenote.kr |
+| 이행명령 위반 과태료 1,000만원 이하 | 가사소송법 제67조 제1항 | easylaw.go.kr |
+| 감치 30일 범위 (요건 충족 시) | 가사소송법 제68조 제1항 | easylaw.go.kr |
+| 행정 제재: 운전면허 정지 100일 / 출국금지 6개월(단위) / 명단공개 3년 | 양육비이행법 | mogef.go.kr, childsupport.or.kr |
+| 형사처벌: 감치 후 1년 내 미지급 시 1년 이하 징역 또는 1,000만원 이하 벌금 | 양육비이행법 | lawtimes.co.kr |
+| 양육비이행관리원 (신청·추심·제재 청구 대행, 한시적 긴급지원) | 양육비이행법 | childsupport.or.kr |
+| 성년 19세 | 민법 제4조 | (통용 조문) |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **과거 양육비 청구 가능** — "can be claimed in practice ... courts weigh
+  how the costs were actually borne" 완충 (판례 법리 — 인용 없음. 시효 논점
+  미전개).
+- **소득 없는 배우자** — "courts look past a bare 'no income' claim — at
+  earning capacity ..." 실무 서술.
+- **성년 이후 대학 비용** — "such agreements are enforceable ... without
+  one, a voluntary matter" 일반 서술.
+- **양육비 선지급제(2025 시행)** — 시의성 위험으로 본문에서는 언급하지 않고
+  이행관리원의 "temporary emergency support"로만 포괄.
+- 출국금지 단위·명단공개 기간은 이행법 시행 기준 수치 — 개정 추적 필요.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물·아동 완전 비노출)
+  - 히어로: `/assets/guides/child-support-hero.jpg` (주방 카운터의 아이 가방·
+    도시락 — 사람 없음)
+  - 본문: `/assets/guides/child-support-school.jpg` (백지 공책·색연필·실내화·
+    저금통 — 글자 없음)

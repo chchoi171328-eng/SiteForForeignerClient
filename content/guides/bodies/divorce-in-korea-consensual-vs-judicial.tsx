@@ -280,8 +280,11 @@ export default function DivorceInKoreaConsensualVsJudicial() {
           <Link href="/guides/divorce-family-law/child-custody-in-international-marriages" className={LINK}>
             Child Custody in International Marriages
           </Link>
+          , and the money side in{' '}
+          <Link href="/guides/divorce-family-law/child-support-how-amounts-are-set" className={LINK}>
+            Child Support: How Amounts Are Set
+          </Link>
           .
-          {/* TODO: internal link to child-support guide (production list #13) */}
         </li>
       </ul>
 

@@ -21,6 +21,7 @@ import SeverancePayWhoQualifies from './bodies/severance-pay-who-qualifies'
 import LeaseRegistrationOrder from './bodies/lease-registration-order'
 import PropertyDivisionBasics from './bodies/property-division-basics'
 import ChildCustodyInInternationalMarriages from './bodies/child-custody-in-international-marriages'
+import ChildSupportHowAmountsAreSet from './bodies/child-support-how-amounts-are-set'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -225,8 +226,21 @@ export const GUIDES: Guide[] = [
       'How Korean courts decide custody in international families: the welfare standard, custody vs. parental authority, cross-border visitation, and the Hague rules.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/custody-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'which-countrys-court-international-divorce'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'child-support-how-amounts-are-set'],
     body: ChildCustodyInInternationalMarriages,
+  },
+  {
+    slug: 'child-support-how-amounts-are-set',
+    field: 'divorce-family-law',
+    listingTitle: 'Child Support: How Amounts Are Set',
+    metaTitle:
+      "Child Support in Korea — The Court Guidelines Table, Enforcement, and Cross-Border Cases",
+    metaDescription:
+      "How Korean child support is set: the court guidelines table, the income-ratio split, changing the amount, and the enforcement ladder from salary deduction to exit bans.",
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/child-support-hero.jpg',
+    related: ['divorce-in-korea-consensual-vs-judicial', 'child-custody-in-international-marriages'],
+    body: ChildSupportHowAmountsAreSet,
   },
 ]
 

@@ -360,12 +360,14 @@ export default function ChildCustodyInInternationalMarriages() {
       />
 
       <p className={P + ' mt-8'}>
-        Custody rarely travels alone — the money that follows the children is covered next in the
-        cluster, and the process around both lives in{' '}
+        Custody rarely travels alone — the money that follows the children is covered in{' '}
+        <Link href="/guides/divorce-family-law/child-support-how-amounts-are-set" className={LINK}>
+          Child Support: How Amounts Are Set
+        </Link>
+        , and the process around both lives in{' '}
         <Link href="/guides/divorce-family-law/divorce-in-korea-consensual-vs-judicial" className={LINK}>
           Divorce in Korea: Consensual vs. Judicial
         </Link>
-        {/* TODO: internal link to child-support guide (production list #13) once published */}
         .
       </p>
 
