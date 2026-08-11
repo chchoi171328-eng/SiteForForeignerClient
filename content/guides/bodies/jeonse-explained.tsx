@@ -252,7 +252,12 @@ export default function JeonseExplained() {
           <strong>Have the contract read before you sign it</strong> — special clauses{' '}
           <span lang="ko">(특약)</span> are where landlords quietly shift risk. If your Korean
           isn&rsquo;t contract-grade, that is not a character flaw; it is a reason to get the
-          document reviewed.
+          document reviewed. The full pre-signing walkthrough — register, clauses, the
+          landlord&rsquo;s tax certificates — is in{' '}
+          <Link href="/guides/real-estate-lease-disputes/reading-a-korean-lease-before-signing" className={LINK}>
+            Reading a Korean Lease Before Signing
+          </Link>
+          .
         </li>
       </ul>
 

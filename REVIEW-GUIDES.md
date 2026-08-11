@@ -645,3 +645,41 @@
   - 본문: `/assets/guides/move-out-photos.jpg` (비운 방을 스마트폰으로
     촬영하는 손 — 얼굴 비노출. 1차 계량기 구도는 숫자 제거로 의미가 죽어
     사용자 피드백으로 폐기·재생성)
+
+---
+
+## 17. Reading a Korean Lease Before Signing
+`/guides/real-estate-lease-disputes/reading-a-korean-lease-before-signing` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 임대인 정보 제시 의무 (2023 신설): 선순위 임대차 정보(확정일자·차임·보증금) + 국세·지방세 납세증명서, 또는 미납 열람 동의로 갈음 | 주임법 제3조의7 | casenote.kr, law.go.kr |
+| 강행규정: 법 위반 약정 중 임차인에게 불리한 것 무효 (편면적) | 주임법 제10조 | casenote.kr, lbox.kr |
+| 2년 미만 약정 시 2년 주장 가능 (guide 2와 공통) | 주임법 제4조 | guide 2에서 검증 |
+| 중개대상물 확인·설명 의무 + 근거자료(등기사항증명서 등) 제시 + 확인·설명서 서명·날인 교부 | 공인중개사법 제25조 | casenote.kr, easylaw.go.kr |
+| 중개사 손해배상책임 + 보장(보증) 설명·증서 사본 교부 | 공인중개사법 제30조 | casenote.kr, easylaw.go.kr |
+| 소유자 계좌 지급·등기부 확인 등 | guide 2 기검증 재사용 | — |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **신탁 부동산 경고** — "typically need the trustee's consent under the
+  trust agreement" 완충 서술 (신탁법·신탁원부 세부 미전개. 사기 유형 서술은
+  일반 실무 수준).
+- **가계약금 FAQ** — "practice varies from full refund to full forfeit"
+  완충 (판례 법리 미인용).
+- **영문 번역본 효력 FAQ** — "treat the Korean text as the one that
+  governs" 실무 서술 (준거 조문 없음 — 계약 해석 일반론).
+- **특약 예시 5종** — 권고 문구는 일반형으로만 제시 ("your agent can
+  phrase properly").
+- 미납국세 열람(국세징수법 §109) 자체는 §3-7의 "열람 동의 갈음"으로만
+  포괄 — 별도 조문 인용 생략.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/reading-lease-hero.jpg` (백지 계약서·도장·인주·
+    안경 — 날인 자국·글자 없음)
+  - 본문: `/assets/guides/reading-lease-clauses.jpg` (백지 계약면 위에 펜을
+    든 손 — 특약 테마, 얼굴 비노출)
