@@ -25,6 +25,7 @@ import ChildSupportHowAmountsAreSet from './bodies/child-support-how-amounts-are
 import PoliceInterviewRightsAndInterpreters from './bodies/police-interview-rights-and-interpreters'
 import SummaryOrdersAndFormalTrial from './bodies/summary-orders-and-formal-trial'
 import MoveOutChecklistAndDeadlines from './bodies/move-out-checklist-and-deadlines'
+import ReadingAKoreanLeaseBeforeSigning from './bodies/reading-a-korean-lease-before-signing'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -99,7 +100,7 @@ export const GUIDES: Guide[] = [
       "What jeonse (전세) is, how Korea's lump-sum deposit lease compares to wolse, and the steps that keep your deposit safe — explained for foreign residents.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/jeonse-hero.jpg',
-    related: ['getting-your-housing-deposit-back'],
+    related: ['getting-your-housing-deposit-back', 'reading-a-korean-lease-before-signing'],
     body: JeonseExplained,
   },
   {
@@ -283,6 +284,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/move-out-hero.jpg',
     related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'jeonse-explained'],
     body: MoveOutChecklistAndDeadlines,
+  },
+  {
+    slug: 'reading-a-korean-lease-before-signing',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'Reading a Korean Lease Before Signing',
+    metaTitle:
+      "Reading a Korean Lease Before You Sign — The Register, the Special Clauses, and the Landlord's Finances",
+    metaDescription:
+      "How to read a Korean lease before signing: matching the register, the special clauses (특약) that decide disputes, the landlord's tax certificates, and the agent's duties.",
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/reading-lease-hero.jpg',
+    related: ['jeonse-explained', 'getting-your-housing-deposit-back', 'move-out-checklist-and-deadlines'],
+    body: ReadingAKoreanLeaseBeforeSigning,
   },
 ]
 
