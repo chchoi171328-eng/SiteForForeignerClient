@@ -607,3 +607,41 @@
     페이퍼나이프 — 글자·소인 없음)
   - 본문: `/assets/guides/summary-order-calendar.jpg` (백지 탁상달력·빨간 핀 —
     7일 기한 테마, 글자·숫자 없음)
+
+---
+
+## 16. Move-Out Checklist and Deadlines
+`/guides/real-estate-lease-disputes/move-out-checklist-and-deadlines` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08 — guide 1·2·10 기검증분 재사용 표시)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 갱신거절 통지 2개월 전 / 묵시적 갱신 후 해지 3개월 | 주임법 제6조·제6조의2 | guide 1에서 검증 |
+| 임차권등기 완료 후 이사 (보증금 미반환 시) | 주임법 제3조의3 | guide 1·10에서 검증 |
+| 동시이행 프레이밍 (보증금 ↔ 인도) | 일반 법리 (guide 1과 동일 완충) | guide 1 수위 유지 |
+| 장기수선충당금: 소유자 부담 원칙 | 공동주택관리법 제30조 제1항 | easylaw.go.kr |
+| 임차인 납부분 임대차 종료 시 반환 청구 | 공동주택관리법 시행령 제31조 제8항 | easylaw.go.kr, lawtalk |
+| 외국인 체류지 변경 전입신고 **15일 이내** | 출입국관리법 제36조 | lbox.kr, gov.kr (구 14일 아님 — 현행 15일 확인) |
+| 10년 소멸시효 (출국 FAQ) | 민법 제162조 | guide 1에서 검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **원상복구 범위** — "ordinary wear ... generally the cost of renting the
+  place out" 완충 (판례 법리 — 인용 없음. 계약 특약 우선 명시).
+- **장충금 미적용 범위 FAQ** — "professionally managed multi-family housing"
+  기준으로 완충 (의무관리대상 공동주택 세부 기준 미전개).
+- **가스 해지 방문·인터넷 위약금** — 실무 일반론.
+- **체류지 신고 지연 제재** — "risks fines and needless visa friction"
+  수준 (과태료 금액 미기재).
+- **이중 보증금 브리지 FAQ** — "moving a jeonse loan ... through the bank"
+  실무 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음/손만)
+  - 히어로: `/assets/guides/move-out-hero.jpg` (현관 옆 이사 상자·문에 걸린
+    열쇠 — 상자 표면 공백)
+  - 본문: `/assets/guides/move-out-photos.jpg` (비운 방을 스마트폰으로
+    촬영하는 손 — 얼굴 비노출. 1차 계량기 구도는 숫자 제거로 의미가 죽어
+    사용자 피드백으로 폐기·재생성)
