@@ -19,6 +19,7 @@ const H2 = 'text-2xl font-serif font-bold text-navy-900 mt-12 mb-4 scroll-mt-28'
 const P = 'text-gray-700 leading-relaxed mb-4'
 const TH = 'text-left text-xs font-bold uppercase tracking-wider text-gray-500 px-4 py-3'
 const TD = 'px-4 py-3 text-sm text-gray-700 leading-relaxed align-top'
+const LINK = 'text-navy-900 underline decoration-gold-400 underline-offset-2 hover:text-gold-600'
 
 export default function GettingYourHousingDepositBack() {
   return (
@@ -242,6 +243,11 @@ export default function GettingYourHousingDepositBack() {
         deadline, and your bank account — and says plainly what comes next: a lease registration
         order, statutory interest, and a lawsuit whose costs the landlord may bear. Many disputes
         end here, because it shows the landlord you know the sequence and are already walking it.
+        The letter&rsquo;s legal effects, drafting, and follow-up rules are covered in full in{' '}
+        <Link href="/guides/civil-litigation/certified-content-mail" className={LINK}>
+          Certified Content Mail (내용증명)
+        </Link>
+        .
       </p>
 
       <h2 id="payment-order-or-lawsuit" className={H2}>

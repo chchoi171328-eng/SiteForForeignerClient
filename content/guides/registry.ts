@@ -28,6 +28,7 @@ import MoveOutChecklistAndDeadlines from './bodies/move-out-checklist-and-deadli
 import ReadingAKoreanLeaseBeforeSigning from './bodies/reading-a-korean-lease-before-signing'
 import TheUnfairDismissalStandard from './bodies/the-unfair-dismissal-standard'
 import YouveBeenServedFirst30Days from './bodies/youve-been-served-first-30-days'
+import CertifiedContentMail from './bodies/certified-content-mail'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -219,7 +220,21 @@ export const GUIDES: Guide[] = [
       'Served with Korean court papers? How to tell a complaint from a payment order, the 30-day answer, the 2-week objection windows, and how default judgments happen.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/served-hero.jpg',
+    related: ['certified-content-mail'],
     body: YouveBeenServedFirst30Days,
+  },
+  {
+    slug: 'certified-content-mail',
+    field: 'civil-litigation',
+    listingTitle: 'Certified Content Mail (내용증명)',
+    metaTitle:
+      "Certified Content Mail in Korea (내용증명) — What It Does, What It Can't, and How to Write One",
+    metaDescription:
+      'What Korean certified content mail (내용증명) actually does: proof of content and date, the 6-month escalation rule, how to write one, and when to skip it.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/content-mail-hero.jpg',
+    related: ['youve-been-served-first-30-days', 'getting-your-housing-deposit-back'],
+    body: CertifiedContentMail,
   },
   {
     slug: 'lease-registration-order',
