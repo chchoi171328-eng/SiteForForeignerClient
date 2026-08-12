@@ -27,6 +27,7 @@ import SummaryOrdersAndFormalTrial from './bodies/summary-orders-and-formal-tria
 import MoveOutChecklistAndDeadlines from './bodies/move-out-checklist-and-deadlines'
 import ReadingAKoreanLeaseBeforeSigning from './bodies/reading-a-korean-lease-before-signing'
 import TheUnfairDismissalStandard from './bodies/the-unfair-dismissal-standard'
+import YouveBeenServedFirst30Days from './bodies/youve-been-served-first-30-days'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -207,6 +208,18 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/unfair-dismissal-hero.jpg',
     related: ['unpaid-wages-labor-office-vs-lawsuit', 'severance-pay-who-qualifies'],
     body: TheUnfairDismissalStandard,
+  },
+  {
+    slug: 'youve-been-served-first-30-days',
+    field: 'civil-litigation',
+    listingTitle: "You've Been Served: First 30 Days",
+    metaTitle:
+      'Served with a Korean Lawsuit — What the Papers Mean, the 30-Day Answer, and What Happens If You Ignore It',
+    metaDescription:
+      'Served with Korean court papers? How to tell a complaint from a payment order, the 30-day answer, the 2-week objection windows, and how default judgments happen.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/served-hero.jpg',
+    body: YouveBeenServedFirst30Days,
   },
   {
     slug: 'lease-registration-order',

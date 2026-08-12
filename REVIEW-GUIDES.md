@@ -733,3 +733,45 @@
     배제)
   - 본문: `/assets/guides/unfair-dismissal-records.jpg` (백지 서류를 폴더에
     모으는 외국인의 손 — 얼굴 비노출·문서 전부 백지)
+
+---
+
+## 19. You've Been Served: First 30 Days
+`/guides/civil-litigation/youve-been-served-first-30-days` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 답변서 제출의무 — 소장 부본 송달일부터 30일 (공시송달 예외) | 민사소송법 제256조 | law.go.kr, casenote.kr, easylaw.go.kr |
+| 무변론 판결 — 답변서 미제출 시 자백 간주, 변론 없이 판결 가능. 단 선고 전 다투는 취지 답변서 제출 시 불가 | 민사소송법 제257조 (단서 포함) | law.go.kr, casenote.kr |
+| 보충송달 — 동거인·사무원·피용자 중 사리분별 지능 있는 사람 수령 시 송달 효력; 수령 거부 시 유치송달 | 민사소송법 제186조 (제3항 포함) | lbox.kr, casenote.kr |
+| 공시송달 | 민사소송법 제194조 이하 | law.go.kr |
+| 항소기간 — 판결서 송달일부터 2주, 불변기간 | 민사소송법 제396조 | lbox.kr, casenote.kr, easylaw.go.kr |
+| 추완항소 — 책임질 수 없는 사유 소멸 후 2주 (공시송달 판결: 안 날 기준 실무) | 민사소송법 제173조 | easylaw.go.kr, 다수 해설 |
+| 지급명령 이의 2주, 미이의 시 확정판결과 같은 효력 | 민사소송법 제470조·제474조 | guide 1에서 기검증 |
+| 이행권고결정 — 소액사건, 등본 송달일부터 2주 이의(불변기간), 미이의 시 확정판결 효력 | 소액사건심판법 제5조의3·제5조의4 | easylaw.go.kr |
+| 소액사건 상한 3,000만원 | 소액사건심판법 제2조, 동규칙 | guide 1에서 기검증 |
+| 화해권고결정 2주 이의 (flow 6단계에서 언급) | 민사소송법 제226조 | casenote.kr 관련 검색 |
+| 반소 (FAQ — 존재·같은 절차 병합 수준만) | 민사소송법 제269조 | 통용 조문 — 요건 세부 미전개 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **추완항소 "안 날" 기준** — 공시송달 판결에서 "기록 열람·판결정본 영수 시"
+  실무 해석은 판례 법리이므로 본문은 "in practice means the day you actually
+  learned" 완충 서술 (판례 인용 없음).
+- **통역** — 민사 변론 통역은 "arranged case by case where the court finds
+  it necessary" 완충 (법원조직법 §62 등 조문 인용 생략).
+- **외국 판결 집행 (FAQ PCS)** — "can be the basis for enforcement efforts
+  abroad" 관점 수준 (승인·집행 요건 미전개).
+- **소송비용 부담** — 미전개 (guide 23 What Litigation Costs에서 다룰 예정).
+- **전자소송** — "electronic litigation system" 사실 언급만.
+- 비자·SOFA 서술 없음. 판례 인용 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/served-hero.jpg` (아파트 우편함 벽, 한 칸에
+    꽂힌 두꺼운 백지 봉투 — 라벨·숫자 없음)
+  - 본문: `/assets/guides/served-response.jpg` (클립보드 위 백지 서류와
+    무지 인덱스 탭·만년필 — 항목별 답변 테마)
