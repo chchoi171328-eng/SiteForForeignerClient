@@ -775,3 +775,41 @@
     꽂힌 두꺼운 백지 봉투 — 라벨·숫자 없음)
   - 본문: `/assets/guides/served-response.jpg` (클립보드 위 백지 서류와
     무지 인덱스 탭·만년필 — 항목별 답변 테마)
+
+---
+
+## 20. Certified Content Mail (내용증명)
+`/guides/civil-litigation/certified-content-mail` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 내용증명 = 우체국의 증명취급 (내용문서 원본·등본 대조, 발송연월일 기재); 등본 3년 보관, 발송인·수취인 재증명·열람 청구 가능 | 우편법 시행규칙 (증명취급 규정) | law.go.kr, epost.go.kr, easylaw.go.kr |
+| 작성 언어 — 한글·한자·그 밖의 외국어로 자획 명료 기재 시 취급 (영문 가능) | 우편법 시행규칙 내용문서 요건 | law.go.kr, epost.go.kr |
+| 최고의 시효중단 — 6월 내 재판상 청구·파산절차참가·화해를 위한 소환·임의출석·압류·가압류·가처분 없으면 효력 없음 | 민법 제174조 | casenote.kr, lbox.kr |
+| 도달주의 — 상대방 있는 의사표시는 도달 시 효력 | 민법 제111조 | casenote.kr, lbox.kr |
+| 소액사건 상한 3,000만원 (6절 언급) | 소액사건심판법 제2조 | guide 1 기검증 |
+| 임금채권 3년·일반 채권 10년 (2절 예시) | 근로기준법 제49조, 민법 제162조 | guide 8·1 기검증 |
+| e-내용증명 24시간 접수·전자 보관 | 인터넷우체국 서비스 | epost.go.kr |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **"도달" 의미** — 판례 법리(요지 가능 상태)는 미전개, "reaches the other
+  side" 일반 서술 + 배달증명 병용 권고로 처리.
+- **수령 거부 시 효력** — 판례 법리이므로 확정 서술 없이 "refusal can be
+  shown, keep the envelope sealed" 실무 수준.
+- **가압류 전 통지 리스크 (3절)** — "where asset flight is realistic,
+  secure first" 전략 서술은 일반 실무 수준, 가압류 요건 미전개 (guide 25
+  예정).
+- **변호사 명의 발송 FAQ** — 사실 서술 수준 유지, 수임 유도 없음 (광고는
+  CTA 블록만).
+- 판례 인용 0건, SOFA·비자 서술 0건, 환율 환산 없음.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/content-mail-hero.jpg` (책상 위 백지 봉투 3통
+    부채꼴 — 3부 등본 모티프, 인물·텍스트 없음)
+  - 본문: `/assets/guides/content-mail-writing.jpg` (백지 편지를 삼단
+    접는 외국인의 손 — 얼굴 비노출·텍스트 없음)
