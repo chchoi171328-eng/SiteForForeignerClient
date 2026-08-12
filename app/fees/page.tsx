@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RETAINER_RANGES } from '@/content/fees'
@@ -66,14 +67,41 @@ export default function FeesPage() {
           </p>
         </header>
 
-        {/* How legal fees work in Korea */}
+        {/* How legal fees work in Korea — and how we set them */}
         <section className="mb-12">
-          <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">How legal fees work in Korea</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">
+            How legal fees work in Korea — and how we set them
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
             Korean litigation fees typically have two parts. The retainer (착수금) is paid when you engage the
-            firm and covers the work of running your case. A success fee (성공보수), agreed in writing before
-            you sign, is paid only if the outcome defined in your engagement letter is achieved. Both are set
-            out in your engagement letter before you commit — nothing is added mid-case.
+            firm and covers the work of running your case. A success fee (성공보수) is paid only if the outcome
+            defined in your engagement letter is achieved. If you are used to US-style contingency fees, note
+            the difference: the retainer is not contingent, and the success fee is a defined percentage or
+            amount, not a share taken in place of other fees.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">Here is how we set success fees:</p>
+          <ul className="space-y-2 mb-4">
+            {[
+              'In civil, real estate, and family matters, the success fee is usually between 1% and 10% of the amount in dispute — the larger the amount, the lower the percentage.',
+              'In criminal matters, the success fee does not exceed the retainer.',
+              'For simple matters, we sometimes agree on no success fee at all. Where a case genuinely calls for terms outside these ranges, we tell you before you sign — not after.',
+              'Flat-fee work carries no success fee.',
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-gray-700">
+                <Icons.ArrowRight className="w-4 h-4 text-gold-500 mt-1.5 shrink-0" aria-hidden="true" />
+                <span className="leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Whatever the terms, they are fixed in writing before you sign, and they do not grow or appear
+            mid-case.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            One more thing we put in writing: what counts as &ldquo;success.&rdquo; The judgment amount, or the
+            amount actually collected? In a criminal case, which outcome? Most disputes over success fees
+            happen because this was never defined. Ours is defined in your engagement letter before you pay
+            anything.
           </p>
         </section>
 
@@ -91,11 +119,20 @@ export default function FeesPage() {
               </thead>
               <tbody>
                 {RETAINER_RANGES.map((r) => (
-                  <tr key={r.area} className="border-b border-gray-200 align-top">
-                    <td className="py-3 pr-4 font-medium text-navy-900">{r.area}</td>
-                    <td className="py-3 pr-4 text-gray-700 whitespace-nowrap">{r.range}</td>
-                    <td className="py-3 text-gray-600 text-sm">{r.dependsOn}</td>
-                  </tr>
+                  <React.Fragment key={r.area}>
+                    <tr className="border-b border-gray-200 align-top">
+                      <td className="py-3 pr-4 font-medium text-navy-900">{r.area}</td>
+                      <td className="py-3 pr-4 text-gray-700 whitespace-nowrap">{r.range}</td>
+                      <td className="py-3 text-gray-600 text-sm">{r.dependsOn}</td>
+                    </tr>
+                    {r.footnote && (
+                      <tr className="border-b border-gray-200">
+                        <td colSpan={3} className="pt-2 pb-3 text-gray-500 text-xs leading-relaxed">
+                          {r.footnote}
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>

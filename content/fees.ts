@@ -9,6 +9,8 @@ export type RetainerRange = {
   area: string
   range: string
   dependsOn: string
+  /** Optional one-line footnote rendered directly under the row. */
+  footnote?: string
 }
 
 export const RETAINER_RANGES: RetainerRange[] = [
@@ -21,6 +23,8 @@ export const RETAINER_RANGES: RetainerRange[] = [
     area: 'Divorce & family',
     range: '₩4,000,000 – ₩7,000,000',
     dependsOn: 'property division and custody issues',
+    footnote:
+      'Inheritance renunciation and qualified acceptance are handled at a flat fee — ₩100,000 / ₩1,000,000. For unusually large estates, any adjusted fee is quoted at case review, before you commit.',
   },
   {
     area: 'Civil (loans & contract disputes)',
