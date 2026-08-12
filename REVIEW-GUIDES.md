@@ -683,3 +683,53 @@
     안경 — 날인 자국·글자 없음)
   - 본문: `/assets/guides/reading-lease-clauses.jpg` (백지 계약면 위에 펜을
     든 손 — 특약 테마, 얼굴 비노출)
+
+---
+
+## 18. The Unfair Dismissal Standard
+`/guides/labor-employment/the-unfair-dismissal-standard` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 정당한 이유 없는 해고·휴직·정직·전직·감봉·징벌 금지, 구제절차상 입증책임 사용자 | 근로기준법 제23조 제1항 | law.go.kr, casenote.kr, easylaw.go.kr |
+| 경영상 해고 4요건 (긴박한 경영상 필요·해고회피 노력·합리적 기준·근로자대표 협의) | 근로기준법 제24조 | law.go.kr |
+| 해고예고 30일 또는 30일분 통상임금 (해고예고수당); 예외 3종(3개월 미만·천재사변·고의로 막대한 지장, 시행규칙 별표) | 근로기준법 제26조 | casenote.kr, worklaw.co.kr |
+| 해고사유·시기 서면통지, 서면통지 없으면 효력 없음 | 근로기준법 제27조 | casenote.kr, easylaw.go.kr |
+| 부당해고등 구제신청 — 노동위원회, 3개월 이내 | 근로기준법 제28조 | law.go.kr, casenote.kr |
+| 금전보상명령 — 원직복직 불원 시 해고기간 임금상당액 이상, 심문회의 개최 통보 전 신청 | 근로기준법 제30조 제3항, easylaw | easylaw.go.kr, casenote.kr |
+| 이행강제금 3천만원 이하, 반복 부과 가능 | 근로기준법 제33조 | easylaw.go.kr |
+| 재심 신청 10일 (중앙노동위), 행정소송 15일 | 근로기준법 제31조 절차 — easylaw·중노위 안내 | easylaw.go.kr, nlrc.go.kr |
+| 5인 미만 사업장: §23①·§27·§28 미적용, §26 해고예고(수당)는 적용 | 근로기준법 제11조 + 시행령 별표 | easylaw.go.kr, seoullabor.or.kr |
+| 기간제 2년 초과 시 무기계약 간주 | 기간제법 제4조 | 통용 법령 확인 (guide 9 관련 기검증) |
+| 외국인 동일 적용 — 노동관계법령은 국적 무관, 외국인도 노동위 구제신청 가능 | 근로기준법 (국적 요건 없음) | easylaw.go.kr (외국인근로자 권리구제) |
+| 무료 권리구제 대리인 (변호사·공인노무사) — 월평균임금 300만원 미만 | 노동위원회 권리구제 대리인 지원제도 | moel.go.kr |
+| 임금채권 소멸시효 3년 (기한 박스 마지막 행) | 근로기준법 제49조 | guide 8에서 기검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **"정당한 이유"의 실질 기준** — 조문이 정의하지 않으므로 "in practice the
+  bar is high: ... cannot reasonably continue" 수준으로 서술 (판례 문구
+  직인용 없음, 하드 룰 준수).
+- **수습(probation)** — "widens the employer's room ... still requires a
+  reasonable ground" 완충 서술 (판례 법리 미전개).
+- **갱신기대권** — 판례 법리이므로 "renewals were repeated and routine →
+  can become contestable on its facts" 완충으로만 (조문 인용 없음).
+- **권고사직 강박 다툼** — "hard and evidence-heavy" 실무 수준.
+- **5인 미만 민사적 다툼 여지** — "contract-based civil claim ... can
+  remain open" 완충 (민법 근거 조문 미전개).
+- **비자 영향 (FAQ·common mistakes)** — 관점 수준 유지 ("can affect a
+  work-based status; check ... at the same time"), 구체 비자 코드·결과
+  단정 없음. 5-6절 ② 준수.
+- **노동위 절차 소요** — "usually within about 60 days of filing" (easylaw
+  안내 기준 접수~심문 통상 60일) 완충 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과)
+  - 히어로: `/assets/guides/unfair-dismissal-hero.jpg` (빈 사무실 책상 위
+    사원증 랜야드·백지 배지·노트 — 인물 없음·텍스트 없음, 이사박스 클리셰
+    배제)
+  - 본문: `/assets/guides/unfair-dismissal-records.jpg` (백지 서류를 폴더에
+    모으는 외국인의 손 — 얼굴 비노출·문서 전부 백지)

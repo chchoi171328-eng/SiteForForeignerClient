@@ -26,6 +26,7 @@ import PoliceInterviewRightsAndInterpreters from './bodies/police-interview-righ
 import SummaryOrdersAndFormalTrial from './bodies/summary-orders-and-formal-trial'
 import MoveOutChecklistAndDeadlines from './bodies/move-out-checklist-and-deadlines'
 import ReadingAKoreanLeaseBeforeSigning from './bodies/reading-a-korean-lease-before-signing'
+import TheUnfairDismissalStandard from './bodies/the-unfair-dismissal-standard'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -178,7 +179,7 @@ export const GUIDES: Guide[] = [
       'What to do about unpaid wages in Korea: the 14-day rule, the labor office complaint, the government wage fund (대지급금), free legal aid, and the 3-year deadline.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/unpaid-wages-hero.jpg',
-    related: ['severance-pay-who-qualifies'],
+    related: ['severance-pay-who-qualifies', 'the-unfair-dismissal-standard'],
     body: UnpaidWagesLaborOfficeVsLawsuit,
   },
   {
@@ -191,8 +192,21 @@ export const GUIDES: Guide[] = [
       "Korea's statutory severance: a month's average pay per year worked. Who qualifies (1 year, 15 hours/week), the freelancer question, IRP accounts, and E-9 insurance.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/severance-hero.jpg',
-    related: ['unpaid-wages-labor-office-vs-lawsuit'],
+    related: ['unpaid-wages-labor-office-vs-lawsuit', 'the-unfair-dismissal-standard'],
     body: SeverancePayWhoQualifies,
+  },
+  {
+    slug: 'the-unfair-dismissal-standard',
+    field: 'labor-employment',
+    listingTitle: 'The Unfair Dismissal Standard',
+    metaTitle:
+      'Unfair Dismissal in Korea — Just Cause, Written Notice, and the 3-Month Labor Relations Commission Deadline',
+    metaDescription:
+      'Unfair dismissal in Korea: the just-cause rule, the written-notice rule, the 3-month Labor Relations Commission deadline, and the under-5-employee exception.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/unfair-dismissal-hero.jpg',
+    related: ['unpaid-wages-labor-office-vs-lawsuit', 'severance-pay-who-qualifies'],
+    body: TheUnfairDismissalStandard,
   },
   {
     slug: 'lease-registration-order',
