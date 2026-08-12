@@ -21,12 +21,18 @@ const Hero: React.FC = () => {
                     sizes="100vw"
                 />
 
-                <div className="absolute inset-0 bg-navy-900/80"></div>
+                {/* Overlay: on mobile the photo shows through at the top and the text zone
+                    below stays dark; on md+ it lightens left→right so the courthouse is
+                    visible on the right while the copy keeps its contrast. */}
+                <div className="absolute inset-0 bg-gradient-to-b from-navy-900/35 via-navy-900/80 via-10% to-navy-900/85 md:hidden"></div>
+                <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-navy-900/85 via-navy-900/75 via-70% to-navy-900/30"></div>
             </div>
 
-            {/* Photo caption — small, set apart from the hero copy, and kept clear of
-                the floating call buttons that sit bottom-right on small screens. */}
-            <p className="absolute bottom-4 left-4 z-10 max-w-[15rem] sm:max-w-xs text-left text-[11px] md:text-xs text-gray-400 leading-snug">
+            {/* Photo caption — small and set apart from the hero copy. On md+ it sits
+                bottom-right, on the side the gradient leaves the photo visible; on small
+                screens it stays bottom-left, clear of the floating call buttons that sit
+                bottom-right. */}
+            <p className="absolute bottom-4 left-4 md:left-auto md:right-6 z-10 max-w-[15rem] sm:max-w-xs text-left md:text-right text-[11px] md:text-xs text-gray-400 md:text-gray-300 leading-snug">
                 The Pyeongtaek courthouse and prosecutors&apos; office — seen from our office window.
             </p>
 
