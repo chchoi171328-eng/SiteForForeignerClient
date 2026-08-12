@@ -29,6 +29,7 @@ import ReadingAKoreanLeaseBeforeSigning from './bodies/reading-a-korean-lease-be
 import TheUnfairDismissalStandard from './bodies/the-unfair-dismissal-standard'
 import YouveBeenServedFirst30Days from './bodies/youve-been-served-first-30-days'
 import CertifiedContentMail from './bodies/certified-content-mail'
+import PaymentOrders from './bodies/payment-orders'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -220,7 +221,7 @@ export const GUIDES: Guide[] = [
       'Served with Korean court papers? How to tell a complaint from a payment order, the 30-day answer, the 2-week objection windows, and how default judgments happen.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/served-hero.jpg',
-    related: ['certified-content-mail'],
+    related: ['certified-content-mail', 'payment-orders'],
     body: YouveBeenServedFirst30Days,
   },
   {
@@ -233,8 +234,21 @@ export const GUIDES: Guide[] = [
       'What Korean certified content mail (내용증명) actually does: proof of content and date, the 6-month escalation rule, how to write one, and when to skip it.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/content-mail-hero.jpg',
-    related: ['youve-been-served-first-30-days', 'getting-your-housing-deposit-back'],
+    related: ['youve-been-served-first-30-days', 'payment-orders', 'getting-your-housing-deposit-back'],
     body: CertifiedContentMail,
+  },
+  {
+    slug: 'payment-orders',
+    field: 'civil-litigation',
+    listingTitle: 'Payment Orders (지급명령)',
+    metaTitle:
+      'Payment Orders in Korea (지급명령) — The Fast Track for Undisputed Money Claims, and Its One Weakness',
+    metaDescription:
+      "Korea's payment order (지급명령): a fast, cheap court order for undisputed money claims — how it works, the 2-week objection, and when a lawsuit is better.",
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/payment-order-hero.jpg',
+    related: ['youve-been-served-first-30-days', 'certified-content-mail'],
+    body: PaymentOrders,
   },
   {
     slug: 'lease-registration-order',

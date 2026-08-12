@@ -283,7 +283,12 @@ export default function GettingYourHousingDepositBack() {
         Act (arts. 462–474): the court issues an order on your documents alone, without a hearing.
         If the landlord does not object within <strong>2 weeks of service</strong>, the order
         becomes final with the same force as a judgment. If the landlord objects, the case simply
-        converts to an ordinary lawsuit — you lose a few weeks, not your claim.
+        converts to an ordinary lawsuit — you lose a few weeks, not your claim. The procedure,
+        its costs, and when to skip it are covered in full in{' '}
+        <Link href="/guides/civil-litigation/payment-orders" className={LINK}>
+          Payment Orders (지급명령)
+        </Link>
+        .
       </p>
       <p className={P}>
         In a lawsuit, the economics favor you. While you still occupy the unit, interest generally

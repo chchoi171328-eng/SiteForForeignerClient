@@ -813,3 +813,44 @@
     부채꼴 — 3부 등본 모티프, 인물·텍스트 없음)
   - 본문: `/assets/guides/content-mail-writing.jpg` (백지 편지를 삼단
     접는 외국인의 손 — 얼굴 비노출·텍스트 없음)
+
+---
+
+## 21. Payment Orders (지급명령)
+`/guides/civil-litigation/payment-orders` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 지급명령 대상 — 금전·대체물·유가증권의 일정 수량 청구, 공시송달 외 방법으로 송달 가능한 경우 한정 | 민사소송법 제462조 | law.go.kr, casenote.kr, easylaw.go.kr |
+| 채무자 심문 없이 서면 심사로 발령 | 민사소송법 제467조 (독촉절차 구조) | easylaw.go.kr, nepla |
+| 송달불능 시 주소보정명령 또는 소제기신청(소송 이행) | 민사소송법 제466조 | easylaw.go.kr |
+| 이의신청 2주 (송달일부터), 이유 기재 불요 | 민사소송법 제470조 | guide 1 기검증 + easylaw |
+| 적법한 이의 시 그 범위에서 지급명령 실효, 소송으로 이행 | 민사소송법 제472조 | law.go.kr |
+| 확정 시 확정판결과 같은 효력 | 민사소송법 제474조 | casenote.kr |
+| 인지액 — 소장의 10분의 1 | 민사소송 등 인지법 (독촉절차) | easylaw.go.kr, 다수 해설 |
+| 확정 지급명령 채권 소멸시효 10년 연장 (단기시효 채권 포함) | 민법 제165조 (제2항 취지) | casenote.kr, lbox.kr, easylaw.go.kr |
+| 소액 3,000만원·임금 3년 (비교 서술) | 소액사건심판법 제2조, 근기법 제49조 | 기검증 재사용 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **확정 지급명령의 10년 연장** — 민법 §165 적용은 판례 법리 경유이므로
+  본문은 조문 인용(§165)으로 서술하되 "runs on a 10-year limitation
+  period" 단정 수위 — 통설·실무 일치라 유지. 확인 요망.
+- **집행문 불요 등 집행 세부** — 민사집행법 §58 미인용, "supports
+  compulsory execution" 수준으로만 (강제집행은 guide 26 예정).
+- **이의 후 인지 보정** — "top up the court fees to lawsuit level" 실무
+  수준.
+- **부분 이의 FAQ** — "voids the order within the scope you contest"
+  (§472 문언 "그 범위 안에서" 반영).
+- **비용 비유** — "costs less than a decent dinner"는 금액 미제시 비유
+  (KRW 수치 없음 — 환율·수수료 변동 회피). 판례 인용 0건, 비자·SOFA 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/payment-order-hero.jpg` (밝고 조용한 관공서
+    복도 — 서면 심사 트랙 모티프, 표지판·텍스트 없음, 공포 구도 배제)
+  - 본문: `/assets/guides/payment-order-response.jpg` (개봉된 남색 봉투와
+    백지 한 장·펜 — 2주 이의신청 테마, 텍스트 없음)
