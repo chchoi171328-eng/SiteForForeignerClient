@@ -21,11 +21,13 @@ const Hero: React.FC = () => {
                     sizes="100vw"
                 />
 
-                {/* Overlay: on mobile the photo shows through at the top and the text zone
-                    below stays dark; on md+ it lightens left→right so the courthouse is
-                    visible on the right while the copy keeps its contrast. */}
-                <div className="absolute inset-0 bg-gradient-to-b from-navy-900/35 via-navy-900/80 via-10% to-navy-900/85 md:hidden"></div>
-                <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-navy-900/85 via-navy-900/75 via-70% to-navy-900/30"></div>
+                {/* Overlay: kept light so the courthouse photo reads — on mobile the top
+                    half shows the photo and it darkens toward the text stack below; on
+                    md+ it lightens left→right so the building is clearly visible on the
+                    right half. Text readability is carried by text-shadows, not overlay
+                    density (same technique as the Korean site's hero). */}
+                <div className="absolute inset-0 bg-gradient-to-b from-navy-900/25 via-navy-900/55 via-45% to-navy-900/75 md:hidden"></div>
+                <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-navy-900/75 via-navy-900/40 via-45% to-navy-900/15"></div>
             </div>
 
             {/* Photo caption — small and set apart from the hero copy. On md+ it sits
@@ -42,10 +44,10 @@ const Hero: React.FC = () => {
                     <p className="text-gold-400 font-bold tracking-[0.2em] uppercase mb-4 text-sm md:text-base">
                         A Law Firm for Foreign Residents in Korea
                     </p>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white font-bold mb-6 leading-tight [text-shadow:0_2px_22px_rgba(10,14,22,.45)]">
                         We don&apos;t take every case.
                     </h1>
-                    <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
+                    <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-sans leading-relaxed [text-shadow:0_1px_12px_rgba(10,14,22,.5)]">
                         We listen to your situation first, then tell you honestly where you stand — the strengths and the weaknesses — so you can make an informed decision about what to do next.
                     </p>
 
@@ -81,7 +83,7 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Fact line */}
-                    <p className="mt-10 mx-auto max-w-2xl border-t border-white/20 pt-6 text-gray-300 text-sm md:text-base">
+                    <p className="mt-10 mx-auto max-w-2xl border-t border-white/20 pt-6 text-gray-300 text-sm md:text-base [text-shadow:0_1px_12px_rgba(10,14,22,.5)]">
                         {CONSULTATION.HERO_FACT_LINE}
                     </p>
 
