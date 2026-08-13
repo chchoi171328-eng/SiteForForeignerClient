@@ -1,5 +1,7 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import LocationSection from '@/components/LocationSection'
+import { SERVICE_AREAS } from '@/content/serviceAreas'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -60,6 +62,28 @@ export default function LocationPage() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Getting here from nearby areas (city-pages brief §D-2) — the times
+          below come from content/serviceAreas.ts, the same source the city
+          pages' Directions blocks use, so they cannot drift apart. */}
+      <div className="container mx-auto px-6 max-w-3xl mb-12">
+        <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">
+          Getting here from nearby areas
+        </h2>
+        <ul className="space-y-3">
+          {SERVICE_AREAS.map((area) => (
+            <li key={area.slug} className="text-gray-700 leading-relaxed">
+              {area.driveLine}{' '}
+              <Link
+                href={`/${area.slug}`}
+                className="text-gold-600 hover:text-gold-700 font-bold underline underline-offset-2 whitespace-nowrap"
+              >
+                {area.navLabel} page →
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <LocationSection />

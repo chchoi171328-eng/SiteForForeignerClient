@@ -4,6 +4,7 @@ import type { LandingPage } from '@/content/landingPages'
 import { CONTACT_INFO } from '@/constants'
 import { Icons } from './Icons'
 import ConsultationFees from './ConsultationFees'
+import SituationNav from './SituationNav'
 
 const BASE = 'https://www.lsfp.co.kr'
 
@@ -86,8 +87,64 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
                 ))}
               </ul>
             )}
+            {i === 0 && page.hookNote && (
+              <p className="text-sm text-gray-500 leading-relaxed mt-2">
+                {page.hookNote.text}{' '}
+                <Link
+                  href={page.hookNote.href}
+                  className="text-gold-600 hover:text-gold-700 font-bold underline underline-offset-2"
+                >
+                  {page.hookNote.linkText}
+                </Link>
+              </p>
+            )}
+            {section.image && (
+              <figure className="my-6">
+                <Image
+                  src={section.image.src}
+                  alt={section.image.alt}
+                  width={1600}
+                  height={900}
+                  className="rounded-lg"
+                />
+                {section.image.caption && (
+                  <figcaption className="mt-2 text-sm text-gray-500 leading-relaxed">
+                    {section.image.caption}
+                  </figcaption>
+                )}
+              </figure>
+            )}
           </section>
         ))}
+
+        {/* Directions (city pages) */}
+        {page.directions && (
+          <section className="mb-10 border border-gray-200 rounded-xl p-6 md:p-8 bg-slate-50">
+            <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4 flex items-center gap-2">
+              <Icons.MapPin className="w-5 h-5 text-gold-500" aria-hidden="true" />
+              Directions
+            </h2>
+            {page.directions.paragraphs.map((p) => (
+              <p key={p} className="text-gray-700 leading-relaxed mb-3">{p}</p>
+            ))}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=1029-1+Pyeongnam-ro,+Pyeongtaek-si"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gold-600 hover:text-gold-700 font-bold text-sm underline underline-offset-2"
+            >
+              Open in Google Maps
+              <Icons.ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </a>
+          </section>
+        )}
+
+        {/* Situation-based navigation (brief §A/§C) */}
+        {page.showSituationNav && (
+          <section className="mb-12">
+            <SituationNav />
+          </section>
+        )}
 
         {/* Consultation CTA */}
         <section className="bg-navy-900 text-white p-8 rounded-xl">

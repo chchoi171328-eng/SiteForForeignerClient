@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                                         href={`/${page.slug}`}
                                         className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
                                     >
-                                        {page.title}
+                                        {page.footerTitle ?? page.title}
                                     </Link>
                                 </li>
                             ))}
