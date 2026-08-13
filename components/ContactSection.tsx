@@ -14,59 +14,31 @@ const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 // Content-length limits (also enforced with maxLength on the inputs).
-// LSFP-form-revision-v2 §4-9: description capped at 1,000 characters, and no
-// visible minimum that pressures people into writing long legal essays.
-const LIMITS = {
-    name: 100,
-    phone: 30,
-    email: 150,
-    message: 1000,
-    messageMin: 10,
-    deadline: 120,
-    location: 120,
-    opposing: 150,
-    stageOther: 120,
-} as const;
+// form-lightweight §5: the description carries the whole matter now, so it gets
+// 2,000 characters and no minimum that pressures people into padding.
+const LIMITS = { name: 100, phone: 30, email: 150, message: 2000 } as const;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Consultation-request options. Matter types mirror the site's actual
-// practice areas (form-revision-v2 §4-4: do not invent new ones).
-const MATTER_TYPES = [
-    'Criminal',
-    'Divorce & Family',
-    'Civil or Debt',
-    'Real Estate & Lease',
-    'Labor & Employment',
-    'Other',
-] as const;
-
-// §4-5 — where the matter currently stands.
-const STAGES = [
-    'Contacted by police',
-    'Police interview scheduled',
-    'Received court papers',
-    'Lawsuit already pending',
-    'Dispute has arisen but no case has been filed',
-    'Judgment or court decision already issued',
-    'Other',
-] as const;
-
-// §4-10 — realistic contact channels only (no messengers the office doesn't use).
+// §6 — realistic contact channels only (no messengers the office doesn't use).
 const CONTACT_METHODS = ['Email', 'Phone'] as const;
 
-// §4-11 — time to CONTACT the applicant, never a consultation-time picker.
+// §6 — time to CALL the applicant, never a consultation-time picker.
 const BEST_TIMES = ['No Preference', 'Morning', 'Afternoon', '5 PM – 7 PM'] as const;
+
+// §4 — the guidance card. Prompts, not required questions: the applicant
+// describes the situation in their own words and the attorney classifies it.
+const DESCRIPTION_PROMPTS = [
+    'What happened and what problem you are facing',
+    'What has happened so far, such as police contact, court papers, a demand for payment, or a dispute with another person or company',
+    'Any important or urgent date you know about',
+    'What you would like help with',
+    'Names of other people or companies involved, only if you are comfortable providing them at this stage',
+] as const;
 
 type FormState = {
     name: string;
     email: string;
     phone: string;
-    matter: string;
-    stage: string;
-    stageOther: string;
-    deadline: string;
-    location: string;
-    opposingParty: string;
     message: string;
     contactMethod: string;
     bestTime: string;
@@ -77,12 +49,6 @@ const EMPTY_FORM: FormState = {
     name: '',
     email: '',
     phone: '',
-    matter: '',
-    stage: '',
-    stageOther: '',
-    deadline: '',
-    location: '',
-    opposingParty: '',
     message: '',
     contactMethod: '',
     bestTime: 'No Preference',
@@ -90,19 +56,7 @@ const EMPTY_FORM: FormState = {
 };
 
 type FieldErrors = Partial<
-    Record<
-        | 'name'
-        | 'email'
-        | 'phone'
-        | 'matter'
-        | 'stage'
-        | 'location'
-        | 'opposingParty'
-        | 'message'
-        | 'contactMethod'
-        | 'agreed',
-        string
-    >
+    Record<'name' | 'email' | 'phone' | 'message' | 'contactMethod' | 'agreed', string>
 >;
 
 function validate(form: FormState): FieldErrors {
@@ -113,23 +67,13 @@ function validate(form: FormState): FieldErrors {
     if (!form.email.trim()) errors.email = 'Please enter your email.';
     else if (!EMAIL_RE.test(form.email.trim())) errors.email = 'Please enter a valid email address.';
 
-    if (!form.phone.trim()) errors.phone = 'Please enter a phone number.';
-    else if (form.phone.trim().length > LIMITS.phone) errors.phone = 'Phone number is too long.';
-
-    if (!form.matter) errors.matter = 'Please choose the kind of matter.';
-    if (!form.stage) errors.stage = 'Please choose where things currently stand.';
-
-    if (!form.location.trim()) errors.location = 'Please tell us where the matter is based.';
-    else if (form.location.trim().length > LIMITS.location) errors.location = 'Location is too long.';
-
-    if (!form.opposingParty.trim())
-        errors.opposingParty = "Please name the other party — or write 'Unknown' or 'Not applicable'.";
-    else if (form.opposingParty.trim().length > LIMITS.opposing)
-        errors.opposingParty = 'This entry is too long.';
+    // Phone is optional — unless the applicant asked to be called (§2).
+    if (form.phone.trim().length > LIMITS.phone) errors.phone = 'Phone number is too long.';
+    else if (form.contactMethod === 'Phone' && !form.phone.trim())
+        errors.phone = 'Please enter a phone number so we can call you.';
 
     const msg = form.message.trim();
     if (!msg) errors.message = 'Please tell us briefly what happened.';
-    else if (msg.length < LIMITS.messageMin) errors.message = 'Please provide a little more detail.';
     else if (msg.length > LIMITS.message) errors.message = 'Message is too long.';
 
     if (!form.contactMethod) errors.contactMethod = 'Please choose how we should contact you.';
@@ -141,39 +85,29 @@ function validate(form: FormState): FieldErrors {
 }
 
 /**
- * Assemble the entire request into one readable email body (§8/§8-A single-
- * assembly principle). The EmailJS dashboard template prints {{message_body}}
- * only, so future field changes need no dashboard edits. Ordered so the
- * office can judge at a glance: can we take it, any conflict, how urgent,
- * and how to reach the applicant.
+ * Assemble the whole request into one readable email body. The EmailJS
+ * dashboard template prints {{message_body}} only, so field changes like this
+ * one need no dashboard edit (§9).
  */
 function buildMessageBody(form: FormState): string {
-    const stage =
-        form.stage === 'Other' && form.stageOther.trim()
-            ? `Other — ${form.stageOther.trim()}`
-            : form.stage;
-    return [
+    const lines = [
         '— Applicant —',
         `Name: ${form.name.trim()}`,
         `Email: ${form.email.trim()}`,
-        `Phone: ${form.phone.trim()}`,
-        '',
-        '— Matter —',
-        `Legal Matter: ${form.matter}`,
-        `Current Stage: ${stage}`,
-        `Important Deadline: ${form.deadline.trim() || 'None provided'}`,
-        `Location: ${form.location.trim()}`,
-        `Opposing Party / Company: ${form.opposingParty.trim()}`,
+        `Phone: ${form.phone.trim() || 'Not provided'}`,
         '',
         'Brief Description:',
         form.message.trim(),
         '',
         '— Contact —',
         `Preferred Contact Method: ${form.contactMethod}`,
-        `Best Time to Contact: ${form.bestTime}`,
+    ];
+    if (form.contactMethod === 'Phone') lines.push(`Best Time to Call: ${form.bestTime}`);
+    lines.push(
         '',
-        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)',
-    ].join('\n');
+        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)'
+    );
+    return lines.join('\n');
 }
 
 const ContactSection: React.FC = () => {
@@ -222,16 +156,12 @@ const ContactSection: React.FC = () => {
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 {
-                    // Kept for the template's subject/reply-to settings (§8-A rule 4).
+                    // Kept for the template's subject and reply-to line.
                     from_name: formState.name.trim(),
                     from_email: formState.email.trim(),
-                    from_phone: formState.phone.trim(),
-                    matter_type: formState.matter,
+                    from_phone: formState.phone.trim() || 'Not provided',
                     // Single-assembly body — the template body prints only this.
                     message_body: buildMessageBody(formState),
-                    // Legacy variable kept so the email stays readable until the
-                    // dashboard template is switched to {{message_body}}.
-                    message: buildMessageBody(formState),
                 },
                 EMAILJS_PUBLIC_KEY
             );
@@ -262,9 +192,8 @@ const ContactSection: React.FC = () => {
                 }`}
         >
             <div className="container mx-auto px-6 max-w-4xl">
-                {/* Header — form-revision-v2 §2: value frame + fee line kept; the
-                    reply-with-times sentence replaced by the conflict-check flow;
-                    pressure-removal paragraph kept with the not-confirmed clause. */}
+                {/* Header — §3: value frame, fee line, and the pressure-removal
+                    paragraph are kept verbatim; only the review-flow sentence moves. */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Request a Consultation</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-5">
@@ -276,8 +205,9 @@ const ContactSection: React.FC = () => {
                         30 minutes&ensp;·&ensp;₩100,000 (VAT included)&ensp;·&ensp;Korean or English, same fee
                     </p>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-3">
-                        We will first confirm that we can take your matter — including a
-                        conflict-of-interest check — and then contact you with available consultation times.
+                        Tell us briefly about your situation. We will review whether we can assist and check
+                        for potential conflicts of interest. If appropriate, we will contact you with
+                        available consultation times.
                     </p>
                     {/* Pressure-removal paragraph — keep (balances the checkbox friction). */}
                     <p className="text-gray-500 text-sm max-w-2xl mx-auto">
@@ -288,7 +218,7 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg relative overflow-hidden">
-                    {/* Success Overlay — §6: received, review + conflict check, not yet confirmed. */}
+                    {/* Success Overlay — §8. */}
                     {status === 'success' && (
                         <div
                             className="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center text-center p-8 animate-fade-in"
@@ -303,7 +233,7 @@ const ContactSection: React.FC = () => {
                             </h3>
                             <p className="text-gray-600 max-w-md mb-3">
                                 We will review the information you provided and check for potential conflicts
-                                of interest. If we are able to assist, we will contact you with available
+                                of interest. If we are able to assist, we will contact you regarding available
                                 consultation times.
                             </p>
                             <p className="text-gray-600 max-w-md font-medium mb-1">
@@ -322,7 +252,7 @@ const ContactSection: React.FC = () => {
                     )}
 
                     <form onSubmit={handleSubmit} onFocus={handleFormStart} className="space-y-6">
-                        {/* ——— About You (§9 grouping) ——— */}
+                        {/* ——— About You ——— */}
                         <p className={groupHeadingClass}>About You</p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {/* 1. Name */}
@@ -371,22 +301,27 @@ const ContactSection: React.FC = () => {
                                     <p id="contact-email-error" className="text-red-600 text-sm mt-1">{errors.email}</p>
                                 )}
                             </div>
-                            {/* 3. Phone (international numbers welcome) */}
+                            {/* 3. Phone — optional unless "Phone" is the chosen contact method (§2). */}
                             <div>
                                 <label htmlFor="contact-phone" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Phone Number <span className="text-red-500" aria-label="required">*</span>
+                                    Phone Number{' '}
+                                    {formState.contactMethod === 'Phone' ? (
+                                        <span className="text-red-500" aria-label="required">*</span>
+                                    ) : (
+                                        <span className="text-gray-400 font-normal">(optional)</span>
+                                    )}
                                 </label>
                                 <input
                                     id="contact-phone"
                                     type="tel"
-                                    required
+                                    required={formState.contactMethod === 'Phone'}
                                     maxLength={LIMITS.phone}
                                     disabled={status === 'submitting'}
                                     className={inputClass}
                                     placeholder="010-1234-5678 or +1 555 123 4567"
                                     value={formState.phone}
                                     onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                                    aria-required="true"
+                                    aria-required={formState.contactMethod === 'Phone'}
                                     aria-invalid={!!errors.phone}
                                     aria-describedby={errors.phone ? 'contact-phone-error' : undefined}
                                 />
@@ -396,172 +331,53 @@ const ContactSection: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* ——— About Your Matter ——— */}
-                        <p className={groupHeadingClass}>About Your Matter</p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* 4. Type of legal matter */}
-                            <div>
-                                <label htmlFor="contact-matter" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Type of Legal Matter <span className="text-red-500" aria-label="required">*</span>
-                                </label>
-                                <select
-                                    id="contact-matter"
-                                    required
-                                    disabled={status === 'submitting'}
-                                    className={`${inputClass} ${formState.matter ? 'text-gray-900' : 'text-gray-400'}`}
-                                    value={formState.matter}
-                                    onChange={(e) => setFormState({ ...formState, matter: e.target.value })}
-                                    aria-required="true"
-                                    aria-invalid={!!errors.matter}
-                                    aria-describedby={errors.matter ? 'contact-matter-error' : undefined}
-                                >
-                                    <option value="" disabled>
-                                        Choose one…
-                                    </option>
-                                    {MATTER_TYPES.map((m) => (
-                                        <option key={m} value={m} className="text-gray-900">
-                                            {m}
-                                        </option>
-                                    ))}
-                                </select>
-                                {errors.matter && (
-                                    <p id="contact-matter-error" className="text-red-600 text-sm mt-1">{errors.matter}</p>
-                                )}
-                            </div>
-                            {/* 5. Current stage */}
-                            <div>
-                                <label htmlFor="contact-stage" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Current Situation / Stage <span className="text-red-500" aria-label="required">*</span>
-                                </label>
-                                <select
-                                    id="contact-stage"
-                                    required
-                                    disabled={status === 'submitting'}
-                                    className={`${inputClass} ${formState.stage ? 'text-gray-900' : 'text-gray-400'}`}
-                                    value={formState.stage}
-                                    onChange={(e) => setFormState({ ...formState, stage: e.target.value })}
-                                    aria-required="true"
-                                    aria-invalid={!!errors.stage}
-                                    aria-describedby={errors.stage ? 'contact-stage-error' : undefined}
-                                >
-                                    <option value="" disabled>
-                                        Choose one…
-                                    </option>
-                                    {STAGES.map((s) => (
-                                        <option key={s} value={s} className="text-gray-900">
-                                            {s}
-                                        </option>
-                                    ))}
-                                </select>
-                                {errors.stage && (
-                                    <p id="contact-stage-error" className="text-red-600 text-sm mt-1">{errors.stage}</p>
-                                )}
-                                {formState.stage === 'Other' && (
-                                    <input
-                                        id="contact-stage-other"
-                                        type="text"
-                                        maxLength={LIMITS.stageOther}
-                                        disabled={status === 'submitting'}
-                                        className={`${inputClass} mt-2`}
-                                        placeholder="In a few words, where do things stand? (optional)"
-                                        value={formState.stageOther}
-                                        onChange={(e) => setFormState({ ...formState, stageOther: e.target.value })}
-                                        aria-label="Briefly describe where things stand"
-                                    />
-                                )}
-                            </div>
-                            {/* 6. Important deadline (optional) */}
-                            <div>
-                                <label htmlFor="contact-deadline" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Important Deadline, If Any <span className="text-gray-400 font-normal">(optional)</span>
-                                </label>
-                                <input
-                                    id="contact-deadline"
-                                    type="text"
-                                    maxLength={LIMITS.deadline}
-                                    disabled={status === 'submitting'}
-                                    className={inputClass}
-                                    placeholder="e.g., hearing on 25 August, interview next Tuesday"
-                                    value={formState.deadline}
-                                    onChange={(e) => setFormState({ ...formState, deadline: e.target.value })}
-                                    aria-describedby="contact-deadline-hint"
-                                />
-                                <p id="contact-deadline-hint" className="text-gray-400 text-xs mt-1">
-                                    Court deadline, police interview date, hearing date, or another urgent date.
-                                </p>
-                            </div>
-                            {/* 7. Location of the matter */}
-                            <div>
-                                <label htmlFor="contact-location" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Location of the Matter <span className="text-red-500" aria-label="required">*</span>
-                                </label>
-                                <input
-                                    id="contact-location"
-                                    type="text"
-                                    required
-                                    maxLength={LIMITS.location}
-                                    disabled={status === 'submitting'}
-                                    className={inputClass}
-                                    placeholder="e.g., Pyeongtaek, Osan, Seoul — or another country"
-                                    value={formState.location}
-                                    onChange={(e) => setFormState({ ...formState, location: e.target.value })}
-                                    aria-required="true"
-                                    aria-invalid={!!errors.location}
-                                    aria-describedby={errors.location ? 'contact-location-error' : undefined}
-                                />
-                                {errors.location && (
-                                    <p id="contact-location-error" className="text-red-600 text-sm mt-1">{errors.location}</p>
-                                )}
-                            </div>
-                        </div>
-
-                        {/* 8. Opposing party (conflict-of-interest check) */}
-                        <div>
-                            <label htmlFor="contact-opposing" className="block text-sm font-bold text-gray-700 mb-2">
-                                Name of the Other Party or Company <span className="text-red-500" aria-label="required">*</span>
-                            </label>
-                            <input
-                                id="contact-opposing"
-                                type="text"
-                                required
-                                maxLength={LIMITS.opposing}
-                                disabled={status === 'submitting'}
-                                className={inputClass}
-                                placeholder="Person or company on the other side — or 'Unknown' / 'Not applicable'"
-                                value={formState.opposingParty}
-                                onChange={(e) => setFormState({ ...formState, opposingParty: e.target.value })}
-                                aria-required="true"
-                                aria-invalid={!!errors.opposingParty}
-                                aria-describedby={
-                                    errors.opposingParty ? 'contact-opposing-error contact-opposing-hint' : 'contact-opposing-hint'
-                                }
-                            />
-                            <p id="contact-opposing-hint" className="text-gray-400 text-xs mt-1">
-                                This information is used to check for potential conflicts of interest.
+                        {/* ——— Guidance card (§4) — read before the box, not inside it. ——— */}
+                        <div className="rounded-lg border border-gray-200 bg-slate-50 p-5 md:p-6">
+                            <h3 className="text-base font-bold text-navy-900 mb-2">
+                                Tell us briefly what happened
+                            </h3>
+                            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                                You do not need to know the legal category or use legal terms. Please describe
+                                the situation in your own words.
                             </p>
-                            {errors.opposingParty && (
-                                <p id="contact-opposing-error" className="text-red-600 text-sm mt-1">{errors.opposingParty}</p>
-                            )}
+                            <p className="text-sm text-navy-900 font-bold leading-relaxed mb-3">
+                                You do not need to answer every point below. These are simply a guide to help
+                                us understand your situation.
+                            </p>
+                            <p className="text-sm text-gray-600 mb-2">It is helpful to include:</p>
+                            <ul className="space-y-1.5">
+                                {DESCRIPTION_PROMPTS.map((prompt) => (
+                                    <li key={prompt} className="flex items-start gap-2 text-sm text-gray-600">
+                                        <span className="text-gold-500 mt-0.5" aria-hidden="true">·</span>
+                                        <span className="leading-relaxed">{prompt}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
-                        {/* 9. Brief description */}
+                        {/* 4. Brief description (§5) */}
                         <div>
                             <label htmlFor="contact-message" className="block text-sm font-bold text-gray-700 mb-2">
                                 Brief Description of Your Matter <span className="text-red-500" aria-label="required">*</span>
                             </label>
+                            <p id="contact-message-hint" className="text-sm text-gray-500 mb-2">
+                                Please tell us in your own words what happened and what you would like help with.
+                            </p>
                             <textarea
                                 id="contact-message"
                                 required
-                                rows={4}
+                                rows={7}
                                 maxLength={LIMITS.message}
                                 disabled={status === 'submitting'}
                                 className={inputClass}
-                                placeholder="Briefly explain what happened and what legal help you are seeking — plain English is fine."
+                                placeholder="Briefly describe your situation here..."
                                 value={formState.message}
                                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                                 aria-required="true"
                                 aria-invalid={!!errors.message}
-                                aria-describedby={errors.message ? 'contact-message-error' : undefined}
+                                aria-describedby={
+                                    errors.message ? 'contact-message-hint contact-message-error' : 'contact-message-hint'
+                                }
                             ></textarea>
                             {errors.message && (
                                 <p id="contact-message-error" className="text-red-600 text-sm mt-1">{errors.message}</p>
@@ -571,7 +387,7 @@ const ContactSection: React.FC = () => {
                         {/* ——— How Should We Contact You? ——— */}
                         <p className={groupHeadingClass}>How Should We Contact You?</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* 10. Preferred contact method */}
+                            {/* 5. Preferred contact method */}
                             <fieldset
                                 aria-required="true"
                                 aria-invalid={!!errors.contactMethod}
@@ -591,7 +407,9 @@ const ContactSection: React.FC = () => {
                                                 disabled={status === 'submitting'}
                                                 className="w-4 h-4 accent-gold-500"
                                                 checked={formState.contactMethod === m}
-                                                onChange={(e) => setFormState({ ...formState, contactMethod: e.target.value })}
+                                                onChange={(e) =>
+                                                    setFormState({ ...formState, contactMethod: e.target.value })
+                                                }
                                             />
                                             {m}
                                         </label>
@@ -601,30 +419,33 @@ const ContactSection: React.FC = () => {
                                     <p id="contact-method-error" className="text-red-600 text-sm mt-1">{errors.contactMethod}</p>
                                 )}
                             </fieldset>
-                            {/* 11. Best time to CONTACT (optional; never a consultation-time picker) */}
-                            <div>
-                                <label htmlFor="contact-besttime" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Best Time for Us to Contact You <span className="text-gray-400 font-normal">(optional)</span>
-                                </label>
-                                <select
-                                    id="contact-besttime"
-                                    disabled={status === 'submitting'}
-                                    className={inputClass}
-                                    value={formState.bestTime}
-                                    onChange={(e) => setFormState({ ...formState, bestTime: e.target.value })}
-                                >
-                                    {BEST_TIMES.map((t) => (
-                                        <option key={t} value={t} className="text-gray-900">
-                                            {t}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
+                            {/* 6. Best time to CALL — only when a call was requested (§6). */}
+                            {formState.contactMethod === 'Phone' && (
+                                <div>
+                                    <label htmlFor="contact-besttime" className="block text-sm font-bold text-gray-700 mb-2">
+                                        Best Time for Us to Call You{' '}
+                                        <span className="text-gray-400 font-normal">(optional)</span>
+                                    </label>
+                                    <select
+                                        id="contact-besttime"
+                                        disabled={status === 'submitting'}
+                                        className={inputClass}
+                                        value={formState.bestTime}
+                                        onChange={(e) => setFormState({ ...formState, bestTime: e.target.value })}
+                                    >
+                                        {BEST_TIMES.map((t) => (
+                                            <option key={t} value={t} className="text-gray-900">
+                                                {t}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                            )}
                         </div>
 
                         {/* ——— Consultation Fee & Privacy ——— */}
                         <p className={groupHeadingClass}>Consultation Fee &amp; Privacy</p>
-                        {/* 12. Fee acknowledgement + personal-information consent (single checkbox) */}
+                        {/* 7. Fee acknowledgement + personal-information consent (single checkbox) */}
                         <div>
                             <label htmlFor="contact-agree" className="flex items-start gap-3 cursor-pointer">
                                 <input
@@ -673,7 +494,7 @@ const ContactSection: React.FC = () => {
                             />
                         </div>
 
-                        {/* Submit (§5 — no booking-confirmation language) */}
+                        {/* Submit (§8 — no booking-confirmation language) */}
                         <button
                             type="submit"
                             disabled={status === 'submitting'}
