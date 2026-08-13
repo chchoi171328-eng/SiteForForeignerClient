@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import { Icons } from './Icons';
 import { CONTACT_INFO } from '../constants';
@@ -133,7 +134,8 @@ function validate(form: FormState): FieldErrors {
 
     if (!form.contactMethod) errors.contactMethod = 'Please choose how we should contact you.';
 
-    if (!form.agreed) errors.agreed = 'Please confirm you understand the consultation terms.';
+    if (!form.agreed)
+        errors.agreed = 'Please confirm the consultation fee and the personal-information consent.';
 
     return errors;
 }
@@ -170,7 +172,7 @@ function buildMessageBody(form: FormState): string {
         `Preferred Contact Method: ${form.contactMethod}`,
         `Best Time to Contact: ${form.bestTime}`,
         '',
-        'Consultation Fee Acknowledged: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission)',
+        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)',
     ].join('\n');
 }
 
@@ -620,9 +622,9 @@ const ContactSection: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* ——— Consultation Fee ——— */}
-                        <p className={groupHeadingClass}>Consultation Fee</p>
-                        {/* 12. Fee acknowledgement (§4-12) */}
+                        {/* ——— Consultation Fee & Privacy ——— */}
+                        <p className={groupHeadingClass}>Consultation Fee &amp; Privacy</p>
+                        {/* 12. Fee acknowledgement + personal-information consent (single checkbox) */}
                         <div>
                             <label htmlFor="contact-agree" className="flex items-start gap-3 cursor-pointer">
                                 <input
@@ -639,7 +641,17 @@ const ContactSection: React.FC = () => {
                                 />
                                 <span className="text-sm text-gray-700 leading-relaxed">
                                     I understand that the consultation fee is KRW 100,000 (VAT included) for 30
-                                    minutes and that submitting this form does not confirm an appointment.{' '}
+                                    minutes and that submitting this form does not confirm an appointment, and I
+                                    consent to the collection and use of the personal information in this form
+                                    for the purpose of handling my consultation request, as described in the{' '}
+                                    <Link
+                                        href="/privacy"
+                                        target="_blank"
+                                        className="text-gold-600 hover:text-gold-700 underline underline-offset-2"
+                                    >
+                                        Privacy Policy
+                                    </Link>
+                                    .{' '}
                                     <span className="text-red-500" aria-label="required">*</span>
                                 </span>
                             </label>
