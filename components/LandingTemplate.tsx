@@ -87,6 +87,17 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
                 ))}
               </ul>
             )}
+            {i === 0 && page.hookNote && (
+              <p className="text-sm text-gray-500 leading-relaxed mt-2">
+                {page.hookNote.text}{' '}
+                <Link
+                  href={page.hookNote.href}
+                  className="text-gold-600 hover:text-gold-700 font-bold underline underline-offset-2"
+                >
+                  {page.hookNote.linkText}
+                </Link>
+              </p>
+            )}
             {section.image && (
               <figure className="my-6">
                 <Image

@@ -30,6 +30,12 @@ export type LandingPage = {
    * (city-pages brief §B — figures must match content/serviceAreas.ts).
    */
   directions?: { paragraphs: string[] }
+  /**
+   * Small one-line audience-routing note rendered right after the hook
+   * (first section). The Osan pair's mutual pointer is the ONLY sanctioned
+   * exception to the no-cross-links-between-landing-pages rule.
+   */
+  hookNote?: { text: string; linkText: string; href: string }
   /** Render the "What's your situation?" component before the CTA (brief §C). */
   showSituationNav?: boolean
   /** Camp Humphreys / Osan AB pages must show the non-affiliation disclaimer. */
@@ -194,10 +200,15 @@ export const LANDING_PAGES: LandingPage[] = [
       'Osan Air Base sits in Songtan, Pyeongtaek — the same city as our office and its courthouse. English consultations directly with a Korean attorney, about 20 minutes from the main gate.',
     heroSubtitle:
       'Osan Air Base is in Songtan, Pyeongtaek — the same city as our office, and the same city whose courthouse handles off-base matters.',
+    hookNote: {
+      text: 'Live in Osan the city, not on base?',
+      linkText: 'See our page for Osan residents.',
+      href: '/english-speaking-lawyer-osan',
+    },
     sections: [
       {
         paragraphs: [
-          "Here's something many newcomers don't know: Osan Air Base isn't in Osan. It sits in Songtan, in the city of Pyeongtaek — the same city as our office, and the same city whose courthouse stands directly across the street from us. If a legal matter finds you off-base, Pyeongtaek is where it will be handled. That's where we are.",
+          "As most people stationed here learn quickly, Osan Air Base isn't in Osan — it sits in Songtan, in the city of Pyeongtaek. That geography matters for one practical reason: if a legal matter finds you off-base, Pyeongtaek is where it will be handled — and the courthouse that will handle it stands directly across the street from our office.",
         ],
       },
       {
@@ -223,6 +234,50 @@ export const LANDING_PAGES: LandingPage[] = [
     showSituationNav: true,
     disclaimer:
       'SOL & LUNA Law Firm is an independent Korean law firm and is not affiliated with, endorsed by, or officially connected to USFK or Osan Air Base.',
+  },
+  {
+    slug: 'english-speaking-lawyer-osan',
+    centralQuestion:
+      'I live in Osan (the city) — where would my case be heard, and who can take it in English?',
+    title: 'An English-Speaking Lawyer for Osan Residents',
+    footerTitle: 'English-Speaking Lawyer — Osan City',
+    metaTitle: 'English-Speaking Lawyer for Osan Residents | SOL & LUNA Law Firm',
+    metaDescription:
+      "Osan residents' court cases are heard at the Suwon District Court, where we work regularly. English consultations directly with a Korean attorney, about 30 minutes from Osan.",
+    heroSubtitle:
+      'Osan cases are heard at the Suwon District Court — part of our normal territory. Our office, and the English consultation, is in Pyeongtaek.',
+    hookNote: {
+      text: "Stationed at Osan Air Base? That's actually in Pyeongtaek —",
+      linkText: 'see our page for the base community.',
+      href: '/lawyer-near-osan-air-base',
+    },
+    sections: [
+      {
+        paragraphs: [
+          "If you live in Osan, your court cases are heard at the Suwon District Court — not in Pyeongtaek. We work in the Suwon courts regularly: appeals from Pyeongtaek cases are heard there, so Suwon is part of this firm's normal territory. And what we offer from Pyeongtaek, about 30 minutes from Osan, is what's hard to find closer: a consultation conducted in English, directly by the attorney who would handle your case.",
+        ],
+      },
+      {
+        heading: 'Who this page is for',
+        paragraphs: [
+          "Osan's foreign residents mostly work for a living in Korean workplaces — production staff and engineers at the plants and logistics parks around the city, and English teachers in its schools and academies. Their legal problems arrive in Korean: an employment contract signed half-understood, wages that stopped, a lease that went wrong, a police matter after an ordinary night.",
+          'Each of those runs on Korean procedure and, when it reaches a courtroom, on the Suwon courts. What usually decides the outcome is not finding a lawyer — it is finding one you can brief precisely, in your own language, before the deadlines start expiring.',
+        ],
+      },
+      {
+        heading: 'Suwon court work, from a Pyeongtaek office',
+        paragraphs: [
+          'We say it plainly: our office is in Pyeongtaek, not Osan or Suwon. When your matter needs a filing or a hearing at the Suwon District Court, we handle it there — that is routine for this firm, not an away game — while the consultations and case preparation happen with you, in English, with the attorney himself.',
+        ],
+      },
+    ],
+    directions: {
+      paragraphs: [
+        'From Osan Station, our office is about 30 minutes by car (roughly 20 km), south along the Gyeonggi-daero (National Route 1) corridor into central Pyeongtaek. By rail, Line 1 runs from Osan Station to Pyeongtaek Station in about 15 minutes, and the office is a short taxi ride from the station. Parking is available at the building.',
+        '5F, SJ Plaza, 1029-1 Pyeongnam-ro, Pyeongtaek-si, Gyeonggi-do',
+      ],
+    },
+    showSituationNav: true,
   },
   {
     slug: 'english-speaking-lawyer-anseong',

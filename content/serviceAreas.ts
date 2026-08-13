@@ -30,6 +30,12 @@ export const SERVICE_AREAS: ServiceArea[] = [
       'From the Osan Air Base main gate (Songtan), about 20 minutes by car — roughly 13 km down Gyeonggi-daero.',
   },
   {
+    slug: 'english-speaking-lawyer-osan',
+    navLabel: 'Osan City',
+    driveLine:
+      'From Osan Station, about 30 minutes by car (roughly 20 km), or about 15 minutes on Line 1 to Pyeongtaek Station.',
+  },
+  {
     slug: 'english-speaking-lawyer-anseong',
     navLabel: 'Anseong',
     driveLine: 'From central Anseong, about 30 minutes by car — roughly 22 km along National Route 38.',
