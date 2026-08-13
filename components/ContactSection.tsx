@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import { Icons } from './Icons';
 import { CONTACT_INFO } from '../constants';
@@ -13,10 +14,23 @@ const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 // Content-length limits (also enforced with maxLength on the inputs).
-const LIMITS = { name: 100, phone: 30, email: 150, message: 2000, messageMin: 10 } as const;
+// LSFP-form-revision-v2 §4-9: description capped at 1,000 characters, and no
+// visible minimum that pressures people into writing long legal essays.
+const LIMITS = {
+    name: 100,
+    phone: 30,
+    email: 150,
+    message: 1000,
+    messageMin: 10,
+    deadline: 120,
+    location: 120,
+    opposing: 150,
+    stageOther: 120,
+} as const;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Consultation-request options (claude-code-contact-conversion.md §2).
+// Consultation-request options. Matter types mirror the site's actual
+// practice areas (form-revision-v2 §4-4: do not invent new ones).
 const MATTER_TYPES = [
     'Criminal',
     'Divorce & Family',
@@ -25,17 +39,37 @@ const MATTER_TYPES = [
     'Labor & Employment',
     'Other',
 ] as const;
-// Weekends stay selectable — weekend/holiday consultations run by appointment.
-const TIME_SLOTS = ['Morning', '13:00–15:00', '15:00–17:00', '17:00–19:00', 'Flexible'] as const;
+
+// §4-5 — where the matter currently stands.
+const STAGES = [
+    'Contacted by police',
+    'Police interview scheduled',
+    'Received court papers',
+    'Lawsuit already pending',
+    'Dispute has arisen but no case has been filed',
+    'Judgment or court decision already issued',
+    'Other',
+] as const;
+
+// §4-10 — realistic contact channels only (no messengers the office doesn't use).
+const CONTACT_METHODS = ['Email', 'Phone'] as const;
+
+// §4-11 — time to CONTACT the applicant, never a consultation-time picker.
+const BEST_TIMES = ['No Preference', 'Morning', 'Afternoon', '5 PM – 7 PM'] as const;
 
 type FormState = {
     name: string;
     email: string;
     phone: string;
     matter: string;
+    stage: string;
+    stageOther: string;
+    deadline: string;
+    location: string;
+    opposingParty: string;
     message: string;
-    preferredDate: string;
-    preferredTime: string;
+    contactMethod: string;
+    bestTime: string;
     agreed: boolean;
 };
 
@@ -44,13 +78,32 @@ const EMPTY_FORM: FormState = {
     email: '',
     phone: '',
     matter: '',
+    stage: '',
+    stageOther: '',
+    deadline: '',
+    location: '',
+    opposingParty: '',
     message: '',
-    preferredDate: '',
-    preferredTime: '',
+    contactMethod: '',
+    bestTime: 'No Preference',
     agreed: false,
 };
 
-type FieldErrors = Partial<Record<'name' | 'email' | 'phone' | 'matter' | 'message' | 'agreed', string>>;
+type FieldErrors = Partial<
+    Record<
+        | 'name'
+        | 'email'
+        | 'phone'
+        | 'matter'
+        | 'stage'
+        | 'location'
+        | 'opposingParty'
+        | 'message'
+        | 'contactMethod'
+        | 'agreed',
+        string
+    >
+>;
 
 function validate(form: FormState): FieldErrors {
     const errors: FieldErrors = {};
@@ -64,15 +117,63 @@ function validate(form: FormState): FieldErrors {
     else if (form.phone.trim().length > LIMITS.phone) errors.phone = 'Phone number is too long.';
 
     if (!form.matter) errors.matter = 'Please choose the kind of matter.';
+    if (!form.stage) errors.stage = 'Please choose where things currently stand.';
+
+    if (!form.location.trim()) errors.location = 'Please tell us where the matter is based.';
+    else if (form.location.trim().length > LIMITS.location) errors.location = 'Location is too long.';
+
+    if (!form.opposingParty.trim())
+        errors.opposingParty = "Please name the other party — or write 'Unknown' or 'Not applicable'.";
+    else if (form.opposingParty.trim().length > LIMITS.opposing)
+        errors.opposingParty = 'This entry is too long.';
 
     const msg = form.message.trim();
     if (!msg) errors.message = 'Please tell us briefly what happened.';
     else if (msg.length < LIMITS.messageMin) errors.message = 'Please provide a little more detail.';
     else if (msg.length > LIMITS.message) errors.message = 'Message is too long.';
 
-    if (!form.agreed) errors.agreed = 'Please confirm you understand the consultation terms.';
+    if (!form.contactMethod) errors.contactMethod = 'Please choose how we should contact you.';
+
+    if (!form.agreed)
+        errors.agreed = 'Please confirm the consultation fee and the personal-information consent.';
 
     return errors;
+}
+
+/**
+ * Assemble the entire request into one readable email body (§8/§8-A single-
+ * assembly principle). The EmailJS dashboard template prints {{message_body}}
+ * only, so future field changes need no dashboard edits. Ordered so the
+ * office can judge at a glance: can we take it, any conflict, how urgent,
+ * and how to reach the applicant.
+ */
+function buildMessageBody(form: FormState): string {
+    const stage =
+        form.stage === 'Other' && form.stageOther.trim()
+            ? `Other — ${form.stageOther.trim()}`
+            : form.stage;
+    return [
+        '— Applicant —',
+        `Name: ${form.name.trim()}`,
+        `Email: ${form.email.trim()}`,
+        `Phone: ${form.phone.trim()}`,
+        '',
+        '— Matter —',
+        `Legal Matter: ${form.matter}`,
+        `Current Stage: ${stage}`,
+        `Important Deadline: ${form.deadline.trim() || 'None provided'}`,
+        `Location: ${form.location.trim()}`,
+        `Opposing Party / Company: ${form.opposingParty.trim()}`,
+        '',
+        'Brief Description:',
+        form.message.trim(),
+        '',
+        '— Contact —',
+        `Preferred Contact Method: ${form.contactMethod}`,
+        `Best Time to Contact: ${form.bestTime}`,
+        '',
+        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)',
+    ].join('\n');
 }
 
 const ContactSection: React.FC = () => {
@@ -121,13 +222,16 @@ const ContactSection: React.FC = () => {
                 EMAILJS_SERVICE_ID,
                 EMAILJS_TEMPLATE_ID,
                 {
+                    // Kept for the template's subject/reply-to settings (§8-A rule 4).
                     from_name: formState.name.trim(),
                     from_email: formState.email.trim(),
                     from_phone: formState.phone.trim(),
                     matter_type: formState.matter,
-                    message: formState.message.trim(),
-                    preferred_date: formState.preferredDate || 'No preference',
-                    preferred_time: formState.preferredTime || 'No preference',
+                    // Single-assembly body — the template body prints only this.
+                    message_body: buildMessageBody(formState),
+                    // Legacy variable kept so the email stays readable until the
+                    // dashboard template is switched to {{message_body}}.
+                    message: buildMessageBody(formState),
                 },
                 EMAILJS_PUBLIC_KEY
             );
@@ -147,6 +251,8 @@ const ContactSection: React.FC = () => {
 
     const inputClass =
         'w-full px-4 py-3 rounded-md border border-gray-300 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-all disabled:bg-gray-100';
+    const groupHeadingClass =
+        'text-xs font-bold uppercase tracking-widest text-gray-400 border-b border-gray-200 pb-2';
 
     return (
         <section
@@ -156,7 +262,9 @@ const ContactSection: React.FC = () => {
                 }`}
         >
             <div className="container mx-auto px-6 max-w-4xl">
-                {/* Header (claude-code-contact-conversion.md §1) */}
+                {/* Header — form-revision-v2 §2: value frame + fee line kept; the
+                    reply-with-times sentence replaced by the conflict-check flow;
+                    pressure-removal paragraph kept with the not-confirmed clause. */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Request a Consultation</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-5">
@@ -168,18 +276,19 @@ const ContactSection: React.FC = () => {
                         30 minutes&ensp;·&ensp;₩100,000 (VAT included)&ensp;·&ensp;Korean or English, same fee
                     </p>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-3">
-                        After you send this form, we will reply during business hours (weekdays) with two or
-                        three available times to choose from.
+                        We will first confirm that we can take your matter — including a
+                        conflict-of-interest check — and then contact you with available consultation times.
                     </p>
                     {/* Pressure-removal paragraph — keep (balances the checkbox friction). */}
                     <p className="text-gray-500 text-sm max-w-2xl mx-auto">
-                        Sending this form does not commit you to anything. Confirming a time comes after we
-                        reply — and after the consultation, deciding whether to hire us is entirely up to you.
+                        Sending this form does not commit you to anything. Deciding whether to hire us after
+                        the consultation is entirely up to you — and your appointment is not confirmed until
+                        we contact you.
                     </p>
                 </div>
 
                 <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg relative overflow-hidden">
-                    {/* Success Overlay (§3) */}
+                    {/* Success Overlay — §6: received, review + conflict check, not yet confirmed. */}
                     {status === 'success' && (
                         <div
                             className="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center text-center p-8 animate-fade-in"
@@ -189,10 +298,19 @@ const ContactSection: React.FC = () => {
                             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600" aria-hidden="true">
                                 <Icons.ArrowRight className="w-8 h-8 -rotate-45" />
                             </div>
-                            <h3 className="text-2xl font-bold text-navy-900 mb-2">Thank you. We&apos;ve received your request.</h3>
-                            <p className="text-gray-600 max-w-md">
-                                We will reply during business hours (weekdays) with available times — you&apos;ll
-                                just pick one.
+                            <h3 className="text-2xl font-bold text-navy-900 mb-2">
+                                Your consultation request has been received.
+                            </h3>
+                            <p className="text-gray-600 max-w-md mb-3">
+                                We will review the information you provided and check for potential conflicts
+                                of interest. If we are able to assist, we will contact you with available
+                                consultation times.
+                            </p>
+                            <p className="text-gray-600 max-w-md font-medium mb-1">
+                                Your appointment is not yet confirmed.
+                            </p>
+                            <p className="text-gray-500 text-sm max-w-md">
+                                Please do not send additional confidential documents unless requested.
                             </p>
                             <button
                                 onClick={() => setStatus('idle')}
@@ -204,8 +322,10 @@ const ContactSection: React.FC = () => {
                     )}
 
                     <form onSubmit={handleSubmit} onFocus={handleFormStart} className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* 1. Full Name */}
+                        {/* ——— About You (§9 grouping) ——— */}
+                        <p className={groupHeadingClass}>About You</p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {/* 1. Name */}
                             <div>
                                 <label htmlFor="contact-name" className="block text-sm font-bold text-gray-700 mb-2">
                                     Full Name <span className="text-red-500" aria-label="required">*</span>
@@ -251,7 +371,7 @@ const ContactSection: React.FC = () => {
                                     <p id="contact-email-error" className="text-red-600 text-sm mt-1">{errors.email}</p>
                                 )}
                             </div>
-                            {/* 3. Phone Number */}
+                            {/* 3. Phone (international numbers welcome) */}
                             <div>
                                 <label htmlFor="contact-phone" className="block text-sm font-bold text-gray-700 mb-2">
                                     Phone Number <span className="text-red-500" aria-label="required">*</span>
@@ -263,7 +383,7 @@ const ContactSection: React.FC = () => {
                                     maxLength={LIMITS.phone}
                                     disabled={status === 'submitting'}
                                     className={inputClass}
-                                    placeholder="010-1234-5678"
+                                    placeholder="010-1234-5678 or +1 555 123 4567"
                                     value={formState.phone}
                                     onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                                     aria-required="true"
@@ -274,10 +394,15 @@ const ContactSection: React.FC = () => {
                                     <p id="contact-phone-error" className="text-red-600 text-sm mt-1">{errors.phone}</p>
                                 )}
                             </div>
-                            {/* 4. Matter type */}
+                        </div>
+
+                        {/* ——— About Your Matter ——— */}
+                        <p className={groupHeadingClass}>About Your Matter</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* 4. Type of legal matter */}
                             <div>
                                 <label htmlFor="contact-matter" className="block text-sm font-bold text-gray-700 mb-2">
-                                    What kind of matter is this? <span className="text-red-500" aria-label="required">*</span>
+                                    Type of Legal Matter <span className="text-red-500" aria-label="required">*</span>
                                 </label>
                                 <select
                                     id="contact-matter"
@@ -303,12 +428,126 @@ const ContactSection: React.FC = () => {
                                     <p id="contact-matter-error" className="text-red-600 text-sm mt-1">{errors.matter}</p>
                                 )}
                             </div>
+                            {/* 5. Current stage */}
+                            <div>
+                                <label htmlFor="contact-stage" className="block text-sm font-bold text-gray-700 mb-2">
+                                    Current Situation / Stage <span className="text-red-500" aria-label="required">*</span>
+                                </label>
+                                <select
+                                    id="contact-stage"
+                                    required
+                                    disabled={status === 'submitting'}
+                                    className={`${inputClass} ${formState.stage ? 'text-gray-900' : 'text-gray-400'}`}
+                                    value={formState.stage}
+                                    onChange={(e) => setFormState({ ...formState, stage: e.target.value })}
+                                    aria-required="true"
+                                    aria-invalid={!!errors.stage}
+                                    aria-describedby={errors.stage ? 'contact-stage-error' : undefined}
+                                >
+                                    <option value="" disabled>
+                                        Choose one…
+                                    </option>
+                                    {STAGES.map((s) => (
+                                        <option key={s} value={s} className="text-gray-900">
+                                            {s}
+                                        </option>
+                                    ))}
+                                </select>
+                                {errors.stage && (
+                                    <p id="contact-stage-error" className="text-red-600 text-sm mt-1">{errors.stage}</p>
+                                )}
+                                {formState.stage === 'Other' && (
+                                    <input
+                                        id="contact-stage-other"
+                                        type="text"
+                                        maxLength={LIMITS.stageOther}
+                                        disabled={status === 'submitting'}
+                                        className={`${inputClass} mt-2`}
+                                        placeholder="In a few words, where do things stand? (optional)"
+                                        value={formState.stageOther}
+                                        onChange={(e) => setFormState({ ...formState, stageOther: e.target.value })}
+                                        aria-label="Briefly describe where things stand"
+                                    />
+                                )}
+                            </div>
+                            {/* 6. Important deadline (optional) */}
+                            <div>
+                                <label htmlFor="contact-deadline" className="block text-sm font-bold text-gray-700 mb-2">
+                                    Important Deadline, If Any <span className="text-gray-400 font-normal">(optional)</span>
+                                </label>
+                                <input
+                                    id="contact-deadline"
+                                    type="text"
+                                    maxLength={LIMITS.deadline}
+                                    disabled={status === 'submitting'}
+                                    className={inputClass}
+                                    placeholder="e.g., hearing on 25 August, interview next Tuesday"
+                                    value={formState.deadline}
+                                    onChange={(e) => setFormState({ ...formState, deadline: e.target.value })}
+                                    aria-describedby="contact-deadline-hint"
+                                />
+                                <p id="contact-deadline-hint" className="text-gray-400 text-xs mt-1">
+                                    Court deadline, police interview date, hearing date, or another urgent date.
+                                </p>
+                            </div>
+                            {/* 7. Location of the matter */}
+                            <div>
+                                <label htmlFor="contact-location" className="block text-sm font-bold text-gray-700 mb-2">
+                                    Location of the Matter <span className="text-red-500" aria-label="required">*</span>
+                                </label>
+                                <input
+                                    id="contact-location"
+                                    type="text"
+                                    required
+                                    maxLength={LIMITS.location}
+                                    disabled={status === 'submitting'}
+                                    className={inputClass}
+                                    placeholder="e.g., Pyeongtaek, Osan, Seoul — or another country"
+                                    value={formState.location}
+                                    onChange={(e) => setFormState({ ...formState, location: e.target.value })}
+                                    aria-required="true"
+                                    aria-invalid={!!errors.location}
+                                    aria-describedby={errors.location ? 'contact-location-error' : undefined}
+                                />
+                                {errors.location && (
+                                    <p id="contact-location-error" className="text-red-600 text-sm mt-1">{errors.location}</p>
+                                )}
+                            </div>
                         </div>
 
-                        {/* 5. What happened */}
+                        {/* 8. Opposing party (conflict-of-interest check) */}
+                        <div>
+                            <label htmlFor="contact-opposing" className="block text-sm font-bold text-gray-700 mb-2">
+                                Name of the Other Party or Company <span className="text-red-500" aria-label="required">*</span>
+                            </label>
+                            <input
+                                id="contact-opposing"
+                                type="text"
+                                required
+                                maxLength={LIMITS.opposing}
+                                disabled={status === 'submitting'}
+                                className={inputClass}
+                                placeholder="Person or company on the other side — or 'Unknown' / 'Not applicable'"
+                                value={formState.opposingParty}
+                                onChange={(e) => setFormState({ ...formState, opposingParty: e.target.value })}
+                                aria-required="true"
+                                aria-invalid={!!errors.opposingParty}
+                                aria-describedby={
+                                    errors.opposingParty ? 'contact-opposing-error contact-opposing-hint' : 'contact-opposing-hint'
+                                }
+                            />
+                            <p id="contact-opposing-hint" className="text-gray-400 text-xs mt-1">
+                                This information is used to check for potential conflicts of interest.
+                            </p>
+                            {errors.opposingParty && (
+                                <p id="contact-opposing-error" className="text-red-600 text-sm mt-1">{errors.opposingParty}</p>
+                            )}
+                        </div>
+
+                        {/* 9. Brief description */}
                         <div>
                             <label htmlFor="contact-message" className="block text-sm font-bold text-gray-700 mb-2">
-                                Briefly tell us what happened <span className="text-red-500" aria-label="required">*</span>
+                                Brief Description of Your Matter <span className="text-red-500" aria-label="required">*</span>
                             </label>
                             <textarea
                                 id="contact-message"
@@ -317,7 +556,7 @@ const ContactSection: React.FC = () => {
                                 maxLength={LIMITS.message}
                                 disabled={status === 'submitting'}
                                 className={inputClass}
-                                placeholder="In your own words — plain English is fine. You don't need legal terms."
+                                placeholder="Briefly explain what happened and what legal help you are seeking — plain English is fine."
                                 value={formState.message}
                                 onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                                 aria-required="true"
@@ -329,35 +568,52 @@ const ContactSection: React.FC = () => {
                             )}
                         </div>
 
+                        {/* ——— How Should We Contact You? ——— */}
+                        <p className={groupHeadingClass}>How Should We Contact You?</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* 6. Preferred date — weekends stay enabled (appointment-based weekend/holiday slots) */}
+                            {/* 10. Preferred contact method */}
+                            <fieldset
+                                aria-required="true"
+                                aria-invalid={!!errors.contactMethod}
+                                aria-describedby={errors.contactMethod ? 'contact-method-error' : undefined}
+                            >
+                                <legend className="block text-sm font-bold text-gray-700 mb-2">
+                                    Preferred Contact Method <span className="text-red-500" aria-label="required">*</span>
+                                </legend>
+                                <div className="flex gap-6 pt-2">
+                                    {CONTACT_METHODS.map((m) => (
+                                        <label key={m} className="flex items-center gap-2 cursor-pointer text-gray-700">
+                                            <input
+                                                type="radio"
+                                                name="contact-method"
+                                                value={m}
+                                                required
+                                                disabled={status === 'submitting'}
+                                                className="w-4 h-4 accent-gold-500"
+                                                checked={formState.contactMethod === m}
+                                                onChange={(e) => setFormState({ ...formState, contactMethod: e.target.value })}
+                                            />
+                                            {m}
+                                        </label>
+                                    ))}
+                                </div>
+                                {errors.contactMethod && (
+                                    <p id="contact-method-error" className="text-red-600 text-sm mt-1">{errors.contactMethod}</p>
+                                )}
+                            </fieldset>
+                            {/* 11. Best time to CONTACT (optional; never a consultation-time picker) */}
                             <div>
-                                <label htmlFor="contact-date" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Preferred date <span className="text-gray-400 font-normal">(optional)</span>
-                                </label>
-                                <input
-                                    id="contact-date"
-                                    type="date"
-                                    disabled={status === 'submitting'}
-                                    className={inputClass}
-                                    value={formState.preferredDate}
-                                    onChange={(e) => setFormState({ ...formState, preferredDate: e.target.value })}
-                                />
-                            </div>
-                            {/* 7. Preferred time */}
-                            <div>
-                                <label htmlFor="contact-time" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Preferred time <span className="text-gray-400 font-normal">(optional)</span>
+                                <label htmlFor="contact-besttime" className="block text-sm font-bold text-gray-700 mb-2">
+                                    Best Time for Us to Contact You <span className="text-gray-400 font-normal">(optional)</span>
                                 </label>
                                 <select
-                                    id="contact-time"
+                                    id="contact-besttime"
                                     disabled={status === 'submitting'}
-                                    className={`${inputClass} ${formState.preferredTime ? 'text-gray-900' : 'text-gray-400'}`}
-                                    value={formState.preferredTime}
-                                    onChange={(e) => setFormState({ ...formState, preferredTime: e.target.value })}
+                                    className={inputClass}
+                                    value={formState.bestTime}
+                                    onChange={(e) => setFormState({ ...formState, bestTime: e.target.value })}
                                 >
-                                    <option value="">No preference</option>
-                                    {TIME_SLOTS.map((t) => (
+                                    {BEST_TIMES.map((t) => (
                                         <option key={t} value={t} className="text-gray-900">
                                             {t}
                                         </option>
@@ -366,7 +622,9 @@ const ContactSection: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* 8. Confirmation checkbox */}
+                        {/* ——— Consultation Fee & Privacy ——— */}
+                        <p className={groupHeadingClass}>Consultation Fee &amp; Privacy</p>
+                        {/* 12. Fee acknowledgement + personal-information consent (single checkbox) */}
                         <div>
                             <label htmlFor="contact-agree" className="flex items-start gap-3 cursor-pointer">
                                 <input
@@ -382,8 +640,18 @@ const ContactSection: React.FC = () => {
                                     aria-describedby={errors.agreed ? 'contact-agree-error' : undefined}
                                 />
                                 <span className="text-sm text-gray-700 leading-relaxed">
-                                    I understand this is a paid, in-person consultation (30 minutes, ₩100,000,
-                                    VAT included) at the Pyeongtaek office.{' '}
+                                    I understand that the consultation fee is KRW 100,000 (VAT included) for 30
+                                    minutes and that submitting this form does not confirm an appointment, and I
+                                    consent to the collection and use of the personal information in this form
+                                    for the purpose of handling my consultation request, as described in the{' '}
+                                    <Link
+                                        href="/privacy"
+                                        target="_blank"
+                                        className="text-gold-600 hover:text-gold-700 underline underline-offset-2"
+                                    >
+                                        Privacy Policy
+                                    </Link>
+                                    .{' '}
                                     <span className="text-red-500" aria-label="required">*</span>
                                 </span>
                             </label>
@@ -405,12 +673,12 @@ const ContactSection: React.FC = () => {
                             />
                         </div>
 
-                        {/* 9. Submit */}
+                        {/* Submit (§5 — no booking-confirmation language) */}
                         <button
                             type="submit"
                             disabled={status === 'submitting'}
                             className={`w-full bg-navy-900 text-white font-bold py-4 rounded-md hover:bg-navy-800 transition-colors flex items-center justify-center gap-2 ${status === 'submitting' ? 'opacity-80 cursor-wait' : ''}`}
-                            aria-label={status === 'submitting' ? 'Sending request' : 'Request my consultation'}
+                            aria-label={status === 'submitting' ? 'Sending request' : 'Submit consultation request'}
                         >
                             {status === 'submitting' ? (
                                 <>
@@ -419,7 +687,7 @@ const ContactSection: React.FC = () => {
                                 </>
                             ) : (
                                 <>
-                                    <span>Request My Consultation</span>
+                                    <span>Submit Consultation Request</span>
                                     <Icons.ArrowRight className="w-5 h-5" aria-hidden="true" />
                                 </>
                             )}
