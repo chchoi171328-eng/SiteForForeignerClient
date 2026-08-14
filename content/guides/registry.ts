@@ -31,6 +31,7 @@ import YouveBeenServedFirst30Days from './bodies/youve-been-served-first-30-days
 import CertifiedContentMail from './bodies/certified-content-mail'
 import PaymentOrders from './bodies/payment-orders'
 import StatutesOfLimitations from './bodies/statutes-of-limitations'
+import WhatLitigationCosts from './bodies/what-litigation-costs'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -248,7 +249,7 @@ export const GUIDES: Guide[] = [
       "Korea's payment order (지급명령): a fast, cheap court order for undisputed money claims — how it works, the 2-week objection, and when a lawsuit is better.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/payment-order-hero.jpg',
-    related: ['youve-been-served-first-30-days', 'certified-content-mail', 'statutes-of-limitations'],
+    related: ['youve-been-served-first-30-days', 'statutes-of-limitations', 'what-litigation-costs'],
     body: PaymentOrders,
   },
   {
@@ -261,8 +262,21 @@ export const GUIDES: Guide[] = [
       'Korean limitation periods: 10 years by default, 5 for commercial claims, 3 for wages, 1 for some debts — when the clock starts, what interrupts it, and what happens after it expires.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/limitations-hero.jpg',
-    related: ['youve-been-served-first-30-days', 'certified-content-mail', 'payment-orders'],
+    related: ['youve-been-served-first-30-days', 'payment-orders', 'what-litigation-costs'],
     body: StatutesOfLimitations,
+  },
+  {
+    slug: 'what-litigation-costs',
+    field: 'civil-litigation',
+    listingTitle: 'What Litigation Costs in Korea',
+    metaTitle:
+      'What Litigation Costs in Korea — Filing Fees, Deposits, and What "The Loser Pays" Really Covers',
+    metaDescription:
+      'Korean litigation costs explained: the filing-fee formula with worked examples, service deposits, appraisal expenses, the loser-pays rule and its ceiling, and litigation aid.',
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/litigation-costs-hero.jpg',
+    related: ['youve-been-served-first-30-days', 'payment-orders', 'statutes-of-limitations'],
+    body: WhatLitigationCosts,
   },
   {
     slug: 'lease-registration-order',
