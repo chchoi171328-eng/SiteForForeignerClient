@@ -1,4 +1,4 @@
-import PracticeAreas from '@/components/PracticeAreas'
+import PracticeAreaCards from '@/components/PracticeAreaCards'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -22,7 +22,9 @@ export const metadata: Metadata = {
 export default function PracticeAreasPage() {
   return (
     <div className="pt-24 lg:pt-32">
-      <PracticeAreas />
+      {/* The index keeps the field card grid; the situation-based navigation
+          stays on the home page and the For-Foreigners landings. */}
+      <PracticeAreaCards />
     </div>
   )
 }
