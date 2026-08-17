@@ -99,8 +99,11 @@ const Header: React.FC = () => {
                         aria-label="Request a consultation"
                     >
                         <Icons.Phone className="w-4 h-4" />
-                        {/* Shortened per the CTA-unification brief: full label wraps at lg. */}
-                        <span className="whitespace-nowrap">Consultation</span>
+                        {/* Sole /contact entry point in the header. The full label shows once
+                            there is room; below xl it shortens to "Consultation". */}
+                        <span className="whitespace-nowrap">
+                            <span className="hidden xl:inline">Request a </span>Consultation
+                        </span>
                     </Link>
                 </nav>
 
@@ -153,10 +156,19 @@ const Header: React.FC = () => {
                             </Link>
                         )
                     )}
+                    {/* Same rule as the desktop nav: one highlighted /contact entry point
+                        instead of a plain "Contact" link in the list. */}
+                    <Link
+                        href="/contact"
+                        className="bg-gold-400 text-navy-900 py-3 rounded text-center font-bold mt-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        Request a Consultation
+                    </Link>
                     <a
                         href={`tel:${CONTACT_INFO.PHONE}`}
                         onClick={reportPhoneConversion}
-                        className="bg-gold-400 text-navy-900 py-3 rounded text-center font-bold mt-2"
+                        className="border border-gold-400 text-gold-400 py-3 rounded text-center font-bold"
                         aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                     >
                         Call Now: {CONTACT_INFO.PHONE}

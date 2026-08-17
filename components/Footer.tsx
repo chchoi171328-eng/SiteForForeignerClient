@@ -33,7 +33,10 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-serif font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-3">
-                            {NAV_LINKS.map(link => (
+                            {/* Contact is appended here rather than living in NAV_LINKS: the
+                                header uses a single highlighted button for it, but the footer
+                                keeps the full sitemap. */}
+                            {[...NAV_LINKS, { name: 'Contact', href: '/contact' }].map(link => (
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}

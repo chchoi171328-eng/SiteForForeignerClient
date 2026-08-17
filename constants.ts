@@ -57,6 +57,9 @@ export const ATTORNEY = {
   koreanProfileUrl: "https://www.sllaw.co.kr"
 };
 
+// Header/footer navigation. "Contact" is intentionally absent: in the header
+// the highlighted consultation button is the single /contact entry point, and
+// the footer adds its own Contact link separately (full-sitemap convention).
 export const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
@@ -64,7 +67,6 @@ export const NAV_LINKS = [
   { name: "Fees", href: "/fees" },
   { name: "Guides", href: "/guides" },
   { name: "Location", href: "/location" },
-  { name: "Contact", href: "/contact" },
 ];
 
 // Practice-area content now lives in content/practiceAreas.ts (single source of truth).

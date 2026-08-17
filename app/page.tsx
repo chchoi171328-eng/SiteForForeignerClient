@@ -11,10 +11,12 @@ export default function Home() {
   return (
     <>
       <Hero />
+      {/* "What's your situation?" sits directly under the hero, matching the
+          Korean site: visitors pick their situation before reading about us. */}
+      <PracticeAreas />
       <WhyConsult />
       <About />
       <AttorneyIntro />
-      <PracticeAreas />
       <ConsultationProcess />
       <LocationSection />
       <ContactSection />
