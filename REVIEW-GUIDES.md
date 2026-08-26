@@ -953,3 +953,48 @@
     무지 서류철·만년필 — 화면·키 모두 숫자 없음, 지폐·동전 배제)
   - 본문: `/assets/guides/litigation-costs-desk.jpg` (클립으로 묶은 백지
     전표 묶음과 봉투 — 영수증 보관 테마, 숫자·텍스트 없음)
+
+---
+
+## 24. Someone Owes You Money in Korea
+`/guides/debt-collection/someone-owes-you-money-in-korea` · Reviewed 2026-08
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-08)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 재산명시신청 — 금전 집행권원 가진 채권자, 채무자 보통재판적 법원, 선서 후 재산목록 제출 | 민사집행법 제61조 | casenote.kr, law.go.kr, klac.or.kr |
+| 명시기일 불출석·목록 제출 거부·선서 거부 → 20일 이내 감치 | 민사집행법 제68조 제1항 | casenote.kr (조문 원문 확인) |
+| 거짓 재산목록 제출 → 3년 이하 징역 또는 500만원 이하 벌금 | 민사집행법 제68조 제9항 | casenote.kr (조문 원문 확인) |
+| 재산조회 — 명시절차 거친 채권자 신청 시 법원이 공공기관·금융기관 등에 조회, 정당한 사유 없이 거부 불가 | 민사집행법 제74조 | casenote.kr, nepla, easylaw |
+| 채무불이행자명부 — 집행권원 확정 후 6개월 내 미이행 시 등재 신청 | 민사집행법 제70조 | casenote.kr, lbox.kr |
+| 사기죄 (기망에 의한 재물 편취) — 관점 수준 인용 | 형법 제347조 | 통용 조문 (요건 세부 미전개) |
+| 지급명령 인지 1/10·이의 2주·확정 효력, 소액 3,000만원, 최고 6개월, 시효 3/5/10년, 확정 채권 10년 | guide 20·21·22·23 기검증 재사용 | — |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **"단순 채무불이행은 민사, 사기는 차용 시점 기망" 프레임** — 표준
+  법리이나 판례 직인용 없이 서술, "whether your facts cross that line is
+  precisely the judgment to have assessed" 완충으로 마무리. 수위 확인 요망.
+- **고소 협박 경고 Callout** — "can create separate legal problems" 수준
+  (공갈·협박죄 죄명 단정 없음, 스킬 4-6 규칙 준수).
+- **가압류 (map 2단계)** — 요건 미전개, "can freeze property" 개요만
+  (guide 25 예정).
+- **강제집행 (map 5단계)** — 절차 미전개 (guide 26 예정).
+- **채권추심업 규제** — "only licensed credit-information companies may
+  run collection as a business" (신용정보법 취지) — 법령명 미인용 완충.
+  무허가 추심 경고는 일반 실무 수준.
+- **법인 채무 FAQ** — "a corporation's debts are normally its own,
+  exceptions are fact-specific" (법인격 부인론 미전개).
+- **해외 집행 FAQ** — 관점 수준 (승인·집행 요건 미전개, guide 19와 동일
+  수위).
+- **채무불이행자명부 10년 직권 말소** — 세부라 본문 미기재.
+- 판례 인용 0건, SOFA·비자 서술 0건, 환율 환산 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/owed-money-hero.jpg` (책상 위 펼쳐진 백지
+    장부와 만년필 — 채권 장부 모티프, 글자·숫자·지폐 없음)
+  - 본문: `/assets/guides/owed-money-search.jpg` (백지 서류 위 돋보기 —
+    재산 조회 테마, 텍스트 없음)
