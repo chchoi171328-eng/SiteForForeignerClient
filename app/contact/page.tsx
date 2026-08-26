@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Request a consultation with SOL & LUNA Law Firm in Pyeongtaek — up to 60 minutes, conducted directly by the attorney in English.',
+  description: 'Request a 60-minute consultation with SOL & LUNA Law Firm in Pyeongtaek, conducted directly by the attorney in English.',
   openGraph: {
     title: 'Contact Us | SOL & LUNA Law Firm',
-    description: 'Request a consultation with SOL & LUNA Law Firm in Pyeongtaek — up to 60 minutes, conducted directly by the attorney in English.',
+    description: 'Request a 60-minute consultation with SOL & LUNA Law Firm in Pyeongtaek, conducted directly by the attorney in English.',
     url: 'https://www.lsfp.co.kr/contact',
   },
   twitter: {
     card: 'summary',
     title: 'Contact Us | SOL & LUNA Law Firm',
-    description: 'Request a consultation with SOL & LUNA Law Firm in Pyeongtaek — up to 60 minutes, conducted directly by the attorney in English.',
+    description: 'Request a 60-minute consultation with SOL & LUNA Law Firm in Pyeongtaek, conducted directly by the attorney in English.',
   },
   alternates: {
     canonical: 'https://www.lsfp.co.kr/contact',

@@ -16,7 +16,7 @@ export default function ConsultationFees({ variant = 'light' }: { variant?: 'lig
         <div className={`text-sm ${body}`}>
             <p className={`font-bold ${heading} mb-1`}>{CONSULTATION.BLOCK_HEADING}</p>
             <p className={`font-bold ${heading}`}>
-                Up to {CONSULTATION.DURATION_MIN} minutes · {CONSULTATION.FEE_KRW_LABEL} (
+                {CONSULTATION.DURATION_MIN} minutes · {CONSULTATION.FEE_KRW_LABEL} (
                 {CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included
             </p>
             <p className="mb-3">

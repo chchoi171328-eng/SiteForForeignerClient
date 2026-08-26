@@ -107,8 +107,8 @@ export default async function GuidePage({
         <section className="mt-12 bg-navy-900 text-white p-8 rounded-xl">
           <h2 className="text-xl font-serif font-bold mb-3">Talk it through with the attorney</h2>
           <p className="text-gray-300 mb-6 leading-relaxed">
-            A consultation of up to {CONSULTATION.DURATION_MIN} minutes is{' '}
-            {CONSULTATION.FEE_KRW_LABEL} ({CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included —{' '}
+            A {CONSULTATION.DURATION_MIN}-minute consultation is {CONSULTATION.FEE_KRW_LABEL}{' '}
+            ({CONSULTATION.FEE_USD_APPROX_LABEL}), VAT included —{' '}
             {CONSULTATION.SHORT_FEE_KRW_LABEL} if it ends within{' '}
             {CONSULTATION.SHORT_DURATION_MIN} minutes. The same fee in Korean or English, conducted
             by the attorney who would handle your case.
