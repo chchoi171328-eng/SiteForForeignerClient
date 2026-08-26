@@ -9,23 +9,33 @@ export const CONTACT_INFO = {
   NAVER_BLOG: "https://blog.naver.com/natural_born"
 };
 
-// Paid consultation policy — one unified fee regardless of language.
-// KRW is the billed amount (VAT included); USD is an approximate conversion only.
+// Paid consultation policy — tiered, and identical in either language:
+// a 60-minute consultation at the full fee, reduced when it ends within
+// 30 minutes.
+// KRW is the billed amount (VAT included); USD is an approximate conversion
+// only, and is shown solely where a USD figure already appeared.
 export const CONSULTATION = {
-  DURATION_MIN: 30,
-  FEE_KRW_LABEL: "₩100,000",
-  FEE_USD_APPROX_LABEL: "approx. US$70",
+  DURATION_MIN: 60,
+  FEE_KRW_LABEL: "₩150,000",
+  FEE_USD_APPROX_LABEL: "approx. US$110",
+  // Reduced tier — applies when the consultation ends inside 30 minutes.
+  SHORT_DURATION_MIN: 30,
+  SHORT_FEE_KRW_LABEL: "₩100,000",
+  SHORT_FEE_USD_APPROX_LABEL: "approx. US$70",
   VAT_INCLUDED: true,
+  // Standard block heading. The two fee lines are composed in
+  // ConsultationFees from the labels above so the USD figures stay attached.
+  BLOCK_HEADING: "Consultation with the Attorney",
   // Standard block body (unification signal — do not drop).
-  BLOCK_BODY: "The same fee whichever language you speak, Korean or English. Every consultation is conducted by the attorney who would actually handle your case — not by staff, and not through an interpreter.",
+  BLOCK_BODY: "We review the facts and your documents, then tell you the legal issues and how we would approach them. The same fee whichever language you speak, Korean or English — conducted by the attorney who would actually handle your case, not by staff, and not through an interpreter.",
   // Inline abbreviated form for use mid-sentence.
-  INLINE: "₩100,000 for 30 minutes (approx. US$70), VAT included — the same fee in Korean or English",
+  INLINE: "a 60-minute consultation for ₩150,000 (₩100,000 if it ends within 30 minutes), VAT included, in Korean or English",
   // Compact hero fact line.
-  HERO_FACT_LINE: "30-minute assessment — ₩100,000, VAT included. The same fee in Korean or English, conducted by the attorney who would handle your case. No obligation to proceed.",
+  HERO_FACT_LINE: "A 60-minute consultation with the attorney — ₩150,000, VAT included (₩100,000 if we finish within 30). The same fee in Korean or English. No obligation to proceed.",
   // How We Work step 02 body.
-  STEP2: "₩100,000 (approx. US$70), VAT included, by appointment — the same fee whichever language you speak. The fee is fixed; it does not change based on your case type.",
+  STEP2: "60 minutes for ₩150,000 (VAT included) — and if we finish within 30 minutes, you pay only ₩100,000. The same fee whichever language you speak, by appointment.",
   // Symmetric-disclosure line — must appear wherever the fee block is shown.
-  KOREAN_SITE_LINE: "The same fee is published on our Korean-language site."
+  KOREAN_SITE_LINE: "The same fees are published on our Korean-language site."
 };
 
 // Representative attorney. Facts sourced from the firm's Korean site; do not

@@ -105,7 +105,7 @@ function buildMessageBody(form: FormState): string {
     if (form.contactMethod === 'Phone') lines.push(`Best Time to Call: ${form.bestTime}`);
     lines.push(
         '',
-        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 100,000 / 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)'
+        'Consultation Fee Acknowledged & Privacy Consent: Yes (KRW 150,000 for a 60-minute consultation, or KRW 100,000 if it ends within 30 minutes, VAT included; appointment not confirmed by submission; consented to personal-information handling for this request)'
     );
     return lines.join('\n');
 }
@@ -202,7 +202,8 @@ const ContactSection: React.FC = () => {
                     </p>
                     {/* Fee line — visually distinct, echoing the site's fee blocks */}
                     <p className="inline-block bg-navy-900 text-white font-bold px-6 py-3 rounded-md mb-5">
-                        30 minutes&ensp;·&ensp;₩100,000 (VAT included)&ensp;·&ensp;Korean or English, same fee
+                        60 minutes&ensp;·&ensp;₩150,000 (VAT included)&ensp;·&ensp;₩100,000 if it
+                        ends within 30 minutes&ensp;·&ensp;Korean or English, same fee
                     </p>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-3">
                         Tell us briefly about your situation. We will review whether we can assist and check
@@ -461,10 +462,12 @@ const ContactSection: React.FC = () => {
                                     aria-describedby={errors.agreed ? 'contact-agree-error' : undefined}
                                 />
                                 <span className="text-sm text-gray-700 leading-relaxed">
-                                    I understand that the consultation fee is KRW 100,000 (VAT included) for 30
-                                    minutes and that submitting this form does not confirm an appointment, and I
-                                    consent to the collection and use of the personal information in this form
-                                    for the purpose of handling my consultation request, as described in the{' '}
+                                    I understand the consultation fee — KRW 150,000 for a 60-minute
+                                    consultation (VAT included), or KRW 100,000 if it ends within 30
+                                    minutes — and that
+                                    submitting this form does not confirm an appointment, and I consent to the
+                                    collection and use of the personal information in this form for the purpose
+                                    of handling my consultation request, as described in the{' '}
                                     <Link
                                         href="/privacy"
                                         target="_blank"
