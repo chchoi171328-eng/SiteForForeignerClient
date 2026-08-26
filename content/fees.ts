@@ -2,8 +2,8 @@
 //
 // Amounts MUST match the firm's Korean-language /fees page. Retainer figures are
 // exclusive of VAT (10%); the consultation fee (see CONSULTATION in constants)
-// includes VAT. Keep KRW only — the sole USD figure allowed is the consultation
-// fee's approx. US$70.
+// includes VAT. Keep KRW only — the sole USD figures allowed are the
+// consultation fee's approx. US$110 and its reduced tier's approx. US$70.
 
 export type RetainerRange = {
   area: string

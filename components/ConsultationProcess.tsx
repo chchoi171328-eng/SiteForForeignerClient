@@ -12,7 +12,7 @@ const STEPS = [
         body: 'Send a brief description through the contact form or by phone. Plain English is fine; you don’t need to use legal terms.',
     },
     {
-        title: 'Book a 30-minute assessment.',
+        title: 'Book a consultation.',
         body: CONSULTATION.STEP2,
     },
     {
