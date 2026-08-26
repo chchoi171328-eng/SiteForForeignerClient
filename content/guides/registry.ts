@@ -32,6 +32,7 @@ import CertifiedContentMail from './bodies/certified-content-mail'
 import PaymentOrders from './bodies/payment-orders'
 import StatutesOfLimitations from './bodies/statutes-of-limitations'
 import WhatLitigationCosts from './bodies/what-litigation-costs'
+import SomeoneOwesYouMoneyInKorea from './bodies/someone-owes-you-money-in-korea'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -277,6 +278,19 @@ export const GUIDES: Guide[] = [
     thumbnail: '/assets/guides/litigation-costs-hero.jpg',
     related: ['youve-been-served-first-30-days', 'payment-orders', 'statutes-of-limitations'],
     body: WhatLitigationCosts,
+  },
+  {
+    slug: 'someone-owes-you-money-in-korea',
+    field: 'debt-collection',
+    listingTitle: 'Someone Owes You Money in Korea',
+    metaTitle:
+      'Someone Owes You Money in Korea — The Recovery Map, from Demand Letter to Asset Disclosure',
+    metaDescription:
+      "Recovering a debt in Korea: the demand-to-enforcement sequence, court-ordered asset disclosure under oath, bank and registry searches, the defaulters' list, and the fraud question.",
+    reviewed: '2026-08',
+    thumbnail: '/assets/guides/owed-money-hero.jpg',
+    related: ['payment-orders', 'certified-content-mail', 'statutes-of-limitations'],
+    body: SomeoneOwesYouMoneyInKorea,
   },
   {
     slug: 'lease-registration-order',
