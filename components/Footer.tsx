@@ -45,10 +45,18 @@ const Footer: React.FC = () => {
                     <div>
                         <h4 className="font-serif font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-3">
-                            {/* Contact is appended here rather than living in NAV_LINKS: the
-                                header uses a single highlighted button for it, but the footer
-                                keeps the full sitemap. */}
-                            {[...NAV_LINKS, { name: 'Contact', href: '/contact' }].map(link => (
+                            {/* Footer-only additions to NAV_LINKS (the header stays lean):
+                                the attorney profile slots in after About Us, and Contact is
+                                appended last — the footer keeps the full sitemap while the
+                                header uses a single highlighted button for /contact. */}
+                            {[
+                                ...NAV_LINKS.flatMap(link =>
+                                    link.href === '/about'
+                                        ? [link, { name: 'Meet Attorney Chulho Choi', href: '/attorneys/chulho-choi' }]
+                                        : [link]
+                                ),
+                                { name: 'Contact', href: '/contact' },
+                            ].map(link => (
                                 <li key={link.name}>
                                     <Link
                                         href={link.href}
