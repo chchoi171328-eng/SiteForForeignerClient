@@ -3,8 +3,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
-import { LANDING_PAGES } from '../content/landingPages';
 import { CustomLogo, Icons } from './Icons';
+
+// Nav-demotion brief §2: the city/base landings live in one small inline
+// line in the footer's secondary area instead of a link block. Pages, URLs,
+// and the sitemap are unchanged.
+const SERVICE_AREA_LINKS = [
+    { name: 'Camp Humphreys', href: '/camp-humphreys-legal-help' },
+    { name: 'Osan AB', href: '/lawyer-near-osan-air-base' },
+    { name: 'Osan', href: '/english-speaking-lawyer-osan' },
+    { name: 'Pyeongtaek', href: '/english-speaking-lawyer-pyeongtaek' },
+    { name: 'Anseong', href: '/english-speaking-lawyer-anseong' },
+    { name: 'Cheonan', href: '/english-speaking-lawyer-cheonan' },
+    { name: 'Asan', href: '/english-speaking-lawyer-asan' },
+];
 import { trackEvent } from '../lib/gtag';
 import Modal from './Modal';
 
@@ -14,7 +26,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="bg-navy-900 text-white border-t border-gray-800 pt-16 pb-8" role="contentinfo">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3 mb-6">
@@ -44,31 +56,6 @@ const Footer: React.FC = () => {
                                         aria-label={`Navigate to ${link.name} section`}
                                     >
                                         {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* For Foreigners */}
-                    <div>
-                        <h4 className="font-serif font-bold text-lg mb-6">For Foreigners</h4>
-                        <ul className="space-y-3">
-                            <li>
-                                <Link
-                                    href="/attorneys/chulho-choi"
-                                    className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
-                                >
-                                    Meet Attorney Chulho Choi
-                                </Link>
-                            </li>
-                            {LANDING_PAGES.map(page => (
-                                <li key={page.slug}>
-                                    <Link
-                                        href={`/${page.slug}`}
-                                        className="text-gray-400 hover:text-gold-400 text-sm transition-colors cursor-pointer"
-                                    >
-                                        {page.footerTitle ?? page.title}
                                     </Link>
                                 </li>
                             ))}
@@ -143,6 +130,20 @@ const Footer: React.FC = () => {
 
                 {/* Secondary links */}
                 <div className="border-t border-gray-800 pt-6 text-center">
+                    <p className="text-gray-500 text-sm mb-4">
+                        Service areas:{' '}
+                        {SERVICE_AREA_LINKS.map((area, i) => (
+                            <React.Fragment key={area.href}>
+                                {i > 0 && <span aria-hidden="true"> · </span>}
+                                <Link
+                                    href={area.href}
+                                    className="hover:text-gold-400 transition-colors"
+                                >
+                                    {area.name}
+                                </Link>
+                            </React.Fragment>
+                        ))}
+                    </p>
                     <a
                         href={CONTACT_INFO.NAVER_BLOG}
                         target="_blank"

@@ -231,8 +231,8 @@ const ContactSection: React.FC = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-serif font-bold text-navy-900 mb-4">Request a Consultation</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto mb-5">
-                        Meet directly with the attorney at our Pyeongtaek office — the attorney who would
-                        actually handle your case.
+                        Meet directly with the attorney who would actually handle your case — by video,
+                        by phone, or in person at our Pyeongtaek office.
                     </p>
                     {/* Fee line — visually distinct, echoing the site's fee blocks */}
                     <p className="inline-block bg-navy-900 text-white font-bold px-6 py-3 rounded-md mb-5">
