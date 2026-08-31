@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import GoogleAnalytics from '../components/GoogleAnalytics'
+import PhoneClickTracker from '../components/PhoneClickTracker'
 import { CONTACT_INFO } from '../constants'
 import { Icons } from '../components/Icons'
 
@@ -65,6 +66,7 @@ export default function RootLayout({
     <html lang="en" className={`${cinzel.variable} ${lato.variable}`} suppressHydrationWarning>
       <body className="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col" suppressHydrationWarning>
         <GoogleAnalytics />
+        <PhoneClickTracker />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -31,7 +31,7 @@ export const CONSULTATION = {
   // Inline abbreviated form for use mid-sentence.
   INLINE: "a 60-minute consultation for ₩150,000 (₩100,000 if it ends within 30 minutes), VAT included, in Korean or English",
   // Compact hero fact line.
-  HERO_FACT_LINE: "A 60-minute consultation with the attorney — ₩150,000, VAT included (₩100,000 if we finish within 30). The same fee in Korean or English. No obligation to proceed.",
+  HERO_FACT_LINE: "A 60-minute consultation with the attorney — ₩150,000, VAT included (₩100,000 if we finish within 30). The same fee in Korean or English. No obligation to proceed. In person, by video, or by phone.",
   // How We Work step 02 body.
   STEP2: "60 minutes for ₩150,000 (VAT included) — and if we finish within 30 minutes, you pay only ₩100,000. The same fee whichever language you speak, by appointment.",
   // Symmetric-disclosure line — must appear wherever the fee block is shown.

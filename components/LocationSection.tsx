@@ -3,7 +3,7 @@
 import React from 'react';
 import { CONTACT_INFO } from '../constants';
 import { Icons } from './Icons';
-import { reportPhoneConversion, trackEvent } from '../lib/gtag';
+import { trackEvent } from '../lib/gtag';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const LocationSection: React.FC = () => {
@@ -36,7 +36,6 @@ const LocationSection: React.FC = () => {
                                 <h3 className="font-bold text-lg text-gold-400 mb-1">Phone</h3>
                                 <a
                                     href={`tel:${CONTACT_INFO.PHONE}`}
-                                    onClick={reportPhoneConversion}
                                     className="text-gray-300 hover:text-white text-xl"
                                     aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                                 >

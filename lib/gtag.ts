@@ -1,5 +1,3 @@
-import type React from 'react';
-
 type GtagFn = (command: string, action: string, params?: Record<string, unknown>) => void;
 
 /**
@@ -40,19 +38,8 @@ export function trackEvent(action: string, params?: Record<string, unknown>) {
     }
 }
 
-/**
- * Report a phone-call click: fires a GA "click_to_call" event and, when Google
- * Ads conversion tracking is present, the conversion callback.
- *
- * When GA is not loaded, `window.gtag_report_conversion` is undefined; in that
- * case we do NOT call preventDefault, so the browser follows the tel: link
- * normally instead of blocking the call.
- */
-export function reportPhoneConversion(e: React.MouseEvent<HTMLAnchorElement>) {
-    trackEvent('click_to_call');
-    const report = (window as unknown as { gtag_report_conversion?: (url: string) => void }).gtag_report_conversion;
-    if (typeof report === 'function') {
-        e.preventDefault();
-        report(e.currentTarget.href);
-    }
-}
+// Phone-click tracking lives in components/PhoneClickTracker.tsx: one
+// delegated listener records GA4 `click_to_call` for every tel: link. The
+// old per-link handler — which also fired a generic `conversion` event at
+// the GA4 measurement ID and intercepted tel: navigation — was removed per
+// the remote-nationwide brief PART A.

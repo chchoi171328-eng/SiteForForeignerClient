@@ -36,7 +36,7 @@ const About: React.FC = () => {
                         <h2 className="text-gold-400 font-bold uppercase tracking-widest mb-2">Who We Are</h2>
                         <h3 className="text-4xl font-serif font-bold text-navy-900 mb-6">A Small Firm, Deliberately</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                            <span className="font-bold text-navy-900">SOL &amp; LUNA (Law Firm Myeong)</span> is a Korean law firm in Pyeongtaek serving foreign residents across Gyeonggi-do and beyond.
+                            <span className="font-bold text-navy-900">SOL &amp; LUNA (Law Firm Myeong)</span> is a Korean law firm in Pyeongtaek serving foreign residents across Korea — by video, phone, or in person at our Pyeongtaek office.
                         </p>
                         <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                             We deliberately limit the number of cases we take on at one time. The attorney you meet at your first consultation is the same attorney who drafts your documents, appears at your hearings, and stands with you in court. Nothing is lost in handoffs — and nothing is lost in translation, because your attorney is the one speaking with you.

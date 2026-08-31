@@ -151,6 +151,12 @@ export default function FeesPage() {
         {/* Consultation fee block (shared standard block) */}
         <section className="mb-12 bg-navy-900 text-white p-8 rounded-xl">
           <ConsultationFees variant="dark" />
+          {/* Remote-nationwide brief B-2(4): consultation formats, /fees only. */}
+          <p className="text-gray-300 text-sm leading-relaxed mt-4">
+            Available in person at our Pyeongtaek office, by video (Google Meet), or by phone —
+            same fee. Video and phone consultations are paid in advance by bank transfer; if the
+            consultation ends within 30 minutes, ₩50,000 is refunded.
+          </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"

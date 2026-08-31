@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { NAV_LINKS, CONTACT_INFO } from '../constants';
 import { LANDING_PAGES } from '../content/landingPages';
 import { CustomLogo, Icons } from './Icons';
-import { reportPhoneConversion, trackEvent } from '../lib/gtag';
+import { trackEvent } from '../lib/gtag';
 import Modal from './Modal';
 
 const Footer: React.FC = () => {
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                             </div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            SOL &amp; LUNA (Law Firm Myeong) is a Korean law firm in Pyeongtaek serving foreign residents. We limit our caseload, quote fees upfront, and tell you honestly when a case is not worth pursuing.
+                            Based in Pyeongtaek, serving foreign residents across Korea. We limit our caseload, quote fees upfront, and tell you honestly when a case is not worth pursuing.
                         </p>
                     </div>
 
@@ -81,9 +81,8 @@ const Footer: React.FC = () => {
                         <ul className="space-y-4 text-sm text-gray-400">
                             <li className="flex items-center gap-3">
                                 <Icons.Phone className="w-4 h-4 text-gold-400" aria-hidden="true" />
-                                <a 
-                                    href={`tel:${CONTACT_INFO.PHONE}`} 
-                                    onClick={reportPhoneConversion}
+                                <a
+                                    href={`tel:${CONTACT_INFO.PHONE}`}
                                     aria-label={`Call ${CONTACT_INFO.PHONE}`}
                                 >
                                     {CONTACT_INFO.PHONE}

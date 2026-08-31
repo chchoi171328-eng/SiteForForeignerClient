@@ -183,6 +183,13 @@ export const LANDING_PAGES: LandingPage[] = [
           'One more thing worth knowing: a consultation here does not commit you to anything. Some visitors book an assessment, learn where they stand, and decide not to litigate — with our agreement. That is a good outcome too.',
         ],
       },
+      {
+        heading: 'Anywhere in Korea — without coming to Pyeongtaek first',
+        paragraphs: [
+          "You don't need to visit our office to get an honest assessment. Consultations are available by video (Google Meet) or phone at the same fee, paid in advance by bank transfer — and if we finish within 30 minutes, ₩50,000 comes back to you.",
+          'Korean civil litigation now runs largely through the electronic filing system, so for many civil, lease, debt, and inheritance matters — including flat-fee inheritance renunciation — distance matters less than it used to. We are based in Pyeongtaek, and we say so plainly; what you get from here is the attorney himself, in English, wherever you are in Korea.',
+        ],
+      },
     ],
   },
 
