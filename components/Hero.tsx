@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CONTACT_INFO, CONSULTATION } from '../constants';
 import { Icons } from './Icons';
-import { reportPhoneConversion } from '../lib/gtag';
 
 const Hero: React.FC = () => {
     return (
@@ -55,7 +54,6 @@ const Hero: React.FC = () => {
                     <div className="mb-10">
                         <a
                             href={`tel:${CONTACT_INFO.PHONE}`}
-                            onClick={reportPhoneConversion}
                             className="inline-flex items-center gap-3 text-3xl md:text-5xl font-serif font-bold text-white hover:text-gold-400 transition-colors group"
                             aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                         >

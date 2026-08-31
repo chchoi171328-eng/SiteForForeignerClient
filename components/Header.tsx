@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { CONTACT_INFO, NAV_LINKS } from '../constants';
 import { SERVICE_AREAS } from '../content/serviceAreas';
 import { CustomLogo, Icons } from './Icons';
-import { reportPhoneConversion } from '../lib/gtag';
 
 // "Areas We Serve" dropdown (city-pages brief §D-1) — replaces the flat
 // "Location" nav item. The office/directions page leads the list.
@@ -165,9 +164,9 @@ const Header: React.FC = () => {
                     >
                         Request a Consultation
                     </Link>
+                    {/* click_to_call is recorded by the global PhoneClickTracker. */}
                     <a
                         href={`tel:${CONTACT_INFO.PHONE}`}
-                        onClick={reportPhoneConversion}
                         className="border border-gold-400 text-gold-400 py-3 rounded text-center font-bold"
                         aria-label={`Call us at ${CONTACT_INFO.PHONE}`}
                     >

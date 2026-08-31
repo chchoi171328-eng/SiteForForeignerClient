@@ -22,20 +22,6 @@ export default function GoogleAnalytics() {
           gtag('config', '${GA_MEASUREMENT_ID}');
           // Google Ads destination on the same gtag.js library — not a second tag.
           gtag('config', '${ADS_CONVERSION_ID}');
-
-          function gtag_report_conversion(url) {
-            var callback = function () {
-              if (typeof(url) != 'undefined') {
-                window.location = url;
-              }
-            };
-            gtag('event', 'conversion', {
-              'send_to': '${GA_MEASUREMENT_ID}',
-              'event_callback': callback
-            });
-            return false;
-          }
-          window.gtag_report_conversion = gtag_report_conversion;
         `}
       </Script>
     </>

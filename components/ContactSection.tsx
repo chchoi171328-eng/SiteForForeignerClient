@@ -35,11 +35,32 @@ const DESCRIPTION_PROMPTS = [
     'Names of other people or companies involved, only if you are comfortable providing them at this stage',
 ] as const;
 
+// Remote-nationwide brief B-1 — how the consultation itself is held.
+// Remote methods need a reachable phone number and carry the advance-payment
+// note; the microcopy renders under the selected option.
+const MEETING_METHODS = [
+    { value: 'in-person', label: 'In person — at our Pyeongtaek office', note: null },
+    {
+        value: 'video',
+        label: 'Video call — Google Meet',
+        note: 'Held over Google Meet — no account or installation needed. Video consultations are never recorded.',
+    },
+    {
+        value: 'phone-call',
+        label: "Phone call — we call you",
+        note: "We call you at the confirmed time — you don't need to call us. Calls are not recorded.",
+    },
+] as const;
+
+type MeetMethod = (typeof MEETING_METHODS)[number]['value'] | '';
+const isRemote = (m: MeetMethod) => m === 'video' || m === 'phone-call';
+
 type FormState = {
     name: string;
     email: string;
     phone: string;
     message: string;
+    meetMethod: MeetMethod;
     contactMethod: string;
     bestTime: string;
     agreed: boolean;
@@ -50,13 +71,14 @@ const EMPTY_FORM: FormState = {
     email: '',
     phone: '',
     message: '',
+    meetMethod: '',
     contactMethod: '',
     bestTime: 'No Preference',
     agreed: false,
 };
 
 type FieldErrors = Partial<
-    Record<'name' | 'email' | 'phone' | 'message' | 'contactMethod' | 'agreed', string>
+    Record<'name' | 'email' | 'phone' | 'message' | 'meetMethod' | 'contactMethod' | 'agreed', string>
 >;
 
 function validate(form: FormState): FieldErrors {
@@ -67,15 +89,17 @@ function validate(form: FormState): FieldErrors {
     if (!form.email.trim()) errors.email = 'Please enter your email.';
     else if (!EMAIL_RE.test(form.email.trim())) errors.email = 'Please enter a valid email address.';
 
-    // Phone is optional — unless the applicant asked to be called (§2).
+    // Phone is optional — unless the applicant asked to be called, or chose a
+    // remote consultation (we need a number in case the connection fails).
     if (form.phone.trim().length > LIMITS.phone) errors.phone = 'Phone number is too long.';
-    else if (form.contactMethod === 'Phone' && !form.phone.trim())
-        errors.phone = 'Please enter a phone number so we can call you.';
+    else if ((form.contactMethod === 'Phone' || isRemote(form.meetMethod)) && !form.phone.trim())
+        errors.phone = 'Please enter a phone number so we can reach you.';
 
     const msg = form.message.trim();
     if (!msg) errors.message = 'Please tell us briefly what happened.';
     else if (msg.length > LIMITS.message) errors.message = 'Message is too long.';
 
+    if (!form.meetMethod) errors.meetMethod = 'Please choose how you would like to meet.';
     if (!form.contactMethod) errors.contactMethod = 'Please choose how we should contact you.';
 
     if (!form.agreed)
@@ -100,6 +124,7 @@ function buildMessageBody(form: FormState): string {
         form.message.trim(),
         '',
         '— Contact —',
+        `Consultation Method: ${MEETING_METHODS.find((m) => m.value === form.meetMethod)?.label ?? form.meetMethod}`,
         `Preferred Contact Method: ${form.contactMethod}`,
     ];
     if (form.contactMethod === 'Phone') lines.push(`Best Time to Call: ${form.bestTime}`);
@@ -120,6 +145,10 @@ const ContactSection: React.FC = () => {
     const { ref, isVisible } = useScrollAnimation(0.2);
     // Fire "contact_form_started" only on the first interaction.
     const startedRef = useRef(false);
+    // Synchronous double-submit guard: React state updates are async, so two
+    // submits in the same tick would both see status === 'idle'. The ref
+    // closes that gap; the status check still covers the rendered UI.
+    const submittingRef = useRef(false);
 
     const handleFormStart = () => {
         if (!startedRef.current) {
@@ -131,7 +160,7 @@ const ContactSection: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         // Guard against double submission (e.g. Enter key + click).
-        if (status === 'submitting') return;
+        if (status === 'submitting' || submittingRef.current) return;
 
         // Honeypot tripped → silently accept without sending (do not tip off the bot).
         if (honeypot.trim() !== '') {
@@ -144,6 +173,7 @@ const ContactSection: React.FC = () => {
         setErrors(nextErrors);
         if (Object.keys(nextErrors).length > 0) return;
 
+        submittingRef.current = true;
         setStatus('submitting');
 
         try {
@@ -167,7 +197,9 @@ const ContactSection: React.FC = () => {
             );
 
             setStatus('success');
-            trackEvent('contact_form_submitted');
+            // Same event name and timing; the consultation_method parameter was
+            // added by the remote-nationwide brief B-1.
+            trackEvent('contact_form_submitted', { consultation_method: formState.meetMethod });
             // Google Ads conversion — only after the request was actually delivered,
             // so it never fires on click, on a validation failure, or on a send error.
             reportAdsConversion(ADS_CONTACT_CONVERSION);
@@ -176,6 +208,8 @@ const ContactSection: React.FC = () => {
         } catch (error) {
             console.error("Failed to send email:", error);
             setStatus('error');
+        } finally {
+            submittingRef.current = false;
         }
     };
 
@@ -205,6 +239,12 @@ const ContactSection: React.FC = () => {
                         60 minutes&ensp;·&ensp;₩150,000 (VAT included)&ensp;·&ensp;₩100,000 if it
                         ends within 30 minutes&ensp;·&ensp;Korean or English, same fee
                     </p>
+                    {isRemote(formState.meetMethod) && (
+                        <p className="text-gray-500 text-sm max-w-2xl mx-auto mb-3">
+                            Video and phone consultations are confirmed after advance payment by bank
+                            transfer — we send an invoice with our account details when we reply.
+                        </p>
+                    )}
                     <p className="text-gray-600 max-w-2xl mx-auto mb-3">
                         Tell us briefly about your situation. We will review whether we can assist and check
                         for potential conflicts of interest. If appropriate, we will contact you with
@@ -306,7 +346,7 @@ const ContactSection: React.FC = () => {
                             <div>
                                 <label htmlFor="contact-phone" className="block text-sm font-bold text-gray-700 mb-2">
                                     Phone Number{' '}
-                                    {formState.contactMethod === 'Phone' ? (
+                                    {formState.contactMethod === 'Phone' || isRemote(formState.meetMethod) ? (
                                         <span className="text-red-500" aria-label="required">*</span>
                                     ) : (
                                         <span className="text-gray-400 font-normal">(optional)</span>
@@ -315,7 +355,7 @@ const ContactSection: React.FC = () => {
                                 <input
                                     id="contact-phone"
                                     type="tel"
-                                    required={formState.contactMethod === 'Phone'}
+                                    required={formState.contactMethod === 'Phone' || isRemote(formState.meetMethod)}
                                     maxLength={LIMITS.phone}
                                     disabled={status === 'submitting'}
                                     className={inputClass}
@@ -387,6 +427,48 @@ const ContactSection: React.FC = () => {
 
                         {/* ——— How Should We Contact You? ——— */}
                         <p className={groupHeadingClass}>How Should We Contact You?</p>
+                        {/* B-1: how the consultation itself is held — above the contact method. */}
+                        <fieldset
+                            aria-required="true"
+                            aria-invalid={!!errors.meetMethod}
+                            aria-describedby={errors.meetMethod ? 'meet-method-error' : undefined}
+                        >
+                            <legend className="block text-sm font-bold text-gray-700 mb-2">
+                                How would you like to meet? <span className="text-red-500" aria-label="required">*</span>
+                            </legend>
+                            <div className="space-y-2 pt-1">
+                                {MEETING_METHODS.map((m) => (
+                                    <div key={m.value}>
+                                        <label className="flex items-center gap-2 cursor-pointer text-gray-700">
+                                            <input
+                                                type="radio"
+                                                name="meet-method"
+                                                value={m.value}
+                                                required
+                                                disabled={status === 'submitting'}
+                                                className="w-4 h-4 accent-gold-500"
+                                                checked={formState.meetMethod === m.value}
+                                                onChange={(e) =>
+                                                    setFormState({
+                                                        ...formState,
+                                                        meetMethod: e.target.value as MeetMethod,
+                                                    })
+                                                }
+                                            />
+                                            {m.label}
+                                        </label>
+                                        {m.note && formState.meetMethod === m.value && (
+                                            <p className="text-gray-500 text-xs mt-1 ml-6 leading-relaxed">
+                                                {m.note}
+                                            </p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                            {errors.meetMethod && (
+                                <p id="meet-method-error" className="text-red-600 text-sm mt-1">{errors.meetMethod}</p>
+                            )}
+                        </fieldset>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* 5. Preferred contact method */}
                             <fieldset
