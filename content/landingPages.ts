@@ -159,7 +159,7 @@ export const LANDING_PAGES: LandingPage[] = [
       {
         heading: 'Interpretation & Translation',
         paragraphs: [
-          'Where necessary, we address language barriers so that you understand the proceedings and your position is accurately represented. Consultations themselves are conducted directly in English by the attorney.',
+          "Where necessary, we address language barriers so that you understand the proceedings and your position is accurately represented. Consultations themselves are conducted directly in English by the attorney. And his English wasn't learned in a classroom: before law school, Attorney Choi spent two years as a KATUSA — a Korean Army soldier assigned to a U.S. Army unit — living and working in English alongside American soldiers.",
         ],
       },
       {
