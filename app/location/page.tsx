@@ -29,7 +29,8 @@ export default function LocationPage() {
         <p className="text-gray-700 leading-relaxed text-lg">
           Our office is on the 5th floor of SJ Plaza in central Pyeongtaek, minutes from the Pyeongtaek
           courthouse and prosecutors&apos; office — the buildings where local cases are actually decided.
-          Consultations are by appointment.
+          Consultations are by appointment. If you are outside Pyeongtaek, you do not need to visit the
+          office for your initial consultation. Video and phone consultations are available across Korea.
         </p>
       </div>
 

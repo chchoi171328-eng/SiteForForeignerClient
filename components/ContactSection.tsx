@@ -394,6 +394,11 @@ const ContactSection: React.FC = () => {
                                     </li>
                                 ))}
                             </ul>
+                            {/* Nationwide-finish brief §3-2 — scope filter for direct visitors
+                                who did not pass through a landing page. */}
+                            <p className="text-sm text-gray-600 leading-relaxed mt-3">
+                                Note: we do not handle immigration or visa applications.
+                            </p>
                         </div>
 
                         {/* 4. Brief description (§5) */}

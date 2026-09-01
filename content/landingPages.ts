@@ -9,6 +9,8 @@ export type LandingSection = {
   heading?: string
   paragraphs?: string[]
   bullets?: string[]
+  /** Short closing line rendered after the bullets (e.g. a scope disclaimer). */
+  note?: string
   /** Optional in-body photo (e.g. the courtroom-window view on the Anseong page). */
   image?: { src: string; alt: string; caption?: string }
 }
@@ -38,6 +40,16 @@ export type LandingPage = {
   hookNote?: { text: string; linkText: string; href: string }
   /** Render the "What's your situation?" component before the CTA (brief §C). */
   showSituationNav?: boolean
+  /**
+   * Nationwide-finish brief §2-4: render the SituationNav right after the
+   * section at this index instead of at the bottom (requires showSituationNav).
+   */
+  situationNavAfterIndex?: number
+  /**
+   * Nationwide-finish brief §2-3: short trust chips rendered directly under
+   * the hero banner (nationwide ad landing only).
+   */
+  trustChips?: string[]
   /** Camp Humphreys / Osan AB pages must show the non-affiliation disclaimer. */
   disclaimer?: string
 }
@@ -135,14 +147,43 @@ export const LANDING_PAGES: LandingPage[] = [
     slug: 'lawyer-for-foreigners-korea',
     centralQuestion:
       'How is the Korean legal system different, and why do I need a Korean lawyer?',
-    title: 'A Lawyer for Foreigners in Korea',
+    title: 'English-Speaking Korean Lawyer for Legal Matters in Korea',
+    footerTitle: 'A Lawyer for Foreigners in Korea',
     showSituationNav: true,
+    // Nationwide-finish brief §2-4: the SituationNav sits right after the
+    // remote-consultation section instead of at the bottom of the page.
+    situationNavAfterIndex: 0,
     metaTitle: 'Lawyer for Foreigners in Korea | SOL & LUNA Law Firm',
     metaDescription:
       'Why foreign residents need a Korean lawyer — how Korean litigation and investigation differ, language and cultural barriers, interpretation, and the types of cases we handle.',
     heroSubtitle:
-      'Understanding why the Korean legal system works differently — and how a Korean attorney helps foreign residents navigate it.',
+      'Based in Pyeongtaek, serving clients across Korea. Paid consultations are available by video, phone, or in person.',
+    trustChips: [
+      'Consultation directly with the attorney',
+      'KBA-registered specialist in Civil Law and Criminal Law',
+      '60 min ₩150,000 / ₩100,000 if finished within 30 min',
+      'Video · Phone · Pyeongtaek Office',
+    ],
     sections: [
+      {
+        heading: 'Anywhere in Korea — without coming to Pyeongtaek first',
+        paragraphs: [
+          "You don't need to visit our office to get an honest assessment. Consultations are available by video (Google Meet) or phone at the same fee, paid in advance by bank transfer — and if we finish within 30 minutes, ₩50,000 comes back to you.",
+          'Korean civil litigation now runs largely through the electronic filing system, so for many civil, lease, debt, and inheritance matters — including flat-fee inheritance renunciation — distance matters less than it used to. We are based in Pyeongtaek, and we say so plainly; what you get from here is the attorney himself, in English, wherever you are in Korea.',
+        ],
+      },
+      {
+        heading: 'Types of Cases We Handle',
+        bullets: [
+          'Criminal defense and police investigations',
+          'Civil litigation',
+          'Real estate and lease disputes',
+          'Debt collection',
+          'Divorce and family matters',
+          'Labor and employment',
+        ],
+        note: 'We do not handle immigration or visa applications.',
+      },
       {
         heading: 'How the Korean System Differs',
         paragraphs: [
@@ -163,17 +204,6 @@ export const LANDING_PAGES: LandingPage[] = [
         ],
       },
       {
-        heading: 'Types of Cases We Handle',
-        bullets: [
-          'Criminal defense and police investigations',
-          'Civil litigation',
-          'Real estate and lease disputes',
-          'Debt collection',
-          'Divorce and family matters',
-          'Labor and employment',
-        ],
-      },
-      {
         paragraphs: [
           "Since 2025, Attorney Choi has served as a legal advisor at the foreign resident counseling center run by the Pyeongtaek International Exchange Foundation (PIEF) — the city's public foundation for its international community. Appointed and reappointed by the foundation, he advises foreign residents on legal matters through the center's consultation program.",
         ],
@@ -181,13 +211,6 @@ export const LANDING_PAGES: LandingPage[] = [
       {
         paragraphs: [
           'One more thing worth knowing: a consultation here does not commit you to anything. Some visitors book an assessment, learn where they stand, and decide not to litigate — with our agreement. That is a good outcome too.',
-        ],
-      },
-      {
-        heading: 'Anywhere in Korea — without coming to Pyeongtaek first',
-        paragraphs: [
-          "You don't need to visit our office to get an honest assessment. Consultations are available by video (Google Meet) or phone at the same fee, paid in advance by bank transfer — and if we finish within 30 minutes, ₩50,000 comes back to you.",
-          'Korean civil litigation now runs largely through the electronic filing system, so for many civil, lease, debt, and inheritance matters — including flat-fee inheritance renunciation — distance matters less than it used to. We are based in Pyeongtaek, and we say so plainly; what you get from here is the attorney himself, in English, wherever you are in Korea.',
         ],
       },
     ],

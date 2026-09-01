@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { LandingPage } from '@/content/landingPages'
@@ -58,6 +59,20 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
           </div>
         </header>
 
+        {/* Trust chips (nationwide-finish brief §2-3) */}
+        {page.trustChips && page.trustChips.length > 0 && (
+          <ul className="flex flex-wrap gap-2 -mt-6 mb-12">
+            {page.trustChips.map((chip) => (
+              <li
+                key={chip}
+                className="border border-gold-400/60 bg-slate-50 text-navy-900 text-sm font-medium px-3 py-1.5 rounded-full"
+              >
+                {chip}
+              </li>
+            ))}
+          </ul>
+        )}
+
         {/* Non-affiliation disclaimer (shown prominently near the top when set) */}
         {page.disclaimer && (
           <div
@@ -70,7 +85,8 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
 
         {/* Content sections */}
         {page.sections.map((section, i) => (
-          <section key={section.heading ?? i} className="mb-10">
+          <React.Fragment key={section.heading ?? i}>
+          <section className="mb-10">
             {section.heading && (
               <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">{section.heading}</h2>
             )}
@@ -86,6 +102,9 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
                   </li>
                 ))}
               </ul>
+            )}
+            {section.note && (
+              <p className="text-gray-700 leading-relaxed mt-4">{section.note}</p>
             )}
             {i === 0 && page.hookNote && (
               <p className="text-sm text-gray-500 leading-relaxed mt-2">
@@ -115,6 +134,13 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
               </figure>
             )}
           </section>
+          {/* Mid-page SituationNav slot (nationwide-finish brief §2-4) */}
+          {page.showSituationNav && page.situationNavAfterIndex === i && (
+            <section className="mb-12">
+              <SituationNav />
+            </section>
+          )}
+          </React.Fragment>
         ))}
 
         {/* Directions (city pages) */}
@@ -139,8 +165,9 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
           </section>
         )}
 
-        {/* Situation-based navigation (brief §A/§C) */}
-        {page.showSituationNav && (
+        {/* Situation-based navigation (brief §A/§C) — bottom placement unless
+            the page pins it after a specific section via situationNavAfterIndex. */}
+        {page.showSituationNav && page.situationNavAfterIndex === undefined && (
           <section className="mb-12">
             <SituationNav />
           </section>

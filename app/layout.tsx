@@ -33,23 +33,23 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lsfp.co.kr'),
   title: {
-    default: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
+    default: 'English-Speaking Korean Lawyer | SOL & LUNA Law Firm',
     template: '%s | SOL & LUNA Law Firm',
   },
-  description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters. Paid consultations are available by appointment in Pyeongtaek.',
+  description: 'English legal consultations with a Korean attorney for foreign clients across Korea. Criminal, civil, real estate, debt and family matters. Available by video, phone or in person in Pyeongtaek.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.lsfp.co.kr',
     siteName: 'SOL & LUNA Law Firm',
-    title: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
-    description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters.',
+    title: 'English-Speaking Korean Lawyer | SOL & LUNA Law Firm',
+    description: 'English legal consultations with a Korean attorney for foreign clients across Korea. Criminal, civil, real estate, debt and family matters. Available by video, phone or in person in Pyeongtaek.',
     images: [{ url: '/assets/logo.png', width: 512, height: 512, alt: 'SOL & LUNA Law Firm Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'English-Speaking Korean Lawyer in Pyeongtaek | SOL & LUNA',
-    description: 'SOL & LUNA Law Firm assists foreign residents in Korea with criminal defense, civil litigation, real estate and lease disputes, debt recovery, labor issues, and family matters.',
+    title: 'English-Speaking Korean Lawyer | SOL & LUNA Law Firm',
+    description: 'English legal consultations with a Korean attorney for foreign clients across Korea. Criminal, civil, real estate, debt and family matters. Available by video, phone or in person in Pyeongtaek.',
     images: ['/assets/logo.png'],
   },
   alternates: {
