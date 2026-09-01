@@ -66,8 +66,9 @@ export default function AboutPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-serif font-bold text-navy-900 mb-4">Who we serve</h2>
           <p className="text-gray-700 leading-relaxed">
-            Our clients are foreign residents in Korea — people working, running businesses, raising
-            families, or stationed here — who need Korean legal problems explained and handled in English,
+            We serve foreign residents and international clients dealing with legal matters in Korea —
+            people working, running businesses, raising families, or stationed here, as well as those
+            abroad with a case in Korea — who need Korean legal problems explained and handled in English,
             by the attorney responsible for the outcome.
           </p>
         </section>
