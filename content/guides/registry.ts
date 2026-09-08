@@ -33,6 +33,7 @@ import PaymentOrders from './bodies/payment-orders'
 import StatutesOfLimitations from './bodies/statutes-of-limitations'
 import WhatLitigationCosts from './bodies/what-litigation-costs'
 import SomeoneOwesYouMoneyInKorea from './bodies/someone-owes-you-money-in-korea'
+import ProvisionalAttachment from './bodies/provisional-attachment'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -289,8 +290,21 @@ export const GUIDES: Guide[] = [
       "Recovering a debt in Korea: the demand-to-enforcement sequence, court-ordered asset disclosure under oath, bank and registry searches, the defaulters' list, and the fraud question.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/owed-money-hero.jpg',
-    related: ['payment-orders', 'certified-content-mail', 'statutes-of-limitations'],
+    related: ['provisional-attachment', 'payment-orders', 'certified-content-mail'],
     body: SomeoneOwesYouMoneyInKorea,
+  },
+  {
+    slug: 'provisional-attachment',
+    field: 'debt-collection',
+    listingTitle: 'Provisional Attachment (가압류)',
+    metaTitle:
+      "Provisional Attachment (가압류) in Korea — Freezing a Debtor's Assets Before the Lawsuit",
+    metaDescription:
+      "How a Korean provisional attachment freezes bank accounts and property before judgment — requirements, security deposits, the 2-week execution window, and how to respond if you're frozen.",
+    reviewed: '2026-09',
+    thumbnail: '/assets/guides/attachment-hero.jpg',
+    related: ['someone-owes-you-money-in-korea', 'payment-orders', 'what-litigation-costs'],
+    body: ProvisionalAttachment,
   },
   {
     slug: 'lease-registration-order',
