@@ -34,6 +34,7 @@ import StatutesOfLimitations from './bodies/statutes-of-limitations'
 import WhatLitigationCosts from './bodies/what-litigation-costs'
 import SomeoneOwesYouMoneyInKorea from './bodies/someone-owes-you-money-in-korea'
 import ProvisionalAttachment from './bodies/provisional-attachment'
+import EnforcingAJudgment from './bodies/enforcing-a-judgment'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -290,7 +291,7 @@ export const GUIDES: Guide[] = [
       "Recovering a debt in Korea: the demand-to-enforcement sequence, court-ordered asset disclosure under oath, bank and registry searches, the defaulters' list, and the fraud question.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/owed-money-hero.jpg',
-    related: ['provisional-attachment', 'payment-orders', 'certified-content-mail'],
+    related: ['provisional-attachment', 'enforcing-a-judgment', 'payment-orders'],
     body: SomeoneOwesYouMoneyInKorea,
   },
   {
@@ -303,8 +304,21 @@ export const GUIDES: Guide[] = [
       "How a Korean provisional attachment freezes bank accounts and property before judgment — requirements, security deposits, the 2-week execution window, and how to respond if you're frozen.",
     reviewed: '2026-09',
     thumbnail: '/assets/guides/attachment-hero.jpg',
-    related: ['someone-owes-you-money-in-korea', 'payment-orders', 'what-litigation-costs'],
+    related: ['someone-owes-you-money-in-korea', 'enforcing-a-judgment', 'payment-orders'],
     body: ProvisionalAttachment,
+  },
+  {
+    slug: 'enforcing-a-judgment',
+    field: 'debt-collection',
+    listingTitle: 'Enforcing a Judgment (강제집행)',
+    metaTitle:
+      'Enforcing a Judgment in Korea (강제집행) — Turning a Court Title into Money, Asset by Asset',
+    metaDescription:
+      'How compulsory execution works in Korea: the enforceable title, seizing bank accounts and wages, collection vs. assignment orders, real-estate auctions, and debtor protections.',
+    reviewed: '2026-09',
+    thumbnail: '/assets/guides/enforcement-hero.jpg',
+    related: ['someone-owes-you-money-in-korea', 'provisional-attachment', 'payment-orders'],
+    body: EnforcingAJudgment,
   },
   {
     slug: 'lease-registration-order',
