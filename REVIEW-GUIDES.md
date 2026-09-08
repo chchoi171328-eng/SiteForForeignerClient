@@ -1045,3 +1045,47 @@
     자물쇠 — 자산 동결 모티프, 판독 가능한 글자·숫자 없음)
   - 본문: `/assets/guides/attachment-frozen.jpg` (얼음 블록 속 무지 남색
     카드 — 동결 계좌 테마, 텍스트·로고·숫자 없음)
+
+## 26. Enforcing a Judgment (강제집행)
+`/guides/debt-collection/enforcing-a-judgment` · Reviewed 2026-09
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-09)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 집행권원 종류 — 확정/가집행 판결, 확정 지급명령, 소송상 화해·인낙, 강제집행 승낙 공정증서 | 민사집행법 제24조·제56조 | casenote.kr (제56조 원문 확인) |
+| 집행문 — 법원사무관 부여, 확정 또는 가집행선고 시 | 민사집행법 제28~30조 | casenote.kr, law.go.kr |
+| 확정된 지급명령은 집행문 불요, 정본으로 집행 (조건부·승계 예외) | 민사집행법 제58조 제1항 | casenote.kr (조문 원문 확인) |
+| 채권집행 — 압류명령 제3채무자 송달, 추심명령(대위절차 없이 추심)·전부명령(지급 갈음 이전) | 민사집행법 제227조·제229조 제1~3항 | casenote.kr (제229조 원문 확인) |
+| 전부명령 — 송달 전 타 압류·가압류·배당요구 시 무효, 확정되어야 효력 | 민사집행법 제229조 제5·7항 | casenote.kr (조문 원문 확인) |
+| 즉시항고 1주 불변기간 | 민사집행법 제15조 제2항 | law.go.kr |
+| 부동산 강제집행 — 강제경매·강제관리, 채권자 선택·병용 | 민사집행법 제78조 | casenote.kr (조문 원문 확인) |
+| 유체동산 압류 — 집행관 점유(봉인 보관 가능) | 민사집행법 제189조 | law.go.kr, korea.legal |
+| 압류금지물건(생활필수품 등) / 급여 1/2 압류금지 + 시행령 하한 | 민사집행법 제195조·제246조 제1항 제4호 | guide 25 기검증 재사용 |
+| 청구이의의 소(1심 판결법원) / 제3자이의의 소 / 이의의 소는 집행 계속에 영향 없음(별도 잠정처분 필요) | 민사집행법 제44조·제48조·제46조 | law.go.kr, lbox.kr |
+| 집행비용 채무자 부담, 집행 결과에서 우선 변상 | 민사집행법 제53조 제1항 | casenote.kr (조문 원문 확인) |
+| 외국재판 강제집행 — 집행판결 필요 | 민사집행법 제26~27조 | law.go.kr |
+| 판결 확정 채권 10년(갱신 가능), 채무불이행자명부 6개월 | 민법 제165조 / 민집법 제70조 | guide 21·22·24 기검증 재사용 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **외국판결 승인 요건 FAQ** — "statutory conditions, including proper
+  service and reciprocity" 관점 수준 (민소법 §217 요건 목록 미전개,
+  guide 19 해외 FAQ와 동일 수위).
+- **추심의 소** — "a collection suit by you against them" 일반 서술
+  (조문 미인용).
+- **경매 소요 기간** — "months rather than weeks / a process measured in
+  months" 정성 서술만 (구체 개월 수 미기재).
+- **압류 후 입금분 효력** — "depending on its terms, sums credited
+  afterwards" 완충 서술 (장래 예금채권 압류 실무 세부 미전개).
+- **셀프 집행 금지 Callout** — "can create separate legal problems" 수준
+  (죄명 단정 없음).
+- 판례 인용 0건, SOFA·비자 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/enforcement-hero.jpg` (백지 공문서 + 황동
+    인장·열쇠 — 집행권원 모티프, 판독 가능한 글자·숫자 없음)
+  - 본문: `/assets/guides/enforcement-auction.jpg` (목재 주택 모형 +
+    무지 황동 태그 열쇠 — 부동산 경매 테마, 텍스트 없음)
