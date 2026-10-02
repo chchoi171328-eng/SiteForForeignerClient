@@ -36,6 +36,7 @@ import SomeoneOwesYouMoneyInKorea from './bodies/someone-owes-you-money-in-korea
 import ProvisionalAttachment from './bodies/provisional-attachment'
 import EnforcingAJudgment from './bodies/enforcing-a-judgment'
 import ExitBansDuringInvestigation from './bodies/exit-bans-during-investigation'
+import TenantStoppedPayingRentFromAbroad from './bodies/tenant-stopped-paying-rent-from-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -115,7 +116,7 @@ export const GUIDES: Guide[] = [
       "What jeonse (전세) is, how Korea's lump-sum deposit lease compares to wolse, and the steps that keep your deposit safe — explained for foreign residents.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/jeonse-hero.jpg',
-    related: ['getting-your-housing-deposit-back', 'reading-a-korean-lease-before-signing'],
+    related: ['getting-your-housing-deposit-back', 'reading-a-korean-lease-before-signing', 'tenant-stopped-paying-rent-from-abroad'],
     body: JeonseExplained,
   },
   {
@@ -340,6 +341,20 @@ export const GUIDES: Guide[] = [
     body: ExitBansDuringInvestigation,
   },
   {
+    slug: 'tenant-stopped-paying-rent-from-abroad',
+    field: 'real-estate-lease-disputes',
+    listingTitle: "Your Tenant Stopped Paying — and You're Abroad",
+    metaTitle:
+      "Your Tenant in Korea Stopped Paying Rent — and You're Abroad: Termination, Eviction, and Collection Without Flying In",
+    metaDescription:
+      "What a landlord abroad can do about a non-paying tenant in Korea: the two-months' rent termination rule, the eviction lawsuit and bailiff, collecting arrears, and what truly needs you there.",
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/rent-abroad-hero.jpg',
+    related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'jeonse-explained'],
+    tags: ['from-abroad'],
+    body: TenantStoppedPayingRentFromAbroad,
+  },
+  {
     slug: 'lease-registration-order',
     field: 'real-estate-lease-disputes',
     listingTitle: 'Lease Registration Order (임차권등기명령)',
@@ -349,7 +364,7 @@ export const GUIDES: Guide[] = [
       'How to get a lease registration order in Korea: when you qualify, filing step by step (self-filing included), costs recoverable from the landlord, and what to verify before moving out.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/lease-registration-hero.jpg',
-    related: ['getting-your-housing-deposit-back', 'jeonse-explained'],
+    related: ['getting-your-housing-deposit-back', 'jeonse-explained', 'tenant-stopped-paying-rent-from-abroad'],
     body: LeaseRegistrationOrder,
   },
   {

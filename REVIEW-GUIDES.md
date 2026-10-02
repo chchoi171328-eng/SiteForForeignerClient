@@ -1151,3 +1151,70 @@
     한 개 — 출국 저지 모티프, 표지판·텍스트 없음, 디스플레이 꺼짐)
   - 본문: `/assets/guides/exit-ban-gate.jpg` (해질녘 빈 탑승구 좌석 +
     무표식 기체 — 통지 예외 테마, 텍스트·로고 없음)
+
+## 29. Your Tenant in Korea Stopped Paying Rent — and You're Abroad
+`/guides/real-estate-lease-disputes/tenant-stopped-paying-rent-from-abroad` · tags: from-abroad · Reviewed 2026-10
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-10)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 건물 임대차 차임연체액이 2기의 차임액에 달하면 임대인 해지 가능 (누적 기준) | 민법 제640조 | wikipedia(조문)·lbox.kr·lawyerglory 해설 |
+| 2기 차임액 연체 사실 있는 임차인 — 계약갱신요구 거절 사유 | 주택임대차보호법 제6조의3 제1항 제1호 | casenote.kr, easylaw |
+| 2기 연체 임차인에게는 묵시적 갱신(§6①) 미적용 | 주택임대차보호법 제6조 제3항 | casenote.kr (조문 원문 확인) |
+| 갱신거절 통지 기간 6~2개월 전 | 주택임대차보호법 제6조 제1항 | casenote.kr (재사용) |
+| 해지 의사표시는 도달 시 효력 | 민법 제111조 | guide 20 기검증 |
+| 점유이전금지가처분 — 다툼 대상 가처분 | 민사집행법 제300조 | lawnb·실무 해설 다수 |
+| 부동산 인도집행 — 집행관이 점유를 빼앗아 채권자에게 인도, 채권자 또는 대리인 출석 시에만, 목적물 외 동산은 채무자·동거친족 등에 인도, 부재 시 채무자 비용 보관, 미수취 시 법원 허가 매각·공탁 | 민사집행법 제258조 제1~6항 | casenote.kr (조문 원문 확인) |
+| 차임채권 소멸시효 3년 | 민법 제163조 제1호 | guide 22 기검증 |
+| 지급명령 이의 2주, 소액사건 3,000만원 | 민소법 제470조, 소액사건심판법 제2조 | 기검증 재사용 |
+| 해외 위임장 — 현지 공증+아포스티유 또는 재외공관 영사확인(예약·방문 필수) | 외교부 재외공관 안내(뉴욕총영사관) | overseas.mofa.go.kr |
+| 전자소송 대리인 수행·변론 대리 | 민사소송 등에서의 전자문서 이용 등에 관한 법률 | PR #52 기검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **보증금의 담보 기능·종료 시 공제** — 조문 인용 없이 일반 원리로 서술
+  ("secures ... deducted when the lease ends"), 판례 미인용.
+- **해지 후 점유 기간 보상** — "compensation for occupation after
+  termination" 일반 서술 (부당이득·손해배상 법리 미전개).
+- **명도소송 소요 기간** — "months rather than weeks" 정성 서술만.
+- **자력구제 금지 Callout** — "can create separate legal problems" 수위
+  (죄명 단정 없음).
+- **비거주자 임대소득 과세 FAQ** — "carries Korean tax obligations ... a tax
+  professional's territory" 관점 수준 (세율·원천징수 미기재).
+- **소재불명 임차인 송달 FAQ** — "the court has procedures for serving an
+  absent defendant" 한 줄 (공시송달 요건은 #33에서 검증 예정).
+- **변호사 가치 분기** — 소액(수백만·보증금 충당)은 공제 후 중단 권고,
+  점유 중·보증금 초과 시 선임 합리적 — 스킬 5-7 규칙 반영.
+- from-abroad 표: 집행 입회는 대리인 가능(§258②) 근거로 "No" 서술; 매각은
+  "some buyers and agents prefer to meet"로 완충.
+- 판례 인용 0건, SOFA·비자 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/rent-abroad-hero.jpg` (해질녘 빈 한국 아파트
+    거실, 조리대 위 열쇠와 백지 — 공실·임대인 부재 모티프, 텍스트 없음)
+  - 본문: `/assets/guides/rent-abroad-desk.jpg` (해외 서재 책상의 열쇠와
+    백지 서류, 창밖 야경 — 해외 임대인의 손익 계산 테마, 텍스트·로고 없음)
+
+---
+
+## 발행 예정 가이드 — 번호 통일 (2026-10-02 확정)
+원 계획(claude-code-guide-production.md)은 #28까지. 해외 거주 축 지침
+(claude-code-from-abroad-master.md §3)의 7편을 #29~#35로, 원 계획의 보류
+2편을 #36~#37로 이어 붙인다. 발행 시 각 편은 위 양식대로 `## N. 제목`
+섹션을 추가한다.
+
+| # | 분야키 | 제목 | 비고 |
+|---|---|---|---|
+| 28 | labor-employment | When Your Visa Is Tied to Your Employer | ⚠강 — 착수 전 수위 협의 (#27 방식: AskUserQuestion으로 시행령 수치·부재 주장·예외 제도·실무 절차 범위 결정 후 "수위 협의 결과" 기록) |
+| 29 | real-estate-lease-disputes | Your Tenant in Korea Stopped Paying Rent — and You're Abroad | `tags: ['from-abroad']` |
+| 30 | criminal-defense | Filing a Criminal Complaint in Korea From Abroad | `tags: ['from-abroad']` · 고소인 진술은 대리·서면 갈음 가능하되 본인 진술 요구 가능(PR #52 검증) |
+| 31 | real-estate-lease-disputes | You Left Korea Without Your Deposit | `tags: ['from-abroad']` · #1 보증금 가이드와 검색어 분리(해외 거주 관점) |
+| 32 | criminal-defense | You Left Korea With a Case Still Open — Can You Come Back? | `tags: ['from-abroad']` ⚠ 수배 조회 절차 단정 금지; 출국금지는 수임 변호인 출입국관리사무소 방문 확인 가능(검증됨) |
+| 33 | civil-litigation | Served With a Korean Lawsuit While Abroad — the Default Judgment Risk | `tags: ['from-abroad']` ⚠ 공시송달 요건(민소법 §194 이하) 검증 |
+| 34 | labor-employment | Unpaid Wages After Leaving Korea | `tags: ['from-abroad']` |
+| 35 | divorce-family-law | Paternity and Child Support in Korea When You Live Abroad | `tags: ['from-abroad']` ⚠ 가사소송법 §7 본인출석주의·§29 수검명령 — DNA 채취는 국내 지정 감정인(해외 채취 불가 서술) |
+| 36 | criminal-defense | Criminal Records: What Stays | 보류 — ⚠ 체류 영향 전면 주제, 사용자와 수위 협의 후 착수 |
+| 37 | divorce-family-law | Divorce and Marriage-Based Residency | 보류 — ⚠ F-6 확정 서술 위험, 사용자와 수위 협의 후 착수 |
