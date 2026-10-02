@@ -36,6 +36,11 @@ export default function GettingYourHousingDepositBack() {
       <GuideSummary>
         <ul className="list-disc pl-5">
           <li>
+            The strongest protection comes <strong>before the keys change hands</strong>: get the
+            deposit back before you hand over the unit, and if you must leave first, register your
+            claim on the property. Everything after that point runs through court.
+          </li>
+          <li>
             Your deposit becomes due when the lease <strong>ends properly</strong> — and under
             Korean law the lease may have renewed itself if nobody gave notice in time.
           </li>
@@ -67,8 +72,9 @@ export default function GettingYourHousingDepositBack() {
         You handed over a large deposit when you signed your lease — often tens of millions of won —
         and now the lease is ending and the landlord has gone quiet, or says the money will come
         &ldquo;when the next tenant moves in.&rdquo; Getting your housing deposit back in Korea is
-        one of the most common legal problems foreign residents face, and it is very winnable: the
-        law is firmly on the tenant&rsquo;s side.
+        one of the most common legal problems foreign residents face. The law is firmly on the
+        tenant&rsquo;s side — but every tool it gives you after move-out runs through court, which
+        is why the order in which you act, and the size of the deposit, decide how this goes.
       </p>
       <p className={P}>
         The key statute is the <strong>Housing Lease Protection Act</strong>{' '}
@@ -86,11 +92,13 @@ export default function GettingYourHousingDepositBack() {
         items={[
           { href: '#lease-ended', label: '1. First: has your lease actually ended?' },
           { href: '#dont-move-out', label: "2. Don't move out yet — why staying protects you" },
-          { href: '#lease-registration-order', label: '3. The lease registration order (임차권등기명령)' },
-          { href: '#certified-mail', label: '4. The demand letter: certified content mail (내용증명)' },
-          { href: '#payment-order-or-lawsuit', label: '5. Payment order or lawsuit' },
-          { href: '#common-mistakes', label: '6. Common mistakes that cost tenants money' },
-          { href: '#what-to-prepare', label: '7. What to prepare' },
+          { href: '#before-the-keys', label: '3. Before you hand over the keys — what actually protects a deposit' },
+          { href: '#lease-registration-order', label: '4. The lease registration order (임차권등기명령)' },
+          { href: '#certified-mail', label: '5. The demand letter: certified content mail (내용증명)' },
+          { href: '#payment-order-or-lawsuit', label: '6. Payment order or lawsuit' },
+          { href: '#is-a-lawyer-worth-it', label: '7. Is a lawyer worth it? It depends on the amount' },
+          { href: '#common-mistakes', label: '8. Common mistakes that cost tenants money' },
+          { href: '#what-to-prepare', label: '9. What to prepare' },
         ]}
       />
 
@@ -179,8 +187,45 @@ export default function GettingYourHousingDepositBack() {
         you hold. Secure a lease registration order first if you must move.
       </Callout>
 
+      <h2 id="before-the-keys" className={H2}>
+        3. Before you hand over the keys — what actually protects a deposit
+      </h2>
+      <p className={P}>
+        An honest word before the procedures: everything from section 4 onward is a way of
+        recovering a deposit <em>after</em> the leverage is gone, and every one of those routes
+        runs through a court. Prevention is not a slogan here — it is the only stage at which you,
+        rather than a judge, control the outcome. Five habits do most of the work:
+      </p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed mb-4">
+        <li>
+          <strong>Deposit first, keys second.</strong> Hand over the unit when the money is in your
+          account, not against a promise. Once you have moved out and returned the keys, the
+          landlord holds the unit and you hold a claim.
+        </li>
+        <li>
+          <strong>Give termination notice on time, in writing.</strong> The 2-month window in
+          section 1 decides whether the deposit is even due; a provable notice decides whether you
+          can show it.
+        </li>
+        <li>
+          <strong>If you must leave first — especially leaving Korea — complete the lease
+          registration order before you go.</strong> It keeps your priority on the property after
+          you deregister (section 4). Filing from abroad is harder than filing before departure.
+        </li>
+        <li>
+          <strong>Document the unit&rsquo;s condition</strong> — dated photos at move-in and
+          move-out, and any repair agreements in writing. Most deductions are argued over
+          condition, and the tenant who kept records usually wins that argument without a court.
+        </li>
+        <li>
+          <strong>Guarantee insurance, where it applies.</strong> For jeonse-scale deposits, a
+          guarantee policy taken out at the start means the insurer, not a lawsuit, is your first
+          recourse — the FAQ below covers what it changes.
+        </li>
+      </ul>
+
       <h2 id="lease-registration-order" className={H2}>
-        3. The lease registration order <span lang="ko">(임차권등기명령)</span>
+        4. The lease registration order <span lang="ko">(임차권등기명령)</span>
       </h2>
       <p className={P}>
         Real life often won&rsquo;t let you stay — a new job, a housing allowance deadline, a flight
@@ -217,13 +262,14 @@ export default function GettingYourHousingDepositBack() {
       </p>
 
       <h2 id="certified-mail" className={H2}>
-        4. The demand letter: certified content mail <span lang="ko">(내용증명)</span>
+        5. The demand letter: certified content mail <span lang="ko">(내용증명)</span>
       </h2>
       <p className={P}>
         <Term ko="내용증명">Certified content mail</Term> is a postal service where the post office
         keeps an official copy of your letter, proving exactly what you wrote and when it was sent.
-        It is not a court filing and it does not legally force anyone to pay — but it is the
-        standard opening move in a Korean deposit dispute.
+        It is a formal demand that creates a record and starts statutory interest; it sometimes
+        prompts payment but cannot compel it. It is not a court filing, and nothing happens to a
+        landlord who ignores it until you take the next step.
       </p>
       <figure className="my-6">
         <Image
@@ -241,9 +287,10 @@ export default function GettingYourHousingDepositBack() {
       <p className={P}>
         A good demand letter states the lease dates, the notice you gave, the amount owed, a payment
         deadline, and your bank account — and says plainly what comes next: a lease registration
-        order, statutory interest, and a lawsuit whose costs the landlord may bear. Many disputes
-        end here, because it shows the landlord you know the sequence and are already walking it.
-        The letter&rsquo;s legal effects, drafting, and follow-up rules are covered in full in{' '}
+        order, statutory interest, and a lawsuit whose costs the landlord may bear. Some disputes
+        end here, because it shows the landlord you know the sequence and are already walking it —
+        but a landlord who simply has no money, or intends to stall, is not moved by a letter. The
+        letter&rsquo;s legal effects, drafting, and follow-up rules are covered in full in{' '}
         <Link href="/guides/civil-litigation/certified-content-mail" className={LINK}>
           Certified Content Mail (내용증명)
         </Link>
@@ -251,7 +298,7 @@ export default function GettingYourHousingDepositBack() {
       </p>
 
       <h2 id="payment-order-or-lawsuit" className={H2}>
-        5. Payment order or lawsuit
+        6. Payment order or lawsuit
       </h2>
       <p className={P}>If the deadline passes without payment, the path runs through court:</p>
       <GuideFlow
@@ -262,7 +309,7 @@ export default function GettingYourHousingDepositBack() {
           },
           {
             title: 'Send certified content mail',
-            body: 'A dated, provable demand with a deadline. Often enough by itself.',
+            body: 'A dated, provable demand with a deadline — it creates a record and starts statutory interest. It sometimes prompts payment but cannot compel it.',
           },
           {
             title: 'Secure a lease registration order — only if you need to move',
@@ -270,7 +317,7 @@ export default function GettingYourHousingDepositBack() {
           },
           {
             title: 'File a payment order (지급명령) or a deposit-return lawsuit',
-            body: 'Payment order: fast and cheap if the landlord stays silent. Lawsuit: slower but ends in a judgment even if the landlord fights.',
+            body: "Payment order: fast and inexpensive if the landlord doesn't contest; if they file an objection, it becomes an ordinary lawsuit — we recommend it only when you're prepared for that. Lawsuit: slower, but ends in a judgment even if the landlord fights.",
           },
           {
             title: 'Enforce',
@@ -282,9 +329,11 @@ export default function GettingYourHousingDepositBack() {
         A <Term ko="지급명령">payment order</Term> is a summary procedure under the Civil Procedure
         Act (arts. 462–474): the court issues an order on your documents alone, without a hearing.
         If the landlord does not object within <strong>2 weeks of service</strong>, the order
-        becomes final with the same force as a judgment. If the landlord objects, the case simply
-        converts to an ordinary lawsuit — you lose a few weeks, not your claim. The procedure,
-        its costs, and when to skip it are covered in full in{' '}
+        becomes final with the same force as a judgment. It is fast and inexpensive if the landlord
+        doesn&rsquo;t contest; if they file an objection, it becomes an ordinary lawsuit — so we
+        recommend it only when you are prepared for that lawsuit, because an objection costs you
+        weeks, not your claim, but it does put you in court. The procedure, its costs, and when to
+        skip it are covered in full in{' '}
         <Link href="/guides/civil-litigation/payment-orders" className={LINK}>
           Payment Orders (지급명령)
         </Link>
@@ -301,8 +350,47 @@ export default function GettingYourHousingDepositBack() {
         art. 2), though most housing deposits exceed it.
       </p>
 
+      <h2 id="is-a-lawyer-worth-it" className={H2}>
+        7. Is a lawyer worth it? It depends on the amount
+      </h2>
+      <p className={P}>
+        <strong>Small deposits — a few million won.</strong> Be clear-eyed: attorney fees for a
+        contested case can exceed what you recover, and a demand letter cannot force payment. The
+        realistic options, each with its limit:
+      </p>
+      <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed mb-4">
+        <li>
+          <strong>The small-claims track</strong> for claims of ₩30 million or less — a simplified
+          court procedure you can run yourself, but one that may require you to attend in person,
+          which is the hard part if you have already left Korea.
+        </li>
+        <li>
+          <strong>The Housing Lease Dispute Mediation Committee</strong>{' '}
+          <span lang="ko">(주택임대차분쟁조정위원회)</span> — a low-cost mediation (a filing fee
+          of ₩10,000 for claims under ₩100 million) with the limit that mediation needs both
+          sides: a landlord who ignores it or refuses the proposal ends it without a result.
+        </li>
+        <li>
+          <strong>Korea Legal Aid Corporation</strong>{' '}
+          <span lang="ko">(대한법률구조공단)</span> — subsidised or free representation for
+          tenants whose income falls within its thresholds, which include foreign residents of
+          Korea; eligibility is checked case by case, and court costs may still fall on you.
+        </li>
+      </ul>
+      <p className={P}>
+        <strong>Large deposits — jeonse-scale, tens of millions of won and up.</strong> Here the
+        economics usually turn: a registered claim, interest at 12% from service of the complaint,
+        and enforcement against the property make representation a reasonable cost against the sum
+        at stake. Whether it is reasonable in <em>your</em> case is a judgment about the amount, the
+        landlord&rsquo;s assets, and the register.
+      </p>
+      <p className={P}>
+        We&rsquo;ll tell you at the consultation if it isn&rsquo;t worth it — that&rsquo;s the
+        point of paying for one.
+      </p>
+
       <h2 id="common-mistakes" className={H2}>
-        6. Common mistakes that cost tenants money
+        8. Common mistakes that cost tenants money
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed mb-4">
         <li>
@@ -329,7 +417,7 @@ export default function GettingYourHousingDepositBack() {
       </ul>
 
       <h2 id="what-to-prepare" className={H2}>
-        7. What to prepare
+        9. What to prepare
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-gray-700 leading-relaxed mb-4">
         <li>The lease contract — ideally with the fixed-date stamp page</li>

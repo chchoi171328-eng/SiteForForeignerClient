@@ -11,6 +11,8 @@ export type LandingSection = {
   bullets?: string[]
   /** Short closing line rendered after the bullets (e.g. a scope disclaimer). */
   note?: string
+  /** One-line pointer with a link, rendered last in the section (from-abroad brief §2). */
+  sectionLink?: { text: string; linkText: string; href: string }
   /** Optional in-body photo (e.g. the courtroom-window view on the Anseong page). */
   image?: { src: string; alt: string; caption?: string }
 }
@@ -171,6 +173,11 @@ export const LANDING_PAGES: LandingPage[] = [
           "You don't need to visit our office to get an honest assessment. Consultations are available by video (Google Meet) or phone at the same fee, paid in advance by bank transfer — and if we finish within 30 minutes, ₩50,000 comes back to you.",
           'Korean civil litigation now runs largely through the electronic filing system, so for many civil, lease, debt, and inheritance matters — including flat-fee inheritance renunciation — distance matters less than it used to. We are based in Pyeongtaek, and we say so plainly; what you get from here is the attorney himself, in English, wherever you are in Korea.',
         ],
+        sectionLink: {
+          text: 'Outside Korea entirely?',
+          linkText: 'See what can be handled from abroad.',
+          href: '/korea-legal-matters-from-abroad',
+        },
       },
       {
         heading: 'Types of Cases We Handle',

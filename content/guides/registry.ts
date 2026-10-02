@@ -74,6 +74,11 @@ export type Guide = {
   thumbnail: string
   /** Slugs of related guides (same or other fields). */
   related?: string[]
+  /**
+   * Cross-field audience tags (from-abroad brief §1-6 / §3). A tagged guide is
+   * listed automatically by TaggedGuides on the matching situation page.
+   */
+  tags?: string[]
   /** The guide body, composed from components/guide primitives. */
   body: ComponentType
 }
