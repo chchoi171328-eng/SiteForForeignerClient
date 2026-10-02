@@ -53,8 +53,11 @@ const BRANCHES: Branch[] = [
     // Complaint through a representative: Criminal Procedure Act art. 236 (verified).
     remotely:
       'Filing the complaint through us as your representative, following the investigation, settlement talks, victim statements by document.',
+    // Complainant statements (고소보충조서) are the norm; for a client abroad they are
+    // usually given through the complaint representative or in writing. Worded to
+    // the practice rather than the brief's "Rarely" (user-approved 2026-10).
     inPerson:
-      'Rarely — some investigations ask for an in-person statement; we tell you if yours does.',
+      'Not usually. A complainant statement is almost always taken — but for a client abroad it is typically given through us as your complaint representative, or in writing. Some investigators still want your own account, in person or by video, especially on facts only you know; we tell you early if yours will.',
     href: '/practice-areas/criminal-defense',
     linkLabel: 'Criminal Defense',
   },
