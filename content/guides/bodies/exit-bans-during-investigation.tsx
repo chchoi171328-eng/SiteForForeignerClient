@@ -99,7 +99,7 @@ export default function ExitBansDuringInvestigation() {
       </h2>
       <p className={P}>
         A ban is an administrative decision of the <strong>Minister of Justice</strong>, made on
-        request of an agency — a prosecutor&rsquo;s office, the tax authority — or on the
+        request of an agency — an investigating agency, a prosecution office, the tax authority — or on the
         Ministry&rsquo;s own assessment (arts. 4, 29). It is not automatic. No case type
         carries a built-in travel ban; someone must request one, and the Ministry must order
         it, on a ground the statute names.
