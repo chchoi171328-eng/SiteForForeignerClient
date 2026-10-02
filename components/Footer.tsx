@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
                                         ? [link, { name: 'Meet Attorney Chulho Choi', href: '/attorneys/chulho-choi' }]
                                         : [link]
                                 ),
+                                { name: 'From Abroad', href: '/korea-legal-matters-from-abroad' },
                                 { name: 'Contact', href: '/contact' },
                             ].map(link => (
                                 <li key={link.name}>

@@ -194,6 +194,35 @@ const SituationNav: React.FC = () => {
         </div>
       ))}
 
+      {/* From-abroad row (from-abroad brief §2) — sits directly above the catch-all. */}
+      <div className="mb-6">
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1 px-1">
+          From Abroad
+        </p>
+        <ul className="divide-y divide-gray-200 border-y border-gray-200">
+          <li>
+            <Link
+              href="/korea-legal-matters-from-abroad"
+              onClick={() => trackEvent('situation_click', { label: 'from-abroad' })}
+              className="group flex items-center justify-between gap-4 min-h-[44px] py-3 px-1 hover:bg-slate-50 transition-colors"
+            >
+              <span className="text-gray-800 leading-snug">
+                &ldquo;I&apos;ve left Korea, but my problem is still there.&rdquo;
+              </span>
+              <span className="flex items-center gap-3 shrink-0">
+                <span className="hidden md:inline text-xs text-gray-400 group-hover:text-gold-600 transition-colors whitespace-nowrap">
+                  From Abroad
+                </span>
+                <Icons.ArrowRight
+                  className="w-4 h-4 text-gold-500 group-hover:translate-x-1 transition-transform"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       {/* Catch-all — the one box that is clickable as a whole. */}
       <Link
         href="/contact"

@@ -106,6 +106,17 @@ export default function LandingTemplate({ page }: { page: LandingPage }) {
             {section.note && (
               <p className="text-gray-700 leading-relaxed mt-4">{section.note}</p>
             )}
+            {section.sectionLink && (
+              <p className="text-gray-700 leading-relaxed mt-4">
+                {section.sectionLink.text}{' '}
+                <Link
+                  href={section.sectionLink.href}
+                  className="text-gold-600 hover:text-gold-700 font-bold underline underline-offset-2"
+                >
+                  {section.sectionLink.linkText}
+                </Link>
+              </p>
+            )}
             {i === 0 && page.hookNote && (
               <p className="text-sm text-gray-500 leading-relaxed mt-2">
                 {page.hookNote.text}{' '}

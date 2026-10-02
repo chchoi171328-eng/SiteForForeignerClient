@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     ...guidePages,
     ...landingPages,
+    { url: `${baseUrl}/korea-legal-matters-from-abroad`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/location`, lastModified: new Date(), priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.8 },
     ...legalPages,
