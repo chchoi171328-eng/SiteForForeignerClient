@@ -1089,3 +1089,54 @@
     인장·열쇠 — 집행권원 모티프, 판독 가능한 글자·숫자 없음)
   - 본문: `/assets/guides/enforcement-auction.jpg` (목재 주택 모형 +
     무지 황동 태그 열쇠 — 부동산 경매 테마, 텍스트 없음)
+
+## 27. Exit Bans During Investigation
+`/guides/criminal-defense/exit-bans-during-investigation` · Reviewed 2026-09
+
+### 수위 협의 결과 (사용자 확정, 2026-09-08)
+1. 시행령 임계값 수치(벌금·추징금·세금 기준액) — **미기재**, "threshold set by
+   presidential decree"로만 서술
+2. 사적 채무 서술 — **목록 기반**: "법정 사유 목록에 사적 채무 자체는 없다 +
+   세금 체납·형사 고소 전환 별도" 프레임 (단정형 "creditors cannot..." 금지)
+3. 긴급출국금지(§4-6) — **짧게 포함** (본문 1문단 + FAQ 1)
+4. 출국정지 여부 확인 방법 — **일반 수준** ("through the immigration
+   authorities" + 통지 예외로 확인이 어려울 수 있다는 정직한 안내, 구체
+   채널·절차 미기재)
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-09)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 외국인 출국정지 — 국민 출국금지(§4①②) 사유 준용, §4③~⑤·§4-2~§4-5 준용 | 출입국관리법 제29조 | law.go.kr, lbox.kr |
+| 출국금지 사유 — 형사재판 계속·징역/금고 미집행·대통령령 기준 이상 벌금/추징금 미납·국세/관세/지방세 체납·기타(양육비 채무자, 명단공개 체불사업주 등) | 출입국관리법 제4조 제1항 | law.go.kr, wikisource |
+| 기간 — 일반 6개월 이내, 수사 목적 1개월 이내(예외: 사유별 3개월 이내 또는 영장 유효기간) | 출입국관리법 제4조 제1·2항 | wikisource (조문 확인) |
+| 연장 — 기간 만료 전 요청기관 연장 요청 | 출입국관리법 제4조의2 | wikisource |
+| 해제 — 사유 소멸 시 요청기관 해제 요청 의무 + 법무부장관 즉시 해제 의무 | 출입국관리법 제4조의3 | law.go.kr (조문 원문 확인) |
+| 통지 원칙 + 미통지 예외(공익 위해·수사 지장·소재불명), 수사 사유 3개월 초과 시 통지 의무 | 출입국관리법 제4조의4 | wikisource |
+| 이의신청 — 통지받은 날/안 날부터 10일 이내, 15일 내 결정(1회 연장) | 출입국관리법 제4조의5 | wikisource |
+| 긴급출국금지 — 사형·무기·장기 3년 이상 죄 피의자, 현장 조치 후 법무부 승인(시한 내 미승인 시 해제) | 출입국관리법 제4조의6 | wikisource |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **긴급출국금지 시한** — 조문상 6시간 승인 요청/12시간 미승인 해제 구조이나
+  본문에는 "rapid ministerial approval within tight statutory hours"로 완충
+  (검색 요약 기반 수치라 시간 명시 회피).
+- **수사 중 출국 가능 FAQ** — "restricted only through the ban mechanism"
+  구조 서술 + 출국 시 불이익(수사 진행·재입국 시 부상) 관점 수준 경고.
+- **SOFA FAQ** — 스킬 5-6① 허용 수위 그대로 ("can differ depending on your
+  status, including for SOFA personnel — clarify first").
+- **비자 영향 FAQ** — 관점 수준 ("can affect your status... factor the whole
+  picture").
+- **DUI 자동 출국정지 FAQ** — "No case type triggers one automatically"
+  (§4 구조상 요청+명령 필요 — 조문 구조 기반).
+- **행정쟁송** — "administrative challenges exist" 한 줄만 (행정심판·행정
+  소송 절차 미전개).
+- 판례 인용 0건, 환율 환산 0건, 시의성 표현 0건. SOFA·비자는 관점 수준만.
+
+### 보류(PENDING REVIEW) 항목
+- 없음 (수위는 사전 협의로 확정)
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/exit-ban-hero.jpg` (빈 공항 복도의 남색 캐리어
+    한 개 — 출국 저지 모티프, 표지판·텍스트 없음, 디스플레이 꺼짐)
+  - 본문: `/assets/guides/exit-ban-gate.jpg` (해질녘 빈 탑승구 좌석 +
+    무표식 기체 — 통지 예외 테마, 텍스트·로고 없음)

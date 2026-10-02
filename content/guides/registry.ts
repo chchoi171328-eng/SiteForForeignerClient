@@ -35,6 +35,7 @@ import WhatLitigationCosts from './bodies/what-litigation-costs'
 import SomeoneOwesYouMoneyInKorea from './bodies/someone-owes-you-money-in-korea'
 import ProvisionalAttachment from './bodies/provisional-attachment'
 import EnforcingAJudgment from './bodies/enforcing-a-judgment'
+import ExitBansDuringInvestigation from './bodies/exit-bans-during-investigation'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -135,7 +136,7 @@ export const GUIDES: Guide[] = [
       'How hapui (합의), the Korean criminal settlement, actually works: when it ends a case, when it only helps, the deadline, and the mistakes to avoid.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/hapui-hero.jpg',
-    related: ['received-a-police-summons', 'dui-in-korea'],
+    related: ['received-a-police-summons', 'dui-in-korea', 'exit-bans-during-investigation'],
     body: HapuiSettlementInCriminalCases,
   },
   {
@@ -321,6 +322,19 @@ export const GUIDES: Guide[] = [
     body: EnforcingAJudgment,
   },
   {
+    slug: 'exit-bans-during-investigation',
+    field: 'criminal-defense',
+    listingTitle: 'Exit Bans During Investigation',
+    metaTitle:
+      'Exit Bans in Korea (출국정지) — Who Can Be Stopped from Leaving, for How Long, and What You Can Do',
+    metaDescription:
+      'How Korean exit bans and departure suspensions work for foreigners: the statutory grounds, time limits, why notice can be withheld, the 10-day objection, and what private debt cannot do.',
+    reviewed: '2026-09',
+    thumbnail: '/assets/guides/exit-ban-hero.jpg',
+    related: ['received-a-police-summons', 'police-interview-rights-and-interpreters', 'hapui-settlement-in-criminal-cases'],
+    body: ExitBansDuringInvestigation,
+  },
+  {
     slug: 'lease-registration-order',
     field: 'real-estate-lease-disputes',
     listingTitle: 'Lease Registration Order (임차권등기명령)',
@@ -382,7 +396,7 @@ export const GUIDES: Guide[] = [
       'Inside a Korean police interview: silence and counsel rights, the record you sign, interpreter rules for foreigners, video recording, and the time limits.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/police-interview-hero.jpg',
-    related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
+    related: ['received-a-police-summons', 'hapui-settlement-in-criminal-cases', 'exit-bans-during-investigation'],
     body: PoliceInterviewRightsAndInterpreters,
   },
   {
