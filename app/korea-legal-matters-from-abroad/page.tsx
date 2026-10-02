@@ -124,9 +124,10 @@ const HOW_WE_WORK = [
   'A power of attorney and the documents your country requires — we send a checklist for where you live.',
   'We act in Korea; you get updates in English by email at each step.',
   // Fee line composed from the CONSULTATION constants so it cannot drift from the
-  // site standard. The site's published remote-payment method is bank transfer;
-  // the brief's "or card" is not added pending confirmation (reported).
-  `Fees: the same consultation fee as everyone else (${CONSULTATION.DURATION_MIN} minutes · ${CONSULTATION.FEE_KRW_LABEL}, VAT included — ${CONSULTATION.SHORT_FEE_KRW_LABEL} if it ends within ${CONSULTATION.SHORT_DURATION_MIN} minutes), paid in advance by bank transfer; retainers quoted in writing after the consultation.`,
+  // site standard. Payment stays "bank transfer" (site-wide wording); card payment
+  // is possible only case by case, so it is handled at booking rather than promised
+  // here — the "tell us" clause covers clients for whom a transfer is hard.
+  `Fees: the same consultation fee as everyone else (${CONSULTATION.DURATION_MIN} minutes · ${CONSULTATION.FEE_KRW_LABEL}, VAT included — ${CONSULTATION.SHORT_FEE_KRW_LABEL} if it ends within ${CONSULTATION.SHORT_DURATION_MIN} minutes), paid in advance by bank transfer — tell us if that is difficult from where you are; retainers quoted in writing after the consultation.`,
 ]
 
 const H2 = 'text-2xl font-serif font-bold text-navy-900 mb-4'
