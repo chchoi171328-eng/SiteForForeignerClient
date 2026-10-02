@@ -1257,6 +1257,50 @@ Agency (중대범죄수사청)"로 병기.
 
 
 
+## 31. You Left Korea Without Your Deposit
+`/guides/real-estate-lease-disputes/left-korea-without-your-deposit` · tags: from-abroad · Reviewed 2026-10
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-10)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 보증금반환채권 소멸시효 10년 | 민법 제162조 | guide 1 기검증 |
+| 대항력(인도+주민등록 다음 날) / 우선변제권(확정일자) | 주택임대차보호법 제3조 제1항·제3조의2 | casenote.kr (제3조 원문), guide 1 |
+| 양수인의 임대인 지위 승계 | 주택임대차보호법 제3조 제4항 | casenote.kr (조문 원문 확인) |
+| 임차권등기명령 신청 요건 — 임대차 종료 후 보증금 미반환(거주 요건 없음) | 주택임대차보호법 제3조의3 제1항 | casenote.kr (조문 원문 확인) |
+| 등기 완료 시 대항력·우선변제권 취득, 기취득 시 유지·전출해도 유지 | 주택임대차보호법 제3조의3 제5항 | casenote.kr (조문 원문 확인) |
+| 임차권등기 후 임차한 임차인은 최우선변제 배제 | 주택임대차보호법 제3조의3 제6항 | casenote.kr (조문 원문 확인) |
+| 외국인등록·체류지 신고가 주민등록 갈음 | 출입국관리법 제88조의3 | guide 1 기검증 |
+| 지연이자 5% / 소장 송달 다음 날부터 12% | 민법 제379조 / 소송촉진법 제3조 | guide 1 기검증 |
+| 지급명령 이의 2주, 소액사건 3,000만원 | 민소법 제470조, 소액사건심판법 제2조 | 기검증 |
+| 분쟁조정위 수수료 1만원(1억 미만), 상대방 불응 시 불성립 | 주택임대차보호법 제21조 | guide 1 개정 시 검증 |
+| 소액사건 비변호사 대리 — 배우자·직계혈족·형제자매 | 소액사건심판법 제8조 | 통용 조문 (FAQ에 "close family" 일반 서술) |
+| 해외 위임장 — 현지 공증+아포스티유 / 재외공관 | 외교부 재외공관 안내 | guide 29 기검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **전출 후 임차권등기의 효력 시점** — "acquires them afresh — from the
+  registration, not retroactively" (§3-3⑤ 구조에서 도출, 판례 미인용).
+- **매각 시 미등기 전출 임차인** — "generally left with a claim against the
+  old owner alone / as a rule" 완충 (§3④ 승계는 대항력 보유 임차인 전제).
+- **외국인 출국 시 등록 소멸** — "your registration at that address ended"
+  일반 서술 (출입국관리법 말소 조문 미인용).
+- **조정 원격 참석** — "sessions may also be arranged remotely" 완충
+  (실무 확인 요망).
+- **해외 송금 FAQ** — 외국환 신고 세부 미전개, "bank-side paperwork" 수준.
+- **변호사 가치 분기** — 월세 소액 vs 전세 규모, 스킬 5-7 반영.
+- **협박성 메시지 경고 Callout** — "can create separate legal problems" 수위.
+- 판례 인용 0건, SOFA·비자 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/deposit-abroad-hero.jpg` (현관문 자물쇠에 걸린
+    열쇠와 옆의 남색 캐리어 — 출국·열쇠 반납 모티프, 호수·텍스트 없음)
+  - 본문: `/assets/guides/deposit-abroad-desk.jpg` (빈 아파트 사진 인화물과
+    백지 폴더·펜 — 퇴거 당시 상태 기록 테마, 텍스트 없음)
+
+
 ## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
 검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
 검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·

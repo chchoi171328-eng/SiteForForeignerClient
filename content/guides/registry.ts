@@ -38,6 +38,7 @@ import EnforcingAJudgment from './bodies/enforcing-a-judgment'
 import ExitBansDuringInvestigation from './bodies/exit-bans-during-investigation'
 import TenantStoppedPayingRentFromAbroad from './bodies/tenant-stopped-paying-rent-from-abroad'
 import FilingACriminalComplaintFromAbroad from './bodies/filing-a-criminal-complaint-from-abroad'
+import LeftKoreaWithoutYourDeposit from './bodies/left-korea-without-your-deposit'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -104,7 +105,7 @@ export const GUIDES: Guide[] = [
       'How to get your housing deposit back in Korea: the notice deadlines, the lease registration order (임차권등기명령), and when a lawsuit is worth filing.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/deposit-back-hero.jpg',
-    related: ['jeonse-explained', 'lease-registration-order', 'move-out-checklist-and-deadlines'],
+    related: ['jeonse-explained', 'lease-registration-order', 'move-out-checklist-and-deadlines', 'left-korea-without-your-deposit'],
     body: GettingYourHousingDepositBack,
   },
   {
@@ -351,9 +352,23 @@ export const GUIDES: Guide[] = [
       "What a landlord abroad can do about a non-paying tenant in Korea: the two-months' rent termination rule, the eviction lawsuit and bailiff, collecting arrears, and what truly needs you there.",
     reviewed: '2026-10',
     thumbnail: '/assets/guides/rent-abroad-hero.jpg',
-    related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'jeonse-explained'],
+    related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'left-korea-without-your-deposit'],
     tags: ['from-abroad'],
     body: TenantStoppedPayingRentFromAbroad,
+  },
+  {
+    slug: 'left-korea-without-your-deposit',
+    field: 'real-estate-lease-disputes',
+    listingTitle: 'You Left Korea Without Your Deposit',
+    metaTitle:
+      'You Left Korea Without Your Deposit — What Survives Your Departure, and How to Collect From Abroad',
+    metaDescription:
+      'Left Korea with your housing deposit unpaid? The claim survives for 10 years. What leverage you lost, how a lease registration order still helps, and how to collect from abroad.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/deposit-abroad-hero.jpg',
+    related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'tenant-stopped-paying-rent-from-abroad'],
+    tags: ['from-abroad'],
+    body: LeftKoreaWithoutYourDeposit,
   },
   {
     slug: 'filing-a-criminal-complaint-from-abroad',
