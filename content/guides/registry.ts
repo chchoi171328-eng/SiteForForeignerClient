@@ -39,6 +39,7 @@ import ExitBansDuringInvestigation from './bodies/exit-bans-during-investigation
 import TenantStoppedPayingRentFromAbroad from './bodies/tenant-stopped-paying-rent-from-abroad'
 import FilingACriminalComplaintFromAbroad from './bodies/filing-a-criminal-complaint-from-abroad'
 import LeftKoreaWithoutYourDeposit from './bodies/left-korea-without-your-deposit'
+import LeftKoreaWithACaseStillOpen from './bodies/left-korea-with-a-case-still-open'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -339,7 +340,7 @@ export const GUIDES: Guide[] = [
       'How Korean exit bans and departure suspensions work for foreigners: the statutory grounds, time limits, why notice can be withheld, the 10-day objection, and what private debt cannot do.',
     reviewed: '2026-09',
     thumbnail: '/assets/guides/exit-ban-hero.jpg',
-    related: ['received-a-police-summons', 'police-interview-rights-and-interpreters', 'hapui-settlement-in-criminal-cases'],
+    related: ['received-a-police-summons', 'police-interview-rights-and-interpreters', 'hapui-settlement-in-criminal-cases', 'left-korea-with-a-case-still-open'],
     body: ExitBansDuringInvestigation,
   },
   {
@@ -369,6 +370,20 @@ export const GUIDES: Guide[] = [
     related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'tenant-stopped-paying-rent-from-abroad'],
     tags: ['from-abroad'],
     body: LeftKoreaWithoutYourDeposit,
+  },
+  {
+    slug: 'left-korea-with-a-case-still-open',
+    field: 'criminal-defense',
+    listingTitle: 'Coming Back With a Case Still Open',
+    metaTitle:
+      'You Left Korea With a Case Still Open — What Happened to the File, and Whether You Can Come Back',
+    metaDescription:
+      'Left Korea with a police matter open? The file is suspended, not closed; the limitation clock can stop; the file may carry a warrant or a notice. What the border does, and what to do before you fly.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/case-open-hero.jpg',
+    related: ['exit-bans-during-investigation', 'received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
+    tags: ['from-abroad'],
+    body: LeftKoreaWithACaseStillOpen,
   },
   {
     slug: 'filing-a-criminal-complaint-from-abroad',
