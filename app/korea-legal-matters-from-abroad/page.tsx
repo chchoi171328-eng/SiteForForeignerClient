@@ -68,8 +68,11 @@ const BRANCHES: Branch[] = [
     // The warrant/travel-ban status check is described as an outcome, not a procedure.
     remotely:
       'Finding out where your case stands (including whether a warrant or travel ban exists), written submissions, settlement with the other side, planning a voluntary appearance.',
+    // Stages are police questioning (with any follow-up) and trial — no separate
+    // prosecution interview stage in current practice. The brief's "so it happens
+    // once" was a promise and is dropped (user-approved 2026-10).
     inPerson:
-      'Formal questioning as a suspect and trial hearings usually require you to be here — we plan the trip so it happens once, with everything prepared.',
+      "Usually, more than once. Questioning as a suspect and trial hearings generally require you to be here, and they can fall months apart — the police stage, including any follow-up questioning, and then the court. We can't promise a single trip; what we can do is prepare each stage before you fly so no trip is wasted, and tell you honestly when staying abroad is no longer an option.",
     href: '/practice-areas/criminal-defense',
     linkLabel: 'Criminal Defense',
   },
