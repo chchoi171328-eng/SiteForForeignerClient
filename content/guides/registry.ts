@@ -37,6 +37,7 @@ import ProvisionalAttachment from './bodies/provisional-attachment'
 import EnforcingAJudgment from './bodies/enforcing-a-judgment'
 import ExitBansDuringInvestigation from './bodies/exit-bans-during-investigation'
 import TenantStoppedPayingRentFromAbroad from './bodies/tenant-stopped-paying-rent-from-abroad'
+import FilingACriminalComplaintFromAbroad from './bodies/filing-a-criminal-complaint-from-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -142,7 +143,7 @@ export const GUIDES: Guide[] = [
       'How hapui (합의), the Korean criminal settlement, actually works: when it ends a case, when it only helps, the deadline, and the mistakes to avoid.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/hapui-hero.jpg',
-    related: ['received-a-police-summons', 'dui-in-korea', 'exit-bans-during-investigation'],
+    related: ['received-a-police-summons', 'dui-in-korea', 'exit-bans-during-investigation', 'filing-a-criminal-complaint-from-abroad'],
     body: HapuiSettlementInCriminalCases,
   },
   {
@@ -353,6 +354,20 @@ export const GUIDES: Guide[] = [
     related: ['getting-your-housing-deposit-back', 'lease-registration-order', 'jeonse-explained'],
     tags: ['from-abroad'],
     body: TenantStoppedPayingRentFromAbroad,
+  },
+  {
+    slug: 'filing-a-criminal-complaint-from-abroad',
+    field: 'criminal-defense',
+    listingTitle: 'Filing a Criminal Complaint From Abroad',
+    metaTitle:
+      'Filing a Criminal Complaint in Korea From Abroad — Who Can File, Where It Goes, and What Follows',
+    metaDescription:
+      'How to file a Korean criminal complaint from abroad: filing through a representative, the police investigation, the 3-month and 30-day review deadlines, compensation orders, and what needs you in Korea.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/complaint-abroad-hero.jpg',
+    related: ['hapui-settlement-in-criminal-cases', 'received-a-police-summons', 'summary-orders-and-formal-trial'],
+    tags: ['from-abroad'],
+    body: FilingACriminalComplaintFromAbroad,
   },
   {
     slug: 'lease-registration-order',
