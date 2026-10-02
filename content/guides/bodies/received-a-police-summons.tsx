@@ -253,8 +253,8 @@ export default function ReceivedAPoliceSummons() {
             body: 'The complainant is notified and may object, which sends the case to the prosecutor after all (arts. 245-6, 245-7). A police closure is good news, not final news.',
           },
           {
-            title: 'The prosecutor decides',
-            body: 'Indict for trial, seek a summary (fine) order, or decline to prosecute — including conditional non-prosecution outcomes.',
+            title: 'The prosecution office (공소청) decides',
+            body: 'Indict for trial, seek a summary (fine) order, or decline to prosecute — including conditional non-prosecution outcomes. Prosecutors no longer investigate; they decide on the police file.',
           },
         ]}
       />

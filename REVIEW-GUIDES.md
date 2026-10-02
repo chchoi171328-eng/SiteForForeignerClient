@@ -1256,6 +1256,22 @@ Agency (중대범죄수사청)"로 병기.
     노트·커피 — 해외에서 대리인과 통화하는 테마, 텍스트·로고 없음)
 
 
+
+## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
+검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
+검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·
+영장 청구·재판 집행 지휘)는 유지되므로 "prosecutor decides / 벌금 집행 /
+약식명령 청구" 서술은 정확. 수정 4곳:
+| 위치 | 변경 | 근거 |
+|---|---|---|
+| practiceAreas.ts 형사 타임라인 "Before the prosecutor's decision" | "Prosecutors sometimes question you directly" → "no longer investigate; decide on the police file, may ask for your account only to confirm facts" | 검사 수사권 폐지, 형소법 §245조의13 사실관계 확인 |
+| #14 경찰조사 — 12시간/8시간 제한 근거 | "binding police and prosecutors alike" → "governs police questioning" | 검사 신문 폐지, 수사준칙 개정(지휘→지도·조언) |
+| #27 출국금지 — 요청 기관 예시 | "a prosecutor's office" → "an investigating agency, a prosecution office" | 수사 목적 요청 주체 = 경찰·중수청 |
+| #3 출석요구 — 절차도식 4단계 | "The prosecutor decides" → "The prosecution office (공소청) decides" + "no longer investigate" 구절 | 명확성 |
+변경 불필요 확인: #4 합의, #5 DUI, #15 약식명령(집행 지휘 유지), #8 임금체불,
+#22 소멸시효, 사이트 "prosecutors' office" 건물 표기(공식 영문 명칭 확정 시
+일괄 교체 권장).
+
 ---
 
 ## 발행 예정 가이드 — 번호 통일 (2026-10-02 확정)

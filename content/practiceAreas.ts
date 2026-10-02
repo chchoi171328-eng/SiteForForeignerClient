@@ -145,7 +145,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       },
       {
         title: "Before the prosecutor's decision",
-        body: 'The prosecutor decides whether to charge you, drop the case, or seek a summary order. Prosecutors sometimes question you directly at this stage.',
+        body: 'The prosecutor decides whether to charge you, drop the case, or seek a summary order. Prosecutors no longer investigate; they decide on the police file, and may ask for your account only to confirm facts before deciding.',
         youCanDo:
           'Submit material relevant to sentencing, pursue restitution or settlement with the complainant where that fits, and file written arguments.',
       },

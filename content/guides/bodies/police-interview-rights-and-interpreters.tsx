@@ -218,8 +218,8 @@ export default function PoliceInterviewRightsAndInterpreters() {
         <li>
           <strong>12 hours wall-clock, 8 hours of questioning.</strong> A session — including
           waiting, meals, and breaks — must not exceed 12 hours in total, with actual questioning
-          capped at 8; both limits come from the joint investigation-standards regulation binding
-          police and prosecutors alike.
+          capped at 8; both limits come from the general investigation-standards regulation that
+          governs police questioning.
         </li>
         <li>
           <strong>8 hours off before the next round.</strong> Once a session ends, you cannot be
