@@ -1151,3 +1151,24 @@
     한 개 — 출국 저지 모티프, 표지판·텍스트 없음, 디스플레이 꺼짐)
   - 본문: `/assets/guides/exit-ban-gate.jpg` (해질녘 빈 탑승구 좌석 +
     무표식 기체 — 통지 예외 테마, 텍스트·로고 없음)
+
+---
+
+## 발행 예정 가이드 — 번호 통일 (2026-10-02 확정)
+원 계획(claude-code-guide-production.md)은 #28까지. 해외 거주 축 지침
+(claude-code-from-abroad-master.md §3)의 7편을 #29~#35로, 원 계획의 보류
+2편을 #36~#37로 이어 붙인다. 발행 시 각 편은 위 양식대로 `## N. 제목`
+섹션을 추가한다.
+
+| # | 분야키 | 제목 | 비고 |
+|---|---|---|---|
+| 28 | labor-employment | When Your Visa Is Tied to Your Employer | ⚠강 — 착수 전 수위 협의 (#27 방식: AskUserQuestion으로 시행령 수치·부재 주장·예외 제도·실무 절차 범위 결정 후 "수위 협의 결과" 기록) |
+| 29 | real-estate-lease-disputes | Your Tenant in Korea Stopped Paying Rent — and You're Abroad | `tags: ['from-abroad']` |
+| 30 | criminal-defense | Filing a Criminal Complaint in Korea From Abroad | `tags: ['from-abroad']` · 고소인 진술은 대리·서면 갈음 가능하되 본인 진술 요구 가능(PR #52 검증) |
+| 31 | real-estate-lease-disputes | You Left Korea Without Your Deposit | `tags: ['from-abroad']` · #1 보증금 가이드와 검색어 분리(해외 거주 관점) |
+| 32 | criminal-defense | You Left Korea With a Case Still Open — Can You Come Back? | `tags: ['from-abroad']` ⚠ 수배 조회 절차 단정 금지; 출국금지는 수임 변호인 출입국관리사무소 방문 확인 가능(검증됨) |
+| 33 | civil-litigation | Served With a Korean Lawsuit While Abroad — the Default Judgment Risk | `tags: ['from-abroad']` ⚠ 공시송달 요건(민소법 §194 이하) 검증 |
+| 34 | labor-employment | Unpaid Wages After Leaving Korea | `tags: ['from-abroad']` |
+| 35 | divorce-family-law | Paternity and Child Support in Korea When You Live Abroad | `tags: ['from-abroad']` ⚠ 가사소송법 §7 본인출석주의·§29 수검명령 — DNA 채취는 국내 지정 감정인(해외 채취 불가 서술) |
+| 36 | criminal-defense | Criminal Records: What Stays | 보류 — ⚠ 체류 영향 전면 주제, 사용자와 수위 협의 후 착수 |
+| 37 | divorce-family-law | Divorce and Marriage-Based Residency | 보류 — ⚠ F-6 확정 서술 위험, 사용자와 수위 협의 후 착수 |
