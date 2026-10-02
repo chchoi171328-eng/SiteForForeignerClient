@@ -63,9 +63,11 @@ const BRANCHES: Branch[] = [
   },
   {
     matter: 'Criminal — you are the suspect or defendant',
-    // PENDING REVIEW: whether and when suspect questioning can be taken remotely is
-    // not stated as a rule here ("usually") — practice varies by agency and case.
-    // The warrant/travel-ban status check is described as an outcome, not a procedure.
+    // Travel-ban status: a retained attorney can confirm it in person at the
+    // immigration office (easylaw 출국금지제도 — verified 2026-10; online lookup is
+    // for nationals only). Warrant status is a separate, unverified channel, so the
+    // cell describes the outcome, not a procedure. Suspect questioning: "generally
+    // require you to be here" — remote questioning is not asserted either way.
     remotely:
       'Finding out where your case stands (including whether a warrant or travel ban exists), written submissions, settlement with the other side, planning a voluntary appearance.',
     // Stages are police questioning (with any follow-up) and trial — no separate
