@@ -94,15 +94,16 @@ const BRANCHES: Branch[] = [
   },
   {
     matter: 'Family — paternity, child support, divorce with a Korean spouse',
-    // PENDING REVIEW: DNA testing arranged abroad as paternity evidence — court-ordered
-    // testing practice is not stated here as a rule.
+    // Court-ordered genetic testing (Family Litigation Act art. 29) is taken by the
+    // appointed examiner with identity checks, in practice in Korea — the brief's
+    // "DNA testing arranged where you live" was dropped (user-approved 2026-10).
     remotely:
-      'Paternity suits (including DNA testing arranged where you live), child support claims and enforcement, divorce filings and property division, all through your attorney.',
+      'Paternity suits, child support claims and enforcement, divorce filings and property division — the filings and the case itself run through your attorney.',
     // Family Litigation Act art. 7 (verified): the party-appearance rule — a
     // representative may appear instead only with the presiding judge's permission.
     // Worded to match the statute rather than the brief's "usually not".
     inPerson:
-      "Sometimes — family courts apply a party-appearance rule, and a representative may appear in your place only with the judge's permission. We tell you early if yours will need a trip.",
+      "Sometimes. Family courts apply a party-appearance rule — a representative may appear in your place only with the judge's permission — and in a paternity case the court-ordered DNA sampling is normally done in Korea by the appointed examiner. We tell you early if yours will need a trip, and plan it so one trip covers both.",
     href: '/practice-areas/divorce-family-law',
     linkLabel: 'Divorce & Family',
   },
