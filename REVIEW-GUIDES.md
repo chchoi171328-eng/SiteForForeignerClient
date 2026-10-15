@@ -1395,6 +1395,51 @@ Agency (중대범죄수사청)"로 병기.
     백지 서류·엎어 둔 휴대폰 — 추완항소 기산 테마, 텍스트 없음)
 
 
+## 34. Unpaid Wages After Leaving Korea
+`/guides/labor-employment/unpaid-wages-after-leaving-korea` · tags: from-abroad · Reviewed 2026-10
+
+### 검증한 조문·수치 (웹 검색 검증 완료, 2026-10)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 퇴직 후 14일 내 금품청산 / 지연이자 연 20% / 임금채권 소멸시효 3년 / 벌칙 3년·3천만원·반의사불벌 | 근로기준법 제36조·제37조·제49조·제109조 | guide 8 기검증 |
+| 간이대지급금 — 임금(최종 3개월) 700만·퇴직급여(최종 3년) 700만·합계 1,000만원, 사업주 6개월 이상 영위 | 임금채권보장법 제7조·상한액 고시 | easylaw.go.kr (원문 표 확인) |
+| 간이대지급금 기한 — 확인서 루트: 퇴직일 다음 날부터 1년 내 진정 등 / 판결 루트: 2년 내 소 제기 | 임금채권보장법 시행령 | easylaw.go.kr (원문 확인) |
+| 도산대지급금 별도 존재(법원 도산 또는 도산등사실인정) | 임금채권보장법 제7조 | easylaw.go.kr |
+| 출국만기보험 — E-9 사용자 가입 의무, 출국한 때부터 14일 내 지급(출국 후 신청 시 신청일부터 14일) | 외국인근로자의 고용 등에 관한 법률 제13조 제1·3항 | law.go.kr 조문정보, edaily |
+| 무료법률구조 월평균임금 400만원 미만·국내 거주 외국인 포함 | 대한법률구조공단 제도 | guide 8 기검증 — 본문은 "designed around residents … worth asking" 완충 |
+| 소액사건 3,000만원 | 소액사건심판법 제2조 | 기검증 |
+| 노동포털 진정은 본인(개인회원) 인증 기반 | 고용노동부 노동포털 | labor.moel.go.kr (대리 접수 조항 미확인) |
+| 해외 위임장 — 현지 공증+아포스티유 / 재외공관 | 외교부 재외공관 안내 | guide 29 기검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **해외 거주자 대리 진정** — 공식 자료에서 위임 절차를 확인하지 못해 "the
+  workable route is a representative in Korea — a lawyer, or a licensed labor
+  attorney"로 실무 수준 서술; 진술은 "in writing or by remote means … an
+  inspector can ask for more" 완충. **관할 노동관서 대리 접수 요건 실무 확인
+  요망.**
+- **대지급금 해외 계좌 지급** — "remittance to a foreign account is a question
+  to raise with the paying agency" (공단 실무 미확인).
+- **출국만기보험 = 법정퇴직금 대체** — "largely routed through … may not equal
+  your full statutory severance" 완충(차액 사용자 부담 법리는 일반 서술).
+- **귀국비용보험** — 조문 미확인으로 미기재.
+- **체류자격 무관 임금청구** — guide 8과 동일 수위 "treated as claimable in
+  practice regardless"; 비자 영향은 관점 수준(FAQ·Callout).
+- **법률구조 해외 거주자 적용** — "whether a departed worker still qualifies is
+  worth asking" 완충.
+- 판례 인용 0건, SOFA 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 상태: 완료 (Artlist GPT Image 2, 검증 게이트 통과 — 인물 없음)
+  - 히어로: `/assets/guides/wages-abroad-hero.jpg` (정리된 사무 책상 위
+    상자·무지 사원증 목걸이·키보드 — 퇴직 모티프, 텍스트 없음)
+  - 본문: `/assets/guides/wages-abroad-desk.jpg` (백지 폴더·화면 꺼진
+    계산기·펜 — 체불액 산정 테마; 계산기 키 각인은 표시 크기에서 판독 불가
+    수준 — 교체 원하면 재생성)
+
+
 ## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
 검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
 검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·
