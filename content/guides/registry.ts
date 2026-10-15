@@ -41,6 +41,7 @@ import FilingACriminalComplaintFromAbroad from './bodies/filing-a-criminal-compl
 import LeftKoreaWithoutYourDeposit from './bodies/left-korea-without-your-deposit'
 import LeftKoreaWithACaseStillOpen from './bodies/left-korea-with-a-case-still-open'
 import ServedWithAKoreanLawsuitWhileAbroad from './bodies/served-with-a-korean-lawsuit-while-abroad'
+import UnpaidWagesAfterLeavingKorea from './bodies/unpaid-wages-after-leaving-korea'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -198,7 +199,7 @@ export const GUIDES: Guide[] = [
       'What to do about unpaid wages in Korea: the 14-day rule, the labor office complaint, the government wage fund (대지급금), free legal aid, and the 3-year deadline.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/unpaid-wages-hero.jpg',
-    related: ['severance-pay-who-qualifies', 'the-unfair-dismissal-standard'],
+    related: ['severance-pay-who-qualifies', 'the-unfair-dismissal-standard', 'unpaid-wages-after-leaving-korea'],
     body: UnpaidWagesLaborOfficeVsLawsuit,
   },
   {
@@ -211,7 +212,7 @@ export const GUIDES: Guide[] = [
       "Korea's statutory severance: a month's average pay per year worked. Who qualifies (1 year, 15 hours/week), the freelancer question, IRP accounts, and E-9 insurance.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/severance-hero.jpg',
-    related: ['unpaid-wages-labor-office-vs-lawsuit', 'the-unfair-dismissal-standard'],
+    related: ['unpaid-wages-labor-office-vs-lawsuit', 'the-unfair-dismissal-standard', 'unpaid-wages-after-leaving-korea'],
     body: SeverancePayWhoQualifies,
   },
   {
@@ -399,6 +400,20 @@ export const GUIDES: Guide[] = [
     related: ['youve-been-served-first-30-days', 'payment-orders', 'what-litigation-costs'],
     tags: ['from-abroad'],
     body: ServedWithAKoreanLawsuitWhileAbroad,
+  },
+  {
+    slug: 'unpaid-wages-after-leaving-korea',
+    field: 'labor-employment',
+    listingTitle: 'Unpaid Wages After Leaving Korea',
+    metaTitle:
+      'Unpaid Wages After Leaving Korea — The 3-Year Claim, the 1-Year Wage-Fund Clock, and How to Collect From Abroad',
+    metaDescription:
+      'Left Korea with wages or severance unpaid? The claim lasts 3 years, but the wage fund needs a complaint within 1 year. Filing through a representative, E-9 departure insurance, and what needs you in Korea.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/wages-abroad-hero.jpg',
+    related: ['unpaid-wages-labor-office-vs-lawsuit', 'severance-pay-who-qualifies', 'the-unfair-dismissal-standard'],
+    tags: ['from-abroad'],
+    body: UnpaidWagesAfterLeavingKorea,
   },
   {
     slug: 'filing-a-criminal-complaint-from-abroad',
