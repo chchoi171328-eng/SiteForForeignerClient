@@ -40,6 +40,7 @@ import TenantStoppedPayingRentFromAbroad from './bodies/tenant-stopped-paying-re
 import FilingACriminalComplaintFromAbroad from './bodies/filing-a-criminal-complaint-from-abroad'
 import LeftKoreaWithoutYourDeposit from './bodies/left-korea-without-your-deposit'
 import LeftKoreaWithACaseStillOpen from './bodies/left-korea-with-a-case-still-open'
+import ServedWithAKoreanLawsuitWhileAbroad from './bodies/served-with-a-korean-lawsuit-while-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -236,7 +237,7 @@ export const GUIDES: Guide[] = [
       'Served with Korean court papers? How to tell a complaint from a payment order, the 30-day answer, the 2-week objection windows, and how default judgments happen.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/served-hero.jpg',
-    related: ['certified-content-mail', 'payment-orders', 'statutes-of-limitations'],
+    related: ['certified-content-mail', 'payment-orders', 'statutes-of-limitations', 'served-with-a-korean-lawsuit-while-abroad'],
     body: YouveBeenServedFirst30Days,
   },
   {
@@ -384,6 +385,20 @@ export const GUIDES: Guide[] = [
     related: ['exit-bans-during-investigation', 'received-a-police-summons', 'hapui-settlement-in-criminal-cases'],
     tags: ['from-abroad'],
     body: LeftKoreaWithACaseStillOpen,
+  },
+  {
+    slug: 'served-with-a-korean-lawsuit-while-abroad',
+    field: 'civil-litigation',
+    listingTitle: 'Served With a Korean Lawsuit While Abroad',
+    metaTitle:
+      'Served With a Korean Lawsuit While Abroad — Service by Public Notice, the Default Judgment Risk, and the Late Appeal',
+    metaDescription:
+      'How a Korean civil case proceeds against a defendant abroad: service through consulates, service by public notice and its 2-week/2-month effect, what the judgment can reach, and the 30-day late appeal.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/served-abroad-hero.jpg',
+    related: ['youve-been-served-first-30-days', 'payment-orders', 'what-litigation-costs'],
+    tags: ['from-abroad'],
+    body: ServedWithAKoreanLawsuitWhileAbroad,
   },
   {
     slug: 'filing-a-criminal-complaint-from-abroad',
