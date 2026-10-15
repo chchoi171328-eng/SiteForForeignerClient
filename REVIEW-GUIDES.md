@@ -1440,6 +1440,57 @@ Agency (중대범죄수사청)"로 병기.
     수준 — 교체 원하면 재생성)
 
 
+## 35. Paternity and Child Support in Korea When You Live Abroad
+`/guides/divorce-family-law/paternity-and-child-support-from-abroad` · tags: from-abroad · ⚠ · Reviewed 2026-10
+
+### 수위 (PR #52 검증 결과 적용)
+1. 본인출석주의(가사소송법 §7) — "representative may appear in your place only
+   with the judge's permission", 출석 필요 기일은 "we tell you early"
+2. DNA 채취 — 법원 지정 감정인이 국내에서 채취(해외 키트 불가) → 자녀·본인
+   입국 필요 명시(사용자 사건 경험 일치)
+3. 국적·가족관계등록 — 관점 수준("can open the way to questions … run on their
+   own rules"), 국적법 조문 미인용
+4. 양육비이행관리원 해외 거주 부모 지원 가능 여부 — "not something to assume;
+   ask early" (공식 확인 불가)
+5. 과거 양육비 소급 — "fact-specific … raise it from the start" (판례 법리 미전개)
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-10)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 친생자관계 사건 국제재판관할 — 자녀 일상거소 국내 또는 자녀·피고 부모 중 한쪽이 한국 국민 | 국제사법 제57조 | wikisource(조문), law.go.kr |
+| 임의인지 / 인지 소급효(제3자 권리 불해) / 인지청구의 소 / 부 사망 시 안 날부터 2년 검사 상대 | 민법 제855조·제860조·제863조·제864조 | casenote.kr, lawtalk 해설(조문 인용) |
+| 나류 사건 조정전치 | 가사소송법 제50조 | lawtalk 해설(조문 인용) |
+| 수검명령(유전인자 검사, 건강·인격 존엄 범위 내) | 가사소송법 제29조 | casenote.kr (guide 31 조사 시 확인) |
+| 수검명령 위반 과태료 1천만원 이하 / 재위반 시 30일 범위 감치 | 가사소송법 제67조 제1·2항 | casenote.kr (조문 원문) |
+| 양육비 직접지급명령 — 2회 이상 미지급, 원천징수의무자에게, 압류+전부 효력, 미도래분 포함 | 가사소송법 제63조의2 | casenote.kr, law.go.kr (조문) |
+| 담보제공명령 / 미제공 시 일시금 지급명령 | 가사소송법 제63조의3 | casenote.kr |
+| 이행명령 / 위반 과태료 1천만원 | 가사소송법 제64조·제67조 | casenote.kr |
+| 본인출석주의, 재판장 허가 시 대리 출석 | 가사소송법 제7조 | PR #52 검증 |
+| 양육비이행관리원 — 19세 미만 자녀 양육 한부모 지원, 채권추심·법률지원 | 양육비 이행확보 및 지원에 관한 법률 | mogef.go.kr, childsupport.or.kr |
+| 제재(출국금지·운전면허 정지·명단공개) — 이행명령 후 3회 이상 미지급 또는 3천만원 초과 | 양육비이행법 | 문화일보·MBC 2026-06 보도(수치는 본문 미기재, "multiple payments or a large arrears figure") |
+| 헤이그 아동양육비협약 한국 미가입 | — | leesunsin 해설(한 출처) — 본문 "which Korea is outside" 완충 |
+| 해외 위임장 | 외교부 재외공관 안내 | guide 29 기검증 |
+
+### 서술 수위 관련 참고 (변호사 확인 요망)
+- **수검명령 감치 요건** — §67② "제재를 받고도 다시 위반" 구조 그대로 서술.
+- **헤이그 양육비협약 미가입** — 단일 해설 출처라 확인 요망; 본문은 간이
+  집행 채널 부재 수준.
+- **제재 요건 수치(3회/3천만원)** — 보도 기반이라 본문 미기재.
+- **2024 양육비이행법 개정(감치 없이 제재)** — 보도 기반, 본문은 "follow a
+  performance order"로만.
+- **준거법** — "which law the court applies can be its own question" 관점.
+- 판례 인용 0건, SOFA 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음 (수위는 기확정 기준 적용 — PR에서 확인 요청)
+
+### 이미지
+- 히어로 `/assets/guides/paternity-abroad-hero.jpg` — 창가의 아이 운동화 + 접힌 무지 서류 (1600×900, 174KB)
+- 본문 `/assets/guides/paternity-abroad-desk.jpg` — 검체 튜브 + 밀봉 봉투 + 니트릴 장갑 (1600×900, 114KB)
+- 생성: Artlist GPT Image 2 (modelId 2340), 16:9 high, 2장 × 150 credits — 비용 게이트 사용자 승인 후 confirmCost
+- 검증: 인물·얼굴 없음 / 텍스트·라벨·한글 없음 / 법봉·저울·수갑 없음 — 통과
+
+
 ## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
 검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
 검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·

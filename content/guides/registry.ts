@@ -42,6 +42,7 @@ import LeftKoreaWithoutYourDeposit from './bodies/left-korea-without-your-deposi
 import LeftKoreaWithACaseStillOpen from './bodies/left-korea-with-a-case-still-open'
 import ServedWithAKoreanLawsuitWhileAbroad from './bodies/served-with-a-korean-lawsuit-while-abroad'
 import UnpaidWagesAfterLeavingKorea from './bodies/unpaid-wages-after-leaving-korea'
+import PaternityAndChildSupportFromAbroad from './bodies/paternity-and-child-support-from-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -186,7 +187,7 @@ export const GUIDES: Guide[] = [
       "When Korean courts can hear an international divorce, which country's law applies under the statutory ladder, and how foreign divorces are recognized in Korea.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/jurisdiction-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'paternity-and-child-support-from-abroad'],
     body: WhichCountrysCourtInternationalDivorce,
   },
   {
@@ -416,6 +417,20 @@ export const GUIDES: Guide[] = [
     body: UnpaidWagesAfterLeavingKorea,
   },
   {
+    slug: 'paternity-and-child-support-from-abroad',
+    field: 'divorce-family-law',
+    listingTitle: 'Paternity and Child Support From Abroad',
+    metaTitle:
+      'Paternity and Child Support in Korea When You Live Abroad — Jurisdiction, the DNA Order, and How Support Is Enforced',
+    metaDescription:
+      'Living abroad with a child whose Korean father pays nothing? Korean courts have jurisdiction, can declare paternity and order DNA testing, and enforce support through wage deductions and sanctions. What needs a trip.',
+    reviewed: '2026-10',
+    thumbnail: '/assets/guides/paternity-abroad-hero.jpg',
+    related: ['child-support-how-amounts-are-set', 'which-countrys-court-international-divorce', 'child-custody-in-international-marriages'],
+    tags: ['from-abroad'],
+    body: PaternityAndChildSupportFromAbroad,
+  },
+  {
     slug: 'filing-a-criminal-complaint-from-abroad',
     field: 'criminal-defense',
     listingTitle: 'Filing a Criminal Complaint From Abroad',
@@ -478,7 +493,7 @@ export const GUIDES: Guide[] = [
       "How Korean child support is set: the court guidelines table, the income-ratio split, changing the amount, and the enforcement ladder from salary deduction to exit bans.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/child-support-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'child-custody-in-international-marriages'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'child-custody-in-international-marriages', 'paternity-and-child-support-from-abroad'],
     body: ChildSupportHowAmountsAreSet,
   },
   {
