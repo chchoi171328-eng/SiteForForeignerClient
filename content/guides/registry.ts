@@ -44,6 +44,7 @@ import ServedWithAKoreanLawsuitWhileAbroad from './bodies/served-with-a-korean-l
 import UnpaidWagesAfterLeavingKorea from './bodies/unpaid-wages-after-leaving-korea'
 import PaternityAndChildSupportFromAbroad from './bodies/paternity-and-child-support-from-abroad'
 import ConsensualVsMediatedDivorce from './bodies/consensual-vs-mediated-divorce'
+import DivorcingAKoreanSpouseFromAbroad from './bodies/divorcing-a-korean-spouse-from-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -188,7 +189,7 @@ export const GUIDES: Guide[] = [
       "When Korean courts can hear an international divorce, which country's law applies under the statutory ladder, and how foreign divorces are recognized in Korea.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/jurisdiction-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'paternity-and-child-support-from-abroad'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'divorcing-a-korean-spouse-from-abroad', 'paternity-and-child-support-from-abroad'],
     body: WhichCountrysCourtInternationalDivorce,
   },
   {
@@ -441,8 +442,22 @@ export const GUIDES: Guide[] = [
       'Both routes need agreement. Consensual divorce confirms the divorce after a cooling-off period; mediated divorce records property, support and custody in one enforceable document, with no waiting period.',
     reviewed: '2026-11',
     thumbnail: '/assets/guides/mediated-divorce-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'property-division-basics', 'child-support-how-amounts-are-set'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'divorcing-a-korean-spouse-from-abroad', 'property-division-basics', 'child-support-how-amounts-are-set'],
     body: ConsensualVsMediatedDivorce,
+  },
+  {
+    slug: 'divorcing-a-korean-spouse-from-abroad',
+    field: 'divorce-family-law',
+    listingTitle: 'Divorcing a Korean Spouse From Abroad',
+    metaTitle:
+      'Divorcing a Korean Spouse While You Live Abroad — Why Mediation Works From a Distance, and What to Put in the Record',
+    metaDescription:
+      'Living abroad with a spouse in Korea? Consensual divorce needs you in court twice. Mediated or judicial divorce runs through counsel, and the mediation record can settle property, support and cross-border visitation in one enforceable document.',
+    reviewed: '2026-11',
+    thumbnail: '/assets/guides/divorce-abroad-hero.jpg',
+    related: ['consensual-vs-mediated-divorce', 'which-countrys-court-international-divorce', 'child-custody-in-international-marriages'],
+    tags: ['from-abroad'],
+    body: DivorcingAKoreanSpouseFromAbroad,
   },
   {
     slug: 'filing-a-criminal-complaint-from-abroad',
