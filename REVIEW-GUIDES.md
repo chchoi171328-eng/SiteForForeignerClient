@@ -1491,6 +1491,58 @@ Agency (중대범죄수사청)"로 병기.
 - 검증: 인물·얼굴 없음 / 텍스트·라벨·한글 없음 / 법봉·저울·수갑 없음 — 통과
 
 
+## 38. Consensual Divorce vs. Mediated Divorce in Korea
+`/guides/divorce-family-law/consensual-vs-mediated-divorce` · Reviewed 2026-11
+
+### 작성 취지·중복 분리
+- #6(협의 vs 재판)은 "어느 문으로 가나"의 총론. #38은 **합의 기반 두 경로
+  (협의이혼 vs 조정이혼)** 비교 — 검색 질의 "mediated divorce Korea",
+  "divorce mediation vs consensual divorce Korea"로 분리. #6 §2·§4는 유지.
+- 사용자 지시: 조정이혼의 장점 부각. 단 5-7 규칙대로 효과+한계 병기
+  (상대 불출석 시 소송 전환, 재산조회 제한, 협의이혼이 적절한 경우 §5).
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-11)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 협의이혼 — 가정법원 확인, 신고로 효력 | 민법 §834·§836 | guide 6 기검증 |
+| 숙려기간 3개월(양육 자녀)/1개월, 폭력 등 급박 사정 시 단축·면제 | 민법 §836-2 ②③ | korea.legal 조문 원문 |
+| 양육·친권 협의서 제출 / 양육비부담조서 작성, 효력은 가사소송법 §41 준용(집행권원) | 민법 §836-2 ④⑤ | korea.legal 조문 원문, lawtalk |
+| 협의이혼 신고 — 확인서등본 수령일부터 3개월, 도과 시 확인 실효 | 가족관계등록법 §75③ | korea.legal, lawtalk |
+| 신고 전 철회 — 시·읍·면에 철회서, 상대방 신고보다 먼저 | 실무(예규) | albup·lawtalk 해설 — 조문 아닌 실무 서술 수준 유지 |
+| 조정전치 | 가사소송법 §50 | guide 6·35 기검증 |
+| 조정 성립 = 조서 기재, 재판상 화해와 동일 효력 | 가사소송법 §59 | korea.legal 조문 |
+| 본인출석주의, 재판장 허가 시 대리 | 가사소송법 §7 | PR #52 검증 |
+| 조정 불성립 시 조정신청 시 소 제기 간주, 수수료 차액 납부 | 가사소송법 §49 → 민사조정법 §36, 가사소송수수료규칙 §6④ | korea.legal |
+| 조정신청 수수료 5,000원 | 가사소송수수료규칙 §6① | korea.legal (2013 개정본 표시 — 현행 확인 요망) |
+| 조정에 갈음하는 결정, 2주 이의 없으면 재판상 화해 효력 | 민사조정법 §30·§34 | korea.legal, lawtalk |
+| 조정이혼 신고 1개월 — 보고적 신고 | 가족관계등록법 §78 → §58 | korea.legal, lawtalk |
+| 재산분할 2년 | 민법 §839-2 | guide 6·10 기검증 |
+| 재외공관 협의이혼은 재외국민 전제 | 실무 | lawtalk — 외국인 배우자 적용 여부 미확인 → 본문 "confirm before you rely on it" |
+
+### 서술 수위 (변호사 확인 요망)
+- **조정 성립 시 이혼 효력 즉시 발생**: 해설 기반(보고적 신고). 본문 "takes
+  effect when the record is drawn up" — 확인 요망.
+- **협의이혼 수수료 "Nominal"**: 인지액 미확인이라 수치 미기재.
+- **조정기일 소요 "a few weeks to a couple of months"**: 실무 폭 표현, 수치 단정 없음.
+- **홈국 승인 시 조정조서가 유리할 수 있다(FAQ 2)**: "can make recognition
+  simpler" — 관점 수준.
+- **양육 사항 변경 가능(FAQ 4)**: 민법 §837⑤ 수준의 일반 서술, 조문 미인용.
+- 판례 인용 0건, SOFA 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+- 분야 상세 페이지 타임라인 "courts commonly attempt mediation late in the
+  case"와의 관계: 본문 §1에서 "judge sends a contested case to … but can also
+  be applied for directly"로 양립 서술.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 히어로 `/assets/guides/mediated-divorce-hero.jpg` — 빈 가정법원 조정실, 원탁+의자 4개 (1600×900)
+- 본문 `/assets/guides/mediated-divorce-record.jpg` — 백지 서류 위 만년필 + 찻잔 2개 (1600×900)
+- 생성: Artlist GPT Image 2, 16:9 **medium** (이 모델은 이제 medium만 지원 — high 옵션 사라짐), 2장 × 150 credits
+- **주의**: 이번엔 `confirmation_required` 게이트가 뜨지 않고 바로 큐에 들어감(모델 설정에 freeGeneration 플래그). confirmCost는 넘기지 않았으나 사용자 사전 승인 없이 크레딧이 소모됨 — PR·보고에 명시
+- 검증: 인물·얼굴 없음 / 텍스트·한글 없음 / 법봉·저울 없음 — 통과
+
+
 ## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
 검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
 검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·
@@ -1526,3 +1578,4 @@ Agency (중대범죄수사청)"로 병기.
 | 35 | divorce-family-law | Paternity and Child Support in Korea When You Live Abroad | `tags: ['from-abroad']` ⚠ 가사소송법 §7 본인출석주의·§29 수검명령 — DNA 채취는 국내 지정 감정인(해외 채취 불가 서술) |
 | 36 | criminal-defense | Criminal Records: What Stays | 보류 — ⚠ 체류 영향 전면 주제, 사용자와 수위 협의 후 착수 |
 | 37 | divorce-family-law | Divorce and Marriage-Based Residency | 보류 — ⚠ F-6 확정 서술 위험, 사용자와 수위 협의 후 착수 |
+| 38 | divorce-family-law | Consensual Divorce vs. Mediated Divorce in Korea | 2026-11-05 사용자 추가 — 조정이혼 장점 부각, #6과 검색 의도 분리 |
