@@ -1543,6 +1543,62 @@ Agency (중대범죄수사청)"로 병기.
 - 검증: 인물·얼굴 없음 / 텍스트·한글 없음 / 법봉·저울 없음 — 통과
 
 
+## 39. Divorcing a Korean Spouse While You Live Abroad
+`/guides/divorce-family-law/divorcing-a-korean-spouse-from-abroad` · tags: from-abroad · Reviewed 2026-11
+
+### 작성 취지 (사용자 지시 2026-11-05)
+- 협의이혼은 본인 출석 2회 전제 → 해외 거주자에게는 조정이혼·재판이혼이
+  현실적 경로라는 방향.
+- 협의이혼은 기록되는 합의사항이 이혼+양육 사항에 그치지만, 조정조서는 합의
+  가능한 거의 모든 사항을 담아 **이후 분쟁을 예방**한다는 점을 §4에 명시.
+- #38(협의 vs 조정 일반 비교)과 분리: #39는 해외 거주 관점·출석 문제·조서
+  설계·필수 from-abroad 표.
+
+### 검증한 조문 (웹 검색 검증 완료, 2026-11)
+| 본문 서술 | 근거 조문 | 검증 출처 |
+|---|---|---|
+| 일상거소 국내인 자에 대한 소 — 일반관할 | 국제사법 §3① | wikisource 조문(법률 제18670호) |
+| 혼인관계 사건 특별관할(부부 일방 일상거소 국내 + 마지막 공동 일상거소 국내 등) | 국제사법 §56① | korea.legal 조문 |
+| 부수적 청구(친권·양육·부양) 병합 | 국제사법 §6 | korea.legal |
+| 혼인관계 사건에 합의·변론관할 배제 | 국제사법 §13 | korea.legal |
+| 숙려기간 3개월/1개월 | 민법 §836-2② | #38 기검증 |
+| 본인출석주의, 특별한 사정 시 재판장·조정장 허가로 대리 출석 | 가사소송법 §7①~③ | korea.legal 조문 원문 |
+| 정당한 이유 없는 불출석 과태료 50만원 이하·구인 | 가사소송법 §66 | korea.legal (본문 미기재, 참고) |
+| 비디오 등 중계장치·인터넷 화상 조정기일(조정담당판사 상당 인정, 당사자 신청·동의) | 민사조정규칙 §6-2 | korea.legal 조문 원문 — 가사조정 적용은 가사소송법 §49 준용 경로, 본문은 "some courts … where the judge finds it appropriate" |
+| 조정 성립 = 재판상 화해 효력, 임의 처분 불가 사항 제외 | 가사소송법 §59①② | korea.legal |
+| 조정 불성립 시 소제기 간주 | 가사소송법 §49 → 민사조정법 §36 | #38 기검증 |
+| 조정 수수료 5,000원 | 가사소송수수료규칙 §6 | #38 기검증 |
+| 조정·판결 후 1개월 보고적 신고 | 가족관계등록법 §78 → §58 | #38 기검증 |
+| 양육비 직접지급명령(2회 미지급) / 이행명령 / 과태료 | 가사소송법 §63-2·§64·§67 | #35 기검증 |
+| 조정전치 | 가사소송법 §50 | 기검증 |
+| 재판상 이혼 사유 | 민법 §840 | #6 기검증 |
+| 재산분할 2년 | 민법 §839-2 | 기검증 |
+| 갈음결정 2주 이의 | 민사조정법 §34 | #38 기검증 |
+
+### 서술 수위 (변호사 확인 요망)
+- **재외공관 협의이혼의 외국인 배우자 적용**: 출처 상충(대륜·일부 로톡은
+  가능, 다른 칼럼은 재외국민 특례 불적용). 본문은 "built for Korean
+  nationals … not answered the same way by every source … plan on it being
+  unreliable" — 불가 단정 안 함.
+- **해외 거주 = 특별한 사정**: 조문에 명시 없음, 실무 해설 기반 → "commonly
+  is — applied for in advance … permissions, not entitlements".
+- **영상 조정**: 규칙 근거 있으나 법원별 운영 상이 → "some courts".
+- **가사조사관 면담 출석 가능성**: 실무 수준 서술("may still want you present").
+- **자녀 국외 이동 경고 콜아웃**: "can be treated as wrongful removal" —
+  헤이그협약 명시 안 함(관점 수준).
+- **해외 자녀 거주 시 양육 조항의 외국 집행(FAQ 3)**: "depends on its rules" 완충.
+- 판례 인용 0건, SOFA 서술 0건, 환율 환산 0건, 시의성 표현 0건.
+
+### 보류(PENDING REVIEW) 항목
+- 없음
+
+### 이미지
+- 히어로 `/assets/guides/divorce-abroad-hero.jpg` — 해질녘 창가 책상, 닫힌 노트북·휴대폰·접힌 서류 (1600×900)
+- 본문 `/assets/guides/divorce-abroad-mediation.jpg` — 조정실 원탁, 빈 모니터 스탠드 (1600×900)
+- 생성: Artlist GPT Image 2, 16:9 medium, 2장 × 150 credits — **호출 전 사용자 승인 받고 confirmCost** (정상 절차)
+- 검증: 인물·얼굴 없음 / 텍스트·화면 내용·한글 없음 / 법봉·저울 없음 — 통과
+
+
 ## 갱신 이력 — 2026-10-02 수사·기소 분리 체제 반영 (전수 점검)
 검찰청 폐지·공소청 출범(2026-10-02)에 맞춰 전체 가이드·사이트 페이지의
 검찰·검사 서술 30여 곳을 대조. 공소청법상 검사 직무(기소 여부 결정·공소유지·
@@ -1579,3 +1635,4 @@ Agency (중대범죄수사청)"로 병기.
 | 36 | criminal-defense | Criminal Records: What Stays | 보류 — ⚠ 체류 영향 전면 주제, 사용자와 수위 협의 후 착수 |
 | 37 | divorce-family-law | Divorce and Marriage-Based Residency | 보류 — ⚠ F-6 확정 서술 위험, 사용자와 수위 협의 후 착수 |
 | 38 | divorce-family-law | Consensual Divorce vs. Mediated Divorce in Korea | 2026-11-05 사용자 추가 — 조정이혼 장점 부각, #6과 검색 의도 분리 |
+| 39 | divorce-family-law | Divorcing a Korean Spouse While You Live Abroad | `tags: ['from-abroad']` · 2026-11-05 사용자 추가 — 협의이혼 출석 문제 → 조정·재판이혼, 조정조서로 후속 분쟁 예방 |
