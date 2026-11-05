@@ -43,6 +43,8 @@ import LeftKoreaWithACaseStillOpen from './bodies/left-korea-with-a-case-still-o
 import ServedWithAKoreanLawsuitWhileAbroad from './bodies/served-with-a-korean-lawsuit-while-abroad'
 import UnpaidWagesAfterLeavingKorea from './bodies/unpaid-wages-after-leaving-korea'
 import PaternityAndChildSupportFromAbroad from './bodies/paternity-and-child-support-from-abroad'
+import ConsensualVsMediatedDivorce from './bodies/consensual-vs-mediated-divorce'
+import DivorcingAKoreanSpouseFromAbroad from './bodies/divorcing-a-korean-spouse-from-abroad'
 
 /** The six field keys — identical to the core practice-area slugs. */
 export const GUIDE_FIELDS = [
@@ -174,7 +176,7 @@ export const GUIDES: Guide[] = [
       'The two routes to divorce in Korea — the consensual process and its cooling-off period, the six judicial grounds, mediation, and the deadlines around money.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/divorce-hero.jpg',
-    related: ['which-countrys-court-international-divorce', 'property-division-basics', 'child-custody-in-international-marriages'],
+    related: ['consensual-vs-mediated-divorce', 'which-countrys-court-international-divorce', 'property-division-basics', 'child-custody-in-international-marriages'],
     body: DivorceInKoreaConsensualVsJudicial,
   },
   {
@@ -187,7 +189,7 @@ export const GUIDES: Guide[] = [
       "When Korean courts can hear an international divorce, which country's law applies under the statutory ladder, and how foreign divorces are recognized in Korea.",
     reviewed: '2026-08',
     thumbnail: '/assets/guides/jurisdiction-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'paternity-and-child-support-from-abroad'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'divorcing-a-korean-spouse-from-abroad', 'paternity-and-child-support-from-abroad'],
     body: WhichCountrysCourtInternationalDivorce,
   },
   {
@@ -431,6 +433,33 @@ export const GUIDES: Guide[] = [
     body: PaternityAndChildSupportFromAbroad,
   },
   {
+    slug: 'consensual-vs-mediated-divorce',
+    field: 'divorce-family-law',
+    listingTitle: 'Consensual vs. Mediated Divorce',
+    metaTitle:
+      'Consensual Divorce vs. Mediated Divorce in Korea — What Each Settles, and What Only Mediation Enforces',
+    metaDescription:
+      'Both routes need agreement. Consensual divorce confirms the divorce after a cooling-off period; mediated divorce records property, support and custody in one enforceable document, with no waiting period.',
+    reviewed: '2026-11',
+    thumbnail: '/assets/guides/mediated-divorce-hero.jpg',
+    related: ['divorce-in-korea-consensual-vs-judicial', 'divorcing-a-korean-spouse-from-abroad', 'property-division-basics', 'child-support-how-amounts-are-set'],
+    body: ConsensualVsMediatedDivorce,
+  },
+  {
+    slug: 'divorcing-a-korean-spouse-from-abroad',
+    field: 'divorce-family-law',
+    listingTitle: 'Divorcing a Korean Spouse From Abroad',
+    metaTitle:
+      'Divorcing a Korean Spouse While You Live Abroad — Why Mediation Works From a Distance, and What to Put in the Record',
+    metaDescription:
+      'Living abroad with a spouse in Korea? Consensual divorce needs you in court twice. Mediated or judicial divorce runs through counsel, and the mediation record can settle property, support and cross-border visitation in one enforceable document.',
+    reviewed: '2026-11',
+    thumbnail: '/assets/guides/divorce-abroad-hero.jpg',
+    related: ['consensual-vs-mediated-divorce', 'which-countrys-court-international-divorce', 'child-custody-in-international-marriages'],
+    tags: ['from-abroad'],
+    body: DivorcingAKoreanSpouseFromAbroad,
+  },
+  {
     slug: 'filing-a-criminal-complaint-from-abroad',
     field: 'criminal-defense',
     listingTitle: 'Filing a Criminal Complaint From Abroad',
@@ -467,7 +496,7 @@ export const GUIDES: Guide[] = [
       'How property division works in a Korean divorce: what counts as marital property, how contribution sets shares, pensions, hidden assets, and the 2-year limit.',
     reviewed: '2026-08',
     thumbnail: '/assets/guides/property-division-hero.jpg',
-    related: ['divorce-in-korea-consensual-vs-judicial', 'which-countrys-court-international-divorce'],
+    related: ['divorce-in-korea-consensual-vs-judicial', 'consensual-vs-mediated-divorce', 'which-countrys-court-international-divorce'],
     body: PropertyDivisionBasics,
   },
   {
